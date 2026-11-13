@@ -18,7 +18,7 @@ final class SubscriptionValidator {
   java.util.List<String> definitions=new ArrayList<>(config.groups.values());if(config.xray!=null)definitions.add(config.xray);for(String definition:definitions){
   File file=File.createTempFile("subscription-check-",".json",context.getCacheDir());Process process=null;
   try{
-   java.nio.file.Files.writeString(file.toPath(),definition);
+   RuntimeSecrets.write(file,definition);
    process=new ProcessBuilder(context.getApplicationInfo().nativeLibraryDir+"/libxray.so","run","-test","-config",file.getPath()).redirectErrorStream(true).redirectOutput(new File("/dev/null")).start();
    if(!process.waitFor(10,TimeUnit.SECONDS))throw new Exception(L10n.s(R.string.msg_a734112137));
    if(process.exitValue()!=0)throw new Exception(L10n.s(R.string.msg_3d53cd3ab3));

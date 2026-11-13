@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.16
+
+- Subscription action menu with edit, sensitive URL copy, Android sharing, refresh, server list and deletion.
+- Deletion lists affected assignments and offers a replacement server; changes are applied together. Removing the final servers clears assignments and disables linked rules after confirmation.
+- Rebuilt sing-box and Xray with Go 1.27.4 and updated Go dependencies; native ELF segments support 16 KB pages.
+- Explicit confirmation for unsafe imported TLS/transport settings; background refresh cannot silently approve them.
+- Private runtime configuration permissions and cleanup after process restart.
+- Compact Android notification permission controls and an in-app privacy summary.
+
+
 ## 0.2.15
 
 - Add an Updates screen with manual and automatic update checks.

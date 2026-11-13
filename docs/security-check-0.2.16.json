@@ -1,0 +1,17 @@
+{
+  "version": "0.2.16",
+  "go": "1.27.4",
+  "engines": [
+    "sing-box 1.12.12",
+    "Xray 26.11.9"
+  ],
+  "osv_module_findings": {
+    "queries": 89,
+    "findings": []
+  },
+  "govulncheck_binary": {
+    "libbox": "No vulnerabilities found.",
+    "xray": "No vulnerabilities found."
+  },
+  "limitations": "Known vulnerability database checks do not certify absence of malware. Play Protect warning classification is external and has not been re-evaluated by Google."
+}

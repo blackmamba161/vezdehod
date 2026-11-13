@@ -11,13 +11,14 @@ export PATH="$JAVA_HOME/bin:$PATH"
 python3 tools/configure_updates.py
 python3 tools/localize.py --generate
 python3 tests/localization_test.py
+python3 tools/check_native.py
 B="$VPN_ROOT/.build/app"
 VARIANT="${1:-release}"
 if [ "$VARIANT" != test ] && [ "$VARIANT" != release ]; then echo "Use: build.sh [test|release]" >&2; exit 1; fi
 SDK="$ANDROID_HOME"
 BT="$SDK/build-tools/36.0.0"
 JAR="$SDK/platforms/android-36/android.jar"
-python3 -c 'import shutil;shutil.rmtree(".build/app/classes",ignore_errors=True)'
+python3 -c 'import shutil;[shutil.rmtree(".build/app/"+p,ignore_errors=True) for p in ["classes","dex","package","aar"]]'
 mkdir -p "$B" "$B/classes" "$B/generated" "$B/dex" "$B/aar" "$B/package/lib/arm64-v8a" "$VPN_ROOT/private"
 unzip -oq vendor/sing-box-1.12.12/libbox.aar -d "$B/aar"
 "$BT/aapt2" compile --dir app/res -o "$B/resources.zip"
@@ -38,7 +39,7 @@ cp vendor/xray/xray "$B/package/lib/arm64-v8a/libxray.so"
 cp "$B/dex/"*.dex "$B/package/"
 cp "$B/base.apk" "$B/unsigned.apk"
 (cd "$B/package" && zip -qr "$B/unsigned.apk" .)
-"$BT/zipalign" -f -p 4 "$B/unsigned.apk" "$B/aligned.apk"
+"$BT/zipalign" -f -P 16 4 "$B/unsigned.apk" "$B/aligned.apk"
 if [ ! -f private/signing.p12 ]; then
   python3 -c 'import secrets,pathlib; p=pathlib.Path("private/signing-password");p.write_text(secrets.token_hex(24));p.chmod(0o600)'
   "$JAVA_HOME/bin/keytool" -genkeypair -keystore private/signing.p12 -storepass:file private/signing-password -alias personal-vpn -keyalg RSA -keysize 3072 -validity 10000 -dname 'CN=Personal VPN' >/dev/null 2>&1

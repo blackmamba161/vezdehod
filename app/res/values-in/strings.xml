@@ -399,4 +399,20 @@
     <string name="update_notes" formatted="false">"Yang baru"</string>
     <string name="update_checking" formatted="false">"Memeriksa pembaruan…"</string>
     <string name="update_install_hint" formatted="false">"Pemasangan akan memulai ulang aplikasi dan memutus VPN."</string>
+    <string name="profile_actions" formatted="false">"Tindakan langganan"</string>
+    <string name="profile_edit" formatted="false">"Edit"</string>
+    <string name="profile_replace_hint" formatted="false">"Server yang dipilih akan menggantikan server yang dihapus pada semua penetapan di atas."</string>
+    <string name="profile_replacement" formatted="false">"Pilih pengganti"</string>
+    <string name="profile_remove_last" formatted="false">"Tidak ada server lain. Penetapan jaringan dikosongkan, aturan terkait dinonaktifkan, dan rute bawaan terkait menjadi langsung."</string>
+    <string name="profile_remove_changed" formatted="false">"Penetapan berubah. Buka kembali dialog penghapusan."</string>
+    <string name="security_import_title" formatted="false">"Pengaturan tidak aman"</string>
+    <string name="security_certificate" formatted="false">"Beberapa koneksi menonaktifkan verifikasi sertifikat. Identitas server tidak diperiksa. Lanjutkan hanya jika Anda memercayai pengaturan ini."</string>
+    <string name="security_plaintext" formatted="false">"Konfigurasi mencakup koneksi tanpa TLS/Reality. Koneksi ini mungkin bagian dari rantai aman; perlindungan jalur tidak terjamin jika digunakan sendiri."</string>
+    <string name="security_review_required" formatted="false">"Keamanan langganan berubah. Segarkan secara manual di Langganan."</string>
+    <string name="privacy_title" formatted="false">"Privasi"</string>
+    <string name="privacy_summary" formatted="false">"Langganan dienkripsi di perangkat. Impor menghubungi penyedia; koneksi menghubungi server pilihan; pemeriksaan menghubungi Google dan Cloudflare; pembaruan menghubungi GitHub. Kamera hanya untuk QR. Tanpa SDK iklan atau analitik."</string>
+    <string name="profile_share" formatted="false">"Bagikan langganan"</string>
+    <string name="notification_title" formatted="false">"Notifikasi VPN"</string>
+    <string name="notification_allowed" formatted="false">"Diizinkan"</string>
+    <string name="notification_blocked" formatted="false">"Diblokir Android"</string>
 </resources>

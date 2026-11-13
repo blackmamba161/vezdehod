@@ -399,4 +399,20 @@
     <string name="update_notes" formatted="false">"更新内容"</string>
     <string name="update_checking" formatted="false">"正在检查更新…"</string>
     <string name="update_install_hint" formatted="false">"安装将重启应用并中断 VPN。"</string>
+    <string name="profile_actions" formatted="false">"订阅操作"</string>
+    <string name="profile_edit" formatted="false">"编辑"</string>
+    <string name="profile_replace_hint" formatted="false">"所选服务器将替换上述所有分配中的已删除服务器。"</string>
+    <string name="profile_replacement" formatted="false">"选择替代服务器"</string>
+    <string name="profile_remove_last" formatted="false">"没有其他服务器。将清除网络分配、禁用关联规则，并将关联的默认路由改为直连。"</string>
+    <string name="profile_remove_changed" formatted="false">"分配已更改，请重新打开删除窗口。"</string>
+    <string name="security_import_title" formatted="false">"不安全的设置"</string>
+    <string name="security_certificate" formatted="false">"部分连接禁用了证书验证，无法验证服务器身份。仅在信任这些设置时继续。"</string>
+    <string name="security_plaintext" formatted="false">"配置包含未使用 TLS/Reality 保护的连接。它们可能属于安全连接链；单独使用时无法保证通道安全。"</string>
+    <string name="security_review_required" formatted="false">"订阅的安全设置已更改。请在订阅页手动刷新。"</string>
+    <string name="privacy_title" formatted="false">"隐私"</string>
+    <string name="privacy_summary" formatted="false">"订阅在设备上加密存储。导入联系提供商，连接访问所选服务器，检测访问 Google 和 Cloudflare，更新访问 GitHub。相机仅用于扫描二维码。不包含广告或分析 SDK。"</string>
+    <string name="profile_share" formatted="false">"分享订阅"</string>
+    <string name="notification_title" formatted="false">"VPN 通知"</string>
+    <string name="notification_allowed" formatted="false">"已允许"</string>
+    <string name="notification_blocked" formatted="false">"被 Android 阻止"</string>
 </resources>

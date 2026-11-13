@@ -399,4 +399,20 @@
     <string name="update_notes" formatted="false">"Что нового"</string>
     <string name="update_checking" formatted="false">"Проверка обновлений…"</string>
     <string name="update_install_hint" formatted="false">"Установка перезапустит приложение и прервёт VPN."</string>
+    <string name="profile_actions" formatted="false">"Действия с подпиской"</string>
+    <string name="profile_edit" formatted="false">"Изменить"</string>
+    <string name="profile_replace_hint" formatted="false">"Выбранный сервер заменит удаляемые во всех перечисленных назначениях."</string>
+    <string name="profile_replacement" formatted="false">"Выбрать замену"</string>
+    <string name="profile_remove_last" formatted="false">"Других серверов нет. Назначения сетей будут очищены, связанные правила отключены, привязанный маршрут остального трафика заменён на прямой."</string>
+    <string name="profile_remove_changed" formatted="false">"Назначения изменились. Откройте удаление ещё раз."</string>
+    <string name="security_import_title" formatted="false">"Небезопасные настройки"</string>
+    <string name="security_certificate" formatted="false">"В части подключений отключена проверка сертификата. Подлинность сервера не проверяется. Продолжайте только если доверяете этим настройкам."</string>
+    <string name="security_plaintext" formatted="false">"В конфигурации есть соединения без защиты TLS/Reality. Они могут быть частью защищённой цепочки; для отдельного подключения защита канала не гарантирована."</string>
+    <string name="security_review_required" formatted="false">"Изменились настройки защиты подписки. Обновите её вручную во вкладке «Подписки»."</string>
+    <string name="privacy_title" formatted="false">"Конфиденциальность"</string>
+    <string name="privacy_summary" formatted="false">"Подписки хранятся на устройстве в зашифрованном виде. Импорт обращается к указанному провайдеру, соединения — к выбранным серверам, проверки — к Google и Cloudflare, обновления — к GitHub. Камера используется только для QR. Рекламных и аналитических SDK нет."</string>
+    <string name="profile_share" formatted="false">"Поделиться подпиской"</string>
+    <string name="notification_title" formatted="false">"Уведомление VPN"</string>
+    <string name="notification_allowed" formatted="false">"Разрешено"</string>
+    <string name="notification_blocked" formatted="false">"Запрещено Android"</string>
 </resources>

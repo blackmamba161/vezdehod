@@ -399,4 +399,20 @@
     <string name="update_notes" formatted="false">"更新内容"</string>
     <string name="update_checking" formatted="false">"更新を確認中…"</string>
     <string name="update_install_hint" formatted="false">"インストールによりアプリが再起動し、VPNが切断されます。"</string>
+    <string name="profile_actions" formatted="false">"サブスクリプションの操作"</string>
+    <string name="profile_edit" formatted="false">"編集"</string>
+    <string name="profile_replace_hint" formatted="false">"選択したサーバーで上記のすべての割り当てを置き換えます。"</string>
+    <string name="profile_replacement" formatted="false">"置き換え先を選択"</string>
+    <string name="profile_remove_last" formatted="false">"他のサーバーがありません。ネットワーク割り当てを消去し、関連ルールを無効にし、関連する既定の経路を直接接続に変更します。"</string>
+    <string name="profile_remove_changed" formatted="false">"割り当てが変更されました。削除画面をもう一度開いてください。"</string>
+    <string name="security_import_title" formatted="false">"安全でない設定"</string>
+    <string name="security_certificate" formatted="false">"一部の接続では証明書の検証が無効です。サーバーの身元は確認されません。信頼できる設定の場合のみ続行してください。"</string>
+    <string name="security_plaintext" formatted="false">"TLS/Reality 保護のない接続が含まれます。安全な接続チェーンの一部の場合もありますが、単独使用時の通信保護は保証されません。"</string>
+    <string name="security_review_required" formatted="false">"サブスクリプションの安全設定が変わりました。サブスクリプション画面で手動更新してください。"</string>
+    <string name="privacy_title" formatted="false">"プライバシー"</string>
+    <string name="privacy_summary" formatted="false">"サブスクリプションは端末で暗号化されます。インポートは提供者、接続は選択したサーバー、検査は Google と Cloudflare、更新は GitHub に通信します。カメラは QR 専用です。広告や解析 SDK は含みません。"</string>
+    <string name="profile_share" formatted="false">"サブスクリプションを共有"</string>
+    <string name="notification_title" formatted="false">"VPN 通知"</string>
+    <string name="notification_allowed" formatted="false">"許可済み"</string>
+    <string name="notification_blocked" formatted="false">"Android によりブロック"</string>
 </resources>

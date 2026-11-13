@@ -14,4 +14,4 @@ License texts are included in `licenses/`. Exact downloaded artifact hashes are 
 
 The libbox extension maintained by this project is `mobile_app.go`. It adds application-facing selection, connectivity, and diagnostic methods. The source archive includes the corresponding sing-box source tree and this extension. Go dependencies are identified by the upstream `go.mod` and `go.sum` files.
 
-The Xray binary is an unmodified upstream ARM64 release. Source is available at the exact version link above. No VPN provider credentials are included in public artifacts.
+Both native engines are rebuilt with Go 1.27.4. Their Go dependency versions include security updates beyond the upstream tags; the pinned go.mod and go.sum files in the source archive describe the exact inputs. Xray source is included in vendor/xray-source. Build instructions are in tools/rebuild_cores.sh. No VPN provider credentials are included in public artifacts.

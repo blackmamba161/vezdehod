@@ -399,4 +399,20 @@
     <string name="update_notes" formatted="false">"What’s new"</string>
     <string name="update_checking" formatted="false">"Checking for updates…"</string>
     <string name="update_install_hint" formatted="false">"Installation will restart the app and interrupt the VPN."</string>
+    <string name="profile_actions" formatted="false">"Subscription actions"</string>
+    <string name="profile_edit" formatted="false">"Edit"</string>
+    <string name="profile_replace_hint" formatted="false">"The selected server will replace the removed servers in every assignment listed above."</string>
+    <string name="profile_replacement" formatted="false">"Choose replacement"</string>
+    <string name="profile_remove_last" formatted="false">"No other servers remain. Network assignments will be cleared, linked rules disabled, and any linked default route changed to direct."</string>
+    <string name="profile_remove_changed" formatted="false">"Assignments changed. Open the removal dialog again."</string>
+    <string name="security_import_title" formatted="false">"Unsafe settings"</string>
+    <string name="security_certificate" formatted="false">"Some connections disable certificate verification. Server identity is not verified. Continue only if you trust these settings."</string>
+    <string name="security_plaintext" formatted="false">"The configuration includes connections without TLS/Reality protection. They may belong to a secure chain; channel protection is not guaranteed when used on their own."</string>
+    <string name="security_review_required" formatted="false">"Subscription security settings changed. Refresh it manually in Subscriptions."</string>
+    <string name="privacy_title" formatted="false">"Privacy"</string>
+    <string name="privacy_summary" formatted="false">"Subscriptions are encrypted on your device. Imports contact your provider; connections contact selected servers; checks contact Google and Cloudflare; updates contact GitHub. The camera is used only for QR scanning. No advertising or analytics SDKs are included."</string>
+    <string name="profile_share" formatted="false">"Share subscription"</string>
+    <string name="notification_title" formatted="false">"VPN notification"</string>
+    <string name="notification_allowed" formatted="false">"Allowed"</string>
+    <string name="notification_blocked" formatted="false">"Blocked by Android"</string>
 </resources>

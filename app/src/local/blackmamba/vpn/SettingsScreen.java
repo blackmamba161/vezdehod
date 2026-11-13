@@ -18,6 +18,7 @@ final class SettingsScreen {
     a.iconItem(c,"settings",L10n.s(R.string.msg_d7907f4d43),"DNS, IP, MTU",()->open("advanced"));
     a.iconItem(c,"diagnostics",L10n.s(R.string.msg_9ba1e22ac3),null,()->open("diagnostics"));
     a.iconItem(c,"download",L10n.s(R.string.update_title),null,()->open("updates"));
+    a.iconItem(c,"shield",L10n.s(R.string.privacy_title),null,()->{AlertDialog d=a.new DialogBuilder(a).setTitle(L10n.s(R.string.privacy_title)).setMessage(L10n.s(R.string.privacy_summary)).setPositiveButton(L10n.s(R.string.msg_4ae50d3073),null).create();a.sheet(d);});
     try{a.note(host,L10n.s(R.string.msg_a84ab2656e)+a.getPackageManager().getPackageInfo(a.getPackageName(),0).versionName);}catch(Exception ignored){}
   }
  }
@@ -46,9 +47,11 @@ final class SettingsScreen {
  }
  boolean notificationVisible(){NotificationManager nm=a.getSystemService(NotificationManager.class);NotificationChannel channel=nm.getNotificationChannel("vpn");return nm.areNotificationsEnabled()&&(channel==null||channel.getImportance()!=NotificationManager.IMPORTANCE_NONE);}
  Intent notificationSettings(){NotificationManager nm=a.getSystemService(NotificationManager.class);if(!nm.areNotificationsEnabled()||nm.getNotificationChannel("vpn")==null)return new Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).putExtra(Settings.EXTRA_APP_PACKAGE,a.getPackageName());return new Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS).putExtra(Settings.EXTRA_APP_PACKAGE,a.getPackageName()).putExtra(Settings.EXTRA_CHANNEL_ID,"vpn");}
- void notifications(){a.title(L10n.s(R.string.msg_f56353b7eb),null);LinearLayout c=a.card(host);a.section(c,L10n.s(R.string.msg_64776d5102),L10n.s(R.string.msg_6ba4db3033));a.note(c,notificationVisible()?L10n.s(R.string.msg_4e73aa66da):L10n.s(R.string.msg_f1d3c27f2c));c.addView(a.button(L10n.s(R.string.msg_8960ddc30e),()->{try{a.startActivity(notificationSettings());}catch(ActivityNotFoundException e){a.startActivity(new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,android.net.Uri.parse("package:"+a.getPackageName())));}}),a.lp(-1,48));
-  c=a.card(host);a.section(c,L10n.s(R.string.msg_be99ac8f13),L10n.s(R.string.msg_e57f3249b4));a.note(c,L10n.s(R.string.msg_136e1c4c3c));
+ void notifications(){a.title(L10n.s(R.string.msg_f56353b7eb),null);LinearLayout c=a.card(host);
+  a.item(c,L10n.s(R.string.notification_title),notificationVisible()?L10n.s(R.string.notification_allowed):L10n.s(R.string.notification_blocked),L10n.s(R.string.msg_6ba4db3033),()->{if(android.os.Build.VERSION.SDK_INT>=33&&a.checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS)!=android.content.pm.PackageManager.PERMISSION_GRANTED){android.content.SharedPreferences preferences=a.getSharedPreferences("notification_permission",android.content.Context.MODE_PRIVATE);if(!preferences.getBoolean("asked",false)||a.shouldShowRequestPermissionRationale(android.Manifest.permission.POST_NOTIFICATIONS)){preferences.edit().putBoolean("asked",true).apply();a.requestPermissions(new String[]{android.Manifest.permission.POST_NOTIFICATIONS},52);}else a.startActivity(notificationSettings());}else a.startActivity(notificationSettings());});
+  a.item(c,L10n.s(R.string.msg_be99ac8f13),null,L10n.s(R.string.msg_e57f3249b4)+"\n\n"+L10n.s(R.string.msg_136e1c4c3c),()->a.showHelp(c,L10n.s(R.string.msg_e57f3249b4)+"\n\n"+L10n.s(R.string.msg_136e1c4c3c)));
  }
+
  void connection(){a.title(L10n.s(R.string.msg_79e350f743),L10n.s(R.string.msg_9d22ff847e));LinearLayout c=a.card(host);
   toggle(c,L10n.s(R.string.msg_fcb4b47313),L10n.s(R.string.msg_2be12d2d73),"boot",false);
   toggle(c,L10n.s(R.string.msg_a8e2cfb793),"","reconnect",false);

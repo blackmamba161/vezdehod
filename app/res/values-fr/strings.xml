@@ -399,4 +399,20 @@
     <string name="update_notes" formatted="false">"Nouveautés"</string>
     <string name="update_checking" formatted="false">"Recherche de mises à jour…"</string>
     <string name="update_install_hint" formatted="false">"L’installation redémarrera l’application et interrompra le VPN."</string>
+    <string name="profile_actions" formatted="false">"Actions de l’abonnement"</string>
+    <string name="profile_edit" formatted="false">"Modifier"</string>
+    <string name="profile_replace_hint" formatted="false">"Le serveur choisi remplacera les serveurs supprimés dans toutes les affectations indiquées."</string>
+    <string name="profile_replacement" formatted="false">"Choisir un remplacement"</string>
+    <string name="profile_remove_last" formatted="false">"Aucun autre serveur. Les affectations seront effacées, les règles liées désactivées et la route par défaut liée passera en connexion directe."</string>
+    <string name="profile_remove_changed" formatted="false">"Les affectations ont changé. Rouvrez la suppression."</string>
+    <string name="security_import_title" formatted="false">"Paramètres non sécurisés"</string>
+    <string name="security_certificate" formatted="false">"Certaines connexions désactivent la vérification du certificat. L’identité du serveur n’est pas vérifiée. Continuez uniquement si ces paramètres sont fiables."</string>
+    <string name="security_plaintext" formatted="false">"La configuration contient des connexions sans TLS/Reality. Elles peuvent appartenir à une chaîne sécurisée ; utilisées seules, leur canal n’est pas nécessairement protégé."</string>
+    <string name="security_review_required" formatted="false">"La sécurité de l’abonnement a changé. Actualisez-le manuellement dans Abonnements."</string>
+    <string name="privacy_title" formatted="false">"Confidentialité"</string>
+    <string name="privacy_summary" formatted="false">"Les abonnements sont chiffrés sur l’appareil. L’importation contacte le fournisseur, les connexions les serveurs choisis, les tests Google et Cloudflare, les mises à jour GitHub. La caméra sert uniquement aux QR. Aucun SDK publicitaire ou analytique."</string>
+    <string name="profile_share" formatted="false">"Partager l’abonnement"</string>
+    <string name="notification_title" formatted="false">"Notification VPN"</string>
+    <string name="notification_allowed" formatted="false">"Autorisée"</string>
+    <string name="notification_blocked" formatted="false">"Bloquée par Android"</string>
 </resources>

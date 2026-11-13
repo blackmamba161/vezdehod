@@ -14,6 +14,8 @@ public final class Icons extends View {
  @Override protected void onDraw(Canvas c){super.onDraw(c);float scale=Math.min(getWidth()-getPaddingLeft()-getPaddingRight(),getHeight()-getPaddingTop()-getPaddingBottom())/24f;c.save();c.translate((getWidth()-24*scale)/2,(getHeight()-24*scale)/2);c.scale(scale,scale);p.setColor(color);p.setStrokeWidth(1.8f);p.setStrokeCap(Paint.Cap.ROUND);p.setStrokeJoin(Paint.Join.ROUND);p.setStyle(Paint.Style.STROKE);
   if(getLayoutDirection()==LAYOUT_DIRECTION_RTL&&(name.equals("chevron")||name.equals("back"))){c.translate(24,0);c.scale(-1,1);}
   switch(name){
+   case "share":c.drawCircle(5,12,2.5f,p);c.drawCircle(19,4,2.5f,p);c.drawCircle(19,20,2.5f,p);line(c,7.2f,10.7f,16.8f,5.3f);line(c,7.2f,13.3f,16.8f,18.7f);break;
+   case "more":dot(c,12,5);dot(c,12,12);dot(c,12,19);break;
    case "download":line(c,12,3,12,15);line(c,7,10,12,15,17,10);line(c,4,16,4,21,20,21,20,16);break;
    case "check":line(c,4,12,9,17,20,6);break;
    case "copy":c.drawRoundRect(8,8,21,21,2,2,p);line(c,16,5,16,3,3,3,3,16,5,16);break;

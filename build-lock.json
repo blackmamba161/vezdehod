@@ -1,20 +1,36 @@
 {
   "sing-box": "1.12.12",
   "xray": "26.11.9",
-  "go": "1.24.13",
+  "go": "1.27.4",
   "ndk": "r27d",
   "arch": "arm64-v8a",
   "sha256": {
     "vendor/sing-box-1.12.12.tar.gz": "f08add81eab7e4d6091195179bb39fa3f64dbb0326feaa022994566b702d1245",
-    "vendor/sing-box-1.12.12/libbox.aar": "122a69c9c9509d0a92bb297908b1666bd7cfb1303d7be350a6a1593d98dbbbb8",
+    "vendor/sing-box-1.12.12/libbox.aar": "c7b95ef52df76dbbf5589da6ea73b997f5992193a1da9e2d51c1e5536ebdd4ef",
     "vendor/xray-android.zip": "edcefc25b9b3195b11e18624c8269a969d6aabc39c6298a9a5ab29de15d46f3b",
     "mobile_app.go": "0923416893affa78ac7e709327903bb64748351cab6c0166900128e517bf3503",
     "app/res/raw/ads_light.srs": "9877fbe5aa317936f73216828aca8dac407a402f95bcdbaeee4856e9dae4e998",
     "vendor/zxing/core-3.5.3.jar": "8d8064c1636fdaef7189dd9055c7d59950a8940a12f2293956446ec3c109fd82",
-    "vendor/snakeyaml/snakeyaml-2.7.jar": "2e194eba45a67dee19a4e272f4a04b18de8054e9f598b094382f6dae0b0e4b5e"
+    "vendor/snakeyaml/snakeyaml-2.7.jar": "2e194eba45a67dee19a4e272f4a04b18de8054e9f598b094382f6dae0b0e4b5e",
+    "vendor/sing-box-1.12.12/go.mod": "0b505b8146cecc964d1d30bf25eb2d22f161338fa06d63c941dd371324037380",
+    "vendor/sing-box-1.12.12/go.sum": "ffbc045f78e851120ab74ad08f78888db0664719caac0d7501dc1f76d5c9c2e0",
+    "vendor/xray/xray": "bd72e636103c8ae8dbe9b0ff13395adbe4a5eb4904675dbd732013aaf4641f69",
+    "vendor/xray-source/go.mod": "e13b98fb2a7c05cc9e2126451353d4ac5b1ca734174dbd2b416fef6d8ab7ef40",
+    "vendor/xray-source/go.sum": "d53d7e8f770513935d5ab87c9e6692eb565f996cdaff5500f2c14ddd2dea05f4"
   },
-  "apk_sha256": "9eab565c600a9cab832bf974c84074d70ae8f565b295d0fcded385792024eea6",
-  "app_version": "0.2.15",
+  "app_version": "0.2.16",
   "zxing": "3.5.3",
-  "snakeyaml": "2.7"
+  "snakeyaml": "2.7",
+  "native_page_size": 16384,
+  "sing_box_build_tags": [
+    "http2legacy",
+    "with_gvisor",
+    "with_quic",
+    "with_wireguard",
+    "with_utls",
+    "with_clash_api",
+    "with_conntrack"
+  ],
+  "sing_box_gcflags": "golang.org/x/net/http2=-l",
+  "apk_sha256": "a24e38d46ccb079f4b056e8e325b39ce6f93c085ea168af4607c24d7988c0ad1"
 }

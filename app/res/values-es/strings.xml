@@ -399,4 +399,20 @@
     <string name="update_notes" formatted="false">"Novedades"</string>
     <string name="update_checking" formatted="false">"Buscando actualizaciones…"</string>
     <string name="update_install_hint" formatted="false">"La instalación reiniciará la app e interrumpirá la VPN."</string>
+    <string name="profile_actions" formatted="false">"Acciones de suscripción"</string>
+    <string name="profile_edit" formatted="false">"Editar"</string>
+    <string name="profile_replace_hint" formatted="false">"El servidor elegido sustituirá los servidores eliminados en todas las asignaciones indicadas."</string>
+    <string name="profile_replacement" formatted="false">"Elegir sustituto"</string>
+    <string name="profile_remove_last" formatted="false">"No quedan otros servidores. Se borrarán las asignaciones, se desactivarán las reglas vinculadas y la ruta predeterminada vinculada pasará a ser directa."</string>
+    <string name="profile_remove_changed" formatted="false">"Las asignaciones cambiaron. Vuelve a abrir la eliminación."</string>
+    <string name="security_import_title" formatted="false">"Ajustes inseguros"</string>
+    <string name="security_certificate" formatted="false">"Algunas conexiones desactivan la verificación del certificado. No se comprueba la identidad del servidor. Continúa solo si confías en estos ajustes."</string>
+    <string name="security_plaintext" formatted="false">"La configuración incluye conexiones sin TLS/Reality. Pueden formar parte de una cadena segura; por separado no se garantiza la protección del canal."</string>
+    <string name="security_review_required" formatted="false">"Cambió la seguridad de la suscripción. Actualízala manualmente en Suscripciones."</string>
+    <string name="privacy_title" formatted="false">"Privacidad"</string>
+    <string name="privacy_summary" formatted="false">"Las suscripciones se cifran en el dispositivo. Las importaciones contactan al proveedor; las conexiones, a los servidores elegidos; las pruebas, a Google y Cloudflare; las actualizaciones, a GitHub. La cámara solo escanea QR. No hay SDK de publicidad ni analítica."</string>
+    <string name="profile_share" formatted="false">"Compartir suscripción"</string>
+    <string name="notification_title" formatted="false">"Notificación de VPN"</string>
+    <string name="notification_allowed" formatted="false">"Permitida"</string>
+    <string name="notification_blocked" formatted="false">"Bloqueada por Android"</string>
 </resources>

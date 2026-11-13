@@ -399,4 +399,20 @@
     <string name="update_notes" formatted="false">"Novidades"</string>
     <string name="update_checking" formatted="false">"Verificando atualizações…"</string>
     <string name="update_install_hint" formatted="false">"A instalação reiniciará o app e interromperá a VPN."</string>
+    <string name="profile_actions" formatted="false">"Ações da assinatura"</string>
+    <string name="profile_edit" formatted="false">"Editar"</string>
+    <string name="profile_replace_hint" formatted="false">"O servidor escolhido substituirá os removidos em todas as atribuições indicadas."</string>
+    <string name="profile_replacement" formatted="false">"Escolher substituto"</string>
+    <string name="profile_remove_last" formatted="false">"Não há outros servidores. As atribuições serão limpas, as regras vinculadas desativadas e a rota padrão vinculada será direta."</string>
+    <string name="profile_remove_changed" formatted="false">"As atribuições mudaram. Abra a exclusão novamente."</string>
+    <string name="security_import_title" formatted="false">"Configurações inseguras"</string>
+    <string name="security_certificate" formatted="false">"Algumas conexões desativam a verificação do certificado. A identidade do servidor não é verificada. Continue apenas se confiar nessas configurações."</string>
+    <string name="security_plaintext" formatted="false">"A configuração inclui conexões sem TLS/Reality. Podem integrar uma cadeia segura; isoladamente, a proteção do canal não é garantida."</string>
+    <string name="security_review_required" formatted="false">"A segurança da assinatura mudou. Atualize manualmente em Assinaturas."</string>
+    <string name="privacy_title" formatted="false">"Privacidade"</string>
+    <string name="privacy_summary" formatted="false">"As assinaturas são criptografadas no dispositivo. A importação contata o provedor; conexões, os servidores escolhidos; testes, Google e Cloudflare; atualizações, GitHub. A câmera só lê QR. Sem SDKs de publicidade ou análise."</string>
+    <string name="profile_share" formatted="false">"Compartilhar assinatura"</string>
+    <string name="notification_title" formatted="false">"Notificação VPN"</string>
+    <string name="notification_allowed" formatted="false">"Permitida"</string>
+    <string name="notification_blocked" formatted="false">"Bloqueada pelo Android"</string>
 </resources>

@@ -1,6 +1,6 @@
 # Privacy
 
-Vezdehod stores VPN subscriptions and configuration on your device. The configuration store is encrypted using a key held by Android Keystore. Android cloud backup is disabled for the application.
+Vezdehod stores VPN subscriptions and configuration on your device. The configuration store is encrypted using a key held by Android Keystore. Android cloud backup is disabled for the application. While Xray is running, generated engine configurations also exist as private temporary files with owner-only permissions; they are removed on normal shutdown and cleaned up when the app process next starts.
 
 Network requests depend on the features you use:
 
@@ -13,3 +13,5 @@ Network requests depend on the features you use:
 You can disable automatic update checks in Settings → Updates. Manual checks contact GitHub only when requested. The QR scanner uses the camera while its screen is open.
 
 Avoid sharing diagnostic logs without reviewing them. Provider URLs and server details may identify your account even when they do not look like passwords.
+
+Sharing or copying a subscription is performed only at your request. The Android share chooser receives the subscription URL, which can contain account credentials. Clipboard copies are marked sensitive. Unsafe imported transport or certificate settings require confirmation before being saved; background refresh does not silently approve new unsafe settings.

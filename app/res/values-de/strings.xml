@@ -399,4 +399,20 @@
     <string name="update_notes" formatted="false">"Was ist neu"</string>
     <string name="update_checking" formatted="false">"Updates werden gesucht…"</string>
     <string name="update_install_hint" formatted="false">"Die Installation startet die App neu und unterbricht das VPN."</string>
+    <string name="profile_actions" formatted="false">"Abonnementaktionen"</string>
+    <string name="profile_edit" formatted="false">"Bearbeiten"</string>
+    <string name="profile_replace_hint" formatted="false">"Der gewählte Server ersetzt die entfernten Server in allen aufgeführten Zuweisungen."</string>
+    <string name="profile_replacement" formatted="false">"Ersatz wählen"</string>
+    <string name="profile_remove_last" formatted="false">"Keine weiteren Server. Netzwerkzuweisungen werden gelöscht, verknüpfte Regeln deaktiviert und die verknüpfte Standardroute auf direkt gesetzt."</string>
+    <string name="profile_remove_changed" formatted="false">"Zuweisungen geändert. Löschdialog erneut öffnen."</string>
+    <string name="security_import_title" formatted="false">"Unsichere Einstellungen"</string>
+    <string name="security_certificate" formatted="false">"Einige Verbindungen deaktivieren die Zertifikatsprüfung. Die Serveridentität wird nicht geprüft. Nur mit vertrauenswürdigen Einstellungen fortfahren."</string>
+    <string name="security_plaintext" formatted="false">"Die Konfiguration enthält Verbindungen ohne TLS/Reality. Sie können Teil einer sicheren Kette sein; einzeln ist der Kanalschutz nicht gewährleistet."</string>
+    <string name="security_review_required" formatted="false">"Sicherheitseinstellungen geändert. Unter Abonnements manuell aktualisieren."</string>
+    <string name="privacy_title" formatted="false">"Datenschutz"</string>
+    <string name="privacy_summary" formatted="false">"Abonnements werden auf dem Gerät verschlüsselt. Import kontaktiert den Anbieter, Verbindungen gewählte Server, Tests Google und Cloudflare, Updates GitHub. Die Kamera dient nur QR-Codes. Keine Werbe- oder Analyse-SDKs."</string>
+    <string name="profile_share" formatted="false">"Abonnement teilen"</string>
+    <string name="notification_title" formatted="false">"VPN-Benachrichtigung"</string>
+    <string name="notification_allowed" formatted="false">"Erlaubt"</string>
+    <string name="notification_blocked" formatted="false">"Von Android blockiert"</string>
 </resources>

@@ -399,4 +399,20 @@
     <string name="update_notes" formatted="false">"ما الجديد"</string>
     <string name="update_checking" formatted="false">"جارٍ التحقق من التحديثات…"</string>
     <string name="update_install_hint" formatted="false">"سيُعاد تشغيل التطبيق وسينقطع VPN أثناء التثبيت."</string>
+    <string name="profile_actions" formatted="false">"إجراءات الاشتراك"</string>
+    <string name="profile_edit" formatted="false">"تعديل"</string>
+    <string name="profile_replace_hint" formatted="false">"سيحل الخادم المحدد محل الخوادم المحذوفة في جميع التعيينات المذكورة."</string>
+    <string name="profile_replacement" formatted="false">"اختيار بديل"</string>
+    <string name="profile_remove_last" formatted="false">"لا توجد خوادم أخرى. ستُمسح تعيينات الشبكات وتُعطّل القواعد المرتبطة ويصبح المسار الافتراضي المرتبط مباشراً."</string>
+    <string name="profile_remove_changed" formatted="false">"تغيرت التعيينات. افتح نافذة الحذف مجدداً."</string>
+    <string name="security_import_title" formatted="false">"إعدادات غير آمنة"</string>
+    <string name="security_certificate" formatted="false">"بعض الاتصالات تعطل التحقق من الشهادة. لن تُتحقق هوية الخادم. تابع فقط إذا كنت تثق بهذه الإعدادات."</string>
+    <string name="security_plaintext" formatted="false">"يتضمن التكوين اتصالات دون حماية TLS/Reality. قد تكون ضمن سلسلة آمنة؛ لا تُضمن حماية القناة عند استخدامها منفردة."</string>
+    <string name="security_review_required" formatted="false">"تغيرت إعدادات أمان الاشتراك. حدّثه يدوياً في الاشتراكات."</string>
+    <string name="privacy_title" formatted="false">"الخصوصية"</string>
+    <string name="privacy_summary" formatted="false">"تُشفّر الاشتراكات على جهازك. يتصل الاستيراد بمزودك والاتصال بالخوادم المحددة والفحص بـ Google وCloudflare والتحديث بـ GitHub. الكاميرا لمسح QR فقط. لا توجد حزم إعلانات أو تحليلات."</string>
+    <string name="profile_share" formatted="false">"مشاركة الاشتراك"</string>
+    <string name="notification_title" formatted="false">"إشعار VPN"</string>
+    <string name="notification_allowed" formatted="false">"مسموح"</string>
+    <string name="notification_blocked" formatted="false">"محظور من Android"</string>
 </resources>

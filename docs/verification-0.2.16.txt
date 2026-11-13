@@ -1,0 +1,33 @@
+Vezdehod 0.2.16 / code 21
+APK SHA-256: a24e38d46ccb079f4b056e8e325b39ce6f93c085ea168af4607c24d7988c0ad1
+
+PASS host tests: replacement of all references, deletion without partial mutation,
+explicit final-profile confirmation, unsafe subscription detection, stable consent
+fingerprints, updater metadata validation.
+PASS localization: 415 messages, 12 languages, resources and placeholders checked.
+PASS Xiaomi 13 Pro / Android 14: both native engines load and validate current
+subscription definitions; Xray executable reports 26.11.9 and Go 1.27.4.
+PASS Xiaomi UI: compact subscription actions, replacement picker, deletion disabled
+until a replacement is selected, cancellation preserves user configuration,
+exact subscription URL copy with sensitive clipboard flag, Android sharing intent,
+unsafe import confirmation, notification settings and private runtime cleanup.
+PASS UI test restores original clipboard and encrypted configuration unchanged.
+PASS on-device VPN tunnel: real HTTPS verified before connected; simulated loss
+changes status to error, callbacks preserve it, reconnect clears the error.
+Original settings restored after the recovery test.
+PASS physical-network HTTPS checks: 5 sing-box routes and 4 Xray routes succeed
+without changing the encrypted store or VPN settings.
+PASS visually reviewed demonstration-only captures of menus and notification UI.
+PASS known vulnerability checks: govulncheck finds no known vulnerabilities in
+both native binaries; OSV module queries return no findings (89 queries).
+PASS native ELF checks: ARM64, LOAD alignment supports 16 KB pages, no unresolved
+Go package symbols. The pinned HTTP/2 implementation uses upstream http2legacy.
+
+Limits: vulnerability database checks do not prove absence of malware. Google
+Play Protect classification has not been re-evaluated; no warning removal is claimed.
+Poco-specific notification behavior has not been tested on the brother's phone.
+Android 16 KB page-size device execution has not been tested; ELF and ZIP alignment
+are checked. This is a GitHub APK release, not a Google Play approval. Target SDK
+remains 34; a Play Store release requires a separate target-SDK migration and review.
+
+PASS final release APK signature, 16 KB ZIP alignment and absence of debug instrumentation.

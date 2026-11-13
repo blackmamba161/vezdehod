@@ -21,7 +21,11 @@ The full source archive prepared for a release includes the required dependency 
 
 Compare prebuilt dependency hashes with `build-lock.json`. Rebuilding libbox creates a different artifact hash; record the new hash after verifying that build.
 
-To rebuild the customized libbox, copy `mobile_app.go` into `vendor/sing-box-1.12.12/experimental/libbox/mobile_app.go`, then use the upstream Android library build process with Android ARM64 as the target. Keep the `with_gvisor`, `with_quic`, `with_wireguard`, `with_utls`, `with_clash_api`, and `with_conntrack` features required by the application. Consult the bundled upstream build script for the pinned version's additional flags.
+To rebuild both engines with the pinned security updates, install the recorded Go version and the upstream SagerNet gomobile/gobind tools, set ANDROID_NDK_HOME, and run `GO=/path/to/go bash tools/rebuild_cores.sh`. The full source archive includes `vendor/xray-source`, and both engines retain their original protocol implementations.
+
+The pinned HTTP/2 package uses its upstream `http2legacy` compatibility tag and `-gcflags=golang.org/x/net/http2=-l` to retain the symbol used by sing-box 1.12’s transport reset. Device JNI loading is checked before publication.
+
+For reference, to rebuild the customized libbox, copy `mobile_app.go` into `vendor/sing-box-1.12.12/experimental/libbox/mobile_app.go`, then use the upstream Android library build process with Android ARM64 as the target. Keep the `with_gvisor`, `with_quic`, `with_wireguard`, `with_utls`, `with_clash_api`, and `with_conntrack` features required by the application. Consult the bundled upstream build script for the pinned version's additional flags.
 
 ## APK
 

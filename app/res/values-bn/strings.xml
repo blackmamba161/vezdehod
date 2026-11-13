@@ -399,4 +399,20 @@
     <string name="update_notes" formatted="false">"নতুন কী আছে"</string>
     <string name="update_checking" formatted="false">"আপডেট খোঁজা হচ্ছে…"</string>
     <string name="update_install_hint" formatted="false">"ইনস্টল করলে অ্যাপ পুনরায় চালু হবে এবং VPN সংযোগ বিচ্ছিন্ন হবে।"</string>
+    <string name="profile_actions" formatted="false">"সাবস্ক্রিপশনের কাজ"</string>
+    <string name="profile_edit" formatted="false">"সম্পাদনা"</string>
+    <string name="profile_replace_hint" formatted="false">"উপরের সব বরাদ্দে মুছে ফেলা সার্ভারের বদলে নির্বাচিত সার্ভার ব্যবহৃত হবে।"</string>
+    <string name="profile_replacement" formatted="false">"বিকল্প বেছে নিন"</string>
+    <string name="profile_remove_last" formatted="false">"অন্য সার্ভার নেই। নেটওয়ার্ক বরাদ্দ মুছবে, সংশ্লিষ্ট নিয়ম বন্ধ হবে এবং সংশ্লিষ্ট ডিফল্ট রুট সরাসরি হবে।"</string>
+    <string name="profile_remove_changed" formatted="false">"বরাদ্দ বদলেছে। মুছে ফেলার সংলাপ আবার খুলুন।"</string>
+    <string name="security_import_title" formatted="false">"অনিরাপদ সেটিংস"</string>
+    <string name="security_certificate" formatted="false">"কিছু সংযোগে সার্টিফিকেট যাচাই বন্ধ। সার্ভারের পরিচয় যাচাই হবে না। সেটিংস বিশ্বাসযোগ্য হলেই চালিয়ে যান।"</string>
+    <string name="security_plaintext" formatted="false">"কনফিগারেশনে TLS/Reality ছাড়া সংযোগ আছে। এগুলি নিরাপদ শৃঙ্খলের অংশ হতে পারে; আলাদা ব্যবহারে চ্যানেলের সুরক্ষা নিশ্চিত নয়।"</string>
+    <string name="security_review_required" formatted="false">"সাবস্ক্রিপশনের নিরাপত্তা সেটিং বদলেছে। সাবস্ক্রিপশনে গিয়ে নিজে রিফ্রেশ করুন।"</string>
+    <string name="privacy_title" formatted="false">"গোপনীয়তা"</string>
+    <string name="privacy_summary" formatted="false">"সাবস্ক্রিপশন ডিভাইসে এনক্রিপ্ট করা থাকে। আমদানি প্রদানকারীর সঙ্গে, সংযোগ নির্বাচিত সার্ভারের সঙ্গে, পরীক্ষা Google ও Cloudflare-এর সঙ্গে এবং আপডেট GitHub-এর সঙ্গে যোগাযোগ করে। ক্যামেরা শুধু QR-এর জন্য। বিজ্ঞাপন বা বিশ্লেষণ SDK নেই।"</string>
+    <string name="profile_share" formatted="false">"সাবস্ক্রিপশন শেয়ার করুন"</string>
+    <string name="notification_title" formatted="false">"VPN বিজ্ঞপ্তি"</string>
+    <string name="notification_allowed" formatted="false">"অনুমোদিত"</string>
+    <string name="notification_blocked" formatted="false">"Android বন্ধ রেখেছে"</string>
 </resources>

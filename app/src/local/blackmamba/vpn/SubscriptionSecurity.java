@@ -1,0 +1,11 @@
+package local.blackmamba.vpn;
+import org.json.*;import java.util.*;import java.security.MessageDigest;import java.nio.charset.StandardCharsets;
+
+/** Reports explicitly unsafe settings without changing provider configuration. */
+public final class SubscriptionSecurity {
+ public static final int CERTIFICATE=1,PLAINTEXT=2;
+ static boolean disabledVerification(Object object)throws JSONException{if(object instanceof JSONObject){JSONObject o=(JSONObject)object;for(Iterator<String> it=o.keys();it.hasNext();){String key=it.next();if(Set.of("insecure","allowInsecure","skip-cert-verify").contains(key)&&o.optBoolean(key))return true;if(disabledVerification(o.get(key)))return true;}}else if(object instanceof JSONArray){JSONArray a=(JSONArray)object;for(int i=0;i<a.length();i++)if(disabledVerification(a.get(i)))return true;}return false;}
+ static boolean plaintext(JSONObject o)throws JSONException{String type=o.optString("protocol",o.optString("type"));if(type.equals("xray-group")){JSONArray members=o.getJSONObject("config").optJSONArray("outbounds");for(int i=0;members!=null&&i<members.length();i++)if(plaintext(members.getJSONObject(i)))return true;return false;}if(type.equals("xray")||type.equals("xhttp"))return plaintext(o.getJSONObject("xray"));if(!Set.of("vless","http","socks").contains(type))return false;JSONObject stream=o.optJSONObject("streamSettings");if(stream!=null){String security=stream.optString("security","none");return !security.equals("tls")&&!security.equals("reality");}JSONObject tls=o.optJSONObject("tls");return tls==null||!tls.optBoolean("enabled",false);}
+ public static int flags(JSONObject node)throws JSONException{JSONObject o=node.getJSONObject("outbound");return (disabledVerification(o)?CERTIFICATE:0)|(plaintext(o)?PLAINTEXT:0);}
+ public static String fingerprint(JSONArray nodes)throws Exception{List<String> warnings=new ArrayList<>();for(int i=0;i<nodes.length();i++){JSONObject n=nodes.getJSONObject(i);int f=flags(n);if(f!=0)warnings.add(n.optString("name")+":"+f);}if(warnings.isEmpty())return "";Collections.sort(warnings);byte[] bytes=MessageDigest.getInstance("SHA-256").digest(String.join("\n",warnings).getBytes(StandardCharsets.UTF_8));StringBuilder s=new StringBuilder();for(byte b:bytes)s.append(String.format(Locale.ROOT,"%02x",b&255));return s.toString();}
+}
