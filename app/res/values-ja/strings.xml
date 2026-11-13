@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msg_681ba374e5" formatted="false">"MTU：1280–1500"</string>
+    <string name="msg_e13fa5e7d6" formatted="false">"間隔：5–120 秒"</string>
+    <string name="msg_8a43e3fd24" formatted="false">"DNS-over-HTTPS アドレスを入力：https://…"</string>
+    <string name="msg_33f32d875b" formatted="false">"イベントはまだありません"</string>
+    <string name="msg_dd624657c4" formatted="false">"ログを読み取れませんでした"</string>
+    <string name="msg_85973145cb" formatted="false">"サブスクリプションを追加してサーバーを選択してください"</string>
+    <string name="msg_fa9ffb3f84" formatted="false">"選択したサーバーはサブスクリプションにありません。「ネットワーク」で別のサーバーを選択してください。"</string>
+    <string name="msg_27a403dd36" formatted="false">"ローカル VPN ポートを割り当てられませんでした"</string>
+    <string name="msg_2846df10fa" formatted="false">"不明なルールの種類"</string>
+    <string name="msg_4dfebb89a6" formatted="false">"ルールのサーバーが利用できません： "</string>
+    <string name="msg_d721e92378" formatted="false">"サーバー ID が重複しています"</string>
+    <string name="msg_50e1cb1272" formatted="false">"その他の通信"</string>
+    <string name="msg_938ad66f65" formatted="false">"有効なルールに一致しないサイトやアプリに使用する経路。"</string>
+    <string name="msg_1667336ad3" formatted="false">"直接接続"</string>
+    <string name="msg_e26ed24f9e" formatted="false">"\nモバイル： "</string>
+    <string name="msg_7be14a7ba6" formatted="false">"手動選択： "</string>
+    <string name="msg_3c0423bc77" formatted="false">"VPN 経由"</string>
+    <string name="msg_e481dedaf2" formatted="false">"ブロック"</string>
+    <string name="msg_0e4d55ab7c" formatted="false">"特定のサーバー"</string>
+    <string name="msg_8f67e4d13d" formatted="false">"すべてのネットワーク"</string>
+    <string name="msg_0ec753be8d" formatted="false">"キャンセル"</string>
+    <string name="msg_dd6b0e1e55" formatted="false">"、選択済み"</string>
+    <string name="msg_45ec755630" formatted="false">"インポートファイルを削除できませんでした"</string>
+    <string name="msg_b63da52997" formatted="false">"保護された設定を開けませんでした。データは保持されています。"</string>
+    <string name="msg_8a78d62250" formatted="false">"サブスクリプションが変更されました。再更新してください。"</string>
+    <string name="msg_1a69e59ba3" formatted="false">"このサブスクリプションは追加済みです"</string>
+    <string name="msg_40f8272534" formatted="false">"先にネットワークとルールで別のサーバーを選択してください"</string>
+    <string name="msg_d2ff3b0e16" formatted="false">"このサーバーを使用するルールがあります"</string>
+    <string name="msg_e8d9cd7b4e" formatted="false">"リンク"</string>
+    <string name="msg_9794aef624" formatted="false">"互換性のあるサーバーがありません。 "</string>
+    <string name="msg_e7e42a2acf" formatted="false">"サブスクリプションにサーバーがありません"</string>
+    <string name="msg_999986e004" formatted="false">"エンコードの階層が多すぎます"</string>
+    <string name="msg_6c21351bc9" formatted="false">"サブスクリプションが 4 MB を超えています"</string>
+    <string name="msg_6153e34d0c" formatted="false">"サーバーから空のサブスクリプションが返されました"</string>
+    <string name="msg_0432186247" formatted="false">"これはウェブページです。提供元の VPN サブスクリプションリンクをコピーしてください。"</string>
+    <string name="msg_3c0e1e7d43" formatted="false">"サブスクリプションの JSON が無効です"</string>
+    <string name="msg_c14abc64af" formatted="false">"YAML を読み取れません。サブスクリプションファイルを確認してください。"</string>
+    <string name="msg_79be6ca6bc" formatted="false">"不明な形式"</string>
+    <string name="msg_30d9e094e4" formatted="false">"行 "</string>
+    <string name="msg_54d59eb38a" formatted="false">"リンク "</string>
+    <string name="msg_8eeacd07c0" formatted="false">"項目 "</string>
+    <string name="msg_f702b574da" formatted="false">"：不明な形式"</string>
+    <string name="msg_e18fd43031" formatted="false">"サーバー一覧または VPN 設定が必要です"</string>
+    <string name="msg_48db32c372" formatted="false">"proxies 一覧が無効です"</string>
+    <string name="msg_1fe1adcef3" formatted="false">"サーバー "</string>
+    <string name="msg_4505a9f9d0" formatted="false">"outbounds 一覧が無効です"</string>
+    <string name="msg_917e05143a" formatted="false">"サーバー"</string>
+    <string name="msg_e271fb3ca1" formatted="false">"JSON に outbounds または proxies がありません"</string>
+    <string name="msg_3d734741a7" formatted="false">"未対応または不完全な設定"</string>
+    <string name="msg_7131aafc7b" formatted="false">"サブスクリプションが 512 サーバーを超えています"</string>
+    <string name="msg_210439cffd" formatted="false">"サーバーのアドレスまたはポートがありません"</string>
+    <string name="msg_6f8352205b" formatted="false">"プロトコル "</string>
+    <string name="msg_b329e9ab1b" formatted="false">"プロキシチェーンはまだサポートされていません"</string>
+    <string name="msg_67acde8ec5" formatted="false">"サーバーアドレスがありません"</string>
+    <string name="msg_09e323f866" formatted="false">"追加プラグインまたはプロキシチェーン"</string>
+    <string name="msg_0203e5e1bf" formatted="false">"トランスポート "</string>
+    <string name="msg_aaecad4a8c" formatted="false">" は YAML ではまだ未対応です"</string>
+    <string name="msg_40a747d563" formatted="false">"リンクを貼り付けるか QR コードを読み取ってください"</string>
+    <string name="msg_680a8e4f43" formatted="false">"空白を含まないリンクを 1 つ入力してください"</string>
+    <string name="msg_102b915c5e" formatted="false">"無効なリンク"</string>
+    <string name="msg_2a16f698ef" formatted="false">"サブスクリプションのアドレスを確認してください"</string>
+    <string name="msg_c01d472ca8" formatted="false">"サブスクリプションまたはサーバーのリンクを入力してください"</string>
+    <string name="msg_cacc66427a" formatted="false">"不完全なリンク"</string>
+    <string name="msg_eee2285ba1" formatted="false">"基本サービス"</string>
+    <string name="msg_16dacca18e" formatted="false">"AI サービス"</string>
+    <string name="msg_65ca123b53" formatted="false">"ソーシャル"</string>
+    <string name="msg_f72ae77771" formatted="false">"独自のルール"</string>
+    <string name="msg_667d8b44a6" formatted="false">"ルール"</string>
+    <string name="msg_9e572ab9c6" formatted="false">"ルールの順序"</string>
+    <string name="msg_02580e2fda" formatted="false">"最初に一致したルールが適用されます。矢印で優先順位を変更できます。サービスをタップするとルールが展開されます。"</string>
+    <string name="msg_9276259877" formatted="false">"プリセット"</string>
+    <string name="msg_fc7987118c" formatted="false">"+ ルール"</string>
+    <string name="msg_dc9a84c4a4" formatted="false">"プリセットでサービスを選択してください"</string>
+    <string name="msg_8840608925" formatted="false">"複数の経路"</string>
+    <string name="msg_d934aed196" formatted="false">"オフ"</string>
+    <string name="msg_6ce4fa393d" formatted="false">" / "</string>
+    <string name="msg_4cc948fff2" formatted="false">" 有効"</string>
+    <string name="msg_26e42bb274" formatted="false">"折りたたむ "</string>
+    <string name="msg_dcfb1b173b" formatted="false">"展開する "</string>
+    <string name="msg_8f769303f6" formatted="false">"上へ： "</string>
+    <string name="msg_c800355918" formatted="false">"下へ： "</string>
+    <string name="msg_9189fc3f32" formatted="false">"サービス： "</string>
+    <string name="msg_3ca212f4fc" formatted="false">"ルール"</string>
+    <string name="msg_5d1611f2fb" formatted="false">"ルール"</string>
+    <string name="msg_69b46d600c" formatted="false">"ルール"</string>
+    <string name="msg_f9886ca2bc" formatted="false">"アプリ"</string>
+    <string name="msg_045bef7d26" formatted="false">"ウェブサイト"</string>
+    <string name="msg_2681a24f90" formatted="false">"ルールを編集： "</string>
+    <string name="msg_27c9c75d4a" formatted="false">"ルールを上へ： "</string>
+    <string name="msg_08525c9005" formatted="false">"ルールを下へ： "</string>
+    <string name="msg_573d59bada" formatted="false">"ルール： "</string>
+    <string name="msg_a11443ec76" formatted="false">"ルールのプリセット"</string>
+    <string name="msg_fd042c9a3a" formatted="false">"後で"</string>
+    <string name="msg_768af67762" formatted="false">"適用"</string>
+    <string name="msg_bdda7682fb" formatted="false">"すべて選択"</string>
+    <string name="msg_accc8ab2b1" formatted="false">" · 追加済み"</string>
+    <string name="msg_97013008b5" formatted="false">"適用 · "</string>
+    <string name="msg_dcd66875e7" formatted="false">"追加したルール： "</string>
+    <string name="msg_5f496335d3" formatted="false">"未確認"</string>
+    <string name="msg_643b39ad20" formatted="false">"VPN の状態"</string>
+    <string name="msg_40b27edf9a" formatted="false">"接続中…"</string>
+    <string name="app_name" formatted="false">"Vezdehod"</string>
+    <string name="msg_94d07a2171" formatted="false">"切断"</string>
+    <string name="msg_683f4493ca" formatted="false">"ネットワークの IPv6 対応状況が変わりました"</string>
+    <string name="msg_b3be92a610" formatted="false">"ネットワーク変更： "</string>
+    <string name="msg_9dfa170d49" formatted="false">"モバイル"</string>
+    <string name="msg_f0a50c59fc" formatted="false">"ネットワークなし"</string>
+    <string name="msg_a6ee13c1ee" formatted="false">"ネットワークを待機中"</string>
+    <string name="msg_6679cdceb0" formatted="false">"モバイルネットワーク"</string>
+    <string name="msg_87fe71dbf1" formatted="false">"Xray 接続を開始できませんでした"</string>
+    <string name="msg_b84eb59edf" formatted="false">"トンネルを開始しました"</string>
+    <string name="msg_8d41645d5d" formatted="false">"トンネルエラー"</string>
+    <string name="msg_15da4eee64" formatted="false">"トンネルエラー。ホーム画面を確認してください"</string>
+    <string name="msg_4ec4a7927c" formatted="false">"接続エラー · アプリを開いてください"</string>
+    <string name="msg_a24fd4542e" formatted="false">"[アドレス非表示]"</string>
+    <string name="msg_1c64a8bede" formatted="false">"[キー非表示]"</string>
+    <string name="msg_c0b5a5c3bd" formatted="false">"VPN を停止しました"</string>
+    <string name="msg_28fc95b5ac" formatted="false">"Xray 接続を停止しました"</string>
+    <string name="msg_9b36be9334" formatted="false">"再接続中"</string>
+    <string name="msg_e66c7d3fa3" formatted="false">"HTTPS 利用可能"</string>
+    <string name="msg_a2ca43d182" formatted="false">"HTTPS 確認に失敗しました"</string>
+    <string name="msg_ec7a0b7421" formatted="false">"メインサーバーに戻りました"</string>
+    <string name="msg_af26aede0a" formatted="false">"予備サーバーを選択しました"</string>
+    <string name="msg_bc15101b19" formatted="false">"先に VPN に接続してください"</string>
+    <string name="msg_f96dbc41fe" formatted="false">"接続が変わりました。再確認してください"</string>
+    <string name="msg_d2d78125b3" formatted="false">"HTTPS と出口 IP の確認に成功しました"</string>
+    <string name="msg_80f6d88155" formatted="false">"確認に失敗しました"</string>
+    <string name="msg_c050b742cc" formatted="false">"HTTPS / IP の確認に失敗しました"</string>
+    <string name="msg_d14be38b43" formatted="false">"接続が変わりました"</string>
+    <string name="msg_044b7bf56c" formatted="false">"接続が変わりました。再測定してください"</string>
+    <string name="msg_cda6f16c5c" formatted="false">"Android の VPN 許可が必要です"</string>
+    <string name="msg_a57d71f512" formatted="false">"Android が VPN を作成できませんでした"</string>
+    <string name="msg_f132898dfe" formatted="false">"VPN ソケットを保護できませんでした"</string>
+    <string name="msg_4ae50d3073" formatted="false">"閉じる"</string>
+    <string name="msg_559a87f7cc" formatted="false">"追加"</string>
+    <string name="msg_9dd9dbd7cf" formatted="false">"ヘルプ： "</string>
+    <string name="msg_d436f8a60e" formatted="false">"サーバーを選択"</string>
+    <string name="msg_109f623f52" formatted="false">"サブスクリプション"</string>
+    <string name="msg_5695330ffb" formatted="false">"自動"</string>
+    <string name="msg_5ec7b0f52b" formatted="false">"手動"</string>
+    <string name="msg_f04c4eff03" formatted="false">"ネットワークの自動切り替え"</string>
+    <string name="msg_7f17c7c62a" formatted="false">"設定"</string>
+    <string name="msg_7d8d1526a4" formatted="false">"画面エラー： "</string>
+    <string name="msg_ffddd31c12" formatted="false">"ホーム"</string>
+    <string name="msg_bd5e9cf0e8" formatted="false">"サーバー"</string>
+    <string name="msg_cba4000b30" formatted="false">"ネットワーク"</string>
+    <string name="msg_9f52d47392" formatted="false">"サブスク"</string>
+    <string name="msg_1c48855699" formatted="false">"VPN はオフです"</string>
+    <string name="msg_c5d75fed69" formatted="false">"設定したルールで接続"</string>
+    <string name="msg_e285415316" formatted="false">"Ping "</string>
+    <string name="msg_5160aea6bb" formatted="false">" ms"</string>
+    <string name="msg_741870459d" formatted="false">"自動"</string>
+    <string name="msg_0d69e3497e" formatted="false">" 追加済み"</string>
+    <string name="msg_81e0cd160b" formatted="false">"接続済み"</string>
+    <string name="msg_6bd21210b3" formatted="false">"接続できませんでした"</string>
+    <string name="msg_ffae505dde" formatted="false">" · 設定したルールで"</string>
+    <string name="msg_e1e9070c84" formatted="false">"タップして停止"</string>
+    <string name="msg_d9c64e0064" formatted="false">"タップして接続"</string>
+    <string name="msg_ca3d376341" formatted="false">"サブスク有効期限： "</string>
+    <string name="msg_96003496cb" formatted="false">"有効期限は不明です"</string>
+    <string name="msg_8c6206e35a" formatted="false">"VPN を切断"</string>
+    <string name="msg_7eed7135eb" formatted="false">"VPN に接続"</string>
+    <string name="msg_a9553f13ed" formatted="false">"サーバーが応答しませんでした"</string>
+    <string name="msg_b8696961cc" formatted="false">"自動切り替え"</string>
+    <string name="msg_4ecfcffd55" formatted="false">"Ping を更新"</string>
+    <string name="msg_3711716b26" formatted="false">"手動選択"</string>
+    <string name="msg_7a06e90b46" formatted="false">"ネットワーク設定を使用"</string>
+    <string name="msg_51609a0433" formatted="false">"Wi-Fi サーバー"</string>
+    <string name="msg_92395d9a9d" formatted="false">"モバイル用サーバー"</string>
+    <string name="msg_f6dab074d7" formatted="false">"戻る"</string>
+    <string name="msg_65ba0faca3" formatted="false">"すべてのサブスク"</string>
+    <string name="msg_aa409ed202" formatted="false">"接続を確認中…"</string>
+    <string name="msg_dd1d4309cd" formatted="false">"サーバー利用不可： "</string>
+    <string name="msg_b28591b34c" formatted="false">"すでに確認が進行中です"</string>
+    <string name="msg_1114ae9044" formatted="false">"確認中…"</string>
+    <string name="msg_ab9e23850b" formatted="false">"約 10 MB · VPN 経由"</string>
+    <string name="msg_69e5535d66" formatted="false">"結果はまだありません"</string>
+    <string name="msg_03297c6b07" formatted="false">"テスト開始"</string>
+    <string name="msg_a554b1e8fe" formatted="false">"速度テスト"</string>
+    <string name="msg_02bef41074" formatted="false">"↓ %.1f Mbps\n↑ %.1f Mbps\n遅延：%s ms"</string>
+    <string name="msg_9f9495ccb9" formatted="false">"先に VPN に接続してください"</string>
+    <string name="msg_40d44a7caa" formatted="false">"現在の確認が終わるまでお待ちください"</string>
+    <string name="msg_790a8a4ea0" formatted="false">"ダウンロードとアップロードを測定中…"</string>
+    <string name="msg_f6346b37fe" formatted="false">"再テスト"</string>
+    <string name="msg_1cbfac57b9" formatted="false">"テスト未完了： "</string>
+    <string name="msg_9a01e7088d" formatted="false">"%.1f GB"</string>
+    <string name="msg_188fea6cd2" formatted="false">"サブスクはまだありません"</string>
+    <string name="msg_2c285a5142" formatted="false">"期限： "</string>
+    <string name="msg_a7989c9ed0" formatted="false">"有効期限なし"</string>
+    <string name="msg_504d29a40f" formatted="false">"期限切れ"</string>
+    <string name="msg_2defa5c348" formatted="false">"サブスクを編集： "</string>
+    <string name="msg_ff652348e8" formatted="false">"サブスクを更新"</string>
+    <string name="msg_c9eee72114" formatted="false">"サブスクのサーバー"</string>
+    <string name="msg_4ff9e9046e" formatted="false">"サブスクを更新中…"</string>
+    <string name="msg_3608b5e904" formatted="false">"サブスクを更新しました"</string>
+    <string name="msg_a8c04b7022" formatted="false">"以前のサーバーは保持されています。 "</string>
+    <string name="msg_88b4efa32d" formatted="false">"ルールを削除しますか？"</string>
+    <string name="msg_86ea33aef5" formatted="false">"削除"</string>
+    <string name="msg_9c96d4dc3e" formatted="false">"アプリのパッケージ名を入力してください"</string>
+    <string name="msg_1c97ba2b80" formatted="false">"サブネットを入力してください。例：192.168.0.0/16"</string>
+    <string name="msg_df8cdfc609" formatted="false">"https:// やパスを含めずにドメインを入力してください"</string>
+    <string name="msg_875be13421" formatted="false">"アプリ名またはパッケージ"</string>
+    <string name="msg_f51f551f4b" formatted="false">"システムサービス"</string>
+    <string name="msg_cab718e280" formatted="false">"システムサービスを表示"</string>
+    <string name="msg_e5834c4ca1" formatted="false">"アプリを読み込み中…"</string>
+    <string name="msg_1e1b70b17c" formatted="false">"結果なし"</string>
+    <string name="msg_7819ea82b0" formatted="false">"アプリを選択"</string>
+    <string name="msg_8c5bfb9222" formatted="false">"アプリを読み込めませんでした"</string>
+    <string name="msg_aa4986268e" formatted="false">"サブスクを削除"</string>
+    <string name="msg_3de49828e8" formatted="false">"名前"</string>
+    <string name="msg_11b385895c" formatted="false">"マイ VPN"</string>
+    <string name="msg_046e475e5a" formatted="false">"リンク"</string>
+    <string name="msg_a44800a12f" formatted="false">"リンクをコピー"</string>
+    <string name="msg_a48859c609" formatted="false">"リンクを編集"</string>
+    <string name="msg_ccb6cb6834" formatted="false">"サブスクのリンク"</string>
+    <string name="msg_6fcdbbe8f7" formatted="false">"自動更新"</string>
+    <string name="msg_4e401a2e7b" formatted="false">"サブスクを自動更新"</string>
+    <string name="msg_9066ea9564" formatted="false">"VPN 接続中は毎時サブスクを確認します。"</string>
+    <string name="msg_4864057d62" formatted="false">"保存"</string>
+    <string name="msg_49261ec6a4" formatted="false">"リンクをコピーしました"</string>
+    <string name="msg_f18132742a" formatted="false">"リンク編集を完了"</string>
+    <string name="msg_0af444c6af" formatted="false">"名前を入力してください"</string>
+    <string name="msg_6c6d266c63" formatted="false">"サブスクは削除済みです"</string>
+    <string name="msg_6d039299cd" formatted="false">"サブスクを削除しますか？"</string>
+    <string name="msg_06b9e865d0" formatted="false">"‹  すべての設定"</string>
+    <string name="msg_7f2be1ba3d" formatted="false">"広告ブロック"</string>
+    <string name="msg_85dd4d46ca" formatted="false">"オン"</string>
+    <string name="msg_2106134f75" formatted="false">"オフ"</string>
+    <string name="msg_d206f1bed0" formatted="false">"外観"</string>
+    <string name="msg_ed3f0e507a" formatted="false">"言語"</string>
+    <string name="msg_79e350f743" formatted="false">"接続"</string>
+    <string name="msg_c7e6bf5234" formatted="false">"通知とアイコン"</string>
+    <string name="msg_d7907f4d43" formatted="false">"詳細"</string>
+    <string name="msg_9ba1e22ac3" formatted="false">"診断"</string>
+    <string name="msg_a84ab2656e" formatted="false">"Vezdehod · バージョン "</string>
+    <string name="msg_6521dc9632" formatted="false">"接続設定を変更しました"</string>
+    <string name="msg_7f59da61ba" formatted="false">"外観設定を変更しました"</string>
+    <string name="msg_41a17b3bad" formatted="false">"サイトが動作しなくなった場合は、例外に追加するかフィルターを無効にしてください。"</string>
+    <string name="msg_d6d24ec981" formatted="false">"広告とトラッカー"</string>
+    <string name="msg_85e3709119" formatted="false">"VPN 接続中に機能します。動画内の広告は削除しません。"</string>
+    <string name="msg_ea65534c79" formatted="false">"例外"</string>
+    <string name="msg_f82a821941" formatted="false">"なし"</string>
+    <string name="msg_449885f5fe" formatted="false">" ドメイン"</string>
+    <string name="msg_0f97e2780c" formatted="false">"経路を変えずにドメインとそのサブドメインを許可します。"</string>
+    <string name="msg_2923b8f670" formatted="false">"1 行に 1 ドメイン"</string>
+    <string name="msg_494d7c7be7" formatted="false">"ブロックの例外"</string>
+    <string name="msg_35d57a900e" formatted="false">"端末の言語"</string>
+    <string name="msg_553c45f1b8" formatted="false">"テーマ"</string>
+    <string name="msg_bd16b23470" formatted="false">"ダーク"</string>
+    <string name="msg_8080010c5e" formatted="false">"ライト"</string>
+    <string name="msg_f0a22d9d1a" formatted="false">"システム設定"</string>
+    <string name="msg_70f0229afd" formatted="false">"アクセントカラー"</string>
+    <string name="msg_9f1325f197" formatted="false">"ゴールド"</string>
+    <string name="msg_891c5e9e76" formatted="false">"ミント"</string>
+    <string name="msg_0deebc3a96" formatted="false">"ブルー"</string>
+    <string name="msg_a4617199a8" formatted="false">"表示サイズ"</string>
+    <string name="msg_4886f1af13" formatted="false">"コンパクト · 90%"</string>
+    <string name="msg_e7e285a436" formatted="false">"標準 · 100%"</string>
+    <string name="msg_52bac55f34" formatted="false">"大 · 110%"</string>
+    <string name="msg_d8fcb99153" formatted="false">"特大 · 120%"</string>
+    <string name="msg_11bb1b11c0" formatted="false">"ホーム画面の表示"</string>
+    <string name="msg_220afdba73" formatted="false">"Ping"</string>
+    <string name="msg_aff5818940" formatted="false">"サブスクの期限"</string>
+    <string name="msg_f56353b7eb" formatted="false">"アイコンと通知"</string>
+    <string name="msg_64776d5102" formatted="false">"通知パネル"</string>
+    <string name="msg_6ba4db3033" formatted="false">"通知を非表示にしても VPN は切断されません。"</string>
+    <string name="msg_4e73aa66da" formatted="false">"通知を表示中"</string>
+    <string name="msg_f1d3c27f2c" formatted="false">"通知は非表示"</string>
+    <string name="msg_8960ddc30e" formatted="false">"設定する"</string>
+    <string name="msg_be99ac8f13" formatted="false">"ステータスバー"</string>
+    <string name="msg_e57f3249b4" formatted="false">"このアイコンは Android が管理します。アプリから変更や移動はできません。"</string>
+    <string name="msg_136e1c4c3c" formatted="false">"Android が管理"</string>
+    <string name="msg_9d22ff847e" formatted="false">"メインサーバーに障害が起きたら予備に切り替え、復旧後に戻ります。"</string>
+    <string name="msg_fcb4b47313" formatted="false">"端末と一緒に起動"</string>
+    <string name="msg_2be12d2d73" formatted="false">"最初のロック解除後に VPN が起動します。"</string>
+    <string name="msg_a8e2cfb793" formatted="false">"再接続"</string>
+    <string name="msg_448e226084" formatted="false">"再試行までの時間"</string>
+    <string name="msg_8c21ba2d9d" formatted="false">"5 秒"</string>
+    <string name="msg_8a45d0d1ad" formatted="false">"15 秒"</string>
+    <string name="msg_d84f514695" formatted="false">"30 秒"</string>
+    <string name="msg_7db1478f63" formatted="false">"60 秒"</string>
+    <string name="msg_e83d7ce312" formatted="false">"Wi-Fi の予備"</string>
+    <string name="msg_fbf3611c53" formatted="false">"モバイルの予備"</string>
+    <string name="msg_ca20e76c0c" formatted="false">"バックグラウンド動作"</string>
+    <string name="msg_d26aec38b1" formatted="false">"バッテリーと自動起動"</string>
+    <string name="msg_a9d9fc2d46" formatted="false">"常時接続 VPN"</string>
+    <string name="msg_8a6ceef063" formatted="false">"Android 設定"</string>
+    <string name="msg_2d8f7570e1" formatted="false">"使用しない"</string>
+    <string name="msg_c8243322dc" formatted="false">"接続時"</string>
+    <string name="msg_e0cf01e43c" formatted="false">"IP モード"</string>
+    <string name="msg_e6da72edd6" formatted="false">"自動 · "</string>
+    <string name="msg_5b9e24bda9" formatted="false">"IPv4 のみ"</string>
+    <string name="msg_9be84e1d9f" formatted="false">"ネットワークが対応している場合、IPv6 は自動的に有効になります。"</string>
+    <string name="msg_8f9bf25ca6" formatted="false">"VPN の DNS"</string>
+    <string name="msg_5f1326b514" formatted="false">"この DNS は VPN を使用します。直接接続には現在のネットワークの DNS を使います。"</string>
+    <string name="msg_0857ba97ab" formatted="false">" バイト"</string>
+    <string name="msg_466019b718" formatted="false">"通常は 1400。ダウンロードが止まる場合は 1280 を試してください。"</string>
+    <string name="msg_7e47a7ce78" formatted="false">"ネットワークスタック"</string>
+    <string name="msg_eca17171d2" formatted="false">"システム"</string>
+    <string name="msg_d155047e55" formatted="false">"混合"</string>
+    <string name="msg_d4dbd88958" formatted="false">"gVisor を推奨します。他のモードは互換性の問題がある場合に使用します。"</string>
+    <string name="msg_e04a016600" formatted="false">"ネットワーク設定をリセット"</string>
+    <string name="msg_f1b8fc3ba0" formatted="false">"ネットワーク設定をリセットしますか？"</string>
+    <string name="msg_478ced019a" formatted="false">"Cloudflare DNS · 自動 IP · MTU 1400 · gVisor。他の設定は保持されます。"</string>
+    <string name="msg_058f162d29" formatted="false">"リセット"</string>
+    <string name="msg_6a38870f87" formatted="false">"Cloudflare · 標準"</string>
+    <string name="msg_8fb98f9cdd" formatted="false">"1400 · 標準"</string>
+    <string name="msg_b826985870" formatted="false">"1280 · 小さめ"</string>
+    <string name="msg_5f233b0c2d" formatted="false">"1280～1500 の整数を入力してください"</string>
+    <string name="msg_989e4afb04" formatted="false">"VPN の出口のみを確認します。直接接続の経路は別途確認が必要です。"</string>
+    <string name="msg_2471b6e04f" formatted="false">"トンネル： "</string>
+    <string name="msg_2eabbcfdaa" formatted="false">"\nネットワーク： "</string>
+    <string name="msg_2afa58988e" formatted="false">"到達性： "</string>
+    <string name="msg_4a198cee74" formatted="false">"まだ確認していません"</string>
+    <string name="msg_19e7fa6964" formatted="false">"接続と IP を確認"</string>
+    <string name="msg_1fa4998331" formatted="false">"HTTPS と公開 IP を確認中…"</string>
+    <string name="msg_2ddce0385c" formatted="false">"出口 IP： "</string>
+    <string name="msg_5a2f918d96" formatted="false">"\nHTTPS：利用可能\n遅延： "</string>
+    <string name="msg_32d477ea64" formatted="false">"確認失敗： "</string>
+    <string name="msg_d32a398cf9" formatted="false">"速度を測定"</string>
+    <string name="msg_57013f6956" formatted="false">"約 10 MB の通信量"</string>
+    <string name="msg_f2ee635aaa" formatted="false">"イベントログ"</string>
+    <string name="msg_67ade741ae" formatted="false">"ログ"</string>
+    <string name="msg_049d00ab33" formatted="false">"ログを消去"</string>
+    <string name="msg_46a01e5fdc" formatted="false">"ログを消去しました"</string>
+    <string name="msg_cde2c9f8b9" formatted="false">"未対応の設定を使用するサーバーがあります。サブスクは変更されていません。"</string>
+    <string name="msg_a734112137" formatted="false">"サーバー検証がタイムアウトしました。サブスクを再追加してください。"</string>
+    <string name="msg_3d53cd3ab3" formatted="false">"未対応の Xray 設定です。サブスクは変更されていません。"</string>
+    <string name="msg_46f4fe51cc" formatted="false">"サブスクを追加"</string>
+    <string name="msg_f91f5592a9" formatted="false">"QR コード"</string>
+    <string name="msg_19a5f8e5b8" formatted="false">"クリップボードから"</string>
+    <string name="msg_a30b87ef8c" formatted="false">"クリップボードは空です"</string>
+    <string name="msg_2a1dd82994" formatted="false">"クリップボードにリンクがありません"</string>
+    <string name="msg_bb84bedbe2" formatted="false">"リンクを入力"</string>
+    <string name="msg_3f75368ab9" formatted="false">"続行"</string>
+    <string name="msg_9e506acb19" formatted="false">"再試行"</string>
+    <string name="msg_92ce2819af" formatted="false">"サーバー： "</string>
+    <string name="msg_06bb7e72a9" formatted="false">"スキップした項目： "</string>
+    <string name="msg_44548e3dc4" formatted="false">"スキップした項目"</string>
+    <string name="msg_fb701daed8" formatted="false">"サブスクを読み取れませんでした"</string>
+    <string name="msg_789841320c" formatted="false">"‹  ルール"</string>
+    <string name="msg_b559f9f1ca" formatted="false">"新しいルール"</string>
+    <string name="msg_97a3265a4a" formatted="false">"ルールを編集"</string>
+    <string name="msg_56970d69fd" formatted="false">"IP アドレスとプレフィックス"</string>
+    <string name="msg_67787241c9" formatted="false">"サイトのアドレス"</string>
+    <string name="msg_31654bd668" formatted="false">"下からアプリを選択してください"</string>
+    <string name="msg_72f953a4f1" formatted="false">"サブドメインを含める"</string>
+    <string name="msg_b765f32584" formatted="false">"経路"</string>
+    <string name="msg_190ba6d582" formatted="false">"適用先"</string>
+    <string name="msg_b03361f6c0" formatted="false">"Wi-Fi とモバイル"</string>
+    <string name="msg_7a1fc2cbc5" formatted="false">"名前 · 任意"</string>
+    <string name="msg_09d340f276" formatted="false">"識別用"</string>
+    <string name="msg_e4d9463d19" formatted="false">"ルールを削除"</string>
+    <string name="msg_58e849be29" formatted="false">"Wi-Fi のみ"</string>
+    <string name="msg_0288127e28" formatted="false">"モバイルのみ"</string>
+    <string name="msg_2bc1c34c0c" formatted="false">"ルールは削除済みです"</string>
+    <string name="msg_9b5a1ac56d" formatted="false">"‹  QR コード"</string>
+    <string name="msg_4198cfd7ad" formatted="false">"スキャナーを閉じる"</string>
+    <string name="msg_d16af433b5" formatted="false">"カメラを QR コードに向けてください"</string>
+    <string name="msg_c01eaf3033" formatted="false">"画像を開く"</string>
+    <string name="msg_6daead7fcc" formatted="false">"カメラの許可がありません。画像を開くこともできます。"</string>
+    <string name="msg_c5f4e5cd89" formatted="false">"カメラを利用できません。画像を開いてください。"</string>
+    <string name="msg_1821a8f4a3" formatted="false">"カメラを起動できませんでした"</string>
+    <string name="msg_1c313fd862" formatted="false">"カメラを利用できません"</string>
+    <string name="msg_2291f43f3b" formatted="false">"QR コードを読み取り中…"</string>
+    <string name="msg_9b811806c2" formatted="false">"QR コードが見つかりません。別の画像を選んでください。"</string>
+    <string name="msg_3fed10dcd2" formatted="false">"形式 "</string>
+    <string name="msg_0ed6fd3f45" formatted="false">"サーバーアドレスがありません"</string>
+    <string name="msg_6fc143271e" formatted="false">"サブスクには HTTPS リンクが必要です"</string>
+    <string name="msg_81f0596a4a" formatted="false">"サブスク更新：HTTP "</string>
+    <string name="msg_7344ead1f2" formatted="false">"サブスクのサイズが大きすぎます"</string>
+    <string name="msg_8478b68ef9" formatted="false">"更新に未対応の項目があります。以前のサーバーは保持されています。"</string>
+    <string name="msg_e07f86b4c4" formatted="false">"https:// やパスを含めず、1 行に 1 ドメインを入力してください"</string>
+    <string name="msg_3baad0b2cf" formatted="false">"例外は最大 200 件です"</string>
+    <string name="msg_04926ac15c" formatted="false">"電源投入後に自動起動"</string>
+    <string name="msg_04d374e07a" formatted="false">"自動起動に失敗しました。アプリを開いてください"</string>
+    <string name="subscription_used" formatted="false">"使用量：%s"</string>
+    <string name="subscription_updated" formatted="false">"更新：%s"</string>
+    <string name="ping_no_response" formatted="false">"応答なし"</string>
+    <string name="connection_unavailable" formatted="false">"このサーバー経由では接続できません。別のサーバーを選んでください。"</string>
+    <string name="connection_choose" formatted="false">"別のサーバー"</string>
+    <string name="update_title" formatted="false">"更新"</string>
+    <string name="update_auto" formatted="false">"自動で確認"</string>
+    <string name="update_check" formatted="false">"今すぐ確認"</string>
+    <string name="update_latest" formatted="false">"最新バージョンです"</string>
+    <string name="update_available" formatted="false">"更新があります"</string>
+    <string name="update_check_failed" formatted="false">"更新を確認できませんでした。後でもう一度お試しください。"</string>
+    <string name="update_not_configured" formatted="false">"アプリの公開後に更新を確認できます"</string>
+    <string name="update_download" formatted="false">"更新をダウンロード"</string>
+    <string name="update_install" formatted="false">"更新をインストール"</string>
+    <string name="update_invalid" formatted="false">"APKの検証に失敗しました。更新を再ダウンロードしてください。"</string>
+    <string name="update_permission" formatted="false">"Vezdehodによる更新のインストールを許可し、もう一度インストールを押してください。"</string>
+    <string name="update_install_failed" formatted="false">"Androidインストーラーを開けませんでした"</string>
+    <string name="update_verifying" formatted="false">"APKを検証中…"</string>
+    <string name="update_download_failed" formatted="false">"ダウンロードに失敗しました。再試行してください。"</string>
+    <string name="update_waiting" formatted="false">"ネットワークを待機中…"</string>
+    <string name="update_notes" formatted="false">"更新内容"</string>
+    <string name="update_checking" formatted="false">"更新を確認中…"</string>
+    <string name="update_install_hint" formatted="false">"インストールによりアプリが再起動し、VPNが切断されます。"</string>
+</resources>

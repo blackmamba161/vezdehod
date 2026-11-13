@@ -1,0 +1,376 @@
+MTU: 1280–1500
+Intervalo: 5–120 segundos
+Introduce una dirección DNS-over-HTTPS: https://…
+Aún no hay eventos
+No se pudo leer el registro
+Añade una suscripción y selecciona un servidor
+El servidor seleccionado ya no está en la suscripción. Elige otro en Redes.
+No se pudo asignar un puerto VPN local
+Tipo de regla desconocido
+Servidor de la regla no disponible: 
+ID de servidor duplicado
+Resto del tráfico
+Ruta para sitios y aplicaciones que no coinciden con ninguna regla activa.
+Directo
+\nRed móvil: 
+Selección manual: 
+Por VPN
+Bloquear
+Servidor específico
+Para cualquier red
+Cancelar
+, seleccionado
+No se pudo eliminar el archivo importado
+No se pudo abrir la configuración segura. Tus datos se han conservado.
+La suscripción ha cambiado. Actualízala de nuevo.
+Esta suscripción ya está añadida
+Primero elige otro servidor para las redes y las reglas
+Una regla utiliza este servidor
+Enlaces
+No hay servidores compatibles. 
+La suscripción no contiene servidores
+Demasiadas capas de codificación
+La suscripción supera los 4 MB
+El servidor devolvió una suscripción vacía
+Esto es una página web. Copia el enlace de suscripción VPN de tu proveedor.
+JSON de suscripción no válido
+No se pudo leer YAML. Revisa el archivo de suscripción.
+formato desconocido
+Línea 
+Enlace 
+Entrada 
+: formato desconocido
+Se necesita una lista de servidores o una configuración VPN
+Lista proxies no válida
+Servidor 
+Lista outbounds no válida
+Servidor
+El JSON no contiene outbounds ni proxies
+configuración no compatible o incompleta
+La suscripción supera los 512 servidores
+falta la dirección o el puerto del servidor
+protocolo 
+las cadenas de proxies aún no son compatibles
+falta la dirección del servidor
+complemento adicional o cadena de proxies
+transporte 
+ aún no es compatible con YAML
+Pega un enlace o escanea un QR
+Introduce un solo enlace sin espacios
+Enlace no válido
+Revisa la dirección de la suscripción
+Introduce un enlace de suscripción o de servidor
+Enlace incompleto
+Esenciales
+Servicios de IA
+Redes sociales
+Reglas propias
+Reglas
+Orden de las reglas
+Se aplica la primera regla que coincida. Usa las flechas para cambiar la prioridad. Toca un servicio para desplegar sus reglas.
+Preajustes
++ Regla
+Elige servicios en Preajustes
+Rutas mixtas
+Desactivado
+ de 
+ activas
+Contraer 
+Expandir 
+Subir: 
+Bajar: 
+Servicio: 
+reglas
+regla
+reglas
+Aplicación
+Sitio web
+Editar regla: 
+Subir regla: 
+Bajar regla: 
+Regla: 
+Reglas predefinidas
+Más tarde
+Aplicar
+Seleccionar todo
+ · añadido
+Aplicar · 
+Reglas añadidas: 
+Sin comprobar
+Estado de VPN
+Conectando…
+Vezdehod
+Desconectar
+Ha cambiado la compatibilidad IPv6 de la red
+Red cambiada: 
+móvil
+Sin red
+Esperando red
+Red móvil
+No se pudo iniciar la conexión Xray
+Túnel iniciado
+Error del túnel
+Error del túnel; consulta Inicio
+Error de conexión · abre la aplicación
+[dirección oculta]
+[clave oculta]
+VPN detenida
+Conexión Xray detenida
+Reconectando
+HTTPS disponible
+Falló la comprobación HTTPS
+Se ha vuelto al servidor principal
+Servidor de respaldo seleccionado
+Primero conecta la VPN
+La conexión ha cambiado; compruébala de nuevo
+HTTPS e IP de salida verificados
+Comprobación fallida
+Falló la comprobación HTTPS / IP
+La conexión ha cambiado
+La conexión ha cambiado; vuelve a medir
+Se necesita el permiso VPN de Android
+Android no pudo crear la VPN
+No se pudo proteger el socket VPN
+Cerrar
+Añadir
+Ayuda: 
+Seleccionar servidor
+Suscripción
+Auto
+Manual
+Cambio automático de red
+Ajustes
+Error de pantalla: 
+Inicio
+Servidores
+Redes
+Suscripciones
+VPN desactivada
+Conectar según tus reglas
+Ping 
+ ms
+Automático
+ añadidos
+Conectado
+No se pudo conectar
+ · según tus reglas
+Toca para detener
+Toca para conectar
+Suscripción hasta 
+Fecha de vencimiento no disponible
+Desconectar VPN
+Conectar VPN
+El servidor no respondió
+Cambiar automáticamente
+Actualizar ping
+Selección manual
+Usar ajustes de red
+Servidor Wi-Fi
+Servidor móvil
+Atrás
+Todas las suscripciones
+Comprobando conexión…
+Servidor no disponible: 
+Ya hay una comprobación en curso
+Comprobando…
+≈10 MB · por VPN
+Aún no hay resultados
+Iniciar prueba
+Prueba de velocidad
+↓ %.1f Mbps\n↑ %.1f Mbps\nLatencia: %s ms
+Primero conecta la VPN
+Espera a que termine la comprobación
+Midiendo descarga y subida…
+Repetir prueba
+Prueba incompleta: 
+%.1f GB
+Aún no hay suscripciones
+Hasta 
+Sin fecha de vencimiento
+Caducada
+Editar suscripción: 
+Actualizar suscripción
+Servidores de la suscripción
+Actualizando suscripción…
+Suscripción actualizada
+Se han conservado los servidores anteriores. 
+¿Eliminar regla?
+Eliminar
+Introduce el nombre de paquete de la aplicación
+Introduce una subred, por ejemplo 192.168.0.0/16
+Introduce un dominio sin https:// ni ruta
+Nombre o paquete de la aplicación
+Servicios del sistema
+Mostrar servicios del sistema
+Cargando aplicaciones…
+Sin resultados
+Seleccionar aplicación
+No se pudieron cargar las aplicaciones
+Eliminar suscripción
+Nombre
+Mi VPN
+Enlace
+Copiar enlace
+Editar enlace
+Enlace de suscripción
+Actualización automática
+Actualizar suscripción automáticamente
+Comprueba la suscripción cada hora mientras la VPN está activa.
+Guardar
+Enlace copiado
+Terminar de editar el enlace
+Introduce un nombre
+La suscripción ya se ha eliminado
+¿Eliminar suscripción?
+‹  Todos los ajustes
+Bloqueo de anuncios
+Activado
+Desactivado
+Apariencia
+Idioma
+Conexión
+Notificaciones e icono
+Avanzado
+Diagnóstico
+Vezdehod · versión 
+Ajustes de conexión modificados
+Ajustes de apariencia modificados
+Si un sitio deja de funcionar, añade una excepción o desactiva el filtro.
+Anuncios y rastreadores
+Funciona mientras la VPN está activa. No elimina anuncios dentro de vídeos.
+Excepciones
+Ninguna
+ dominios
+Permite el dominio y sus subdominios sin cambiar la ruta.
+Un dominio por línea
+Excepciones al bloqueo
+Idioma del dispositivo
+Tema
+Oscuro
+Claro
+Del sistema
+Color de acento
+Dorado
+Menta
+Azul
+Tamaño de interfaz
+Compacto · 90%
+Normal · 100%
+Grande · 110%
+Muy grande · 120%
+En Inicio
+Ping
+Vencimiento de suscripción
+Icono y notificación
+Panel de notificaciones
+Ocultar la notificación no desconecta la VPN.
+Notificación visible
+Notificación oculta
+Configurar
+Barra de estado
+Android controla este icono. La aplicación no puede cambiarlo ni moverlo.
+Controlado por Android
+Cambia al respaldo si falla el servidor principal y vuelve cuando se recupera.
+Iniciar con el teléfono
+La VPN se inicia después del primer desbloqueo.
+Reconectar
+Reintentar después de
+5 segundos
+15 segundos
+30 segundos
+60 segundos
+Respaldo Wi-Fi
+Respaldo móvil
+Actividad en segundo plano
+Batería e inicio automático
+VPN siempre activa
+Ajustes de Android
+No usar
+al conectar
+Modo IP
+Auto · 
+Solo IPv4
+IPv6 se activa automáticamente cuando la red lo admite.
+DNS de VPN
+Este DNS usa la VPN. Las rutas directas usan el DNS de la red actual.
+ bytes
+Normalmente 1400. Prueba 1280 si las descargas se bloquean.
+Pila de red
+Sistema
+Mixta
+Mantén gVisor. Los otros modos son para problemas de compatibilidad.
+Restablecer ajustes de red
+¿Restablecer ajustes de red?
+DNS Cloudflare · IP automático · MTU 1400 · gVisor. Se conservan los demás ajustes.
+Restablecer
+Cloudflare · predeterminado
+1400 · estándar
+1280 · menor
+Introduce un número entero entre 1280 y 1500
+Solo comprueba la salida VPN. Las rutas directas requieren otra comprobación.
+Túnel: 
+\nRed: 
+Accesibilidad: 
+Aún sin comprobar
+Comprobar conexión e IP
+Comprobando HTTPS e IP pública…
+IP de salida: 
+\nHTTPS: disponible\nLatencia: 
+Comprobación fallida: 
+Medir velocidad
+Unos 10 MB de tráfico
+Registro de eventos
+Registro
+Borrar registro
+Registro borrado
+Un servidor usa ajustes no compatibles. La suscripción no se ha modificado.
+La validación del servidor tardó demasiado. Vuelve a añadir la suscripción.
+Ajustes Xray no compatibles. La suscripción no se ha modificado.
+Añadir suscripción
+Código QR
+Desde el portapapeles
+El portapapeles está vacío
+No hay ningún enlace en el portapapeles
+Introducir enlace
+Continuar
+Reintentar
+Servidores: 
+Entradas omitidas: 
+Entradas omitidas
+No se pudo leer la suscripción
+‹  Reglas
+Nueva regla
+Editar regla
+Dirección IP y prefijo
+Dirección del sitio
+Selecciona una aplicación abajo
+Incluir subdominios
+Ruta
+Aplicar en
+Wi-Fi y red móvil
+Nombre · opcional
+Para identificarla
+Eliminar regla
+Solo Wi-Fi
+Solo red móvil
+La regla ya se ha eliminado
+‹  Código QR
+Cerrar escáner
+Apunta la cámara al código QR
+Abrir imagen
+Permiso de cámara denegado. Puedes abrir una imagen.
+Cámara no disponible. Abre una imagen.
+No se pudo iniciar la cámara
+Cámara no disponible
+Leyendo código QR…
+No se encontró ningún QR. Elige otra imagen.
+formato 
+falta la dirección del servidor
+La suscripción requiere un enlace HTTPS
+Actualización de suscripción: HTTP 
+La suscripción es demasiado grande
+La actualización contiene entradas no compatibles. Se conservan los servidores anteriores.
+Introduce un dominio por línea, sin https:// ni ruta
+Máximo 200 excepciones
+Inicio automático tras arrancar
+Falló el inicio automático; abre la aplicación

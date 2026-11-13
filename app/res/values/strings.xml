@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msg_681ba374e5" formatted="false">"MTU: 1280–1500"</string>
+    <string name="msg_e13fa5e7d6" formatted="false">"Interval: 5–120 seconds"</string>
+    <string name="msg_8a43e3fd24" formatted="false">"Enter a DNS-over-HTTPS address: https://…"</string>
+    <string name="msg_33f32d875b" formatted="false">"No events yet"</string>
+    <string name="msg_dd624657c4" formatted="false">"Could not read the log"</string>
+    <string name="msg_85973145cb" formatted="false">"Add a subscription and select a server"</string>
+    <string name="msg_fa9ffb3f84" formatted="false">"The selected server is no longer in the subscription. Select another in Networks."</string>
+    <string name="msg_27a403dd36" formatted="false">"Could not allocate a local VPN port"</string>
+    <string name="msg_2846df10fa" formatted="false">"Unknown rule type"</string>
+    <string name="msg_4dfebb89a6" formatted="false">"Rule server unavailable: "</string>
+    <string name="msg_d721e92378" formatted="false">"Duplicate server ID"</string>
+    <string name="msg_50e1cb1272" formatted="false">"Other traffic"</string>
+    <string name="msg_938ad66f65" formatted="false">"Route for sites and apps that do not match an enabled rule."</string>
+    <string name="msg_1667336ad3" formatted="false">"Direct"</string>
+    <string name="msg_e26ed24f9e" formatted="false">"\nMobile: "</string>
+    <string name="msg_7be14a7ba6" formatted="false">"Manual selection: "</string>
+    <string name="msg_3c0423bc77" formatted="false">"Via VPN"</string>
+    <string name="msg_e481dedaf2" formatted="false">"Block"</string>
+    <string name="msg_0e4d55ab7c" formatted="false">"Specific server"</string>
+    <string name="msg_8f67e4d13d" formatted="false">"For any network"</string>
+    <string name="msg_0ec753be8d" formatted="false">"Cancel"</string>
+    <string name="msg_dd6b0e1e55" formatted="false">", selected"</string>
+    <string name="msg_45ec755630" formatted="false">"Could not delete the import file"</string>
+    <string name="msg_b63da52997" formatted="false">"Could not open secure settings. Your data is preserved."</string>
+    <string name="msg_8a78d62250" formatted="false">"The subscription has changed. Refresh again."</string>
+    <string name="msg_1a69e59ba3" formatted="false">"This subscription is already added"</string>
+    <string name="msg_40f8272534" formatted="false">"Choose another server for networks and rules first"</string>
+    <string name="msg_d2ff3b0e16" formatted="false">"A rule uses this server"</string>
+    <string name="msg_e8d9cd7b4e" formatted="false">"Links"</string>
+    <string name="msg_9794aef624" formatted="false">"No compatible servers. "</string>
+    <string name="msg_e7e42a2acf" formatted="false">"No servers in the subscription"</string>
+    <string name="msg_999986e004" formatted="false">"Too many encoding layers"</string>
+    <string name="msg_6c21351bc9" formatted="false">"Subscription exceeds 4 MB"</string>
+    <string name="msg_6153e34d0c" formatted="false">"The server returned an empty subscription"</string>
+    <string name="msg_0432186247" formatted="false">"This is a web page. Copy your provider’s VPN subscription link."</string>
+    <string name="msg_3c0e1e7d43" formatted="false">"Invalid subscription JSON"</string>
+    <string name="msg_c14abc64af" formatted="false">"Could not read YAML. Check the subscription file."</string>
+    <string name="msg_79be6ca6bc" formatted="false">"unknown format"</string>
+    <string name="msg_30d9e094e4" formatted="false">"Line "</string>
+    <string name="msg_54d59eb38a" formatted="false">"Link "</string>
+    <string name="msg_8eeacd07c0" formatted="false">"Entry "</string>
+    <string name="msg_f702b574da" formatted="false">": unknown format"</string>
+    <string name="msg_e18fd43031" formatted="false">"A server list or VPN configuration is required"</string>
+    <string name="msg_48db32c372" formatted="false">"Invalid proxies list"</string>
+    <string name="msg_1fe1adcef3" formatted="false">"Server "</string>
+    <string name="msg_4505a9f9d0" formatted="false">"Invalid outbounds list"</string>
+    <string name="msg_917e05143a" formatted="false">"Server"</string>
+    <string name="msg_e271fb3ca1" formatted="false">"JSON has no outbounds or proxies"</string>
+    <string name="msg_3d734741a7" formatted="false">"unsupported or incomplete settings"</string>
+    <string name="msg_7131aafc7b" formatted="false">"Subscription exceeds 512 servers"</string>
+    <string name="msg_210439cffd" formatted="false">"server address or port is missing"</string>
+    <string name="msg_6f8352205b" formatted="false">"protocol "</string>
+    <string name="msg_b329e9ab1b" formatted="false">"proxy chains are not supported yet"</string>
+    <string name="msg_67acde8ec5" formatted="false">"server address is missing"</string>
+    <string name="msg_09e323f866" formatted="false">"extra plugin or proxy chain"</string>
+    <string name="msg_0203e5e1bf" formatted="false">"transport "</string>
+    <string name="msg_aaecad4a8c" formatted="false">" is not supported in YAML yet"</string>
+    <string name="msg_40a747d563" formatted="false">"Paste a link or scan a QR code"</string>
+    <string name="msg_680a8e4f43" formatted="false">"Enter one link without spaces"</string>
+    <string name="msg_102b915c5e" formatted="false">"Invalid link"</string>
+    <string name="msg_2a16f698ef" formatted="false">"Check the subscription address"</string>
+    <string name="msg_c01d472ca8" formatted="false">"Enter a subscription or server link"</string>
+    <string name="msg_cacc66427a" formatted="false">"Incomplete link"</string>
+    <string name="msg_eee2285ba1" formatted="false">"Essentials"</string>
+    <string name="msg_16dacca18e" formatted="false">"AI services"</string>
+    <string name="msg_65ca123b53" formatted="false">"Social"</string>
+    <string name="msg_f72ae77771" formatted="false">"Custom rules"</string>
+    <string name="msg_667d8b44a6" formatted="false">"Rules"</string>
+    <string name="msg_9e572ab9c6" formatted="false">"Rule order"</string>
+    <string name="msg_02580e2fda" formatted="false">"The first matching rule applies. Use arrows to change priority. Tap a service to expand its rules."</string>
+    <string name="msg_9276259877" formatted="false">"Presets"</string>
+    <string name="msg_fc7987118c" formatted="false">"+ Rule"</string>
+    <string name="msg_dc9a84c4a4" formatted="false">"Choose services in Presets"</string>
+    <string name="msg_8840608925" formatted="false">"Mixed routes"</string>
+    <string name="msg_d934aed196" formatted="false">"Off"</string>
+    <string name="msg_6ce4fa393d" formatted="false">" of "</string>
+    <string name="msg_4cc948fff2" formatted="false">" on"</string>
+    <string name="msg_26e42bb274" formatted="false">"Collapse "</string>
+    <string name="msg_dcfb1b173b" formatted="false">"Expand "</string>
+    <string name="msg_8f769303f6" formatted="false">"Move up: "</string>
+    <string name="msg_c800355918" formatted="false">"Move down: "</string>
+    <string name="msg_9189fc3f32" formatted="false">"Service: "</string>
+    <string name="msg_3ca212f4fc" formatted="false">"rules"</string>
+    <string name="msg_5d1611f2fb" formatted="false">"rule"</string>
+    <string name="msg_69b46d600c" formatted="false">"rules"</string>
+    <string name="msg_f9886ca2bc" formatted="false">"App"</string>
+    <string name="msg_045bef7d26" formatted="false">"Website"</string>
+    <string name="msg_2681a24f90" formatted="false">"Edit rule: "</string>
+    <string name="msg_27c9c75d4a" formatted="false">"Move rule up: "</string>
+    <string name="msg_08525c9005" formatted="false">"Move rule down: "</string>
+    <string name="msg_573d59bada" formatted="false">"Rule: "</string>
+    <string name="msg_a11443ec76" formatted="false">"Rule presets"</string>
+    <string name="msg_fd042c9a3a" formatted="false">"Later"</string>
+    <string name="msg_768af67762" formatted="false">"Apply"</string>
+    <string name="msg_bdda7682fb" formatted="false">"Select all"</string>
+    <string name="msg_accc8ab2b1" formatted="false">" · added"</string>
+    <string name="msg_97013008b5" formatted="false">"Apply · "</string>
+    <string name="msg_dcd66875e7" formatted="false">"Rules added: "</string>
+    <string name="msg_5f496335d3" formatted="false">"Not checked"</string>
+    <string name="msg_643b39ad20" formatted="false">"VPN status"</string>
+    <string name="msg_40b27edf9a" formatted="false">"Connecting…"</string>
+    <string name="app_name" formatted="false">"Vezdehod"</string>
+    <string name="msg_94d07a2171" formatted="false">"Disconnect"</string>
+    <string name="msg_683f4493ca" formatted="false">"Network IPv6 support changed"</string>
+    <string name="msg_b3be92a610" formatted="false">"Network changed: "</string>
+    <string name="msg_9dfa170d49" formatted="false">"mobile"</string>
+    <string name="msg_f0a50c59fc" formatted="false">"No network"</string>
+    <string name="msg_a6ee13c1ee" formatted="false">"Waiting for network"</string>
+    <string name="msg_6679cdceb0" formatted="false">"Mobile network"</string>
+    <string name="msg_87fe71dbf1" formatted="false">"Could not start the Xray connection"</string>
+    <string name="msg_b84eb59edf" formatted="false">"Tunnel started"</string>
+    <string name="msg_8d41645d5d" formatted="false">"Tunnel error"</string>
+    <string name="msg_15da4eee64" formatted="false">"Tunnel error; see the home screen"</string>
+    <string name="msg_4ec4a7927c" formatted="false">"Connection error · open the app"</string>
+    <string name="msg_a24fd4542e" formatted="false">"[address hidden]"</string>
+    <string name="msg_1c64a8bede" formatted="false">"[key hidden]"</string>
+    <string name="msg_c0b5a5c3bd" formatted="false">"VPN stopped"</string>
+    <string name="msg_28fc95b5ac" formatted="false">"Xray connection stopped"</string>
+    <string name="msg_9b36be9334" formatted="false">"Reconnecting"</string>
+    <string name="msg_e66c7d3fa3" formatted="false">"HTTPS available"</string>
+    <string name="msg_a2ca43d182" formatted="false">"HTTPS check failed"</string>
+    <string name="msg_ec7a0b7421" formatted="false">"Switched back to primary server"</string>
+    <string name="msg_af26aede0a" formatted="false">"Backup server selected"</string>
+    <string name="msg_bc15101b19" formatted="false">"Connect the VPN first"</string>
+    <string name="msg_f96dbc41fe" formatted="false">"Connection changed — check again"</string>
+    <string name="msg_d2d78125b3" formatted="false">"HTTPS and exit IP check passed"</string>
+    <string name="msg_80f6d88155" formatted="false">"Check failed"</string>
+    <string name="msg_c050b742cc" formatted="false">"HTTPS / IP check failed"</string>
+    <string name="msg_d14be38b43" formatted="false">"Connection changed"</string>
+    <string name="msg_044b7bf56c" formatted="false">"Connection changed — measure again"</string>
+    <string name="msg_cda6f16c5c" formatted="false">"Android VPN permission is required"</string>
+    <string name="msg_a57d71f512" formatted="false">"Android could not create the VPN"</string>
+    <string name="msg_f132898dfe" formatted="false">"Could not protect the VPN socket"</string>
+    <string name="msg_4ae50d3073" formatted="false">"Close"</string>
+    <string name="msg_559a87f7cc" formatted="false">"Add"</string>
+    <string name="msg_9dd9dbd7cf" formatted="false">"Help: "</string>
+    <string name="msg_d436f8a60e" formatted="false">"Select a server"</string>
+    <string name="msg_109f623f52" formatted="false">"Subscription"</string>
+    <string name="msg_5695330ffb" formatted="false">"Auto"</string>
+    <string name="msg_5ec7b0f52b" formatted="false">"Manual"</string>
+    <string name="msg_f04c4eff03" formatted="false">"Automatic network switching"</string>
+    <string name="msg_7f17c7c62a" formatted="false">"Settings"</string>
+    <string name="msg_7d8d1526a4" formatted="false">"Screen error: "</string>
+    <string name="msg_ffddd31c12" formatted="false">"Home"</string>
+    <string name="msg_bd5e9cf0e8" formatted="false">"Servers"</string>
+    <string name="msg_cba4000b30" formatted="false">"Networks"</string>
+    <string name="msg_9f52d47392" formatted="false">"Subscriptions"</string>
+    <string name="msg_1c48855699" formatted="false">"VPN is off"</string>
+    <string name="msg_c5d75fed69" formatted="false">"Connect using your rules"</string>
+    <string name="msg_e285415316" formatted="false">"Ping  "</string>
+    <string name="msg_5160aea6bb" formatted="false">" ms"</string>
+    <string name="msg_741870459d" formatted="false">"Automatic"</string>
+    <string name="msg_0d69e3497e" formatted="false">" added"</string>
+    <string name="msg_81e0cd160b" formatted="false">"Connected"</string>
+    <string name="msg_6bd21210b3" formatted="false">"Could not connect"</string>
+    <string name="msg_ffae505dde" formatted="false">" · using your rules"</string>
+    <string name="msg_e1e9070c84" formatted="false">"Tap to stop"</string>
+    <string name="msg_d9c64e0064" formatted="false">"Tap to connect"</string>
+    <string name="msg_ca3d376341" formatted="false">"Subscription until "</string>
+    <string name="msg_96003496cb" formatted="false">"Expiry date unavailable"</string>
+    <string name="msg_8c6206e35a" formatted="false">"Disconnect VPN"</string>
+    <string name="msg_7eed7135eb" formatted="false">"Connect VPN"</string>
+    <string name="msg_a9553f13ed" formatted="false">"Server did not respond"</string>
+    <string name="msg_b8696961cc" formatted="false">"Switch automatically"</string>
+    <string name="msg_4ecfcffd55" formatted="false">"Refresh ping"</string>
+    <string name="msg_3711716b26" formatted="false">"Manual selection"</string>
+    <string name="msg_7a06e90b46" formatted="false">"Use network settings"</string>
+    <string name="msg_51609a0433" formatted="false">"Wi-Fi server"</string>
+    <string name="msg_92395d9a9d" formatted="false">"Mobile server"</string>
+    <string name="msg_f6dab074d7" formatted="false">"Back"</string>
+    <string name="msg_65ba0faca3" formatted="false">"All subscriptions"</string>
+    <string name="msg_aa409ed202" formatted="false">"Checking connection…"</string>
+    <string name="msg_dd1d4309cd" formatted="false">"Server unavailable: "</string>
+    <string name="msg_b28591b34c" formatted="false">"A check is already running"</string>
+    <string name="msg_1114ae9044" formatted="false">"Checking…"</string>
+    <string name="msg_ab9e23850b" formatted="false">"≈10 MB · via VPN"</string>
+    <string name="msg_69e5535d66" formatted="false">"No results yet"</string>
+    <string name="msg_03297c6b07" formatted="false">"Start test"</string>
+    <string name="msg_a554b1e8fe" formatted="false">"Speed test"</string>
+    <string name="msg_02bef41074" formatted="false">"↓ %.1f Mbps\n↑ %.1f Mbps\nLatency: %s ms"</string>
+    <string name="msg_9f9495ccb9" formatted="false">"Connect the VPN first"</string>
+    <string name="msg_40d44a7caa" formatted="false">"Wait for the current check"</string>
+    <string name="msg_790a8a4ea0" formatted="false">"Measuring download and upload…"</string>
+    <string name="msg_f6346b37fe" formatted="false">"Test again"</string>
+    <string name="msg_1cbfac57b9" formatted="false">"Test incomplete: "</string>
+    <string name="msg_9a01e7088d" formatted="false">"%.1f GB"</string>
+    <string name="msg_188fea6cd2" formatted="false">"No subscriptions yet"</string>
+    <string name="msg_2c285a5142" formatted="false">"Until "</string>
+    <string name="msg_a7989c9ed0" formatted="false">"No expiry date"</string>
+    <string name="msg_504d29a40f" formatted="false">"Expired"</string>
+    <string name="msg_2defa5c348" formatted="false">"Edit subscription: "</string>
+    <string name="msg_ff652348e8" formatted="false">"Refresh subscription"</string>
+    <string name="msg_c9eee72114" formatted="false">"Subscription servers"</string>
+    <string name="msg_4ff9e9046e" formatted="false">"Refreshing subscription…"</string>
+    <string name="msg_3608b5e904" formatted="false">"Subscription refreshed"</string>
+    <string name="msg_a8c04b7022" formatted="false">"Previous servers preserved. "</string>
+    <string name="msg_88b4efa32d" formatted="false">"Delete rule?"</string>
+    <string name="msg_86ea33aef5" formatted="false">"Delete"</string>
+    <string name="msg_9c96d4dc3e" formatted="false">"Enter the app package name"</string>
+    <string name="msg_1c97ba2b80" formatted="false">"Enter a subnet, for example 192.168.0.0/16"</string>
+    <string name="msg_df8cdfc609" formatted="false">"Enter a domain without https:// or a path"</string>
+    <string name="msg_875be13421" formatted="false">"App name or package"</string>
+    <string name="msg_f51f551f4b" formatted="false">"System services"</string>
+    <string name="msg_cab718e280" formatted="false">"Show system services"</string>
+    <string name="msg_e5834c4ca1" formatted="false">"Loading apps…"</string>
+    <string name="msg_1e1b70b17c" formatted="false">"No results"</string>
+    <string name="msg_7819ea82b0" formatted="false">"Select app"</string>
+    <string name="msg_8c5bfb9222" formatted="false">"Could not load apps"</string>
+    <string name="msg_aa4986268e" formatted="false">"Delete subscription"</string>
+    <string name="msg_3de49828e8" formatted="false">"Name"</string>
+    <string name="msg_11b385895c" formatted="false">"My VPN"</string>
+    <string name="msg_046e475e5a" formatted="false">"Link"</string>
+    <string name="msg_a44800a12f" formatted="false">"Copy link"</string>
+    <string name="msg_a48859c609" formatted="false">"Edit link"</string>
+    <string name="msg_ccb6cb6834" formatted="false">"Subscription link"</string>
+    <string name="msg_6fcdbbe8f7" formatted="false">"Auto-refresh"</string>
+    <string name="msg_4e401a2e7b" formatted="false">"Auto-refresh subscription"</string>
+    <string name="msg_9066ea9564" formatted="false">"Check the subscription every hour while the VPN is on."</string>
+    <string name="msg_4864057d62" formatted="false">"Save"</string>
+    <string name="msg_49261ec6a4" formatted="false">"Link copied"</string>
+    <string name="msg_f18132742a" formatted="false">"Finish editing link"</string>
+    <string name="msg_0af444c6af" formatted="false">"Enter a name"</string>
+    <string name="msg_6c6d266c63" formatted="false">"Subscription already deleted"</string>
+    <string name="msg_6d039299cd" formatted="false">"Delete subscription?"</string>
+    <string name="msg_06b9e865d0" formatted="false">"‹  All settings"</string>
+    <string name="msg_7f2be1ba3d" formatted="false">"Ad blocking"</string>
+    <string name="msg_85dd4d46ca" formatted="false">"On"</string>
+    <string name="msg_2106134f75" formatted="false">"Off"</string>
+    <string name="msg_d206f1bed0" formatted="false">"Appearance"</string>
+    <string name="msg_ed3f0e507a" formatted="false">"Language"</string>
+    <string name="msg_79e350f743" formatted="false">"Connection"</string>
+    <string name="msg_c7e6bf5234" formatted="false">"Notifications and icon"</string>
+    <string name="msg_d7907f4d43" formatted="false">"Advanced"</string>
+    <string name="msg_9ba1e22ac3" formatted="false">"Diagnostics"</string>
+    <string name="msg_a84ab2656e" formatted="false">"Vezdehod · version "</string>
+    <string name="msg_6521dc9632" formatted="false">"Connection settings changed"</string>
+    <string name="msg_7f59da61ba" formatted="false">"Appearance settings changed"</string>
+    <string name="msg_41a17b3bad" formatted="false">"If a site stops working, add an exception or disable the filter."</string>
+    <string name="msg_d6d24ec981" formatted="false">"Ads and trackers"</string>
+    <string name="msg_85e3709119" formatted="false">"Works while the VPN is on. Does not remove ads inside videos."</string>
+    <string name="msg_ea65534c79" formatted="false">"Exceptions"</string>
+    <string name="msg_f82a821941" formatted="false">"None"</string>
+    <string name="msg_449885f5fe" formatted="false">" domains"</string>
+    <string name="msg_0f97e2780c" formatted="false">"Allows the domain and its subdomains without changing the route."</string>
+    <string name="msg_2923b8f670" formatted="false">"One domain per line"</string>
+    <string name="msg_494d7c7be7" formatted="false">"Blocking exceptions"</string>
+    <string name="msg_35d57a900e" formatted="false">"Device language"</string>
+    <string name="msg_553c45f1b8" formatted="false">"Theme"</string>
+    <string name="msg_bd16b23470" formatted="false">"Dark"</string>
+    <string name="msg_8080010c5e" formatted="false">"Light"</string>
+    <string name="msg_f0a22d9d1a" formatted="false">"System default"</string>
+    <string name="msg_70f0229afd" formatted="false">"Accent color"</string>
+    <string name="msg_9f1325f197" formatted="false">"Gold"</string>
+    <string name="msg_891c5e9e76" formatted="false">"Mint"</string>
+    <string name="msg_0deebc3a96" formatted="false">"Blue"</string>
+    <string name="msg_a4617199a8" formatted="false">"Display size"</string>
+    <string name="msg_4886f1af13" formatted="false">"Compact · 90%"</string>
+    <string name="msg_e7e285a436" formatted="false">"Default · 100%"</string>
+    <string name="msg_52bac55f34" formatted="false">"Large · 110%"</string>
+    <string name="msg_d8fcb99153" formatted="false">"Extra large · 120%"</string>
+    <string name="msg_11bb1b11c0" formatted="false">"On the home screen"</string>
+    <string name="msg_220afdba73" formatted="false">"Ping"</string>
+    <string name="msg_aff5818940" formatted="false">"Subscription expiry"</string>
+    <string name="msg_f56353b7eb" formatted="false">"Icon and notification"</string>
+    <string name="msg_64776d5102" formatted="false">"Notification shade"</string>
+    <string name="msg_6ba4db3033" formatted="false">"Hiding the notification does not disconnect the VPN."</string>
+    <string name="msg_4e73aa66da" formatted="false">"Notification shown"</string>
+    <string name="msg_f1d3c27f2c" formatted="false">"Notification hidden"</string>
+    <string name="msg_8960ddc30e" formatted="false">"Configure"</string>
+    <string name="msg_be99ac8f13" formatted="false">"Status bar"</string>
+    <string name="msg_e57f3249b4" formatted="false">"Android controls this icon. The app cannot replace or move it."</string>
+    <string name="msg_136e1c4c3c" formatted="false">"Controlled by Android"</string>
+    <string name="msg_9d22ff847e" formatted="false">"Switches to a backup if the primary server fails, and back when it recovers."</string>
+    <string name="msg_fcb4b47313" formatted="false">"Start with phone"</string>
+    <string name="msg_2be12d2d73" formatted="false">"The VPN starts after the first unlock."</string>
+    <string name="msg_a8e2cfb793" formatted="false">"Reconnect"</string>
+    <string name="msg_448e226084" formatted="false">"Retry after"</string>
+    <string name="msg_8c21ba2d9d" formatted="false">"5 seconds"</string>
+    <string name="msg_8a45d0d1ad" formatted="false">"15 seconds"</string>
+    <string name="msg_d84f514695" formatted="false">"30 seconds"</string>
+    <string name="msg_7db1478f63" formatted="false">"60 seconds"</string>
+    <string name="msg_e83d7ce312" formatted="false">"Wi-Fi backup"</string>
+    <string name="msg_fbf3611c53" formatted="false">"Mobile backup"</string>
+    <string name="msg_ca20e76c0c" formatted="false">"Background activity"</string>
+    <string name="msg_d26aec38b1" formatted="false">"Battery and auto-start"</string>
+    <string name="msg_a9d9fc2d46" formatted="false">"Always-on VPN"</string>
+    <string name="msg_8a6ceef063" formatted="false">"Android settings"</string>
+    <string name="msg_2d8f7570e1" formatted="false">"Do not use"</string>
+    <string name="msg_c8243322dc" formatted="false">"on connection"</string>
+    <string name="msg_e0cf01e43c" formatted="false">"IP mode"</string>
+    <string name="msg_e6da72edd6" formatted="false">"Auto · "</string>
+    <string name="msg_5b9e24bda9" formatted="false">"IPv4 only"</string>
+    <string name="msg_9be84e1d9f" formatted="false">"IPv6 is enabled automatically when the network supports it."</string>
+    <string name="msg_8f9bf25ca6" formatted="false">"VPN DNS"</string>
+    <string name="msg_5f1326b514" formatted="false">"This DNS uses the VPN. Direct routes use the current network’s DNS."</string>
+    <string name="msg_0857ba97ab" formatted="false">" bytes"</string>
+    <string name="msg_466019b718" formatted="false">"Usually 1400. Try 1280 if downloads stall."</string>
+    <string name="msg_7e47a7ce78" formatted="false">"Network stack"</string>
+    <string name="msg_eca17171d2" formatted="false">"System"</string>
+    <string name="msg_d155047e55" formatted="false">"Mixed"</string>
+    <string name="msg_d4dbd88958" formatted="false">"Keep gVisor. Other modes are for compatibility issues."</string>
+    <string name="msg_e04a016600" formatted="false">"Reset network settings"</string>
+    <string name="msg_f1b8fc3ba0" formatted="false">"Reset network settings?"</string>
+    <string name="msg_478ced019a" formatted="false">"Cloudflare DNS · auto IP · MTU 1400 · gVisor. Other settings are preserved."</string>
+    <string name="msg_058f162d29" formatted="false">"Reset"</string>
+    <string name="msg_6a38870f87" formatted="false">"Cloudflare · default"</string>
+    <string name="msg_8fb98f9cdd" formatted="false">"1400 · standard"</string>
+    <string name="msg_b826985870" formatted="false">"1280 · smaller"</string>
+    <string name="msg_5f233b0c2d" formatted="false">"Enter a whole number from 1280 to 1500"</string>
+    <string name="msg_989e4afb04" formatted="false">"Checks the VPN exit only. Direct routes need a separate check."</string>
+    <string name="msg_2471b6e04f" formatted="false">"Tunnel: "</string>
+    <string name="msg_2eabbcfdaa" formatted="false">"\nNetwork: "</string>
+    <string name="msg_2afa58988e" formatted="false">"Reachability: "</string>
+    <string name="msg_4a198cee74" formatted="false">"Not checked yet"</string>
+    <string name="msg_19e7fa6964" formatted="false">"Check connection and IP"</string>
+    <string name="msg_1fa4998331" formatted="false">"Checking HTTPS and public IP…"</string>
+    <string name="msg_2ddce0385c" formatted="false">"Exit IP: "</string>
+    <string name="msg_5a2f918d96" formatted="false">"\nHTTPS: available\nLatency: "</string>
+    <string name="msg_32d477ea64" formatted="false">"Check failed: "</string>
+    <string name="msg_d32a398cf9" formatted="false">"Measure speed"</string>
+    <string name="msg_57013f6956" formatted="false">"About 10 MB of traffic"</string>
+    <string name="msg_f2ee635aaa" formatted="false">"Event log"</string>
+    <string name="msg_67ade741ae" formatted="false">"Log"</string>
+    <string name="msg_049d00ab33" formatted="false">"Clear log"</string>
+    <string name="msg_46a01e5fdc" formatted="false">"Log cleared"</string>
+    <string name="msg_cde2c9f8b9" formatted="false">"A server uses unsupported settings. The subscription was not changed."</string>
+    <string name="msg_a734112137" formatted="false">"Server validation timed out. Try adding the subscription again."</string>
+    <string name="msg_3d53cd3ab3" formatted="false">"Unsupported Xray settings. The subscription was not changed."</string>
+    <string name="msg_46f4fe51cc" formatted="false">"Add subscription"</string>
+    <string name="msg_f91f5592a9" formatted="false">"QR code"</string>
+    <string name="msg_19a5f8e5b8" formatted="false">"From clipboard"</string>
+    <string name="msg_a30b87ef8c" formatted="false">"Clipboard is empty"</string>
+    <string name="msg_2a1dd82994" formatted="false">"No link in clipboard"</string>
+    <string name="msg_bb84bedbe2" formatted="false">"Enter link"</string>
+    <string name="msg_3f75368ab9" formatted="false">"Continue"</string>
+    <string name="msg_9e506acb19" formatted="false">"Retry"</string>
+    <string name="msg_92ce2819af" formatted="false">"Servers: "</string>
+    <string name="msg_06bb7e72a9" formatted="false">"Skipped entries: "</string>
+    <string name="msg_44548e3dc4" formatted="false">"Skipped entries"</string>
+    <string name="msg_fb701daed8" formatted="false">"Could not read the subscription"</string>
+    <string name="msg_789841320c" formatted="false">"‹  Rules"</string>
+    <string name="msg_b559f9f1ca" formatted="false">"New rule"</string>
+    <string name="msg_97a3265a4a" formatted="false">"Edit rule"</string>
+    <string name="msg_56970d69fd" formatted="false">"IP address and prefix"</string>
+    <string name="msg_67787241c9" formatted="false">"Website address"</string>
+    <string name="msg_31654bd668" formatted="false">"Select an app below"</string>
+    <string name="msg_72f953a4f1" formatted="false">"Include subdomains"</string>
+    <string name="msg_b765f32584" formatted="false">"Route"</string>
+    <string name="msg_190ba6d582" formatted="false">"Apply on"</string>
+    <string name="msg_b03361f6c0" formatted="false">"Wi-Fi and mobile"</string>
+    <string name="msg_7a1fc2cbc5" formatted="false">"Name · optional"</string>
+    <string name="msg_09d340f276" formatted="false">"For your reference"</string>
+    <string name="msg_e4d9463d19" formatted="false">"Delete rule"</string>
+    <string name="msg_58e849be29" formatted="false">"Wi-Fi only"</string>
+    <string name="msg_0288127e28" formatted="false">"Mobile only"</string>
+    <string name="msg_2bc1c34c0c" formatted="false">"Rule already deleted"</string>
+    <string name="msg_9b5a1ac56d" formatted="false">"‹  QR code"</string>
+    <string name="msg_4198cfd7ad" formatted="false">"Close scanner"</string>
+    <string name="msg_d16af433b5" formatted="false">"Point the camera at a QR code"</string>
+    <string name="msg_c01eaf3033" formatted="false">"Open image"</string>
+    <string name="msg_6daead7fcc" formatted="false">"Camera permission denied. You can open an image instead."</string>
+    <string name="msg_c5f4e5cd89" formatted="false">"Camera unavailable. Open an image instead."</string>
+    <string name="msg_1821a8f4a3" formatted="false">"Could not start the camera"</string>
+    <string name="msg_1c313fd862" formatted="false">"Camera unavailable"</string>
+    <string name="msg_2291f43f3b" formatted="false">"Reading QR code…"</string>
+    <string name="msg_9b811806c2" formatted="false">"No QR code found. Choose another image."</string>
+    <string name="msg_3fed10dcd2" formatted="false">"format "</string>
+    <string name="msg_0ed6fd3f45" formatted="false">"server address is missing"</string>
+    <string name="msg_6fc143271e" formatted="false">"A subscription requires an HTTPS link"</string>
+    <string name="msg_81f0596a4a" formatted="false">"Subscription refresh: HTTP "</string>
+    <string name="msg_7344ead1f2" formatted="false">"Subscription is too large"</string>
+    <string name="msg_8478b68ef9" formatted="false">"The update contains unsupported entries. Previous servers are preserved."</string>
+    <string name="msg_e07f86b4c4" formatted="false">"Enter one domain per line, without https:// or a path"</string>
+    <string name="msg_3baad0b2cf" formatted="false">"No more than 200 exceptions"</string>
+    <string name="msg_04926ac15c" formatted="false">"Auto-start after boot"</string>
+    <string name="msg_04d374e07a" formatted="false">"Auto-start failed — open the app"</string>
+    <string name="subscription_used" formatted="false">"Used: %s"</string>
+    <string name="subscription_updated" formatted="false">"Updated: %s"</string>
+    <string name="ping_no_response" formatted="false">"No response"</string>
+    <string name="connection_unavailable" formatted="false">"No connection through this server. Choose another server."</string>
+    <string name="connection_choose" formatted="false">"Change server"</string>
+    <string name="update_title" formatted="false">"Updates"</string>
+    <string name="update_auto" formatted="false">"Check automatically"</string>
+    <string name="update_check" formatted="false">"Check now"</string>
+    <string name="update_latest" formatted="false">"You are up to date"</string>
+    <string name="update_available" formatted="false">"Update available"</string>
+    <string name="update_check_failed" formatted="false">"Could not check for updates. Try again later."</string>
+    <string name="update_not_configured" formatted="false">"Update checks will be available after the app is published"</string>
+    <string name="update_download" formatted="false">"Download update"</string>
+    <string name="update_install" formatted="false">"Install update"</string>
+    <string name="update_invalid" formatted="false">"APK verification failed. Download the update again."</string>
+    <string name="update_permission" formatted="false">"Allow Vezdehod to install updates, then tap Install update again."</string>
+    <string name="update_install_failed" formatted="false">"Could not open the Android installer"</string>
+    <string name="update_verifying" formatted="false">"Verifying APK…"</string>
+    <string name="update_download_failed" formatted="false">"Download failed. Try again."</string>
+    <string name="update_waiting" formatted="false">"Waiting for network…"</string>
+    <string name="update_notes" formatted="false">"What’s new"</string>
+    <string name="update_checking" formatted="false">"Checking for updates…"</string>
+    <string name="update_install_hint" formatted="false">"Installation will restart the app and interrupt the VPN."</string>
+</resources>

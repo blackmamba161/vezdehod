@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msg_681ba374e5" formatted="false">"MTU: ‏1280–1500"</string>
+    <string name="msg_e13fa5e7d6" formatted="false">"الفاصل: 5–120 ثانية"</string>
+    <string name="msg_8a43e3fd24" formatted="false">"أدخل عنوان DNS-over-HTTPS: ‏https://…"</string>
+    <string name="msg_33f32d875b" formatted="false">"لا أحداث بعد"</string>
+    <string name="msg_dd624657c4" formatted="false">"تعذرت قراءة السجل"</string>
+    <string name="msg_85973145cb" formatted="false">"أضف اشتراكًا واختر خادمًا"</string>
+    <string name="msg_fa9ffb3f84" formatted="false">"لم يعد الخادم المحدد موجودًا في الاشتراك. اختر غيره من «الشبكات»."</string>
+    <string name="msg_27a403dd36" formatted="false">"تعذر تخصيص منفذ VPN محلي"</string>
+    <string name="msg_2846df10fa" formatted="false">"نوع قاعدة غير معروف"</string>
+    <string name="msg_4dfebb89a6" formatted="false">"خادم القاعدة غير متاح: "</string>
+    <string name="msg_d721e92378" formatted="false">"معرّف خادم مكرر"</string>
+    <string name="msg_50e1cb1272" formatted="false">"بقية حركة البيانات"</string>
+    <string name="msg_938ad66f65" formatted="false">"مسار المواقع والتطبيقات التي لا تطابق أي قاعدة مفعّلة."</string>
+    <string name="msg_1667336ad3" formatted="false">"مباشر"</string>
+    <string name="msg_e26ed24f9e" formatted="false">"\nالجوال: "</string>
+    <string name="msg_7be14a7ba6" formatted="false">"الاختيار اليدوي: "</string>
+    <string name="msg_3c0423bc77" formatted="false">"عبر VPN"</string>
+    <string name="msg_e481dedaf2" formatted="false">"حظر"</string>
+    <string name="msg_0e4d55ab7c" formatted="false">"خادم محدد"</string>
+    <string name="msg_8f67e4d13d" formatted="false">"لكل الشبكات"</string>
+    <string name="msg_0ec753be8d" formatted="false">"إلغاء"</string>
+    <string name="msg_dd6b0e1e55" formatted="false">"، محدد"</string>
+    <string name="msg_45ec755630" formatted="false">"تعذر حذف ملف الاستيراد"</string>
+    <string name="msg_b63da52997" formatted="false">"تعذر فتح الإعدادات الآمنة. بياناتك محفوظة."</string>
+    <string name="msg_8a78d62250" formatted="false">"تغيّر الاشتراك. حدّثه مجددًا."</string>
+    <string name="msg_1a69e59ba3" formatted="false">"هذا الاشتراك مضاف بالفعل"</string>
+    <string name="msg_40f8272534" formatted="false">"اختر خادمًا آخر للشبكات والقواعد أولًا"</string>
+    <string name="msg_d2ff3b0e16" formatted="false">"تستخدم إحدى القواعد هذا الخادم"</string>
+    <string name="msg_e8d9cd7b4e" formatted="false">"روابط"</string>
+    <string name="msg_9794aef624" formatted="false">"لا توجد خوادم متوافقة. "</string>
+    <string name="msg_e7e42a2acf" formatted="false">"لا توجد خوادم في الاشتراك"</string>
+    <string name="msg_999986e004" formatted="false">"طبقات ترميز كثيرة جدًا"</string>
+    <string name="msg_6c21351bc9" formatted="false">"يتجاوز الاشتراك 4 ميغابايت"</string>
+    <string name="msg_6153e34d0c" formatted="false">"أعاد الخادم اشتراكًا فارغًا"</string>
+    <string name="msg_0432186247" formatted="false">"هذه صفحة ويب. انسخ رابط اشتراك VPN من مزود الخدمة."</string>
+    <string name="msg_3c0e1e7d43" formatted="false">"JSON الاشتراك غير صالح"</string>
+    <string name="msg_c14abc64af" formatted="false">"تعذرت قراءة YAML. تحقق من ملف الاشتراك."</string>
+    <string name="msg_79be6ca6bc" formatted="false">"تنسيق غير معروف"</string>
+    <string name="msg_30d9e094e4" formatted="false">"السطر "</string>
+    <string name="msg_54d59eb38a" formatted="false">"الرابط "</string>
+    <string name="msg_8eeacd07c0" formatted="false">"العنصر "</string>
+    <string name="msg_f702b574da" formatted="false">": تنسيق غير معروف"</string>
+    <string name="msg_e18fd43031" formatted="false">"يلزم إدخال قائمة خوادم أو إعداد VPN"</string>
+    <string name="msg_48db32c372" formatted="false">"قائمة proxies غير صالحة"</string>
+    <string name="msg_1fe1adcef3" formatted="false">"الخادم "</string>
+    <string name="msg_4505a9f9d0" formatted="false">"قائمة outbounds غير صالحة"</string>
+    <string name="msg_917e05143a" formatted="false">"الخادم"</string>
+    <string name="msg_e271fb3ca1" formatted="false">"لا يحتوي JSON على outbounds أو proxies"</string>
+    <string name="msg_3d734741a7" formatted="false">"إعدادات غير مدعومة أو غير مكتملة"</string>
+    <string name="msg_7131aafc7b" formatted="false">"يتجاوز الاشتراك 512 خادمًا"</string>
+    <string name="msg_210439cffd" formatted="false">"عنوان الخادم أو المنفذ مفقود"</string>
+    <string name="msg_6f8352205b" formatted="false">"البروتوكول "</string>
+    <string name="msg_b329e9ab1b" formatted="false">"سلاسل البروكسي غير مدعومة بعد"</string>
+    <string name="msg_67acde8ec5" formatted="false">"عنوان الخادم مفقود"</string>
+    <string name="msg_09e323f866" formatted="false">"إضافة خارجية أو سلسلة بروكسي"</string>
+    <string name="msg_0203e5e1bf" formatted="false">"النقل "</string>
+    <string name="msg_aaecad4a8c" formatted="false">" غير مدعوم في YAML بعد"</string>
+    <string name="msg_40a747d563" formatted="false">"الصق رابطًا أو امسح رمز QR"</string>
+    <string name="msg_680a8e4f43" formatted="false">"أدخل رابطًا واحدًا دون مسافات"</string>
+    <string name="msg_102b915c5e" formatted="false">"رابط غير صالح"</string>
+    <string name="msg_2a16f698ef" formatted="false">"تحقق من عنوان الاشتراك"</string>
+    <string name="msg_c01d472ca8" formatted="false">"أدخل رابط اشتراك أو خادم"</string>
+    <string name="msg_cacc66427a" formatted="false">"رابط غير مكتمل"</string>
+    <string name="msg_eee2285ba1" formatted="false">"الأساسيات"</string>
+    <string name="msg_16dacca18e" formatted="false">"خدمات الذكاء الاصطناعي"</string>
+    <string name="msg_65ca123b53" formatted="false">"التواصل"</string>
+    <string name="msg_f72ae77771" formatted="false">"قواعد مخصصة"</string>
+    <string name="msg_667d8b44a6" formatted="false">"القواعد"</string>
+    <string name="msg_9e572ab9c6" formatted="false">"ترتيب القواعد"</string>
+    <string name="msg_02580e2fda" formatted="false">"تُطبّق أول قاعدة مطابقة. استخدم الأسهم لتغيير الأولوية. اضغط على الخدمة لعرض قواعدها."</string>
+    <string name="msg_9276259877" formatted="false">"مجموعات"</string>
+    <string name="msg_fc7987118c" formatted="false">"+ قاعدة"</string>
+    <string name="msg_dc9a84c4a4" formatted="false">"اختر الخدمات من المجموعات"</string>
+    <string name="msg_8840608925" formatted="false">"مسارات مختلطة"</string>
+    <string name="msg_d934aed196" formatted="false">"معطّل"</string>
+    <string name="msg_6ce4fa393d" formatted="false">" من "</string>
+    <string name="msg_4cc948fff2" formatted="false">" مفعّلة"</string>
+    <string name="msg_26e42bb274" formatted="false">"طيّ "</string>
+    <string name="msg_dcfb1b173b" formatted="false">"توسيع "</string>
+    <string name="msg_8f769303f6" formatted="false">"نقل لأعلى: "</string>
+    <string name="msg_c800355918" formatted="false">"نقل لأسفل: "</string>
+    <string name="msg_9189fc3f32" formatted="false">"الخدمة: "</string>
+    <string name="msg_3ca212f4fc" formatted="false">"قواعد"</string>
+    <string name="msg_5d1611f2fb" formatted="false">"قاعدة"</string>
+    <string name="msg_69b46d600c" formatted="false">"قواعد"</string>
+    <string name="msg_f9886ca2bc" formatted="false">"تطبيق"</string>
+    <string name="msg_045bef7d26" formatted="false">"موقع"</string>
+    <string name="msg_2681a24f90" formatted="false">"تعديل القاعدة: "</string>
+    <string name="msg_27c9c75d4a" formatted="false">"نقل القاعدة لأعلى: "</string>
+    <string name="msg_08525c9005" formatted="false">"نقل القاعدة لأسفل: "</string>
+    <string name="msg_573d59bada" formatted="false">"القاعدة: "</string>
+    <string name="msg_a11443ec76" formatted="false">"مجموعات القواعد"</string>
+    <string name="msg_fd042c9a3a" formatted="false">"لاحقًا"</string>
+    <string name="msg_768af67762" formatted="false">"تطبيق"</string>
+    <string name="msg_bdda7682fb" formatted="false">"تحديد الكل"</string>
+    <string name="msg_accc8ab2b1" formatted="false">" · مضاف"</string>
+    <string name="msg_97013008b5" formatted="false">"تطبيق · "</string>
+    <string name="msg_dcd66875e7" formatted="false">"القواعد المضافة: "</string>
+    <string name="msg_5f496335d3" formatted="false">"لم يُفحص"</string>
+    <string name="msg_643b39ad20" formatted="false">"حالة VPN"</string>
+    <string name="msg_40b27edf9a" formatted="false">"جارٍ الاتصال…"</string>
+    <string name="app_name" formatted="false">"Vezdehod"</string>
+    <string name="msg_94d07a2171" formatted="false">"قطع الاتصال"</string>
+    <string name="msg_683f4493ca" formatted="false">"تغيّر دعم IPv6 في الشبكة"</string>
+    <string name="msg_b3be92a610" formatted="false">"تغيّرت الشبكة: "</string>
+    <string name="msg_9dfa170d49" formatted="false">"الجوال"</string>
+    <string name="msg_f0a50c59fc" formatted="false">"لا توجد شبكة"</string>
+    <string name="msg_a6ee13c1ee" formatted="false">"بانتظار الشبكة"</string>
+    <string name="msg_6679cdceb0" formatted="false">"شبكة الجوال"</string>
+    <string name="msg_87fe71dbf1" formatted="false">"تعذر بدء اتصال Xray"</string>
+    <string name="msg_b84eb59edf" formatted="false">"بدأ النفق"</string>
+    <string name="msg_8d41645d5d" formatted="false">"خطأ في النفق"</string>
+    <string name="msg_15da4eee64" formatted="false">"خطأ في النفق؛ راجع الرئيسية"</string>
+    <string name="msg_4ec4a7927c" formatted="false">"خطأ في الاتصال · افتح التطبيق"</string>
+    <string name="msg_a24fd4542e" formatted="false">"[العنوان مخفي]"</string>
+    <string name="msg_1c64a8bede" formatted="false">"[المفتاح مخفي]"</string>
+    <string name="msg_c0b5a5c3bd" formatted="false">"توقف VPN"</string>
+    <string name="msg_28fc95b5ac" formatted="false">"توقف اتصال Xray"</string>
+    <string name="msg_9b36be9334" formatted="false">"إعادة الاتصال"</string>
+    <string name="msg_e66c7d3fa3" formatted="false">"HTTPS متاح"</string>
+    <string name="msg_a2ca43d182" formatted="false">"فشل فحص HTTPS"</string>
+    <string name="msg_ec7a0b7421" formatted="false">"تم الرجوع إلى الخادم الأساسي"</string>
+    <string name="msg_af26aede0a" formatted="false">"تم اختيار الخادم الاحتياطي"</string>
+    <string name="msg_bc15101b19" formatted="false">"اتصل بـ VPN أولًا"</string>
+    <string name="msg_f96dbc41fe" formatted="false">"تغيّر الاتصال — أعد الفحص"</string>
+    <string name="msg_d2d78125b3" formatted="false">"نجح فحص HTTPS وعنوان IP للخروج"</string>
+    <string name="msg_80f6d88155" formatted="false">"فشل الفحص"</string>
+    <string name="msg_c050b742cc" formatted="false">"فشل فحص HTTPS / IP"</string>
+    <string name="msg_d14be38b43" formatted="false">"تغيّر الاتصال"</string>
+    <string name="msg_044b7bf56c" formatted="false">"تغيّر الاتصال — أعد القياس"</string>
+    <string name="msg_cda6f16c5c" formatted="false">"يلزم إذن VPN من Android"</string>
+    <string name="msg_a57d71f512" formatted="false">"تعذر على Android إنشاء VPN"</string>
+    <string name="msg_f132898dfe" formatted="false">"تعذرت حماية مقبس VPN"</string>
+    <string name="msg_4ae50d3073" formatted="false">"إغلاق"</string>
+    <string name="msg_559a87f7cc" formatted="false">"إضافة"</string>
+    <string name="msg_9dd9dbd7cf" formatted="false">"مساعدة: "</string>
+    <string name="msg_d436f8a60e" formatted="false">"اختر خادمًا"</string>
+    <string name="msg_109f623f52" formatted="false">"الاشتراك"</string>
+    <string name="msg_5695330ffb" formatted="false">"تلقائي"</string>
+    <string name="msg_5ec7b0f52b" formatted="false">"يدوي"</string>
+    <string name="msg_f04c4eff03" formatted="false">"تبديل الشبكة تلقائيًا"</string>
+    <string name="msg_7f17c7c62a" formatted="false">"الإعدادات"</string>
+    <string name="msg_7d8d1526a4" formatted="false">"خطأ في الشاشة: "</string>
+    <string name="msg_ffddd31c12" formatted="false">"الرئيسية"</string>
+    <string name="msg_bd5e9cf0e8" formatted="false">"الخوادم"</string>
+    <string name="msg_cba4000b30" formatted="false">"الشبكات"</string>
+    <string name="msg_9f52d47392" formatted="false">"الاشتراكات"</string>
+    <string name="msg_1c48855699" formatted="false">"VPN غير مفعّل"</string>
+    <string name="msg_c5d75fed69" formatted="false">"الاتصال حسب قواعدك"</string>
+    <string name="msg_e285415316" formatted="false">"الاستجابة "</string>
+    <string name="msg_5160aea6bb" formatted="false">" مللي ثانية"</string>
+    <string name="msg_741870459d" formatted="false">"تلقائي"</string>
+    <string name="msg_0d69e3497e" formatted="false">" مضافة"</string>
+    <string name="msg_81e0cd160b" formatted="false">"متصل"</string>
+    <string name="msg_6bd21210b3" formatted="false">"تعذر الاتصال"</string>
+    <string name="msg_ffae505dde" formatted="false">" · حسب قواعدك"</string>
+    <string name="msg_e1e9070c84" formatted="false">"اضغط للإيقاف"</string>
+    <string name="msg_d9c64e0064" formatted="false">"اضغط للاتصال"</string>
+    <string name="msg_ca3d376341" formatted="false">"الاشتراك حتى "</string>
+    <string name="msg_96003496cb" formatted="false">"تاريخ الانتهاء غير متاح"</string>
+    <string name="msg_8c6206e35a" formatted="false">"قطع VPN"</string>
+    <string name="msg_7eed7135eb" formatted="false">"توصيل VPN"</string>
+    <string name="msg_a9553f13ed" formatted="false">"لم يستجب الخادم"</string>
+    <string name="msg_b8696961cc" formatted="false">"التبديل تلقائيًا"</string>
+    <string name="msg_4ecfcffd55" formatted="false">"تحديث الاستجابة"</string>
+    <string name="msg_3711716b26" formatted="false">"اختيار يدوي"</string>
+    <string name="msg_7a06e90b46" formatted="false">"استخدام إعدادات الشبكة"</string>
+    <string name="msg_51609a0433" formatted="false">"خادم Wi-Fi"</string>
+    <string name="msg_92395d9a9d" formatted="false">"خادم الجوال"</string>
+    <string name="msg_f6dab074d7" formatted="false">"رجوع"</string>
+    <string name="msg_65ba0faca3" formatted="false">"كل الاشتراكات"</string>
+    <string name="msg_aa409ed202" formatted="false">"جارٍ فحص الاتصال…"</string>
+    <string name="msg_dd1d4309cd" formatted="false">"الخادم غير متاح: "</string>
+    <string name="msg_b28591b34c" formatted="false">"يوجد فحص جارٍ بالفعل"</string>
+    <string name="msg_1114ae9044" formatted="false">"جارٍ الفحص…"</string>
+    <string name="msg_ab9e23850b" formatted="false">"≈10 ميغابايت · عبر VPN"</string>
+    <string name="msg_69e5535d66" formatted="false">"لا نتائج بعد"</string>
+    <string name="msg_03297c6b07" formatted="false">"بدء الاختبار"</string>
+    <string name="msg_a554b1e8fe" formatted="false">"اختبار السرعة"</string>
+    <string name="msg_02bef41074" formatted="false">"↓ %.1f ميغابت/ث\n↑ %.1f ميغابت/ث\nالاستجابة: %s مللي ثانية"</string>
+    <string name="msg_9f9495ccb9" formatted="false">"اتصل بـ VPN أولًا"</string>
+    <string name="msg_40d44a7caa" formatted="false">"انتظر انتهاء الفحص الحالي"</string>
+    <string name="msg_790a8a4ea0" formatted="false">"جارٍ قياس التنزيل والرفع…"</string>
+    <string name="msg_f6346b37fe" formatted="false">"إعادة الاختبار"</string>
+    <string name="msg_1cbfac57b9" formatted="false">"الاختبار غير مكتمل: "</string>
+    <string name="msg_9a01e7088d" formatted="false">"%.1f غيغابايت"</string>
+    <string name="msg_188fea6cd2" formatted="false">"لا اشتراكات بعد"</string>
+    <string name="msg_2c285a5142" formatted="false">"حتى "</string>
+    <string name="msg_a7989c9ed0" formatted="false">"بلا تاريخ انتهاء"</string>
+    <string name="msg_504d29a40f" formatted="false">"منتهٍ"</string>
+    <string name="msg_2defa5c348" formatted="false">"تعديل الاشتراك: "</string>
+    <string name="msg_ff652348e8" formatted="false">"تحديث الاشتراك"</string>
+    <string name="msg_c9eee72114" formatted="false">"خوادم الاشتراك"</string>
+    <string name="msg_4ff9e9046e" formatted="false">"جارٍ تحديث الاشتراك…"</string>
+    <string name="msg_3608b5e904" formatted="false">"تم تحديث الاشتراك"</string>
+    <string name="msg_a8c04b7022" formatted="false">"تم الاحتفاظ بالخوادم السابقة. "</string>
+    <string name="msg_88b4efa32d" formatted="false">"حذف القاعدة؟"</string>
+    <string name="msg_86ea33aef5" formatted="false">"حذف"</string>
+    <string name="msg_9c96d4dc3e" formatted="false">"أدخل اسم حزمة التطبيق"</string>
+    <string name="msg_1c97ba2b80" formatted="false">"أدخل شبكة فرعية، مثل 192.168.0.0/16"</string>
+    <string name="msg_df8cdfc609" formatted="false">"أدخل نطاقًا دون https:// أو مسار"</string>
+    <string name="msg_875be13421" formatted="false">"اسم التطبيق أو الحزمة"</string>
+    <string name="msg_f51f551f4b" formatted="false">"خدمات النظام"</string>
+    <string name="msg_cab718e280" formatted="false">"إظهار خدمات النظام"</string>
+    <string name="msg_e5834c4ca1" formatted="false">"جارٍ تحميل التطبيقات…"</string>
+    <string name="msg_1e1b70b17c" formatted="false">"لا نتائج"</string>
+    <string name="msg_7819ea82b0" formatted="false">"اختر تطبيقًا"</string>
+    <string name="msg_8c5bfb9222" formatted="false">"تعذر تحميل التطبيقات"</string>
+    <string name="msg_aa4986268e" formatted="false">"حذف الاشتراك"</string>
+    <string name="msg_3de49828e8" formatted="false">"الاسم"</string>
+    <string name="msg_11b385895c" formatted="false">"VPN الخاص بي"</string>
+    <string name="msg_046e475e5a" formatted="false">"الرابط"</string>
+    <string name="msg_a44800a12f" formatted="false">"نسخ الرابط"</string>
+    <string name="msg_a48859c609" formatted="false">"تعديل الرابط"</string>
+    <string name="msg_ccb6cb6834" formatted="false">"رابط الاشتراك"</string>
+    <string name="msg_6fcdbbe8f7" formatted="false">"تحديث تلقائي"</string>
+    <string name="msg_4e401a2e7b" formatted="false">"تحديث الاشتراك تلقائيًا"</string>
+    <string name="msg_9066ea9564" formatted="false">"فحص الاشتراك كل ساعة أثناء تشغيل VPN."</string>
+    <string name="msg_4864057d62" formatted="false">"حفظ"</string>
+    <string name="msg_49261ec6a4" formatted="false">"تم نسخ الرابط"</string>
+    <string name="msg_f18132742a" formatted="false">"إنهاء تعديل الرابط"</string>
+    <string name="msg_0af444c6af" formatted="false">"أدخل اسمًا"</string>
+    <string name="msg_6c6d266c63" formatted="false">"الاشتراك محذوف بالفعل"</string>
+    <string name="msg_6d039299cd" formatted="false">"حذف الاشتراك؟"</string>
+    <string name="msg_06b9e865d0" formatted="false">"›  كل الإعدادات"</string>
+    <string name="msg_7f2be1ba3d" formatted="false">"حظر الإعلانات"</string>
+    <string name="msg_85dd4d46ca" formatted="false">"مفعّل"</string>
+    <string name="msg_2106134f75" formatted="false">"معطّل"</string>
+    <string name="msg_d206f1bed0" formatted="false">"المظهر"</string>
+    <string name="msg_ed3f0e507a" formatted="false">"اللغة"</string>
+    <string name="msg_79e350f743" formatted="false">"الاتصال"</string>
+    <string name="msg_c7e6bf5234" formatted="false">"الإشعارات والأيقونة"</string>
+    <string name="msg_d7907f4d43" formatted="false">"متقدم"</string>
+    <string name="msg_9ba1e22ac3" formatted="false">"التشخيص"</string>
+    <string name="msg_a84ab2656e" formatted="false">"Vezdehod · الإصدار "</string>
+    <string name="msg_6521dc9632" formatted="false">"تغيّرت إعدادات الاتصال"</string>
+    <string name="msg_7f59da61ba" formatted="false">"تغيّرت إعدادات المظهر"</string>
+    <string name="msg_41a17b3bad" formatted="false">"إذا توقف موقع عن العمل، أضف استثناءً أو عطّل المرشح."</string>
+    <string name="msg_d6d24ec981" formatted="false">"الإعلانات وأدوات التتبع"</string>
+    <string name="msg_85e3709119" formatted="false">"يعمل أثناء تشغيل VPN. لا يزيل الإعلانات داخل الفيديوهات."</string>
+    <string name="msg_ea65534c79" formatted="false">"الاستثناءات"</string>
+    <string name="msg_f82a821941" formatted="false">"لا يوجد"</string>
+    <string name="msg_449885f5fe" formatted="false">" نطاقات"</string>
+    <string name="msg_0f97e2780c" formatted="false">"يسمح بالنطاق ونطاقاته الفرعية دون تغيير المسار."</string>
+    <string name="msg_2923b8f670" formatted="false">"نطاق واحد في كل سطر"</string>
+    <string name="msg_494d7c7be7" formatted="false">"استثناءات الحظر"</string>
+    <string name="msg_35d57a900e" formatted="false">"لغة الجهاز"</string>
+    <string name="msg_553c45f1b8" formatted="false">"السمة"</string>
+    <string name="msg_bd16b23470" formatted="false">"داكنة"</string>
+    <string name="msg_8080010c5e" formatted="false">"فاتحة"</string>
+    <string name="msg_f0a22d9d1a" formatted="false">"حسب النظام"</string>
+    <string name="msg_70f0229afd" formatted="false">"لون التمييز"</string>
+    <string name="msg_9f1325f197" formatted="false">"ذهبي"</string>
+    <string name="msg_891c5e9e76" formatted="false">"نعناعي"</string>
+    <string name="msg_0deebc3a96" formatted="false">"أزرق"</string>
+    <string name="msg_a4617199a8" formatted="false">"حجم العرض"</string>
+    <string name="msg_4886f1af13" formatted="false">"مضغوط · 90%"</string>
+    <string name="msg_e7e285a436" formatted="false">"افتراضي · 100%"</string>
+    <string name="msg_52bac55f34" formatted="false">"كبير · 110%"</string>
+    <string name="msg_d8fcb99153" formatted="false">"كبير جدًا · 120%"</string>
+    <string name="msg_11bb1b11c0" formatted="false">"في الرئيسية"</string>
+    <string name="msg_220afdba73" formatted="false">"الاستجابة"</string>
+    <string name="msg_aff5818940" formatted="false">"انتهاء الاشتراك"</string>
+    <string name="msg_f56353b7eb" formatted="false">"الأيقونة والإشعار"</string>
+    <string name="msg_64776d5102" formatted="false">"لوحة الإشعارات"</string>
+    <string name="msg_6ba4db3033" formatted="false">"إخفاء الإشعار لا يقطع اتصال VPN."</string>
+    <string name="msg_4e73aa66da" formatted="false">"الإشعار ظاهر"</string>
+    <string name="msg_f1d3c27f2c" formatted="false">"الإشعار مخفي"</string>
+    <string name="msg_8960ddc30e" formatted="false">"ضبط"</string>
+    <string name="msg_be99ac8f13" formatted="false">"شريط الحالة"</string>
+    <string name="msg_e57f3249b4" formatted="false">"يتحكم Android بهذه الأيقونة. لا يمكن للتطبيق استبدالها أو نقلها."</string>
+    <string name="msg_136e1c4c3c" formatted="false">"يتحكم به Android"</string>
+    <string name="msg_9d22ff847e" formatted="false">"ينتقل إلى الخادم الاحتياطي عند تعطل الأساسي، ويعود إليه بعد استعادته."</string>
+    <string name="msg_fcb4b47313" formatted="false">"البدء مع الهاتف"</string>
+    <string name="msg_2be12d2d73" formatted="false">"يبدأ VPN بعد فتح القفل لأول مرة."</string>
+    <string name="msg_a8e2cfb793" formatted="false">"إعادة الاتصال"</string>
+    <string name="msg_448e226084" formatted="false">"إعادة المحاولة بعد"</string>
+    <string name="msg_8c21ba2d9d" formatted="false">"5 ثوانٍ"</string>
+    <string name="msg_8a45d0d1ad" formatted="false">"15 ثانية"</string>
+    <string name="msg_d84f514695" formatted="false">"30 ثانية"</string>
+    <string name="msg_7db1478f63" formatted="false">"60 ثانية"</string>
+    <string name="msg_e83d7ce312" formatted="false">"احتياطي Wi-Fi"</string>
+    <string name="msg_fbf3611c53" formatted="false">"احتياطي الجوال"</string>
+    <string name="msg_ca20e76c0c" formatted="false">"العمل في الخلفية"</string>
+    <string name="msg_d26aec38b1" formatted="false">"البطارية والتشغيل التلقائي"</string>
+    <string name="msg_a9d9fc2d46" formatted="false">"VPN دائم التشغيل"</string>
+    <string name="msg_8a6ceef063" formatted="false">"إعدادات Android"</string>
+    <string name="msg_2d8f7570e1" formatted="false">"عدم الاستخدام"</string>
+    <string name="msg_c8243322dc" formatted="false">"عند الاتصال"</string>
+    <string name="msg_e0cf01e43c" formatted="false">"وضع IP"</string>
+    <string name="msg_e6da72edd6" formatted="false">"تلقائي · "</string>
+    <string name="msg_5b9e24bda9" formatted="false">"IPv4 فقط"</string>
+    <string name="msg_9be84e1d9f" formatted="false">"يُفعّل IPv6 تلقائيًا عندما تدعمه الشبكة."</string>
+    <string name="msg_8f9bf25ca6" formatted="false">"DNS الخاص بـ VPN"</string>
+    <string name="msg_5f1326b514" formatted="false">"يستخدم هذا DNS اتصال VPN. تستخدم المسارات المباشرة DNS الشبكة الحالية."</string>
+    <string name="msg_0857ba97ab" formatted="false">" بايت"</string>
+    <string name="msg_466019b718" formatted="false">"عادةً 1400. جرّب 1280 إذا توقفت التنزيلات."</string>
+    <string name="msg_7e47a7ce78" formatted="false">"مكدس الشبكة"</string>
+    <string name="msg_eca17171d2" formatted="false">"النظام"</string>
+    <string name="msg_d155047e55" formatted="false">"مختلط"</string>
+    <string name="msg_d4dbd88958" formatted="false">"اترك gVisor. الأوضاع الأخرى لحل مشكلات التوافق."</string>
+    <string name="msg_e04a016600" formatted="false">"إعادة ضبط الشبكة"</string>
+    <string name="msg_f1b8fc3ba0" formatted="false">"إعادة ضبط إعدادات الشبكة؟"</string>
+    <string name="msg_478ced019a" formatted="false">"Cloudflare DNS · IP تلقائي · MTU 1400 · gVisor. تُحفظ الإعدادات الأخرى."</string>
+    <string name="msg_058f162d29" formatted="false">"إعادة ضبط"</string>
+    <string name="msg_6a38870f87" formatted="false">"Cloudflare · افتراضي"</string>
+    <string name="msg_8fb98f9cdd" formatted="false">"1400 · قياسي"</string>
+    <string name="msg_b826985870" formatted="false">"1280 · أصغر"</string>
+    <string name="msg_5f233b0c2d" formatted="false">"أدخل عددًا صحيحًا من 1280 إلى 1500"</string>
+    <string name="msg_989e4afb04" formatted="false">"يفحص مخرج VPN فقط. تحتاج المسارات المباشرة إلى فحص منفصل."</string>
+    <string name="msg_2471b6e04f" formatted="false">"النفق: "</string>
+    <string name="msg_2eabbcfdaa" formatted="false">"\nالشبكة: "</string>
+    <string name="msg_2afa58988e" formatted="false">"إمكانية الوصول: "</string>
+    <string name="msg_4a198cee74" formatted="false">"لم يُفحص بعد"</string>
+    <string name="msg_19e7fa6964" formatted="false">"فحص الاتصال وIP"</string>
+    <string name="msg_1fa4998331" formatted="false">"جارٍ فحص HTTPS وعنوان IP العام…"</string>
+    <string name="msg_2ddce0385c" formatted="false">"IP الخروج: "</string>
+    <string name="msg_5a2f918d96" formatted="false">"\nHTTPS: متاح\nالاستجابة: "</string>
+    <string name="msg_32d477ea64" formatted="false">"فشل الفحص: "</string>
+    <string name="msg_d32a398cf9" formatted="false">"قياس السرعة"</string>
+    <string name="msg_57013f6956" formatted="false">"حوالي 10 ميغابايت من البيانات"</string>
+    <string name="msg_f2ee635aaa" formatted="false">"سجل الأحداث"</string>
+    <string name="msg_67ade741ae" formatted="false">"السجل"</string>
+    <string name="msg_049d00ab33" formatted="false">"مسح السجل"</string>
+    <string name="msg_46a01e5fdc" formatted="false">"تم مسح السجل"</string>
+    <string name="msg_cde2c9f8b9" formatted="false">"يستخدم خادم إعدادات غير مدعومة. لم يتغيّر الاشتراك."</string>
+    <string name="msg_a734112137" formatted="false">"انتهت مهلة التحقق من الخادم. حاول إضافة الاشتراك مجددًا."</string>
+    <string name="msg_3d53cd3ab3" formatted="false">"إعدادات Xray غير مدعومة. لم يتغيّر الاشتراك."</string>
+    <string name="msg_46f4fe51cc" formatted="false">"إضافة اشتراك"</string>
+    <string name="msg_f91f5592a9" formatted="false">"رمز QR"</string>
+    <string name="msg_19a5f8e5b8" formatted="false">"من الحافظة"</string>
+    <string name="msg_a30b87ef8c" formatted="false">"الحافظة فارغة"</string>
+    <string name="msg_2a1dd82994" formatted="false">"لا يوجد رابط في الحافظة"</string>
+    <string name="msg_bb84bedbe2" formatted="false">"إدخال الرابط"</string>
+    <string name="msg_3f75368ab9" formatted="false">"متابعة"</string>
+    <string name="msg_9e506acb19" formatted="false">"إعادة المحاولة"</string>
+    <string name="msg_92ce2819af" formatted="false">"الخوادم: "</string>
+    <string name="msg_06bb7e72a9" formatted="false">"العناصر المتخطاة: "</string>
+    <string name="msg_44548e3dc4" formatted="false">"العناصر المتخطاة"</string>
+    <string name="msg_fb701daed8" formatted="false">"تعذرت قراءة الاشتراك"</string>
+    <string name="msg_789841320c" formatted="false">"›  القواعد"</string>
+    <string name="msg_b559f9f1ca" formatted="false">"قاعدة جديدة"</string>
+    <string name="msg_97a3265a4a" formatted="false">"تعديل القاعدة"</string>
+    <string name="msg_56970d69fd" formatted="false">"عنوان IP والبادئة"</string>
+    <string name="msg_67787241c9" formatted="false">"عنوان الموقع"</string>
+    <string name="msg_31654bd668" formatted="false">"اختر تطبيقًا أدناه"</string>
+    <string name="msg_72f953a4f1" formatted="false">"تضمين النطاقات الفرعية"</string>
+    <string name="msg_b765f32584" formatted="false">"المسار"</string>
+    <string name="msg_190ba6d582" formatted="false">"تطبيق على"</string>
+    <string name="msg_b03361f6c0" formatted="false">"Wi-Fi والجوال"</string>
+    <string name="msg_7a1fc2cbc5" formatted="false">"الاسم · اختياري"</string>
+    <string name="msg_09d340f276" formatted="false">"للتعرّف عليها"</string>
+    <string name="msg_e4d9463d19" formatted="false">"حذف القاعدة"</string>
+    <string name="msg_58e849be29" formatted="false">"Wi-Fi فقط"</string>
+    <string name="msg_0288127e28" formatted="false">"الجوال فقط"</string>
+    <string name="msg_2bc1c34c0c" formatted="false">"القاعدة محذوفة بالفعل"</string>
+    <string name="msg_9b5a1ac56d" formatted="false">"›  رمز QR"</string>
+    <string name="msg_4198cfd7ad" formatted="false">"إغلاق الماسح"</string>
+    <string name="msg_d16af433b5" formatted="false">"وجّه الكاميرا نحو رمز QR"</string>
+    <string name="msg_c01eaf3033" formatted="false">"فتح صورة"</string>
+    <string name="msg_6daead7fcc" formatted="false">"رُفض إذن الكاميرا. يمكنك فتح صورة بدلًا منها."</string>
+    <string name="msg_c5f4e5cd89" formatted="false">"الكاميرا غير متاحة. افتح صورة بدلًا منها."</string>
+    <string name="msg_1821a8f4a3" formatted="false">"تعذر تشغيل الكاميرا"</string>
+    <string name="msg_1c313fd862" formatted="false">"الكاميرا غير متاحة"</string>
+    <string name="msg_2291f43f3b" formatted="false">"جارٍ قراءة رمز QR…"</string>
+    <string name="msg_9b811806c2" formatted="false">"لم يُعثر على رمز QR. اختر صورة أخرى."</string>
+    <string name="msg_3fed10dcd2" formatted="false">"التنسيق "</string>
+    <string name="msg_0ed6fd3f45" formatted="false">"عنوان الخادم مفقود"</string>
+    <string name="msg_6fc143271e" formatted="false">"يتطلب الاشتراك رابط HTTPS"</string>
+    <string name="msg_81f0596a4a" formatted="false">"تحديث الاشتراك: HTTP "</string>
+    <string name="msg_7344ead1f2" formatted="false">"الاشتراك كبير جدًا"</string>
+    <string name="msg_8478b68ef9" formatted="false">"يتضمن التحديث عناصر غير مدعومة. تم الاحتفاظ بالخوادم السابقة."</string>
+    <string name="msg_e07f86b4c4" formatted="false">"أدخل نطاقًا في كل سطر، دون https:// أو مسار"</string>
+    <string name="msg_3baad0b2cf" formatted="false">"200 استثناء كحد أقصى"</string>
+    <string name="msg_04926ac15c" formatted="false">"التشغيل التلقائي بعد الإقلاع"</string>
+    <string name="msg_04d374e07a" formatted="false">"فشل التشغيل التلقائي — افتح التطبيق"</string>
+    <string name="subscription_used" formatted="false">"المستخدم: %s"</string>
+    <string name="subscription_updated" formatted="false">"آخر تحديث: %s"</string>
+    <string name="ping_no_response" formatted="false">"لا استجابة"</string>
+    <string name="connection_unavailable" formatted="false">"لا يوجد اتصال عبر هذا الخادم. اختر خادمًا آخر."</string>
+    <string name="connection_choose" formatted="false">"خادم آخر"</string>
+    <string name="update_title" formatted="false">"التحديثات"</string>
+    <string name="update_auto" formatted="false">"التحقق تلقائيًا"</string>
+    <string name="update_check" formatted="false">"التحقق الآن"</string>
+    <string name="update_latest" formatted="false">"لديك أحدث إصدار"</string>
+    <string name="update_available" formatted="false">"يتوفر تحديث"</string>
+    <string name="update_check_failed" formatted="false">"تعذر التحقق من التحديثات. حاول لاحقًا."</string>
+    <string name="update_not_configured" formatted="false">"سيتاح التحقق من التحديثات بعد نشر التطبيق"</string>
+    <string name="update_download" formatted="false">"تنزيل التحديث"</string>
+    <string name="update_install" formatted="false">"تثبيت التحديث"</string>
+    <string name="update_invalid" formatted="false">"فشل التحقق من APK. نزّل التحديث مجددًا."</string>
+    <string name="update_permission" formatted="false">"اسمح لتطبيق Vezdehod بتثبيت التحديثات، ثم اضغط تثبيت التحديث مجددًا."</string>
+    <string name="update_install_failed" formatted="false">"تعذر فتح مثبّت Android"</string>
+    <string name="update_verifying" formatted="false">"جارٍ التحقق من APK…"</string>
+    <string name="update_download_failed" formatted="false">"فشل التنزيل. حاول مجددًا."</string>
+    <string name="update_waiting" formatted="false">"بانتظار الشبكة…"</string>
+    <string name="update_notes" formatted="false">"ما الجديد"</string>
+    <string name="update_checking" formatted="false">"جارٍ التحقق من التحديثات…"</string>
+    <string name="update_install_hint" formatted="false">"سيُعاد تشغيل التطبيق وسينقطع VPN أثناء التثبيت."</string>
+</resources>

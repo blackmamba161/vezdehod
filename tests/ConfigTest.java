@@ -1,0 +1,21 @@
+import org.json.*;import java.util.*;import java.nio.file.*;import local.blackmamba.vpn.Configuration;import static local.blackmamba.vpn.Store.*;
+public class ConfigTest {
+ public static void main(String[] args)throws Exception{
+ JSONObject data=obj("servers",arr(obj("id","one","outbound",obj("type","vless","server","192.0.2.1","server_port",443,"uuid","00000000-0000-4000-8000-000000000001","tls",obj("enabled",true,"server_name","example.com"))),obj("id","two","outbound",obj("type","trojan","server","192.0.2.2","server_port",443,"password","test-only","tls",obj("enabled",true,"server_name","example.com")))),"wifi","one","cellular","two","auto",true,"defaultTarget","direct","rules",arr(obj("type","domain_suffix","value","youtube.com","target","auto","enabled",true,"network","all"),obj("type","app","value","org.telegram.messenger","target","auto","network","cellular","enabled",true),obj("type","domain","value","ads.example.com","target","block","enabled",true),obj("type","unsupported","value","desktop-only","target","auto","enabled",false)));
+ Configuration.Result result=Configuration.build(data,"wifi",new HashMap<>(),"unused");JSONObject c=new JSONObject(result.singbox);if(!c.getJSONObject("route").getString("final").equals("direct"))throw new Exception("fallback");JSONArray rules=c.getJSONObject("route").getJSONArray("rules");if(rules.length()!=5)throw new Exception("rule count");if(!rules.getJSONObject(3).getJSONArray("network_type").getString(0).equals("cellular"))throw new Exception("network filter");if(!rules.getJSONObject(4).getString("action").equals("reject"))throw new Exception("block");Files.writeString(Path.of(args[0]),result.singbox);
+ String originalRules=data.getJSONArray("rules").toString();
+ data.put("networkIpv6",false);JSONObject v4=new JSONObject(Configuration.build(data,"wifi",Map.of(),"").singbox);
+ if(v4.getJSONArray("inbounds").getJSONObject(0).getJSONArray("address").length()!=1)throw new Exception("IPv4-only network advertises IPv6");
+ if(!v4.getJSONObject("dns").getString("strategy").equals("ipv4_only"))throw new Exception("AAAA on IPv4-only network");
+ if(v4.getJSONObject("route").getJSONArray("rules").getJSONObject(2).getInt("ip_version")!=6)throw new Exception("Cached IPv6 not rejected");
+ if(!v4.getJSONObject("route").getString("final").equals("direct")||!originalRules.equals(data.getJSONArray("rules").toString()))throw new Exception("Split rules mutated");
+ Files.writeString(Path.of(args[0]+".ipv4-network"),v4.toString());
+ data.put("networkIpv6",true);JSONObject v6=new JSONObject(Configuration.build(data,"cellular",Map.of(),"").singbox);
+ if(v6.getJSONArray("inbounds").getJSONObject(0).getJSONArray("address").length()!=2)throw new Exception("IPv6 not restored on capable network");
+ data.remove("networkIpv6");
+ data.put("wifi","missing");try{Configuration.build(data,"wifi",Map.of(),"");throw new AssertionError("missing server accepted");}catch(Exception expected){}
+ data.put("wifi","one").put("auto",false).put("manual","wifi");String manual=Configuration.build(data,"cellular",Map.of(),"").singbox;if(!manual.contains("\"default\":\"one\""))throw new Exception("manual route");
+ data.put("ipv6",false).put("mtu",1280).put("remoteDns","https://dns.google/dns-query").put("stack","mixed");JSONObject custom=new JSONObject(Configuration.build(data,"wifi",Map.of(),"").singbox);if(custom.getJSONArray("inbounds").getJSONObject(0).getInt("mtu")!=1280)throw new Exception("mtu setting");if(!custom.getJSONObject("dns").getString("strategy").equals("ipv4_only"))throw new Exception("ipv6 setting");if(custom.getJSONObject("route").getJSONArray("rules").getJSONObject(2).getInt("ip_version")!=6)throw new Exception("IPv6 bypass protection");Files.writeString(Path.of(args[0]+".custom"),custom.toString());data.put("mtu",900);try{Configuration.build(data,"wifi",Map.of(),"");throw new AssertionError("invalid mtu accepted");}catch(Exception expected){}data.put("mtu",1400).put("remoteDns","http://dns.example.com/query");try{Configuration.build(data,"wifi",Map.of(),"");throw new AssertionError("cleartext dns accepted");}catch(Exception expected){}
+ System.out.println("PASS DNS, MTU, IPv6 block, validation,  rule order, package/network match, block, missing server, manual selection");
+ }
+}

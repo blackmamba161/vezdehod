@@ -1,0 +1,376 @@
+msg_681ba374e5|MTU: 1280–1500
+msg_e13fa5e7d6|Interval: 5–120 seconds
+msg_8a43e3fd24|Enter a DNS-over-HTTPS address: https://…
+msg_33f32d875b|No events yet
+msg_dd624657c4|Could not read the log
+msg_85973145cb|Add a subscription and select a server
+msg_fa9ffb3f84|The selected server is no longer in the subscription. Select another in Networks.
+msg_27a403dd36|Could not allocate a local VPN port
+msg_2846df10fa|Unknown rule type
+msg_4dfebb89a6|Rule server unavailable: 
+msg_d721e92378|Duplicate server ID
+msg_50e1cb1272|Other traffic
+msg_938ad66f65|Route for sites and apps that do not match an enabled rule.
+msg_1667336ad3|Direct
+msg_e26ed24f9e|\nMobile: 
+msg_7be14a7ba6|Manual selection: 
+msg_3c0423bc77|Via VPN
+msg_e481dedaf2|Block
+msg_0e4d55ab7c|Specific server
+msg_8f67e4d13d|For any network
+msg_0ec753be8d|Cancel
+msg_dd6b0e1e55|, selected
+msg_45ec755630|Could not delete the import file
+msg_b63da52997|Could not open secure settings. Your data is preserved.
+msg_8a78d62250|The subscription has changed. Refresh again.
+msg_1a69e59ba3|This subscription is already added
+msg_40f8272534|Choose another server for networks and rules first
+msg_d2ff3b0e16|A rule uses this server
+msg_e8d9cd7b4e|Links
+msg_9794aef624|No compatible servers. 
+msg_e7e42a2acf|No servers in the subscription
+msg_999986e004|Too many encoding layers
+msg_6c21351bc9|Subscription exceeds 4 MB
+msg_6153e34d0c|The server returned an empty subscription
+msg_0432186247|This is a web page. Copy your provider’s VPN subscription link.
+msg_3c0e1e7d43|Invalid subscription JSON
+msg_c14abc64af|Could not read YAML. Check the subscription file.
+msg_79be6ca6bc|unknown format
+msg_30d9e094e4|Line 
+msg_54d59eb38a|Link 
+msg_8eeacd07c0|Entry 
+msg_f702b574da|: unknown format
+msg_e18fd43031|A server list or VPN configuration is required
+msg_48db32c372|Invalid proxies list
+msg_1fe1adcef3|Server 
+msg_4505a9f9d0|Invalid outbounds list
+msg_917e05143a|Server
+msg_e271fb3ca1|JSON has no outbounds or proxies
+msg_3d734741a7|unsupported or incomplete settings
+msg_7131aafc7b|Subscription exceeds 512 servers
+msg_210439cffd|server address or port is missing
+msg_6f8352205b|protocol 
+msg_b329e9ab1b|proxy chains are not supported yet
+msg_67acde8ec5|server address is missing
+msg_09e323f866|extra plugin or proxy chain
+msg_0203e5e1bf|transport 
+msg_aaecad4a8c| is not supported in YAML yet
+msg_40a747d563|Paste a link or scan a QR code
+msg_680a8e4f43|Enter one link without spaces
+msg_102b915c5e|Invalid link
+msg_2a16f698ef|Check the subscription address
+msg_c01d472ca8|Enter a subscription or server link
+msg_cacc66427a|Incomplete link
+msg_eee2285ba1|Essentials
+msg_16dacca18e|AI services
+msg_65ca123b53|Social
+msg_f72ae77771|Custom rules
+msg_667d8b44a6|Rules
+msg_9e572ab9c6|Rule order
+msg_02580e2fda|The first matching rule applies. Use arrows to change priority. Tap a service to expand its rules.
+msg_9276259877|Presets
+msg_fc7987118c|+ Rule
+msg_dc9a84c4a4|Choose services in Presets
+msg_8840608925|Mixed routes
+msg_d934aed196|Off
+msg_6ce4fa393d| of 
+msg_4cc948fff2| on
+msg_26e42bb274|Collapse 
+msg_dcfb1b173b|Expand 
+msg_8f769303f6|Move up: 
+msg_c800355918|Move down: 
+msg_9189fc3f32|Service: 
+msg_3ca212f4fc|rules
+msg_5d1611f2fb|rule
+msg_69b46d600c|rules
+msg_f9886ca2bc|App
+msg_045bef7d26|Website
+msg_2681a24f90|Edit rule: 
+msg_27c9c75d4a|Move rule up: 
+msg_08525c9005|Move rule down: 
+msg_573d59bada|Rule: 
+msg_a11443ec76|Rule presets
+msg_fd042c9a3a|Later
+msg_768af67762|Apply
+msg_bdda7682fb|Select all
+msg_accc8ab2b1| · added
+msg_97013008b5|Apply · 
+msg_dcd66875e7|Rules added: 
+msg_5f496335d3|Not checked
+msg_643b39ad20|VPN status
+msg_40b27edf9a|Connecting…
+app_name|Vezdehod
+msg_94d07a2171|Disconnect
+msg_683f4493ca|Network IPv6 support changed
+msg_b3be92a610|Network changed: 
+msg_9dfa170d49|mobile
+msg_f0a50c59fc|No network
+msg_a6ee13c1ee|Waiting for network
+msg_6679cdceb0|Mobile network
+msg_87fe71dbf1|Could not start the Xray connection
+msg_b84eb59edf|Tunnel started
+msg_8d41645d5d|Tunnel error
+msg_15da4eee64|Tunnel error; see the home screen
+msg_4ec4a7927c|Connection error · open the app
+msg_a24fd4542e|[address hidden]
+msg_1c64a8bede|[key hidden]
+msg_c0b5a5c3bd|VPN stopped
+msg_28fc95b5ac|Xray connection stopped
+msg_9b36be9334|Reconnecting
+msg_e66c7d3fa3|HTTPS available
+msg_a2ca43d182|HTTPS check failed
+msg_ec7a0b7421|Switched back to primary server
+msg_af26aede0a|Backup server selected
+msg_bc15101b19|Connect the VPN first
+msg_f96dbc41fe|Connection changed — check again
+msg_d2d78125b3|HTTPS and exit IP check passed
+msg_80f6d88155|Check failed
+msg_c050b742cc|HTTPS / IP check failed
+msg_d14be38b43|Connection changed
+msg_044b7bf56c|Connection changed — measure again
+msg_cda6f16c5c|Android VPN permission is required
+msg_a57d71f512|Android could not create the VPN
+msg_f132898dfe|Could not protect the VPN socket
+msg_4ae50d3073|Close
+msg_559a87f7cc|Add
+msg_9dd9dbd7cf|Help: 
+msg_d436f8a60e|Select a server
+msg_109f623f52|Subscription
+msg_5695330ffb|Auto
+msg_5ec7b0f52b|Manual
+msg_f04c4eff03|Automatic network switching
+msg_7f17c7c62a|Settings
+msg_7d8d1526a4|Screen error: 
+msg_ffddd31c12|Home
+msg_bd5e9cf0e8|Servers
+msg_cba4000b30|Networks
+msg_9f52d47392|Subscriptions
+msg_1c48855699|VPN is off
+msg_c5d75fed69|Connect using your rules
+msg_e285415316|Ping  
+msg_5160aea6bb| ms
+msg_741870459d|Automatic
+msg_0d69e3497e| added
+msg_81e0cd160b|Connected
+msg_6bd21210b3|Could not connect
+msg_ffae505dde| · using your rules
+msg_e1e9070c84|Tap to stop
+msg_d9c64e0064|Tap to connect
+msg_ca3d376341|Subscription until 
+msg_96003496cb|Expiry date unavailable
+msg_8c6206e35a|Disconnect VPN
+msg_7eed7135eb|Connect VPN
+msg_a9553f13ed|Server did not respond
+msg_b8696961cc|Switch automatically
+msg_4ecfcffd55|Refresh ping
+msg_3711716b26|Manual selection
+msg_7a06e90b46|Use network settings
+msg_51609a0433|Wi-Fi server
+msg_92395d9a9d|Mobile server
+msg_f6dab074d7|Back
+msg_65ba0faca3|All subscriptions
+msg_aa409ed202|Checking connection…
+msg_dd1d4309cd|Server unavailable: 
+msg_b28591b34c|A check is already running
+msg_1114ae9044|Checking…
+msg_ab9e23850b|≈10 MB · via VPN
+msg_69e5535d66|No results yet
+msg_03297c6b07|Start test
+msg_a554b1e8fe|Speed test
+msg_02bef41074|↓ %.1f Mbps\n↑ %.1f Mbps\nLatency: %s ms
+msg_9f9495ccb9|Connect the VPN first
+msg_40d44a7caa|Wait for the current check
+msg_790a8a4ea0|Measuring download and upload…
+msg_f6346b37fe|Test again
+msg_1cbfac57b9|Test incomplete: 
+msg_9a01e7088d|%.1f GB
+msg_188fea6cd2|No subscriptions yet
+msg_2c285a5142|Until 
+msg_a7989c9ed0|No expiry date
+msg_504d29a40f|Expired
+msg_2defa5c348|Edit subscription: 
+msg_ff652348e8|Refresh subscription
+msg_c9eee72114|Subscription servers
+msg_4ff9e9046e|Refreshing subscription…
+msg_3608b5e904|Subscription refreshed
+msg_a8c04b7022|Previous servers preserved. 
+msg_88b4efa32d|Delete rule?
+msg_86ea33aef5|Delete
+msg_9c96d4dc3e|Enter the app package name
+msg_1c97ba2b80|Enter a subnet, for example 192.168.0.0/16
+msg_df8cdfc609|Enter a domain without https:// or a path
+msg_875be13421|App name or package
+msg_f51f551f4b|System services
+msg_cab718e280|Show system services
+msg_e5834c4ca1|Loading apps…
+msg_1e1b70b17c|No results
+msg_7819ea82b0|Select app
+msg_8c5bfb9222|Could not load apps
+msg_aa4986268e|Delete subscription
+msg_3de49828e8|Name
+msg_11b385895c|My VPN
+msg_046e475e5a|Link
+msg_a44800a12f|Copy link
+msg_a48859c609|Edit link
+msg_ccb6cb6834|Subscription link
+msg_6fcdbbe8f7|Auto-refresh
+msg_4e401a2e7b|Auto-refresh subscription
+msg_9066ea9564|Check the subscription every hour while the VPN is on.
+msg_4864057d62|Save
+msg_49261ec6a4|Link copied
+msg_f18132742a|Finish editing link
+msg_0af444c6af|Enter a name
+msg_6c6d266c63|Subscription already deleted
+msg_6d039299cd|Delete subscription?
+msg_06b9e865d0|‹  All settings
+msg_7f2be1ba3d|Ad blocking
+msg_85dd4d46ca|On
+msg_2106134f75|Off
+msg_d206f1bed0|Appearance
+msg_ed3f0e507a|Language
+msg_79e350f743|Connection
+msg_c7e6bf5234|Notifications and icon
+msg_d7907f4d43|Advanced
+msg_9ba1e22ac3|Diagnostics
+msg_a84ab2656e|Vezdehod · version 
+msg_6521dc9632|Connection settings changed
+msg_7f59da61ba|Appearance settings changed
+msg_41a17b3bad|If a site stops working, add an exception or disable the filter.
+msg_d6d24ec981|Ads and trackers
+msg_85e3709119|Works while the VPN is on. Does not remove ads inside videos.
+msg_ea65534c79|Exceptions
+msg_f82a821941|None
+msg_449885f5fe| domains
+msg_0f97e2780c|Allows the domain and its subdomains without changing the route.
+msg_2923b8f670|One domain per line
+msg_494d7c7be7|Blocking exceptions
+msg_35d57a900e|Device language
+msg_553c45f1b8|Theme
+msg_bd16b23470|Dark
+msg_8080010c5e|Light
+msg_f0a22d9d1a|System default
+msg_70f0229afd|Accent color
+msg_9f1325f197|Gold
+msg_891c5e9e76|Mint
+msg_0deebc3a96|Blue
+msg_a4617199a8|Display size
+msg_4886f1af13|Compact · 90%
+msg_e7e285a436|Default · 100%
+msg_52bac55f34|Large · 110%
+msg_d8fcb99153|Extra large · 120%
+msg_11bb1b11c0|On the home screen
+msg_220afdba73|Ping
+msg_aff5818940|Subscription expiry
+msg_f56353b7eb|Icon and notification
+msg_64776d5102|Notification shade
+msg_6ba4db3033|Hiding the notification does not disconnect the VPN.
+msg_4e73aa66da|Notification shown
+msg_f1d3c27f2c|Notification hidden
+msg_8960ddc30e|Configure
+msg_be99ac8f13|Status bar
+msg_e57f3249b4|Android controls this icon. The app cannot replace or move it.
+msg_136e1c4c3c|Controlled by Android
+msg_9d22ff847e|Switches to a backup if the primary server fails, and back when it recovers.
+msg_fcb4b47313|Start with phone
+msg_2be12d2d73|The VPN starts after the first unlock.
+msg_a8e2cfb793|Reconnect
+msg_448e226084|Retry after
+msg_8c21ba2d9d|5 seconds
+msg_8a45d0d1ad|15 seconds
+msg_d84f514695|30 seconds
+msg_7db1478f63|60 seconds
+msg_e83d7ce312|Wi-Fi backup
+msg_fbf3611c53|Mobile backup
+msg_ca20e76c0c|Background activity
+msg_d26aec38b1|Battery and auto-start
+msg_a9d9fc2d46|Always-on VPN
+msg_8a6ceef063|Android settings
+msg_2d8f7570e1|Do not use
+msg_c8243322dc|on connection
+msg_e0cf01e43c|IP mode
+msg_e6da72edd6|Auto · 
+msg_5b9e24bda9|IPv4 only
+msg_9be84e1d9f|IPv6 is enabled automatically when the network supports it.
+msg_8f9bf25ca6|VPN DNS
+msg_5f1326b514|This DNS uses the VPN. Direct routes use the current network’s DNS.
+msg_0857ba97ab| bytes
+msg_466019b718|Usually 1400. Try 1280 if downloads stall.
+msg_7e47a7ce78|Network stack
+msg_eca17171d2|System
+msg_d155047e55|Mixed
+msg_d4dbd88958|Keep gVisor. Other modes are for compatibility issues.
+msg_e04a016600|Reset network settings
+msg_f1b8fc3ba0|Reset network settings?
+msg_478ced019a|Cloudflare DNS · auto IP · MTU 1400 · gVisor. Other settings are preserved.
+msg_058f162d29|Reset
+msg_6a38870f87|Cloudflare · default
+msg_8fb98f9cdd|1400 · standard
+msg_b826985870|1280 · smaller
+msg_5f233b0c2d|Enter a whole number from 1280 to 1500
+msg_989e4afb04|Checks the VPN exit only. Direct routes need a separate check.
+msg_2471b6e04f|Tunnel: 
+msg_2eabbcfdaa|\nNetwork: 
+msg_2afa58988e|Reachability: 
+msg_4a198cee74|Not checked yet
+msg_19e7fa6964|Check connection and IP
+msg_1fa4998331|Checking HTTPS and public IP…
+msg_2ddce0385c|Exit IP: 
+msg_5a2f918d96|\nHTTPS: available\nLatency: 
+msg_32d477ea64|Check failed: 
+msg_d32a398cf9|Measure speed
+msg_57013f6956|About 10 MB of traffic
+msg_f2ee635aaa|Event log
+msg_67ade741ae|Log
+msg_049d00ab33|Clear log
+msg_46a01e5fdc|Log cleared
+msg_cde2c9f8b9|A server uses unsupported settings. The subscription was not changed.
+msg_a734112137|Server validation timed out. Try adding the subscription again.
+msg_3d53cd3ab3|Unsupported Xray settings. The subscription was not changed.
+msg_46f4fe51cc|Add subscription
+msg_f91f5592a9|QR code
+msg_19a5f8e5b8|From clipboard
+msg_a30b87ef8c|Clipboard is empty
+msg_2a1dd82994|No link in clipboard
+msg_bb84bedbe2|Enter link
+msg_3f75368ab9|Continue
+msg_9e506acb19|Retry
+msg_92ce2819af|Servers: 
+msg_06bb7e72a9|Skipped entries: 
+msg_44548e3dc4|Skipped entries
+msg_fb701daed8|Could not read the subscription
+msg_789841320c|‹  Rules
+msg_b559f9f1ca|New rule
+msg_97a3265a4a|Edit rule
+msg_56970d69fd|IP address and prefix
+msg_67787241c9|Website address
+msg_31654bd668|Select an app below
+msg_72f953a4f1|Include subdomains
+msg_b765f32584|Route
+msg_190ba6d582|Apply on
+msg_b03361f6c0|Wi-Fi and mobile
+msg_7a1fc2cbc5|Name · optional
+msg_09d340f276|For your reference
+msg_e4d9463d19|Delete rule
+msg_58e849be29|Wi-Fi only
+msg_0288127e28|Mobile only
+msg_2bc1c34c0c|Rule already deleted
+msg_9b5a1ac56d|‹  QR code
+msg_4198cfd7ad|Close scanner
+msg_d16af433b5|Point the camera at a QR code
+msg_c01eaf3033|Open image
+msg_6daead7fcc|Camera permission denied. You can open an image instead.
+msg_c5f4e5cd89|Camera unavailable. Open an image instead.
+msg_1821a8f4a3|Could not start the camera
+msg_1c313fd862|Camera unavailable
+msg_2291f43f3b|Reading QR code…
+msg_9b811806c2|No QR code found. Choose another image.
+msg_3fed10dcd2|format 
+msg_0ed6fd3f45|server address is missing
+msg_6fc143271e|A subscription requires an HTTPS link
+msg_81f0596a4a|Subscription refresh: HTTP 
+msg_7344ead1f2|Subscription is too large
+msg_8478b68ef9|The update contains unsupported entries. Previous servers are preserved.
+msg_e07f86b4c4|Enter one domain per line, without https:// or a path
+msg_3baad0b2cf|No more than 200 exceptions
+msg_04926ac15c|Auto-start after boot
+msg_04d374e07a|Auto-start failed — open the app

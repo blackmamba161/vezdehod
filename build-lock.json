@@ -1,0 +1,20 @@
+{
+  "sing-box": "1.12.12",
+  "xray": "26.11.9",
+  "go": "1.24.13",
+  "ndk": "r27d",
+  "arch": "arm64-v8a",
+  "sha256": {
+    "vendor/sing-box-1.12.12.tar.gz": "f08add81eab7e4d6091195179bb39fa3f64dbb0326feaa022994566b702d1245",
+    "vendor/sing-box-1.12.12/libbox.aar": "122a69c9c9509d0a92bb297908b1666bd7cfb1303d7be350a6a1593d98dbbbb8",
+    "vendor/xray-android.zip": "edcefc25b9b3195b11e18624c8269a969d6aabc39c6298a9a5ab29de15d46f3b",
+    "mobile_app.go": "0923416893affa78ac7e709327903bb64748351cab6c0166900128e517bf3503",
+    "app/res/raw/ads_light.srs": "9877fbe5aa317936f73216828aca8dac407a402f95bcdbaeee4856e9dae4e998",
+    "vendor/zxing/core-3.5.3.jar": "8d8064c1636fdaef7189dd9055c7d59950a8940a12f2293956446ec3c109fd82",
+    "vendor/snakeyaml/snakeyaml-2.7.jar": "2e194eba45a67dee19a4e272f4a04b18de8054e9f598b094382f6dae0b0e4b5e"
+  },
+  "apk_sha256": "9eab565c600a9cab832bf974c84074d70ae8f565b295d0fcded385792024eea6",
+  "app_version": "0.2.15",
+  "zxing": "3.5.3",
+  "snakeyaml": "2.7"
+}

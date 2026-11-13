@@ -1,0 +1,376 @@
+MTU: 1280–1500
+Intervall: 5–120 Sekunden
+DNS-over-HTTPS-Adresse eingeben: https://…
+Noch keine Ereignisse
+Protokoll konnte nicht gelesen werden
+Abonnement hinzufügen und Server auswählen
+Der gewählte Server ist nicht mehr im Abonnement. Unter Netzwerke einen anderen auswählen.
+Lokaler VPN-Port konnte nicht zugewiesen werden
+Unbekannter Regeltyp
+Regelserver nicht verfügbar: 
+Doppelte Server-ID
+Übriger Datenverkehr
+Route für Websites und Apps, auf die keine aktive Regel zutrifft.
+Direkt
+\nMobilfunk: 
+Manuelle Auswahl: 
+Über VPN
+Blockieren
+Bestimmter Server
+Für alle Netzwerke
+Abbrechen
+, ausgewählt
+Importdatei konnte nicht gelöscht werden
+Sichere Einstellungen konnten nicht geöffnet werden. Deine Daten bleiben erhalten.
+Das Abonnement wurde geändert. Erneut aktualisieren.
+Dieses Abonnement wurde bereits hinzugefügt
+Zuerst einen anderen Server für Netzwerke und Regeln auswählen
+Eine Regel verwendet diesen Server
+Links
+Keine kompatiblen Server. 
+Keine Server im Abonnement
+Zu viele Kodierungsebenen
+Abonnement überschreitet 4 MB
+Der Server hat ein leeres Abonnement geliefert
+Dies ist eine Webseite. Kopiere den VPN-Abonnement-Link deines Anbieters.
+Ungültiges Abonnement-JSON
+YAML konnte nicht gelesen werden. Abonnementdatei prüfen.
+unbekanntes Format
+Zeile 
+Link 
+Eintrag 
+: unbekanntes Format
+Serverliste oder VPN-Konfiguration erforderlich
+Ungültige proxies-Liste
+Server 
+Ungültige outbounds-Liste
+Server
+JSON enthält weder outbounds noch proxies
+nicht unterstützte oder unvollständige Einstellungen
+Abonnement überschreitet 512 Server
+Serveradresse oder Port fehlt
+Protokoll 
+Proxy-Ketten werden noch nicht unterstützt
+Serveradresse fehlt
+zusätzliches Plugin oder Proxy-Kette
+Transport 
+ wird in YAML noch nicht unterstützt
+Link einfügen oder QR-Code scannen
+Einen Link ohne Leerzeichen eingeben
+Ungültiger Link
+Abonnementadresse prüfen
+Abonnement- oder Serverlink eingeben
+Unvollständiger Link
+Grundauswahl
+KI-Dienste
+Soziale Dienste
+Eigene Regeln
+Regeln
+Regelreihenfolge
+Die erste passende Regel gilt. Pfeile ändern die Priorität. Tippe auf einen Dienst, um seine Regeln aufzuklappen.
+Vorlagen
++ Regel
+Dienste unter Vorlagen auswählen
+Gemischte Routen
+Aus
+ von 
+ aktiv
+Zuklappen 
+Aufklappen 
+Nach oben: 
+Nach unten: 
+Dienst: 
+Regeln
+Regel
+Regeln
+App
+Website
+Regel bearbeiten: 
+Regel nach oben: 
+Regel nach unten: 
+Regel: 
+Regelvorlagen
+Später
+Anwenden
+Alle auswählen
+ · hinzugefügt
+Anwenden · 
+Regeln hinzugefügt: 
+Nicht geprüft
+VPN-Status
+Verbindung wird hergestellt…
+Vezdehod
+Trennen
+IPv6-Unterstützung des Netzwerks geändert
+Netzwerk gewechselt: 
+Mobilfunk
+Kein Netzwerk
+Warten auf Netzwerk
+Mobilfunknetz
+Xray-Verbindung konnte nicht gestartet werden
+Tunnel gestartet
+Tunnelfehler
+Tunnelfehler; siehe Startseite
+Verbindungsfehler · App öffnen
+[Adresse verborgen]
+[Schlüssel verborgen]
+VPN gestoppt
+Xray-Verbindung gestoppt
+Erneuter Verbindungsaufbau
+HTTPS erreichbar
+HTTPS-Prüfung fehlgeschlagen
+Zurück zum Hauptserver gewechselt
+Ersatzserver ausgewählt
+Zuerst VPN verbinden
+Verbindung geändert — erneut prüfen
+HTTPS und Ausgangs-IP erfolgreich geprüft
+Prüfung fehlgeschlagen
+HTTPS-/IP-Prüfung fehlgeschlagen
+Verbindung geändert
+Verbindung geändert — erneut messen
+Android-VPN-Berechtigung erforderlich
+Android konnte das VPN nicht erstellen
+VPN-Socket konnte nicht geschützt werden
+Schließen
+Hinzufügen
+Hilfe: 
+Server auswählen
+Abonnement
+Auto
+Manuell
+Automatischer Netzwerkwechsel
+Einstellungen
+Anzeigefehler: 
+Start
+Server
+Netzwerke
+Abonnements
+VPN ist aus
+Nach deinen Regeln verbinden
+Ping 
+ ms
+Automatisch
+ hinzugefügt
+Verbunden
+Verbindung fehlgeschlagen
+ · nach deinen Regeln
+Zum Stoppen tippen
+Zum Verbinden tippen
+Abonnement bis 
+Ablaufdatum nicht verfügbar
+VPN trennen
+VPN verbinden
+Server hat nicht geantwortet
+Automatisch wechseln
+Ping aktualisieren
+Manuelle Auswahl
+Netzwerkeinstellungen verwenden
+WLAN-Server
+Mobilfunkserver
+Zurück
+Alle Abonnements
+Verbindung wird geprüft…
+Server nicht verfügbar: 
+Eine Prüfung läuft bereits
+Prüfung läuft…
+≈10 MB · über VPN
+Noch keine Ergebnisse
+Test starten
+Geschwindigkeitstest
+↓ %.1f Mbit/s\n↑ %.1f Mbit/s\nLatenz: %s ms
+Zuerst VPN verbinden
+Laufende Prüfung abwarten
+Download und Upload werden gemessen…
+Erneut testen
+Test unvollständig: 
+%.1f GB
+Noch keine Abonnements
+Bis 
+Kein Ablaufdatum
+Abgelaufen
+Abonnement bearbeiten: 
+Abonnement aktualisieren
+Abonnementserver
+Abonnement wird aktualisiert…
+Abonnement aktualisiert
+Vorherige Server bleiben erhalten. 
+Regel löschen?
+Löschen
+Paketnamen der App eingeben
+Subnetz eingeben, z. B. 192.168.0.0/16
+Domain ohne https:// oder Pfad eingeben
+App-Name oder Paket
+Systemdienste
+Systemdienste anzeigen
+Apps werden geladen…
+Keine Ergebnisse
+App auswählen
+Apps konnten nicht geladen werden
+Abonnement löschen
+Name
+Mein VPN
+Link
+Link kopieren
+Link bearbeiten
+Abonnement-Link
+Auto-Aktualisierung
+Abonnement automatisch aktualisieren
+Prüft das Abonnement stündlich, solange das VPN aktiv ist.
+Speichern
+Link kopiert
+Linkbearbeitung abschließen
+Namen eingeben
+Abonnement bereits gelöscht
+Abonnement löschen?
+‹  Alle Einstellungen
+Werbeblocker
+An
+Aus
+Darstellung
+Sprache
+Verbindung
+Benachrichtigungen und Symbol
+Erweitert
+Diagnose
+Vezdehod · Version 
+Verbindungseinstellungen geändert
+Darstellungseinstellungen geändert
+Wenn eine Website nicht mehr funktioniert, Ausnahme hinzufügen oder Filter deaktivieren.
+Werbung und Tracker
+Wirkt bei aktivem VPN. Entfernt keine Werbung innerhalb von Videos.
+Ausnahmen
+Keine
+ Domains
+Erlaubt die Domain und ihre Subdomains, ohne die Route zu ändern.
+Eine Domain pro Zeile
+Blockierausnahmen
+Gerätesprache
+Design
+Dunkel
+Hell
+Systemstandard
+Akzentfarbe
+Gold
+Mint
+Blau
+Anzeigegröße
+Kompakt · 90 %
+Standard · 100 %
+Groß · 110 %
+Sehr groß · 120 %
+Auf der Startseite
+Ping
+Abonnementablauf
+Symbol und Benachrichtigung
+Benachrichtigungsleiste
+Das Ausblenden der Benachrichtigung trennt das VPN nicht.
+Benachrichtigung sichtbar
+Benachrichtigung ausgeblendet
+Konfigurieren
+Statusleiste
+Android steuert dieses Symbol. Die App kann es weder ersetzen noch verschieben.
+Von Android gesteuert
+Wechselt bei Ausfall zum Ersatzserver und nach Wiederherstellung zurück zum Hauptserver.
+Mit dem Telefon starten
+Das VPN startet nach dem ersten Entsperren.
+Neu verbinden
+Erneut versuchen nach
+5 Sekunden
+15 Sekunden
+30 Sekunden
+60 Sekunden
+WLAN-Ersatzserver
+Mobilfunk-Ersatzserver
+Hintergrundaktivität
+Akku und Autostart
+Durchgehend aktives VPN
+Android-Einstellungen
+Nicht verwenden
+beim Verbinden
+IP-Modus
+Auto · 
+Nur IPv4
+IPv6 wird automatisch aktiviert, wenn das Netzwerk es unterstützt.
+VPN-DNS
+Dieser DNS nutzt das VPN. Direkte Routen verwenden den DNS des aktuellen Netzwerks.
+ Bytes
+Üblicherweise 1400. Bei stockenden Downloads 1280 versuchen.
+Netzwerk-Stack
+System
+Gemischt
+gVisor beibehalten. Andere Modi dienen bei Kompatibilitätsproblemen.
+Netzwerkeinstellungen zurücksetzen
+Netzwerkeinstellungen zurücksetzen?
+Cloudflare-DNS · IP automatisch · MTU 1400 · gVisor. Andere Einstellungen bleiben erhalten.
+Zurücksetzen
+Cloudflare · Standard
+1400 · Standard
+1280 · kleiner
+Ganze Zahl von 1280 bis 1500 eingeben
+Prüft nur den VPN-Ausgang. Direkte Routen müssen separat geprüft werden.
+Tunnel: 
+\nNetzwerk: 
+Erreichbarkeit: 
+Noch nicht geprüft
+Verbindung und IP prüfen
+HTTPS und öffentliche IP werden geprüft…
+Ausgangs-IP: 
+\nHTTPS: erreichbar\nLatenz: 
+Prüfung fehlgeschlagen: 
+Geschwindigkeit messen
+Etwa 10 MB Datenverkehr
+Ereignisprotokoll
+Protokoll
+Protokoll leeren
+Protokoll geleert
+Ein Server nutzt nicht unterstützte Einstellungen. Das Abonnement wurde nicht geändert.
+Zeitüberschreitung bei der Serverprüfung. Abonnement erneut hinzufügen.
+Nicht unterstützte Xray-Einstellungen. Das Abonnement wurde nicht geändert.
+Abonnement hinzufügen
+QR-Code
+Aus Zwischenablage
+Zwischenablage ist leer
+Kein Link in der Zwischenablage
+Link eingeben
+Weiter
+Erneut versuchen
+Server: 
+Übersprungene Einträge: 
+Übersprungene Einträge
+Abonnement konnte nicht gelesen werden
+‹  Regeln
+Neue Regel
+Regel bearbeiten
+IP-Adresse und Präfix
+Website-Adresse
+Unten eine App auswählen
+Subdomains einbeziehen
+Route
+Anwenden auf
+WLAN und Mobilfunk
+Name · optional
+Zur eigenen Orientierung
+Regel löschen
+Nur WLAN
+Nur Mobilfunk
+Regel bereits gelöscht
+‹  QR-Code
+Scanner schließen
+Kamera auf einen QR-Code richten
+Bild öffnen
+Kamerazugriff verweigert. Du kannst stattdessen ein Bild öffnen.
+Kamera nicht verfügbar. Öffne stattdessen ein Bild.
+Kamera konnte nicht gestartet werden
+Kamera nicht verfügbar
+QR-Code wird gelesen…
+Kein QR-Code gefunden. Anderes Bild auswählen.
+Format 
+Serveradresse fehlt
+Ein Abonnement benötigt einen HTTPS-Link
+Abonnementaktualisierung: HTTP 
+Abonnement ist zu groß
+Das Update enthält nicht unterstützte Einträge. Vorherige Server bleiben erhalten.
+Eine Domain pro Zeile, ohne https:// oder Pfad eingeben
+Maximal 200 Ausnahmen
+Autostart nach dem Hochfahren
+Autostart fehlgeschlagen — App öffnen

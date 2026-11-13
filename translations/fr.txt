@@ -1,0 +1,376 @@
+MTU : 1280–1500
+Intervalle : 5–120 secondes
+Saisissez une adresse DNS-over-HTTPS : https://…
+Aucun événement
+Impossible de lire le journal
+Ajoutez un abonnement et choisissez un serveur
+Le serveur choisi n’est plus dans l’abonnement. Choisissez-en un autre dans Réseaux.
+Impossible d’allouer un port VPN local
+Type de règle inconnu
+Serveur de la règle indisponible : 
+Identifiant de serveur en double
+Autre trafic
+Route des sites et applications ne correspondant à aucune règle active.
+Direct
+\nMobile : 
+Choix manuel : 
+Via VPN
+Bloquer
+Serveur précis
+Pour tous les réseaux
+Annuler
+, sélectionné
+Impossible de supprimer le fichier importé
+Impossible d’ouvrir les paramètres sécurisés. Vos données sont conservées.
+L’abonnement a changé. Actualisez à nouveau.
+Cet abonnement est déjà ajouté
+Choisissez d’abord un autre serveur pour les réseaux et les règles
+Une règle utilise ce serveur
+Liens
+Aucun serveur compatible. 
+L’abonnement ne contient aucun serveur
+Trop de couches d’encodage
+L’abonnement dépasse 4 Mo
+Le serveur a renvoyé un abonnement vide
+C’est une page web. Copiez le lien d’abonnement VPN fourni par votre prestataire.
+JSON d’abonnement invalide
+Impossible de lire le YAML. Vérifiez le fichier d’abonnement.
+format inconnu
+Ligne 
+Lien 
+Entrée 
+ : format inconnu
+Une liste de serveurs ou une configuration VPN est nécessaire
+Liste proxies invalide
+Serveur 
+Liste outbounds invalide
+Serveur
+Le JSON ne contient ni outbounds ni proxies
+paramètres non pris en charge ou incomplets
+L’abonnement dépasse 512 serveurs
+adresse ou port du serveur manquant
+protocole 
+les chaînes de proxys ne sont pas encore prises en charge
+adresse du serveur manquante
+extension supplémentaire ou chaîne de proxys
+transport 
+ pas encore pris en charge en YAML
+Collez un lien ou scannez un QR code
+Saisissez un seul lien sans espaces
+Lien invalide
+Vérifiez l’adresse de l’abonnement
+Saisissez un lien d’abonnement ou de serveur
+Lien incomplet
+Essentiels
+Services d’IA
+Réseaux sociaux
+Règles personnelles
+Règles
+Ordre des règles
+La première règle correspondante s’applique. Les flèches changent la priorité. Touchez un service pour afficher ses règles.
+Préréglages
++ Règle
+Choisissez des services dans Préréglages
+Routes mixtes
+Désactivé
+ sur 
+ actives
+Réduire 
+Développer 
+Monter : 
+Descendre : 
+Service : 
+règles
+règle
+règles
+Application
+Site web
+Modifier la règle : 
+Monter la règle : 
+Descendre la règle : 
+Règle : 
+Règles prédéfinies
+Plus tard
+Appliquer
+Tout sélectionner
+ · ajouté
+Appliquer · 
+Règles ajoutées : 
+Non vérifié
+État du VPN
+Connexion…
+Vezdehod
+Déconnecter
+La prise en charge IPv6 du réseau a changé
+Réseau modifié : 
+mobile
+Aucun réseau
+En attente du réseau
+Réseau mobile
+Impossible de démarrer la connexion Xray
+Tunnel démarré
+Erreur de tunnel
+Erreur de tunnel ; consultez l’accueil
+Erreur de connexion · ouvrez l’application
+[adresse masquée]
+[clé masquée]
+VPN arrêté
+Connexion Xray arrêtée
+Reconnexion
+HTTPS accessible
+Échec du test HTTPS
+Retour au serveur principal
+Serveur de secours sélectionné
+Connectez d’abord le VPN
+Connexion modifiée — vérifiez à nouveau
+HTTPS et IP de sortie vérifiés
+Échec du test
+Échec du test HTTPS / IP
+Connexion modifiée
+Connexion modifiée — relancez la mesure
+L’autorisation VPN d’Android est nécessaire
+Android n’a pas pu créer le VPN
+Impossible de protéger le socket VPN
+Fermer
+Ajouter
+Aide : 
+Choisir un serveur
+Abonnement
+Auto
+Manuel
+Changement automatique de réseau
+Paramètres
+Erreur d’affichage : 
+Accueil
+Serveurs
+Réseaux
+Abonnements
+VPN désactivé
+Se connecter selon vos règles
+Ping 
+ ms
+Automatique
+ ajoutés
+Connecté
+Connexion impossible
+ · selon vos règles
+Touchez pour arrêter
+Touchez pour connecter
+Abonnement jusqu’au 
+Date d’expiration indisponible
+Déconnecter le VPN
+Connecter le VPN
+Le serveur n’a pas répondu
+Changer automatiquement
+Actualiser le ping
+Choix manuel
+Utiliser les paramètres réseau
+Serveur Wi-Fi
+Serveur mobile
+Retour
+Tous les abonnements
+Test de connexion…
+Serveur indisponible : 
+Un test est déjà en cours
+Vérification…
+≈10 Mo · via VPN
+Aucun résultat
+Lancer le test
+Test de débit
+↓ %.1f Mbit/s\n↑ %.1f Mbit/s\nLatence : %s ms
+Connectez d’abord le VPN
+Attendez la fin du test en cours
+Mesure du débit descendant et montant…
+Relancer le test
+Test incomplet : 
+%.1f Go
+Aucun abonnement
+Jusqu’au 
+Sans date d’expiration
+Expiré
+Modifier l’abonnement : 
+Actualiser l’abonnement
+Serveurs de l’abonnement
+Actualisation de l’abonnement…
+Abonnement actualisé
+Les anciens serveurs sont conservés. 
+Supprimer la règle ?
+Supprimer
+Saisissez le nom du paquet de l’application
+Saisissez un sous-réseau, par exemple 192.168.0.0/16
+Saisissez un domaine sans https:// ni chemin
+Nom ou paquet de l’application
+Services système
+Afficher les services système
+Chargement des applications…
+Aucun résultat
+Choisir une application
+Impossible de charger les applications
+Supprimer l’abonnement
+Nom
+Mon VPN
+Lien
+Copier le lien
+Modifier le lien
+Lien d’abonnement
+Actualisation auto
+Actualiser automatiquement l’abonnement
+Vérifie l’abonnement chaque heure lorsque le VPN est actif.
+Enregistrer
+Lien copié
+Terminer la modification du lien
+Saisissez un nom
+Abonnement déjà supprimé
+Supprimer l’abonnement ?
+‹  Tous les paramètres
+Blocage des publicités
+Activé
+Désactivé
+Apparence
+Langue
+Connexion
+Notifications et icône
+Avancé
+Diagnostic
+Vezdehod · version 
+Paramètres de connexion modifiés
+Paramètres d’apparence modifiés
+Si un site ne fonctionne plus, ajoutez une exception ou désactivez le filtre.
+Publicités et traqueurs
+Fonctionne lorsque le VPN est actif. Ne supprime pas les publicités dans les vidéos.
+Exceptions
+Aucune
+ domaines
+Autorise le domaine et ses sous-domaines sans changer la route.
+Un domaine par ligne
+Exceptions au blocage
+Langue de l’appareil
+Thème
+Sombre
+Clair
+Système
+Couleur d’accent
+Or
+Menthe
+Bleu
+Taille d’affichage
+Compact · 90 %
+Normal · 100 %
+Grand · 110 %
+Très grand · 120 %
+Sur l’accueil
+Ping
+Expiration de l’abonnement
+Icône et notification
+Volet de notifications
+Masquer la notification ne déconnecte pas le VPN.
+Notification affichée
+Notification masquée
+Configurer
+Barre d’état
+Android contrôle cette icône. L’application ne peut ni la remplacer ni la déplacer.
+Géré par Android
+Passe au serveur de secours si le principal tombe en panne, puis revient quand il est rétabli.
+Démarrer avec le téléphone
+Le VPN démarre après le premier déverrouillage.
+Reconnecter
+Réessayer après
+5 secondes
+15 secondes
+30 secondes
+60 secondes
+Secours Wi-Fi
+Secours mobile
+Activité en arrière-plan
+Batterie et démarrage auto
+VPN permanent
+Paramètres Android
+Ne pas utiliser
+à la connexion
+Mode IP
+Auto · 
+IPv4 uniquement
+IPv6 s’active automatiquement si le réseau le permet.
+DNS du VPN
+Ce DNS passe par le VPN. Les routes directes utilisent le DNS du réseau actuel.
+ octets
+1400 en général. Essayez 1280 si les téléchargements se bloquent.
+Pile réseau
+Système
+Mixte
+Gardez gVisor. Les autres modes servent à résoudre les problèmes de compatibilité.
+Réinitialiser le réseau
+Réinitialiser les paramètres réseau ?
+DNS Cloudflare · IP auto · MTU 1400 · gVisor. Les autres paramètres sont conservés.
+Réinitialiser
+Cloudflare · par défaut
+1400 · standard
+1280 · réduit
+Saisissez un entier entre 1280 et 1500
+Teste uniquement la sortie VPN. Les routes directes doivent être testées séparément.
+Tunnel : 
+\nRéseau : 
+Accessibilité : 
+Pas encore vérifié
+Vérifier la connexion et l’IP
+Vérification HTTPS et IP publique…
+IP de sortie : 
+\nHTTPS : accessible\nLatence : 
+Échec du test : 
+Mesurer le débit
+Environ 10 Mo de trafic
+Journal des événements
+Journal
+Effacer le journal
+Journal effacé
+Un serveur utilise des paramètres non pris en charge. L’abonnement n’a pas été modifié.
+La validation du serveur a expiré. Ajoutez à nouveau l’abonnement.
+Paramètres Xray non pris en charge. L’abonnement n’a pas été modifié.
+Ajouter un abonnement
+QR code
+Depuis le presse-papiers
+Le presse-papiers est vide
+Aucun lien dans le presse-papiers
+Saisir un lien
+Continuer
+Réessayer
+Serveurs : 
+Entrées ignorées : 
+Entrées ignorées
+Impossible de lire l’abonnement
+‹  Règles
+Nouvelle règle
+Modifier la règle
+Adresse IP et préfixe
+Adresse du site
+Choisissez une application ci-dessous
+Inclure les sous-domaines
+Route
+Appliquer sur
+Wi-Fi et mobile
+Nom · facultatif
+Pour l’identifier
+Supprimer la règle
+Wi-Fi uniquement
+Mobile uniquement
+Règle déjà supprimée
+‹  QR code
+Fermer le scanner
+Visez un QR code avec la caméra
+Ouvrir une image
+Accès à la caméra refusé. Vous pouvez ouvrir une image.
+Caméra indisponible. Ouvrez une image.
+Impossible de démarrer la caméra
+Caméra indisponible
+Lecture du QR code…
+Aucun QR code trouvé. Choisissez une autre image.
+format 
+adresse du serveur manquante
+Un abonnement nécessite un lien HTTPS
+Actualisation de l’abonnement : HTTP 
+L’abonnement est trop volumineux
+La mise à jour contient des entrées non prises en charge. Les anciens serveurs sont conservés.
+Saisissez un domaine par ligne, sans https:// ni chemin
+200 exceptions maximum
+Démarrage automatique après allumage
+Échec du démarrage automatique — ouvrez l’application

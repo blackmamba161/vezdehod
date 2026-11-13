@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msg_681ba374e5" formatted="false">"MTU: от 1280 до 1500"</string>
+    <string name="msg_e13fa5e7d6" formatted="false">"Интервал: от 5 до 120 секунд"</string>
+    <string name="msg_8a43e3fd24" formatted="false">"Укажи адрес DNS-over-HTTPS: https://…"</string>
+    <string name="msg_33f32d875b" formatted="false">"Событий пока нет"</string>
+    <string name="msg_dd624657c4" formatted="false">"Не удалось прочитать журнал"</string>
+    <string name="msg_85973145cb" formatted="false">"Добавь подписку и выбери сервер"</string>
+    <string name="msg_fa9ffb3f84" formatted="false">"Выбранный сервер исчез из подписки. Выбери другой на экране «Сети»."</string>
+    <string name="msg_27a403dd36" formatted="false">"Не выделен локальный порт VPN"</string>
+    <string name="msg_2846df10fa" formatted="false">"Неизвестный тип правила"</string>
+    <string name="msg_4dfebb89a6" formatted="false">"Сервер в правиле недоступен: "</string>
+    <string name="msg_d721e92378" formatted="false">"Повторяющийся идентификатор сервера"</string>
+    <string name="msg_50e1cb1272" formatted="false">"Остальной трафик"</string>
+    <string name="msg_938ad66f65" formatted="false">"Как подключать сайты и приложения, для которых нет совпавшего включённого правила."</string>
+    <string name="msg_1667336ad3" formatted="false">"Напрямую"</string>
+    <string name="msg_e26ed24f9e" formatted="false">"\nМобильная: "</string>
+    <string name="msg_7be14a7ba6" formatted="false">"Ручной выбор: "</string>
+    <string name="msg_3c0423bc77" formatted="false">"Через VPN"</string>
+    <string name="msg_e481dedaf2" formatted="false">"Блокировать"</string>
+    <string name="msg_0e4d55ab7c" formatted="false">"Конкретный сервер"</string>
+    <string name="msg_8f67e4d13d" formatted="false">"Для любой сети"</string>
+    <string name="msg_0ec753be8d" formatted="false">"Отмена"</string>
+    <string name="msg_dd6b0e1e55" formatted="false">", выбран"</string>
+    <string name="msg_45ec755630" formatted="false">"Не удалось удалить файл импорта"</string>
+    <string name="msg_b63da52997" formatted="false">"Не удалось открыть защищённые настройки. Данные сохранены."</string>
+    <string name="msg_8a78d62250" formatted="false">"Подписка уже изменилась. Повтори обновление."</string>
+    <string name="msg_1a69e59ba3" formatted="false">"Эта подписка уже добавлена"</string>
+    <string name="msg_40f8272534" formatted="false">"Сначала выбери другой сервер для сетей и правил"</string>
+    <string name="msg_d2ff3b0e16" formatted="false">"Сервер используется в правиле"</string>
+    <string name="msg_e8d9cd7b4e" formatted="false">"Ссылки"</string>
+    <string name="msg_9794aef624" formatted="false">"Совместимых серверов нет. "</string>
+    <string name="msg_e7e42a2acf" formatted="false">"В подписке нет серверов"</string>
+    <string name="msg_999986e004" formatted="false">"Слишком много уровней кодирования"</string>
+    <string name="msg_6c21351bc9" formatted="false">"Подписка больше 4 МБ"</string>
+    <string name="msg_6153e34d0c" formatted="false">"Сервер вернул пустую подписку"</string>
+    <string name="msg_0432186247" formatted="false">"Это веб-страница. Скопируй у провайдера ссылку подписки для VPN-клиента"</string>
+    <string name="msg_3c0e1e7d43" formatted="false">"Ошибка в JSON подписки"</string>
+    <string name="msg_c14abc64af" formatted="false">"Не удалось прочитать YAML: проверь файл подписки"</string>
+    <string name="msg_79be6ca6bc" formatted="false">"неизвестный формат"</string>
+    <string name="msg_30d9e094e4" formatted="false">"Строка "</string>
+    <string name="msg_54d59eb38a" formatted="false">"Ссылка "</string>
+    <string name="msg_8eeacd07c0" formatted="false">"Запись "</string>
+    <string name="msg_f702b574da" formatted="false">": неизвестный формат"</string>
+    <string name="msg_e18fd43031" formatted="false">"Нужен список серверов или конфигурация VPN"</string>
+    <string name="msg_48db32c372" formatted="false">"Некорректный список proxies"</string>
+    <string name="msg_1fe1adcef3" formatted="false">"Сервер "</string>
+    <string name="msg_4505a9f9d0" formatted="false">"Некорректный список outbounds"</string>
+    <string name="msg_917e05143a" formatted="false">"Сервер"</string>
+    <string name="msg_e271fb3ca1" formatted="false">"В JSON нет серверов outbounds или proxies"</string>
+    <string name="msg_3d734741a7" formatted="false">"неподдерживаемые или неполные параметры"</string>
+    <string name="msg_7131aafc7b" formatted="false">"В подписке больше 512 серверов"</string>
+    <string name="msg_210439cffd" formatted="false">"не указан адрес или порт сервера"</string>
+    <string name="msg_6f8352205b" formatted="false">"протокол "</string>
+    <string name="msg_b329e9ab1b" formatted="false">"цепочка прокси пока не поддерживается"</string>
+    <string name="msg_67acde8ec5" formatted="false">"нет адреса сервера"</string>
+    <string name="msg_09e323f866" formatted="false">"дополнительный плагин или цепочка прокси"</string>
+    <string name="msg_0203e5e1bf" formatted="false">"транспорт "</string>
+    <string name="msg_aaecad4a8c" formatted="false">" в YAML пока не поддерживается"</string>
+    <string name="msg_40a747d563" formatted="false">"Вставь ссылку или отсканируй QR-код"</string>
+    <string name="msg_680a8e4f43" formatted="false">"Нужна одна ссылка без пробелов"</string>
+    <string name="msg_102b915c5e" formatted="false">"Некорректная ссылка"</string>
+    <string name="msg_2a16f698ef" formatted="false">"Проверь адрес подписки"</string>
+    <string name="msg_c01d472ca8" formatted="false">"Нужна ссылка подписки или сервера"</string>
+    <string name="msg_cacc66427a" formatted="false">"Ссылка неполная"</string>
+    <string name="msg_eee2285ba1" formatted="false">"Основные"</string>
+    <string name="msg_16dacca18e" formatted="false">"Нейросети"</string>
+    <string name="msg_65ca123b53" formatted="false">"Общение"</string>
+    <string name="msg_f72ae77771" formatted="false">"Свои правила"</string>
+    <string name="msg_667d8b44a6" formatted="false">"Правила"</string>
+    <string name="msg_9e572ab9c6" formatted="false">"Порядок правил"</string>
+    <string name="msg_02580e2fda" formatted="false">"Проверяются сверху вниз до первого совпадения. Стрелки меняют приоритет. Нажми на сервис, чтобы открыть его правила."</string>
+    <string name="msg_9276259877" formatted="false">"Наборы"</string>
+    <string name="msg_fc7987118c" formatted="false">"+ Правило"</string>
+    <string name="msg_dc9a84c4a4" formatted="false">"Выбери сервисы в «Наборах»"</string>
+    <string name="msg_8840608925" formatted="false">"Разные маршруты"</string>
+    <string name="msg_d934aed196" formatted="false">"Выключено"</string>
+    <string name="msg_6ce4fa393d" formatted="false">" из "</string>
+    <string name="msg_4cc948fff2" formatted="false">" вкл."</string>
+    <string name="msg_26e42bb274" formatted="false">"Свернуть "</string>
+    <string name="msg_dcfb1b173b" formatted="false">"Раскрыть "</string>
+    <string name="msg_8f769303f6" formatted="false">"Выше: "</string>
+    <string name="msg_c800355918" formatted="false">"Ниже: "</string>
+    <string name="msg_9189fc3f32" formatted="false">"Сервис: "</string>
+    <string name="msg_3ca212f4fc" formatted="false">"правил"</string>
+    <string name="msg_5d1611f2fb" formatted="false">"правило"</string>
+    <string name="msg_69b46d600c" formatted="false">"правила"</string>
+    <string name="msg_f9886ca2bc" formatted="false">"Приложение"</string>
+    <string name="msg_045bef7d26" formatted="false">"Сайт"</string>
+    <string name="msg_2681a24f90" formatted="false">"Изменить правило: "</string>
+    <string name="msg_27c9c75d4a" formatted="false">"Выше правило: "</string>
+    <string name="msg_08525c9005" formatted="false">"Ниже правило: "</string>
+    <string name="msg_573d59bada" formatted="false">"Правило: "</string>
+    <string name="msg_a11443ec76" formatted="false">"Наборы правил"</string>
+    <string name="msg_fd042c9a3a" formatted="false">"Позже"</string>
+    <string name="msg_768af67762" formatted="false">"Применить"</string>
+    <string name="msg_bdda7682fb" formatted="false">"Выбрать все"</string>
+    <string name="msg_accc8ab2b1" formatted="false">" · добавлен"</string>
+    <string name="msg_97013008b5" formatted="false">"Применить · "</string>
+    <string name="msg_dcd66875e7" formatted="false">"Добавлено правил: "</string>
+    <string name="msg_5f496335d3" formatted="false">"Не проверено"</string>
+    <string name="msg_643b39ad20" formatted="false">"Состояние VPN"</string>
+    <string name="msg_40b27edf9a" formatted="false">"Подключение…"</string>
+    <string name="app_name" formatted="false">"Вездеход"</string>
+    <string name="msg_94d07a2171" formatted="false">"Отключить"</string>
+    <string name="msg_683f4493ca" formatted="false">"Изменение поддержки IPv6 в сети"</string>
+    <string name="msg_b3be92a610" formatted="false">"Смена сети: "</string>
+    <string name="msg_9dfa170d49" formatted="false">"мобильная"</string>
+    <string name="msg_f0a50c59fc" formatted="false">"Нет сети"</string>
+    <string name="msg_a6ee13c1ee" formatted="false">"Ожидание сети"</string>
+    <string name="msg_6679cdceb0" formatted="false">"Мобильная сеть"</string>
+    <string name="msg_87fe71dbf1" formatted="false">"Не удалось запустить подключение Xray"</string>
+    <string name="msg_b84eb59edf" formatted="false">"Туннель запущен"</string>
+    <string name="msg_8d41645d5d" formatted="false">"Ошибка туннеля"</string>
+    <string name="msg_15da4eee64" formatted="false">"Ошибка туннеля; подробности на главном экране"</string>
+    <string name="msg_4ec4a7927c" formatted="false">"Ошибка подключения · открой приложение"</string>
+    <string name="msg_a24fd4542e" formatted="false">"[адрес скрыт]"</string>
+    <string name="msg_1c64a8bede" formatted="false">"[ключ скрыт]"</string>
+    <string name="msg_c0b5a5c3bd" formatted="false">"VPN остановлен"</string>
+    <string name="msg_28fc95b5ac" formatted="false">"Подключение Xray остановилось"</string>
+    <string name="msg_9b36be9334" formatted="false">"Повторное подключение"</string>
+    <string name="msg_e66c7d3fa3" formatted="false">"HTTPS доступен"</string>
+    <string name="msg_a2ca43d182" formatted="false">"HTTPS-проверка не прошла"</string>
+    <string name="msg_ec7a0b7421" formatted="false">"Возврат на основной сервер"</string>
+    <string name="msg_af26aede0a" formatted="false">"Выбран резервный сервер"</string>
+    <string name="msg_bc15101b19" formatted="false">"Сначала включи VPN"</string>
+    <string name="msg_f96dbc41fe" formatted="false">"Соединение изменилось — повтори проверку"</string>
+    <string name="msg_d2d78125b3" formatted="false">"Проверка HTTPS и выходного IP пройдена"</string>
+    <string name="msg_80f6d88155" formatted="false">"Проверка не прошла"</string>
+    <string name="msg_c050b742cc" formatted="false">"Проверка HTTPS / IP не пройдена"</string>
+    <string name="msg_d14be38b43" formatted="false">"Соединение изменилось"</string>
+    <string name="msg_044b7bf56c" formatted="false">"Соединение изменилось — повтори замер"</string>
+    <string name="msg_cda6f16c5c" formatted="false">"Нужно разрешение Android на VPN"</string>
+    <string name="msg_a57d71f512" formatted="false">"Android не создал VPN"</string>
+    <string name="msg_f132898dfe" formatted="false">"Не удалось защитить сокет VPN"</string>
+    <string name="msg_4ae50d3073" formatted="false">"Закрыть"</string>
+    <string name="msg_559a87f7cc" formatted="false">"Добавить"</string>
+    <string name="msg_9dd9dbd7cf" formatted="false">"Справка: "</string>
+    <string name="msg_d436f8a60e" formatted="false">"Выбери сервер"</string>
+    <string name="msg_109f623f52" formatted="false">"Подписка"</string>
+    <string name="msg_5695330ffb" formatted="false">"Авто"</string>
+    <string name="msg_5ec7b0f52b" formatted="false">"Вручную"</string>
+    <string name="msg_f04c4eff03" formatted="false">"Автоматическое переключение сетей"</string>
+    <string name="msg_7f17c7c62a" formatted="false">"Настройки"</string>
+    <string name="msg_7d8d1526a4" formatted="false">"Ошибка экрана: "</string>
+    <string name="msg_ffddd31c12" formatted="false">"Главная"</string>
+    <string name="msg_bd5e9cf0e8" formatted="false">"Серверы"</string>
+    <string name="msg_cba4000b30" formatted="false">"Сети"</string>
+    <string name="msg_9f52d47392" formatted="false">"Подписки"</string>
+    <string name="msg_1c48855699" formatted="false">"VPN выключен"</string>
+    <string name="msg_c5d75fed69" formatted="false">"Подключение по твоим правилам"</string>
+    <string name="msg_e285415316" formatted="false">"Пинг  "</string>
+    <string name="msg_5160aea6bb" formatted="false">" мс"</string>
+    <string name="msg_741870459d" formatted="false">"Автоматически"</string>
+    <string name="msg_0d69e3497e" formatted="false">" подключено"</string>
+    <string name="msg_81e0cd160b" formatted="false">"Подключён"</string>
+    <string name="msg_6bd21210b3" formatted="false">"Не удалось подключиться"</string>
+    <string name="msg_ffae505dde" formatted="false">" · по твоим правилам"</string>
+    <string name="msg_e1e9070c84" formatted="false">"Нажми кнопку, чтобы остановить"</string>
+    <string name="msg_d9c64e0064" formatted="false">"Нажми кнопку, чтобы подключиться"</string>
+    <string name="msg_ca3d376341" formatted="false">"Подписка до "</string>
+    <string name="msg_96003496cb" formatted="false">"Срок подписки: нет данных"</string>
+    <string name="msg_8c6206e35a" formatted="false">"Отключить VPN"</string>
+    <string name="msg_7eed7135eb" formatted="false">"Подключить VPN"</string>
+    <string name="msg_a9553f13ed" formatted="false">"Сервер не ответил"</string>
+    <string name="msg_b8696961cc" formatted="false">"Переключать автоматически"</string>
+    <string name="msg_4ecfcffd55" formatted="false">"Обновить пинг"</string>
+    <string name="msg_3711716b26" formatted="false">"Ручной выбор"</string>
+    <string name="msg_7a06e90b46" formatted="false">"Использовать настройки сети"</string>
+    <string name="msg_51609a0433" formatted="false">"Сервер для Wi-Fi"</string>
+    <string name="msg_92395d9a9d" formatted="false">"Сервер для мобильной сети"</string>
+    <string name="msg_f6dab074d7" formatted="false">"Назад"</string>
+    <string name="msg_65ba0faca3" formatted="false">"Все подписки"</string>
+    <string name="msg_aa409ed202" formatted="false">"Проверяю подключение…"</string>
+    <string name="msg_dd1d4309cd" formatted="false">"Сервер недоступен: "</string>
+    <string name="msg_b28591b34c" formatted="false">"Проверка уже идёт"</string>
+    <string name="msg_1114ae9044" formatted="false">"Проверяю…"</string>
+    <string name="msg_ab9e23850b" formatted="false">"≈10 МБ · через VPN"</string>
+    <string name="msg_69e5535d66" formatted="false">"Результатов пока нет"</string>
+    <string name="msg_03297c6b07" formatted="false">"Начать проверку"</string>
+    <string name="msg_a554b1e8fe" formatted="false">"Проверка скорости"</string>
+    <string name="msg_02bef41074" formatted="false">"↓ %.1f Мбит/с\n↑ %.1f Мбит/с\nЗадержка: %s мс"</string>
+    <string name="msg_9f9495ccb9" formatted="false">"Сначала подключи VPN"</string>
+    <string name="msg_40d44a7caa" formatted="false">"Дождись текущей проверки"</string>
+    <string name="msg_790a8a4ea0" formatted="false">"Измеряю загрузку и отправку…"</string>
+    <string name="msg_f6346b37fe" formatted="false">"Повторить проверку"</string>
+    <string name="msg_1cbfac57b9" formatted="false">"Проверка не завершена: "</string>
+    <string name="msg_9a01e7088d" formatted="false">"%.1f ГБ"</string>
+    <string name="msg_188fea6cd2" formatted="false">"Подписок пока нет"</string>
+    <string name="msg_2c285a5142" formatted="false">"До "</string>
+    <string name="msg_a7989c9ed0" formatted="false">"Срок не указан"</string>
+    <string name="msg_504d29a40f" formatted="false">"Срок истёк"</string>
+    <string name="msg_2defa5c348" formatted="false">"Изменить подписку: "</string>
+    <string name="msg_ff652348e8" formatted="false">"Обновить подписку"</string>
+    <string name="msg_c9eee72114" formatted="false">"Серверы подписки"</string>
+    <string name="msg_4ff9e9046e" formatted="false">"Обновляю подписку…"</string>
+    <string name="msg_3608b5e904" formatted="false">"Подписка обновлена"</string>
+    <string name="msg_a8c04b7022" formatted="false">"Старые серверы сохранены. "</string>
+    <string name="msg_88b4efa32d" formatted="false">"Удалить правило?"</string>
+    <string name="msg_86ea33aef5" formatted="false">"Удалить"</string>
+    <string name="msg_9c96d4dc3e" formatted="false">"Укажи пакет приложения"</string>
+    <string name="msg_1c97ba2b80" formatted="false">"Укажи подсеть, например 192.168.0.0/16"</string>
+    <string name="msg_df8cdfc609" formatted="false">"Укажи домен без https:// и пути"</string>
+    <string name="msg_875be13421" formatted="false">"Название или пакет"</string>
+    <string name="msg_f51f551f4b" formatted="false">"Системные службы"</string>
+    <string name="msg_cab718e280" formatted="false">"Показать системные службы"</string>
+    <string name="msg_e5834c4ca1" formatted="false">"Загружаю приложения…"</string>
+    <string name="msg_1e1b70b17c" formatted="false">"Ничего не найдено"</string>
+    <string name="msg_7819ea82b0" formatted="false">"Выбрать приложение"</string>
+    <string name="msg_8c5bfb9222" formatted="false">"Не удалось загрузить приложения"</string>
+    <string name="msg_aa4986268e" formatted="false">"Удалить подписку"</string>
+    <string name="msg_3de49828e8" formatted="false">"Название"</string>
+    <string name="msg_11b385895c" formatted="false">"Мой VPN"</string>
+    <string name="msg_046e475e5a" formatted="false">"Ссылка"</string>
+    <string name="msg_a44800a12f" formatted="false">"Скопировать ссылку"</string>
+    <string name="msg_a48859c609" formatted="false">"Изменить ссылку"</string>
+    <string name="msg_ccb6cb6834" formatted="false">"Ссылка подписки"</string>
+    <string name="msg_6fcdbbe8f7" formatted="false">"Автообновление"</string>
+    <string name="msg_4e401a2e7b" formatted="false">"Автообновление подписки"</string>
+    <string name="msg_9066ea9564" formatted="false">"Проверять подписку каждый час при включённом VPN."</string>
+    <string name="msg_4864057d62" formatted="false">"Сохранить"</string>
+    <string name="msg_49261ec6a4" formatted="false">"Ссылка скопирована"</string>
+    <string name="msg_f18132742a" formatted="false">"Завершить изменение ссылки"</string>
+    <string name="msg_0af444c6af" formatted="false">"Укажи название"</string>
+    <string name="msg_6c6d266c63" formatted="false">"Подписка уже удалена"</string>
+    <string name="msg_6d039299cd" formatted="false">"Удалить подписку?"</string>
+    <string name="msg_06b9e865d0" formatted="false">"‹  Все настройки"</string>
+    <string name="msg_7f2be1ba3d" formatted="false">"Блокировка рекламы"</string>
+    <string name="msg_85dd4d46ca" formatted="false">"Включена"</string>
+    <string name="msg_2106134f75" formatted="false">"Выключена"</string>
+    <string name="msg_d206f1bed0" formatted="false">"Оформление"</string>
+    <string name="msg_ed3f0e507a" formatted="false">"Язык"</string>
+    <string name="msg_79e350f743" formatted="false">"Подключение"</string>
+    <string name="msg_c7e6bf5234" formatted="false">"Уведомления и значок"</string>
+    <string name="msg_d7907f4d43" formatted="false">"Дополнительно"</string>
+    <string name="msg_9ba1e22ac3" formatted="false">"Диагностика"</string>
+    <string name="msg_a84ab2656e" formatted="false">"Вездеход · версия "</string>
+    <string name="msg_6521dc9632" formatted="false">"Изменены параметры подключения"</string>
+    <string name="msg_7f59da61ba" formatted="false">"Изменены настройки интерфейса"</string>
+    <string name="msg_41a17b3bad" formatted="false">"Если сайт перестал работать, добавь исключение или выключи фильтр."</string>
+    <string name="msg_d6d24ec981" formatted="false">"Реклама и трекеры"</string>
+    <string name="msg_85e3709119" formatted="false">"Работает при включённом VPN. Рекламу внутри видео не убирает."</string>
+    <string name="msg_ea65534c79" formatted="false">"Исключения"</string>
+    <string name="msg_f82a821941" formatted="false">"Нет"</string>
+    <string name="msg_449885f5fe" formatted="false">" доменов"</string>
+    <string name="msg_0f97e2780c" formatted="false">"Разрешает домен и его поддомены без изменения маршрута."</string>
+    <string name="msg_2923b8f670" formatted="false">"Один домен на строку"</string>
+    <string name="msg_494d7c7be7" formatted="false">"Исключения из блокировки"</string>
+    <string name="msg_35d57a900e" formatted="false">"Язык устройства"</string>
+    <string name="msg_553c45f1b8" formatted="false">"Тема"</string>
+    <string name="msg_bd16b23470" formatted="false">"Тёмная"</string>
+    <string name="msg_8080010c5e" formatted="false">"Светлая"</string>
+    <string name="msg_f0a22d9d1a" formatted="false">"Как в системе"</string>
+    <string name="msg_70f0229afd" formatted="false">"Акцентный цвет"</string>
+    <string name="msg_9f1325f197" formatted="false">"Золотой"</string>
+    <string name="msg_891c5e9e76" formatted="false">"Мятный"</string>
+    <string name="msg_0deebc3a96" formatted="false">"Голубой"</string>
+    <string name="msg_a4617199a8" formatted="false">"Размер элементов"</string>
+    <string name="msg_4886f1af13" formatted="false">"Компактный · 90%"</string>
+    <string name="msg_e7e285a436" formatted="false">"Обычный · 100%"</string>
+    <string name="msg_52bac55f34" formatted="false">"Крупный · 110%"</string>
+    <string name="msg_d8fcb99153" formatted="false">"Очень крупный · 120%"</string>
+    <string name="msg_11bb1b11c0" formatted="false">"На главном экране"</string>
+    <string name="msg_220afdba73" formatted="false">"Пинг"</string>
+    <string name="msg_aff5818940" formatted="false">"Срок подписки"</string>
+    <string name="msg_f56353b7eb" formatted="false">"Значок и уведомление"</string>
+    <string name="msg_64776d5102" formatted="false">"В шторке"</string>
+    <string name="msg_6ba4db3033" formatted="false">"Скрытие уведомления не отключает VPN."</string>
+    <string name="msg_4e73aa66da" formatted="false">"Уведомление включено"</string>
+    <string name="msg_f1d3c27f2c" formatted="false">"Уведомление скрыто"</string>
+    <string name="msg_8960ddc30e" formatted="false">"Настроить"</string>
+    <string name="msg_be99ac8f13" formatted="false">"В строке состояния"</string>
+    <string name="msg_e57f3249b4" formatted="false">"Вид значка задаёт Android. Приложение не может заменить или переместить его."</string>
+    <string name="msg_136e1c4c3c" formatted="false">"Управляется Android"</string>
+    <string name="msg_9d22ff847e" formatted="false">"Резерв включается при сбое основного сервера. После восстановления — возврат на основной."</string>
+    <string name="msg_fcb4b47313" formatted="false">"Запускать с телефоном"</string>
+    <string name="msg_2be12d2d73" formatted="false">"VPN запустится после первой разблокировки."</string>
+    <string name="msg_a8e2cfb793" formatted="false">"Переподключение"</string>
+    <string name="msg_448e226084" formatted="false">"Повторять через"</string>
+    <string name="msg_8c21ba2d9d" formatted="false">"5 секунд"</string>
+    <string name="msg_8a45d0d1ad" formatted="false">"15 секунд"</string>
+    <string name="msg_d84f514695" formatted="false">"30 секунд"</string>
+    <string name="msg_7db1478f63" formatted="false">"60 секунд"</string>
+    <string name="msg_e83d7ce312" formatted="false">"Резерв для Wi-Fi"</string>
+    <string name="msg_fbf3611c53" formatted="false">"Резерв для мобильного интернета"</string>
+    <string name="msg_ca20e76c0c" formatted="false">"Фоновая работа"</string>
+    <string name="msg_d26aec38b1" formatted="false">"Батарея и автозапуск"</string>
+    <string name="msg_a9d9fc2d46" formatted="false">"Постоянный VPN"</string>
+    <string name="msg_8a6ceef063" formatted="false">"Настройки Android"</string>
+    <string name="msg_2d8f7570e1" formatted="false">"Не использовать"</string>
+    <string name="msg_c8243322dc" formatted="false">"при подключении"</string>
+    <string name="msg_e0cf01e43c" formatted="false">"Режим IP"</string>
+    <string name="msg_e6da72edd6" formatted="false">"Авто · "</string>
+    <string name="msg_5b9e24bda9" formatted="false">"Только IPv4"</string>
+    <string name="msg_9be84e1d9f" formatted="false">"IPv6 включается автоматически, если сеть его поддерживает."</string>
+    <string name="msg_8f9bf25ca6" formatted="false">"DNS для VPN"</string>
+    <string name="msg_5f1326b514" formatted="false">"Этот DNS используется через VPN. Для прямых маршрутов — DNS текущей сети."</string>
+    <string name="msg_0857ba97ab" formatted="false">" байт"</string>
+    <string name="msg_466019b718" formatted="false">"Обычно 1400. При обрывах загрузки попробуй 1280."</string>
+    <string name="msg_7e47a7ce78" formatted="false">"Сетевой стек"</string>
+    <string name="msg_eca17171d2" formatted="false">"Системный"</string>
+    <string name="msg_d155047e55" formatted="false">"Смешанный"</string>
+    <string name="msg_d4dbd88958" formatted="false">"Оставь gVisor. Другие режимы — для проблем совместимости."</string>
+    <string name="msg_e04a016600" formatted="false">"Сброс сетевых параметров"</string>
+    <string name="msg_f1b8fc3ba0" formatted="false">"Сбросить сетевые параметры?"</string>
+    <string name="msg_478ced019a" formatted="false">"DNS Cloudflare · IP авто · MTU 1400 · gVisor. Остальные настройки сохранятся."</string>
+    <string name="msg_058f162d29" formatted="false">"Сбросить"</string>
+    <string name="msg_6a38870f87" formatted="false">"Cloudflare · по умолчанию"</string>
+    <string name="msg_8fb98f9cdd" formatted="false">"1400 · обычно"</string>
+    <string name="msg_b826985870" formatted="false">"1280 · меньше"</string>
+    <string name="msg_5f233b0c2d" formatted="false">"Введи целое число от 1280 до 1500"</string>
+    <string name="msg_989e4afb04" formatted="false">"Проверяется только VPN-выход. Прямые маршруты — отдельно."</string>
+    <string name="msg_2471b6e04f" formatted="false">"Туннель: "</string>
+    <string name="msg_2eabbcfdaa" formatted="false">"\nСеть: "</string>
+    <string name="msg_2afa58988e" formatted="false">"Доступность: "</string>
+    <string name="msg_4a198cee74" formatted="false">"Проверка ещё не запускалась"</string>
+    <string name="msg_19e7fa6964" formatted="false">"Проверить соединение и IP"</string>
+    <string name="msg_1fa4998331" formatted="false">"Проверяю HTTPS и внешний IP…"</string>
+    <string name="msg_2ddce0385c" formatted="false">"Выходной IP: "</string>
+    <string name="msg_5a2f918d96" formatted="false">"\nHTTPS: доступен\nЗадержка: "</string>
+    <string name="msg_32d477ea64" formatted="false">"Проверка не прошла: "</string>
+    <string name="msg_d32a398cf9" formatted="false">"Измерить скорость"</string>
+    <string name="msg_57013f6956" formatted="false">"Около 10 МБ трафика"</string>
+    <string name="msg_f2ee635aaa" formatted="false">"Журнал событий"</string>
+    <string name="msg_67ade741ae" formatted="false">"Журнал"</string>
+    <string name="msg_049d00ab33" formatted="false">"Очистить журнал"</string>
+    <string name="msg_46a01e5fdc" formatted="false">"Журнал очищен"</string>
+    <string name="msg_cde2c9f8b9" formatted="false">"Параметры одного из серверов не поддерживаются этой версией приложения. Подписка не изменена."</string>
+    <string name="msg_a734112137" formatted="false">"Проверка серверов заняла слишком много времени. Повтори добавление."</string>
+    <string name="msg_3d53cd3ab3" formatted="false">"Параметры Xray в подписке не поддерживаются этой версией приложения. Подписка не изменена."</string>
+    <string name="msg_46f4fe51cc" formatted="false">"Добавить подписку"</string>
+    <string name="msg_f91f5592a9" formatted="false">"QR-код"</string>
+    <string name="msg_19a5f8e5b8" formatted="false">"Из буфера"</string>
+    <string name="msg_a30b87ef8c" formatted="false">"Буфер обмена пуст"</string>
+    <string name="msg_2a1dd82994" formatted="false">"В буфере нет ссылки"</string>
+    <string name="msg_bb84bedbe2" formatted="false">"Ввести ссылку"</string>
+    <string name="msg_3f75368ab9" formatted="false">"Продолжить"</string>
+    <string name="msg_9e506acb19" formatted="false">"Повторить"</string>
+    <string name="msg_92ce2819af" formatted="false">"Серверов: "</string>
+    <string name="msg_06bb7e72a9" formatted="false">"Пропущено записей: "</string>
+    <string name="msg_44548e3dc4" formatted="false">"Пропущенные записи"</string>
+    <string name="msg_fb701daed8" formatted="false">"Не удалось прочитать подписку"</string>
+    <string name="msg_789841320c" formatted="false">"‹  Правила"</string>
+    <string name="msg_b559f9f1ca" formatted="false">"Новое правило"</string>
+    <string name="msg_97a3265a4a" formatted="false">"Изменить правило"</string>
+    <string name="msg_56970d69fd" formatted="false">"IP-адрес и маска"</string>
+    <string name="msg_67787241c9" formatted="false">"Адрес сайта"</string>
+    <string name="msg_31654bd668" formatted="false">"Выбери приложение ниже"</string>
+    <string name="msg_72f953a4f1" formatted="false">"Включая поддомены"</string>
+    <string name="msg_b765f32584" formatted="false">"Маршрут"</string>
+    <string name="msg_190ba6d582" formatted="false">"Где применять"</string>
+    <string name="msg_b03361f6c0" formatted="false">"Wi-Fi и мобильная сеть"</string>
+    <string name="msg_7a1fc2cbc5" formatted="false">"Название · необязательно"</string>
+    <string name="msg_09d340f276" formatted="false">"Для себя"</string>
+    <string name="msg_e4d9463d19" formatted="false">"Удалить правило"</string>
+    <string name="msg_58e849be29" formatted="false">"Только Wi-Fi"</string>
+    <string name="msg_0288127e28" formatted="false">"Только мобильная сеть"</string>
+    <string name="msg_2bc1c34c0c" formatted="false">"Правило уже удалено"</string>
+    <string name="msg_9b5a1ac56d" formatted="false">"‹  QR-код"</string>
+    <string name="msg_4198cfd7ad" formatted="false">"Закрыть сканер"</string>
+    <string name="msg_d16af433b5" formatted="false">"Наведи камеру на QR-код"</string>
+    <string name="msg_c01eaf3033" formatted="false">"Открыть изображение"</string>
+    <string name="msg_6daead7fcc" formatted="false">"Нет доступа к камере. Можно открыть изображение."</string>
+    <string name="msg_c5f4e5cd89" formatted="false">"Камера недоступна. Открой изображение."</string>
+    <string name="msg_1821a8f4a3" formatted="false">"Не удалось запустить камеру"</string>
+    <string name="msg_1c313fd862" formatted="false">"Камера недоступна"</string>
+    <string name="msg_2291f43f3b" formatted="false">"Читаю QR-код…"</string>
+    <string name="msg_9b811806c2" formatted="false">"QR-код не найден. Выбери другое изображение."</string>
+    <string name="msg_3fed10dcd2" formatted="false">"формат "</string>
+    <string name="msg_0ed6fd3f45" formatted="false">"не указан адрес сервера"</string>
+    <string name="msg_6fc143271e" formatted="false">"Для подписки нужна ссылка HTTPS"</string>
+    <string name="msg_81f0596a4a" formatted="false">"Обновление подписки: HTTP "</string>
+    <string name="msg_7344ead1f2" formatted="false">"Подписка слишком большая"</string>
+    <string name="msg_8478b68ef9" formatted="false">"В обновлении есть неподдерживаемые записи. Прежние серверы сохранены"</string>
+    <string name="msg_e07f86b4c4" formatted="false">"Укажи домены без https:// и пути, по одному на строку"</string>
+    <string name="msg_3baad0b2cf" formatted="false">"Не более 200 исключений"</string>
+    <string name="msg_04926ac15c" formatted="false">"Автозапуск после загрузки телефона"</string>
+    <string name="msg_04d374e07a" formatted="false">"Автозапуск не выполнен — открой приложение"</string>
+    <string name="subscription_used" formatted="false">"Использовано: %s"</string>
+    <string name="subscription_updated" formatted="false">"Обновлено: %s"</string>
+    <string name="ping_no_response" formatted="false">"Нет ответа"</string>
+    <string name="connection_unavailable" formatted="false">"Через этот сервер нет связи. Выбери другой сервер."</string>
+    <string name="connection_choose" formatted="false">"Другой сервер"</string>
+    <string name="update_title" formatted="false">"Обновления"</string>
+    <string name="update_auto" formatted="false">"Проверять автоматически"</string>
+    <string name="update_check" formatted="false">"Проверить сейчас"</string>
+    <string name="update_latest" formatted="false">"Установлена последняя версия"</string>
+    <string name="update_available" formatted="false">"Доступно обновление"</string>
+    <string name="update_check_failed" formatted="false">"Не удалось проверить обновления. Повтори позже."</string>
+    <string name="update_not_configured" formatted="false">"Проверка станет доступна после публикации приложения"</string>
+    <string name="update_download" formatted="false">"Скачать обновление"</string>
+    <string name="update_install" formatted="false">"Установить обновление"</string>
+    <string name="update_invalid" formatted="false">"Проверка APK не пройдена. Скачай обновление заново."</string>
+    <string name="update_permission" formatted="false">"Разреши установку обновлений из Vezdehod, затем нажми «Установить обновление» ещё раз."</string>
+    <string name="update_install_failed" formatted="false">"Не удалось открыть установщик Android"</string>
+    <string name="update_verifying" formatted="false">"Проверка APK…"</string>
+    <string name="update_download_failed" formatted="false">"Не удалось скачать обновление. Повтори попытку."</string>
+    <string name="update_waiting" formatted="false">"Ожидание сети…"</string>
+    <string name="update_notes" formatted="false">"Что нового"</string>
+    <string name="update_checking" formatted="false">"Проверка обновлений…"</string>
+    <string name="update_install_hint" formatted="false">"Установка перезапустит приложение и прервёт VPN."</string>
+</resources>

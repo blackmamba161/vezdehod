@@ -1,0 +1,376 @@
+MTU: 1280–1500
+Intervalo: 5–120 segundos
+Digite um endereço DNS-over-HTTPS: https://…
+Nenhum evento ainda
+Não foi possível ler o registro
+Adicione uma assinatura e selecione um servidor
+O servidor selecionado não está mais na assinatura. Escolha outro em Redes.
+Não foi possível alocar uma porta VPN local
+Tipo de regra desconhecido
+Servidor da regra indisponível: 
+ID de servidor duplicado
+Outros tráfegos
+Rota para sites e aplicativos que não correspondem a nenhuma regra ativa.
+Direto
+\nRede móvel: 
+Seleção manual: 
+Via VPN
+Bloquear
+Servidor específico
+Para qualquer rede
+Cancelar
+, selecionado
+Não foi possível excluir o arquivo importado
+Não foi possível abrir as configurações seguras. Seus dados foram preservados.
+A assinatura mudou. Atualize novamente.
+Esta assinatura já foi adicionada
+Primeiro escolha outro servidor para redes e regras
+Uma regra usa este servidor
+Links
+Nenhum servidor compatível. 
+A assinatura não contém servidores
+Muitas camadas de codificação
+A assinatura excede 4 MB
+O servidor retornou uma assinatura vazia
+Isto é uma página web. Copie o link de assinatura VPN do provedor.
+JSON de assinatura inválido
+Não foi possível ler o YAML. Verifique o arquivo de assinatura.
+formato desconhecido
+Linha 
+Link 
+Entrada 
+: formato desconhecido
+É necessária uma lista de servidores ou configuração VPN
+Lista proxies inválida
+Servidor 
+Lista outbounds inválida
+Servidor
+O JSON não contém outbounds nem proxies
+configurações incompatíveis ou incompletas
+A assinatura excede 512 servidores
+endereço ou porta do servidor ausente
+protocolo 
+cadeias de proxies ainda não são suportadas
+endereço do servidor ausente
+plugin adicional ou cadeia de proxies
+transporte 
+ ainda não é suportado em YAML
+Cole um link ou leia um QR code
+Digite um único link sem espaços
+Link inválido
+Verifique o endereço da assinatura
+Digite um link de assinatura ou servidor
+Link incompleto
+Essenciais
+Serviços de IA
+Redes sociais
+Regras próprias
+Regras
+Ordem das regras
+A primeira regra correspondente é aplicada. Use as setas para mudar a prioridade. Toque em um serviço para expandir suas regras.
+Predefinições
++ Regra
+Escolha serviços em Predefinições
+Rotas mistas
+Desativado
+ de 
+ ativas
+Recolher 
+Expandir 
+Mover para cima: 
+Mover para baixo: 
+Serviço: 
+regras
+regra
+regras
+Aplicativo
+Site
+Editar regra: 
+Mover regra para cima: 
+Mover regra para baixo: 
+Regra: 
+Regras predefinidas
+Depois
+Aplicar
+Selecionar tudo
+ · adicionado
+Aplicar · 
+Regras adicionadas: 
+Não verificado
+Status da VPN
+Conectando…
+Vezdehod
+Desconectar
+O suporte IPv6 da rede mudou
+Rede alterada: 
+móvel
+Sem rede
+Aguardando rede
+Rede móvel
+Não foi possível iniciar a conexão Xray
+Túnel iniciado
+Erro no túnel
+Erro no túnel; veja a tela inicial
+Erro de conexão · abra o aplicativo
+[endereço oculto]
+[chave oculta]
+VPN parada
+Conexão Xray parada
+Reconectando
+HTTPS disponível
+Falha na verificação HTTPS
+Retornou ao servidor principal
+Servidor reserva selecionado
+Conecte a VPN primeiro
+A conexão mudou — verifique novamente
+HTTPS e IP de saída verificados
+Falha na verificação
+Falha na verificação HTTPS / IP
+Conexão alterada
+A conexão mudou — meça novamente
+É necessária a permissão VPN do Android
+O Android não conseguiu criar a VPN
+Não foi possível proteger o socket VPN
+Fechar
+Adicionar
+Ajuda: 
+Selecionar servidor
+Assinatura
+Auto
+Manual
+Troca automática de rede
+Configurações
+Erro de tela: 
+Início
+Servidores
+Redes
+Assinaturas
+VPN desativada
+Conectar conforme suas regras
+Ping 
+ ms
+Automático
+ adicionados
+Conectado
+Não foi possível conectar
+ · conforme suas regras
+Toque para parar
+Toque para conectar
+Assinatura até 
+Data de vencimento indisponível
+Desconectar VPN
+Conectar VPN
+O servidor não respondeu
+Trocar automaticamente
+Atualizar ping
+Seleção manual
+Usar configurações de rede
+Servidor Wi-Fi
+Servidor móvel
+Voltar
+Todas as assinaturas
+Verificando conexão…
+Servidor indisponível: 
+Já há uma verificação em andamento
+Verificando…
+≈10 MB · via VPN
+Nenhum resultado ainda
+Iniciar teste
+Teste de velocidade
+↓ %.1f Mbps\n↑ %.1f Mbps\nLatência: %s ms
+Conecte a VPN primeiro
+Aguarde a verificação atual
+Medindo download e upload…
+Testar novamente
+Teste incompleto: 
+%.1f GB
+Nenhuma assinatura ainda
+Até 
+Sem data de vencimento
+Expirada
+Editar assinatura: 
+Atualizar assinatura
+Servidores da assinatura
+Atualizando assinatura…
+Assinatura atualizada
+Os servidores anteriores foram preservados. 
+Excluir regra?
+Excluir
+Digite o nome do pacote do aplicativo
+Digite uma sub-rede, por exemplo 192.168.0.0/16
+Digite um domínio sem https:// nem caminho
+Nome ou pacote do aplicativo
+Serviços do sistema
+Mostrar serviços do sistema
+Carregando aplicativos…
+Nenhum resultado
+Selecionar aplicativo
+Não foi possível carregar os aplicativos
+Excluir assinatura
+Nome
+Minha VPN
+Link
+Copiar link
+Editar link
+Link da assinatura
+Atualização automática
+Atualizar assinatura automaticamente
+Verifica a assinatura a cada hora enquanto a VPN está ativa.
+Salvar
+Link copiado
+Concluir edição do link
+Digite um nome
+Assinatura já excluída
+Excluir assinatura?
+‹  Todas as configurações
+Bloqueio de anúncios
+Ativado
+Desativado
+Aparência
+Idioma
+Conexão
+Notificações e ícone
+Avançado
+Diagnóstico
+Vezdehod · versão 
+Configurações de conexão alteradas
+Configurações de aparência alteradas
+Se um site parar de funcionar, adicione uma exceção ou desative o filtro.
+Anúncios e rastreadores
+Funciona enquanto a VPN está ativa. Não remove anúncios dentro dos vídeos.
+Exceções
+Nenhuma
+ domínios
+Permite o domínio e seus subdomínios sem mudar a rota.
+Um domínio por linha
+Exceções ao bloqueio
+Idioma do dispositivo
+Tema
+Escuro
+Claro
+Padrão do sistema
+Cor de destaque
+Dourado
+Menta
+Azul
+Tamanho da interface
+Compacto · 90%
+Padrão · 100%
+Grande · 110%
+Muito grande · 120%
+Na tela inicial
+Ping
+Vencimento da assinatura
+Ícone e notificação
+Painel de notificações
+Ocultar a notificação não desconecta a VPN.
+Notificação visível
+Notificação oculta
+Configurar
+Barra de status
+O Android controla este ícone. O aplicativo não pode substituí-lo nem movê-lo.
+Controlado pelo Android
+Troca para o servidor reserva se o principal falhar e retorna quando ele se recuperar.
+Iniciar com o telefone
+A VPN inicia após o primeiro desbloqueio.
+Reconectar
+Tentar novamente após
+5 segundos
+15 segundos
+30 segundos
+60 segundos
+Reserva Wi-Fi
+Reserva móvel
+Atividade em segundo plano
+Bateria e início automático
+VPN sempre ativa
+Configurações do Android
+Não usar
+ao conectar
+Modo IP
+Auto · 
+Somente IPv4
+IPv6 é ativado automaticamente quando a rede oferece suporte.
+DNS da VPN
+Este DNS usa a VPN. As rotas diretas usam o DNS da rede atual.
+ bytes
+Normalmente 1400. Tente 1280 se os downloads travarem.
+Pilha de rede
+Sistema
+Mista
+Mantenha gVisor. Os outros modos são para problemas de compatibilidade.
+Redefinir rede
+Redefinir configurações de rede?
+DNS Cloudflare · IP automático · MTU 1400 · gVisor. As outras configurações serão mantidas.
+Redefinir
+Cloudflare · padrão
+1400 · padrão
+1280 · menor
+Digite um número inteiro entre 1280 e 1500
+Verifica apenas a saída VPN. As rotas diretas precisam de uma verificação separada.
+Túnel: 
+\nRede: 
+Acessibilidade: 
+Ainda não verificado
+Verificar conexão e IP
+Verificando HTTPS e IP público…
+IP de saída: 
+\nHTTPS: disponível\nLatência: 
+Falha na verificação: 
+Medir velocidade
+Cerca de 10 MB de tráfego
+Registro de eventos
+Registro
+Limpar registro
+Registro limpo
+Um servidor usa configurações incompatíveis. A assinatura não foi alterada.
+A validação do servidor excedeu o tempo limite. Adicione a assinatura novamente.
+Configurações Xray incompatíveis. A assinatura não foi alterada.
+Adicionar assinatura
+QR code
+Da área de transferência
+A área de transferência está vazia
+Nenhum link na área de transferência
+Digitar link
+Continuar
+Tentar novamente
+Servidores: 
+Entradas ignoradas: 
+Entradas ignoradas
+Não foi possível ler a assinatura
+‹  Regras
+Nova regra
+Editar regra
+Endereço IP e prefixo
+Endereço do site
+Selecione um aplicativo abaixo
+Incluir subdomínios
+Rota
+Aplicar em
+Wi-Fi e rede móvel
+Nome · opcional
+Para identificação
+Excluir regra
+Somente Wi-Fi
+Somente rede móvel
+Regra já excluída
+‹  QR code
+Fechar leitor
+Aponte a câmera para um QR code
+Abrir imagem
+Permissão da câmera negada. Você pode abrir uma imagem.
+Câmera indisponível. Abra uma imagem.
+Não foi possível iniciar a câmera
+Câmera indisponível
+Lendo QR code…
+Nenhum QR code encontrado. Escolha outra imagem.
+formato 
+endereço do servidor ausente
+A assinatura exige um link HTTPS
+Atualização de assinatura: HTTP 
+A assinatura é muito grande
+A atualização contém entradas incompatíveis. Os servidores anteriores foram preservados.
+Digite um domínio por linha, sem https:// nem caminho
+No máximo 200 exceções
+Início automático após ligar
+Falha no início automático — abra o aplicativo

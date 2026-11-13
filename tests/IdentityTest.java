@@ -1,0 +1,8 @@
+import org.json.*;import local.blackmamba.vpn.SubscriptionIdentity;
+public class IdentityTest {
+ static JSONObject node(String id,String name,String host)throws Exception{return new JSONObject().put("id",id).put("profile","p").put("protocol","vless").put("name",name).put("outbound",new JSONObject().put("server",host).put("server_port",443));}
+ public static void main(String[] args)throws Exception{JSONArray old=new JSONArray().put(node("selected","Helsinki","example.com"));JSONArray next=SubscriptionIdentity.retainIds(old,new JSONArray().put(node("rotated","Helsinki","new.example.com")));if(!next.getJSONObject(0).getString("id").equals("selected"))throw new AssertionError("selection lost after endpoint/key rotation");next=SubscriptionIdentity.retainIds(old,new JSONArray().put(node("a","Helsinki","one.example.com")).put(node("b","Helsinki","two.example.com")));if(next.getJSONObject(0).getString("id").equals("selected")||next.getJSONObject(1).getString("id").equals("selected"))throw new AssertionError("ambiguous mapping guessed");JSONArray previous=new JSONArray().put(node("a","A","old.example.com")).put(node("b","A","new.example.com"));
+ JSONArray incoming=new JSONArray().put(node("b","A","new.example.com")).put(node("c","A","other.example.com"));
+ JSONArray stable=SubscriptionIdentity.retainIds(previous,incoming);if(!stable.getJSONObject(0).getString("id").equals("b"))throw new AssertionError("exact ID stolen by rotated node");if(stable.getJSONObject(0).getString("id").equals(stable.getJSONObject(1).getString("id")))throw new AssertionError("duplicate ID");
+ System.out.println("PASS retained selection after rotation; ambiguous nodes not guessed");}
+}

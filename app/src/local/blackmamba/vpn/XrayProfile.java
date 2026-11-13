@@ -1,0 +1,17 @@
+package local.blackmamba.vpn;
+import org.json.*;import java.util.*;import static local.blackmamba.vpn.Store.*;
+
+/** A provider connection is a routing graph, not a bag of unrelated outbounds. */
+public final class XrayProfile {
+ public static boolean grouped(JSONObject source){JSONArray out=source.optJSONArray("outbounds");if(out==null||out.length()==0||out.optJSONObject(0)==null||!out.optJSONObject(0).has("protocol"))return false;JSONObject routing=source.optJSONObject("routing");if(source.has("observatory")||source.has("burstObservatory")||routing!=null&&routing.optJSONArray("balancers")!=null)return true;for(int i=0;i<out.length();i++){JSONObject o=out.optJSONObject(i);if(o==null)continue;if(o.has("proxySettings")||o.optJSONObject("streamSettings")!=null&&o.optJSONObject("streamSettings").optJSONObject("sockopt")!=null&&o.optJSONObject("streamSettings").optJSONObject("sockopt").has("dialerProxy"))return true;}return false;}
+ public static JSONObject preserve(JSONObject source)throws Exception{
+  JSONObject config=new JSONObject();for(String key:new String[]{"dns","outbounds","routing","observatory","burstObservatory","policy"})if(source.has(key))config.put(key,new JSONTokener(source.get(key).toString()).nextValue());
+  JSONArray out=config.getJSONArray("outbounds");if(out.length()>128)throw new Exception("Too many group members");Set<String> tags=new HashSet<>();
+  for(int i=0;i<out.length();i++){JSONObject o=out.getJSONObject(i);String type=o.getString("protocol"),tag=o.optString("tag");if(tag.isEmpty()||!tags.add(tag))throw new Exception("Missing or duplicate outbound tag");if(!Arrays.asList("vless","vmess","trojan","shadowsocks","socks","http","freedom","blackhole","loopback","dns").contains(type))throw new Exception("Unsupported group protocol: "+type);if(Arrays.asList("vless","vmess","trojan","shadowsocks","socks","http").contains(type)){JSONObject settings=o.getJSONObject("settings");JSONArray servers=settings.optJSONArray(type.equals("vless")||type.equals("vmess")?"vnext":"servers");if(servers==null||servers.length()==0)throw new Exception("Missing group endpoint");for(int j=0;j<servers.length();j++)SubscriptionFormats.endpoint(servers.getJSONObject(j).optString("address"),servers.getJSONObject(j).optInt("port"));}}
+  // Keep virtual loopback tags, replace only real client listener tags.
+  Set<String> entry=new HashSet<>();JSONArray inbound=source.optJSONArray("inbounds");if(inbound!=null)for(int i=0;i<inbound.length();i++){JSONObject in=inbound.getJSONObject(i);if(Arrays.asList("socks","http","mixed","tun").contains(in.optString("protocol")))entry.add(in.optString("tag"));}if(entry.isEmpty()){entry.add("socks");entry.add("http");}
+  JSONObject routing=config.optJSONObject("routing");if(routing!=null){JSONArray rules=routing.optJSONArray("rules");if(rules!=null)for(int i=0;i<rules.length();i++){JSONObject rule=rules.getJSONObject(i);JSONArray in=rule.optJSONArray("inboundTag");if(in!=null){LinkedHashSet<String> mapped=new LinkedHashSet<>();for(int j=0;j<in.length();j++)mapped.add(entry.contains(in.getString(j))?"app-entry":in.getString(j));rule.put("inboundTag",new JSONArray(mapped));}}}
+  return config;
+ }
+ public static String runtime(JSONObject saved,int port,String password)throws Exception{JSONObject c=new JSONObject(saved.toString());c.put("log",obj("loglevel","none"));c.put("inbounds",arr(obj("tag","app-entry","listen","127.0.0.1","port",port,"protocol","socks","settings",obj("auth","password","accounts",arr(obj("user","vpn","pass",password)),"udp",true))));return c.toString();}
+}

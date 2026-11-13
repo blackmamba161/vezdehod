@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msg_681ba374e5" formatted="false">"MTU: 1280–1500"</string>
+    <string name="msg_e13fa5e7d6" formatted="false">"अंतराल: 5–120 सेकंड"</string>
+    <string name="msg_8a43e3fd24" formatted="false">"DNS-over-HTTPS पता दर्ज करें: https://…"</string>
+    <string name="msg_33f32d875b" formatted="false">"अभी कोई गतिविधि नहीं"</string>
+    <string name="msg_dd624657c4" formatted="false">"लॉग पढ़ा नहीं जा सका"</string>
+    <string name="msg_85973145cb" formatted="false">"सदस्यता जोड़ें और सर्वर चुनें"</string>
+    <string name="msg_fa9ffb3f84" formatted="false">"चुना हुआ सर्वर अब सदस्यता में नहीं है। नेटवर्क में दूसरा सर्वर चुनें।"</string>
+    <string name="msg_27a403dd36" formatted="false">"स्थानीय VPN पोर्ट आवंटित नहीं हो सका"</string>
+    <string name="msg_2846df10fa" formatted="false">"अज्ञात नियम प्रकार"</string>
+    <string name="msg_4dfebb89a6" formatted="false">"नियम का सर्वर उपलब्ध नहीं: "</string>
+    <string name="msg_d721e92378" formatted="false">"सर्वर ID दोहराया गया है"</string>
+    <string name="msg_50e1cb1272" formatted="false">"अन्य ट्रैफ़िक"</string>
+    <string name="msg_938ad66f65" formatted="false">"उन साइटों और ऐप्स का मार्ग जो किसी सक्रिय नियम से मेल नहीं खाते।"</string>
+    <string name="msg_1667336ad3" formatted="false">"सीधा"</string>
+    <string name="msg_e26ed24f9e" formatted="false">"\nमोबाइल: "</string>
+    <string name="msg_7be14a7ba6" formatted="false">"मैन्युअल चयन: "</string>
+    <string name="msg_3c0423bc77" formatted="false">"VPN से"</string>
+    <string name="msg_e481dedaf2" formatted="false">"ब्लॉक करें"</string>
+    <string name="msg_0e4d55ab7c" formatted="false">"विशिष्ट सर्वर"</string>
+    <string name="msg_8f67e4d13d" formatted="false">"सभी नेटवर्क के लिए"</string>
+    <string name="msg_0ec753be8d" formatted="false">"रद्द करें"</string>
+    <string name="msg_dd6b0e1e55" formatted="false">", चयनित"</string>
+    <string name="msg_45ec755630" formatted="false">"आयात फ़ाइल हटाई नहीं जा सकी"</string>
+    <string name="msg_b63da52997" formatted="false">"सुरक्षित सेटिंग नहीं खुल सकी। आपका डेटा सुरक्षित है।"</string>
+    <string name="msg_8a78d62250" formatted="false">"सदस्यता बदल गई है। फिर अपडेट करें।"</string>
+    <string name="msg_1a69e59ba3" formatted="false">"यह सदस्यता पहले से जोड़ी गई है"</string>
+    <string name="msg_40f8272534" formatted="false">"पहले नेटवर्क और नियमों के लिए दूसरा सर्वर चुनें"</string>
+    <string name="msg_d2ff3b0e16" formatted="false">"एक नियम इस सर्वर का उपयोग करता है"</string>
+    <string name="msg_e8d9cd7b4e" formatted="false">"लिंक"</string>
+    <string name="msg_9794aef624" formatted="false">"कोई संगत सर्वर नहीं। "</string>
+    <string name="msg_e7e42a2acf" formatted="false">"सदस्यता में कोई सर्वर नहीं"</string>
+    <string name="msg_999986e004" formatted="false">"एन्कोडिंग की बहुत अधिक परतें हैं"</string>
+    <string name="msg_6c21351bc9" formatted="false">"सदस्यता 4 MB से बड़ी है"</string>
+    <string name="msg_6153e34d0c" formatted="false">"सर्वर ने खाली सदस्यता भेजी"</string>
+    <string name="msg_0432186247" formatted="false">"यह वेब पेज है। प्रदाता का VPN सदस्यता लिंक कॉपी करें।"</string>
+    <string name="msg_3c0e1e7d43" formatted="false">"सदस्यता का JSON अमान्य है"</string>
+    <string name="msg_c14abc64af" formatted="false">"YAML पढ़ा नहीं जा सका। सदस्यता फ़ाइल जाँचें।"</string>
+    <string name="msg_79be6ca6bc" formatted="false">"अज्ञात फ़ॉर्मैट"</string>
+    <string name="msg_30d9e094e4" formatted="false">"पंक्ति "</string>
+    <string name="msg_54d59eb38a" formatted="false">"लिंक "</string>
+    <string name="msg_8eeacd07c0" formatted="false">"प्रविष्टि "</string>
+    <string name="msg_f702b574da" formatted="false">": अज्ञात फ़ॉर्मैट"</string>
+    <string name="msg_e18fd43031" formatted="false">"सर्वर सूची या VPN कॉन्फ़िगरेशन आवश्यक है"</string>
+    <string name="msg_48db32c372" formatted="false">"proxies सूची अमान्य है"</string>
+    <string name="msg_1fe1adcef3" formatted="false">"सर्वर "</string>
+    <string name="msg_4505a9f9d0" formatted="false">"outbounds सूची अमान्य है"</string>
+    <string name="msg_917e05143a" formatted="false">"सर्वर"</string>
+    <string name="msg_e271fb3ca1" formatted="false">"JSON में outbounds या proxies नहीं है"</string>
+    <string name="msg_3d734741a7" formatted="false">"असमर्थित या अधूरी सेटिंग"</string>
+    <string name="msg_7131aafc7b" formatted="false">"सदस्यता में 512 से अधिक सर्वर हैं"</string>
+    <string name="msg_210439cffd" formatted="false">"सर्वर का पता या पोर्ट नहीं है"</string>
+    <string name="msg_6f8352205b" formatted="false">"प्रोटोकॉल "</string>
+    <string name="msg_b329e9ab1b" formatted="false">"प्रॉक्सी चेन अभी समर्थित नहीं हैं"</string>
+    <string name="msg_67acde8ec5" formatted="false">"सर्वर का पता नहीं है"</string>
+    <string name="msg_09e323f866" formatted="false">"अतिरिक्त प्लगइन या प्रॉक्सी चेन"</string>
+    <string name="msg_0203e5e1bf" formatted="false">"ट्रांसपोर्ट "</string>
+    <string name="msg_aaecad4a8c" formatted="false">" अभी YAML में समर्थित नहीं है"</string>
+    <string name="msg_40a747d563" formatted="false">"लिंक चिपकाएँ या QR कोड स्कैन करें"</string>
+    <string name="msg_680a8e4f43" formatted="false">"बिना स्पेस वाला एक लिंक दर्ज करें"</string>
+    <string name="msg_102b915c5e" formatted="false">"अमान्य लिंक"</string>
+    <string name="msg_2a16f698ef" formatted="false">"सदस्यता का पता जाँचें"</string>
+    <string name="msg_c01d472ca8" formatted="false">"सदस्यता या सर्वर का लिंक दर्ज करें"</string>
+    <string name="msg_cacc66427a" formatted="false">"अधूरा लिंक"</string>
+    <string name="msg_eee2285ba1" formatted="false">"बुनियादी"</string>
+    <string name="msg_16dacca18e" formatted="false">"AI सेवाएँ"</string>
+    <string name="msg_65ca123b53" formatted="false">"सोशल"</string>
+    <string name="msg_f72ae77771" formatted="false">"अपने नियम"</string>
+    <string name="msg_667d8b44a6" formatted="false">"नियम"</string>
+    <string name="msg_9e572ab9c6" formatted="false">"नियमों का क्रम"</string>
+    <string name="msg_02580e2fda" formatted="false">"पहला मेल खाता नियम लागू होता है। तीरों से प्राथमिकता बदलें। नियम देखने के लिए सेवा पर टैप करें।"</string>
+    <string name="msg_9276259877" formatted="false">"प्रीसेट"</string>
+    <string name="msg_fc7987118c" formatted="false">"+ नियम"</string>
+    <string name="msg_dc9a84c4a4" formatted="false">"प्रीसेट में सेवाएँ चुनें"</string>
+    <string name="msg_8840608925" formatted="false">"मिले-जुले मार्ग"</string>
+    <string name="msg_d934aed196" formatted="false">"बंद"</string>
+    <string name="msg_6ce4fa393d" formatted="false">" में से "</string>
+    <string name="msg_4cc948fff2" formatted="false">" चालू"</string>
+    <string name="msg_26e42bb274" formatted="false">"समेटें "</string>
+    <string name="msg_dcfb1b173b" formatted="false">"खोलें "</string>
+    <string name="msg_8f769303f6" formatted="false">"ऊपर करें: "</string>
+    <string name="msg_c800355918" formatted="false">"नीचे करें: "</string>
+    <string name="msg_9189fc3f32" formatted="false">"सेवा: "</string>
+    <string name="msg_3ca212f4fc" formatted="false">"नियम"</string>
+    <string name="msg_5d1611f2fb" formatted="false">"नियम"</string>
+    <string name="msg_69b46d600c" formatted="false">"नियम"</string>
+    <string name="msg_f9886ca2bc" formatted="false">"ऐप"</string>
+    <string name="msg_045bef7d26" formatted="false">"वेबसाइट"</string>
+    <string name="msg_2681a24f90" formatted="false">"नियम बदलें: "</string>
+    <string name="msg_27c9c75d4a" formatted="false">"नियम ऊपर करें: "</string>
+    <string name="msg_08525c9005" formatted="false">"नियम नीचे करें: "</string>
+    <string name="msg_573d59bada" formatted="false">"नियम: "</string>
+    <string name="msg_a11443ec76" formatted="false">"नियम प्रीसेट"</string>
+    <string name="msg_fd042c9a3a" formatted="false">"बाद में"</string>
+    <string name="msg_768af67762" formatted="false">"लागू करें"</string>
+    <string name="msg_bdda7682fb" formatted="false">"सभी चुनें"</string>
+    <string name="msg_accc8ab2b1" formatted="false">" · जोड़ा गया"</string>
+    <string name="msg_97013008b5" formatted="false">"लागू करें · "</string>
+    <string name="msg_dcd66875e7" formatted="false">"जोड़े गए नियम: "</string>
+    <string name="msg_5f496335d3" formatted="false">"जाँच नहीं हुई"</string>
+    <string name="msg_643b39ad20" formatted="false">"VPN की स्थिति"</string>
+    <string name="msg_40b27edf9a" formatted="false">"कनेक्ट हो रहा है…"</string>
+    <string name="app_name" formatted="false">"Vezdehod"</string>
+    <string name="msg_94d07a2171" formatted="false">"डिस्कनेक्ट करें"</string>
+    <string name="msg_683f4493ca" formatted="false">"नेटवर्क का IPv6 समर्थन बदल गया"</string>
+    <string name="msg_b3be92a610" formatted="false">"नेटवर्क बदला: "</string>
+    <string name="msg_9dfa170d49" formatted="false">"मोबाइल"</string>
+    <string name="msg_f0a50c59fc" formatted="false">"नेटवर्क नहीं है"</string>
+    <string name="msg_a6ee13c1ee" formatted="false">"नेटवर्क की प्रतीक्षा"</string>
+    <string name="msg_6679cdceb0" formatted="false">"मोबाइल नेटवर्क"</string>
+    <string name="msg_87fe71dbf1" formatted="false">"Xray कनेक्शन शुरू नहीं हो सका"</string>
+    <string name="msg_b84eb59edf" formatted="false">"टनल शुरू हो गई"</string>
+    <string name="msg_8d41645d5d" formatted="false">"टनल में त्रुटि"</string>
+    <string name="msg_15da4eee64" formatted="false">"टनल में त्रुटि; होम स्क्रीन देखें"</string>
+    <string name="msg_4ec4a7927c" formatted="false">"कनेक्शन में त्रुटि · ऐप खोलें"</string>
+    <string name="msg_a24fd4542e" formatted="false">"[पता छिपाया गया]"</string>
+    <string name="msg_1c64a8bede" formatted="false">"[कुंजी छिपाई गई]"</string>
+    <string name="msg_c0b5a5c3bd" formatted="false">"VPN रुक गया"</string>
+    <string name="msg_28fc95b5ac" formatted="false">"Xray कनेक्शन रुक गया"</string>
+    <string name="msg_9b36be9334" formatted="false">"फिर कनेक्ट हो रहा है"</string>
+    <string name="msg_e66c7d3fa3" formatted="false">"HTTPS उपलब्ध है"</string>
+    <string name="msg_a2ca43d182" formatted="false">"HTTPS जाँच विफल"</string>
+    <string name="msg_ec7a0b7421" formatted="false">"मुख्य सर्वर पर वापस आ गए"</string>
+    <string name="msg_af26aede0a" formatted="false">"बैकअप सर्वर चुना गया"</string>
+    <string name="msg_bc15101b19" formatted="false">"पहले VPN कनेक्ट करें"</string>
+    <string name="msg_f96dbc41fe" formatted="false">"कनेक्शन बदल गया — फिर जाँचें"</string>
+    <string name="msg_d2d78125b3" formatted="false">"HTTPS और निकास IP की जाँच सफल"</string>
+    <string name="msg_80f6d88155" formatted="false">"जाँच विफल"</string>
+    <string name="msg_c050b742cc" formatted="false">"HTTPS / IP जाँच विफल"</string>
+    <string name="msg_d14be38b43" formatted="false">"कनेक्शन बदल गया"</string>
+    <string name="msg_044b7bf56c" formatted="false">"कनेक्शन बदल गया — फिर मापें"</string>
+    <string name="msg_cda6f16c5c" formatted="false">"Android की VPN अनुमति आवश्यक है"</string>
+    <string name="msg_a57d71f512" formatted="false">"Android VPN नहीं बना सका"</string>
+    <string name="msg_f132898dfe" formatted="false">"VPN सॉकेट सुरक्षित नहीं किया जा सका"</string>
+    <string name="msg_4ae50d3073" formatted="false">"बंद करें"</string>
+    <string name="msg_559a87f7cc" formatted="false">"जोड़ें"</string>
+    <string name="msg_9dd9dbd7cf" formatted="false">"मदद: "</string>
+    <string name="msg_d436f8a60e" formatted="false">"सर्वर चुनें"</string>
+    <string name="msg_109f623f52" formatted="false">"सदस्यता"</string>
+    <string name="msg_5695330ffb" formatted="false">"ऑटो"</string>
+    <string name="msg_5ec7b0f52b" formatted="false">"मैन्युअल"</string>
+    <string name="msg_f04c4eff03" formatted="false">"नेटवर्क अपने आप बदलें"</string>
+    <string name="msg_7f17c7c62a" formatted="false">"सेटिंग"</string>
+    <string name="msg_7d8d1526a4" formatted="false">"स्क्रीन में त्रुटि: "</string>
+    <string name="msg_ffddd31c12" formatted="false">"होम"</string>
+    <string name="msg_bd5e9cf0e8" formatted="false">"सर्वर"</string>
+    <string name="msg_cba4000b30" formatted="false">"नेटवर्क"</string>
+    <string name="msg_9f52d47392" formatted="false">"सदस्यताएँ"</string>
+    <string name="msg_1c48855699" formatted="false">"VPN बंद है"</string>
+    <string name="msg_c5d75fed69" formatted="false">"अपने नियमों के अनुसार कनेक्ट करें"</string>
+    <string name="msg_e285415316" formatted="false">"पिंग "</string>
+    <string name="msg_5160aea6bb" formatted="false">" ms"</string>
+    <string name="msg_741870459d" formatted="false">"स्वचालित"</string>
+    <string name="msg_0d69e3497e" formatted="false">" जोड़े गए"</string>
+    <string name="msg_81e0cd160b" formatted="false">"कनेक्ट है"</string>
+    <string name="msg_6bd21210b3" formatted="false">"कनेक्ट नहीं हो सका"</string>
+    <string name="msg_ffae505dde" formatted="false">" · आपके नियमों के अनुसार"</string>
+    <string name="msg_e1e9070c84" formatted="false">"रोकने के लिए टैप करें"</string>
+    <string name="msg_d9c64e0064" formatted="false">"कनेक्ट करने के लिए टैप करें"</string>
+    <string name="msg_ca3d376341" formatted="false">"सदस्यता की अवधि: "</string>
+    <string name="msg_96003496cb" formatted="false">"समाप्ति तिथि उपलब्ध नहीं"</string>
+    <string name="msg_8c6206e35a" formatted="false">"VPN डिस्कनेक्ट करें"</string>
+    <string name="msg_7eed7135eb" formatted="false">"VPN कनेक्ट करें"</string>
+    <string name="msg_a9553f13ed" formatted="false">"सर्वर ने जवाब नहीं दिया"</string>
+    <string name="msg_b8696961cc" formatted="false">"अपने आप बदलें"</string>
+    <string name="msg_4ecfcffd55" formatted="false">"पिंग फिर जाँचें"</string>
+    <string name="msg_3711716b26" formatted="false">"मैन्युअल चयन"</string>
+    <string name="msg_7a06e90b46" formatted="false">"नेटवर्क सेटिंग का उपयोग करें"</string>
+    <string name="msg_51609a0433" formatted="false">"Wi-Fi सर्वर"</string>
+    <string name="msg_92395d9a9d" formatted="false">"मोबाइल सर्वर"</string>
+    <string name="msg_f6dab074d7" formatted="false">"वापस"</string>
+    <string name="msg_65ba0faca3" formatted="false">"सभी सदस्यताएँ"</string>
+    <string name="msg_aa409ed202" formatted="false">"कनेक्शन की जाँच हो रही है…"</string>
+    <string name="msg_dd1d4309cd" formatted="false">"सर्वर उपलब्ध नहीं: "</string>
+    <string name="msg_b28591b34c" formatted="false">"एक जाँच पहले से चल रही है"</string>
+    <string name="msg_1114ae9044" formatted="false">"जाँच हो रही है…"</string>
+    <string name="msg_ab9e23850b" formatted="false">"≈10 MB · VPN से"</string>
+    <string name="msg_69e5535d66" formatted="false">"अभी कोई परिणाम नहीं"</string>
+    <string name="msg_03297c6b07" formatted="false">"टेस्ट शुरू करें"</string>
+    <string name="msg_a554b1e8fe" formatted="false">"स्पीड टेस्ट"</string>
+    <string name="msg_02bef41074" formatted="false">"↓ %.1f Mbps\n↑ %.1f Mbps\nविलंब: %s ms"</string>
+    <string name="msg_9f9495ccb9" formatted="false">"पहले VPN कनेक्ट करें"</string>
+    <string name="msg_40d44a7caa" formatted="false">"वर्तमान जाँच पूरी होने दें"</string>
+    <string name="msg_790a8a4ea0" formatted="false">"डाउनलोड और अपलोड माप रहे हैं…"</string>
+    <string name="msg_f6346b37fe" formatted="false">"फिर टेस्ट करें"</string>
+    <string name="msg_1cbfac57b9" formatted="false">"टेस्ट अधूरा: "</string>
+    <string name="msg_9a01e7088d" formatted="false">"%.1f GB"</string>
+    <string name="msg_188fea6cd2" formatted="false">"अभी कोई सदस्यता नहीं"</string>
+    <string name="msg_2c285a5142" formatted="false">"वैधता: "</string>
+    <string name="msg_a7989c9ed0" formatted="false">"समाप्ति तिथि नहीं"</string>
+    <string name="msg_504d29a40f" formatted="false">"समाप्त"</string>
+    <string name="msg_2defa5c348" formatted="false">"सदस्यता बदलें: "</string>
+    <string name="msg_ff652348e8" formatted="false">"सदस्यता अपडेट करें"</string>
+    <string name="msg_c9eee72114" formatted="false">"सदस्यता के सर्वर"</string>
+    <string name="msg_4ff9e9046e" formatted="false">"सदस्यता अपडेट हो रही है…"</string>
+    <string name="msg_3608b5e904" formatted="false">"सदस्यता अपडेट हो गई"</string>
+    <string name="msg_a8c04b7022" formatted="false">"पिछले सर्वर सुरक्षित रखे गए हैं। "</string>
+    <string name="msg_88b4efa32d" formatted="false">"नियम हटाएँ?"</string>
+    <string name="msg_86ea33aef5" formatted="false">"हटाएँ"</string>
+    <string name="msg_9c96d4dc3e" formatted="false">"ऐप का पैकेज नाम दर्ज करें"</string>
+    <string name="msg_1c97ba2b80" formatted="false">"सबनेट दर्ज करें, जैसे 192.168.0.0/16"</string>
+    <string name="msg_df8cdfc609" formatted="false">"https:// या पाथ के बिना डोमेन दर्ज करें"</string>
+    <string name="msg_875be13421" formatted="false">"ऐप का नाम या पैकेज"</string>
+    <string name="msg_f51f551f4b" formatted="false">"सिस्टम सेवाएँ"</string>
+    <string name="msg_cab718e280" formatted="false">"सिस्टम सेवाएँ दिखाएँ"</string>
+    <string name="msg_e5834c4ca1" formatted="false">"ऐप्स लोड हो रहे हैं…"</string>
+    <string name="msg_1e1b70b17c" formatted="false">"कोई परिणाम नहीं"</string>
+    <string name="msg_7819ea82b0" formatted="false">"ऐप चुनें"</string>
+    <string name="msg_8c5bfb9222" formatted="false">"ऐप्स लोड नहीं हो सके"</string>
+    <string name="msg_aa4986268e" formatted="false">"सदस्यता हटाएँ"</string>
+    <string name="msg_3de49828e8" formatted="false">"नाम"</string>
+    <string name="msg_11b385895c" formatted="false">"मेरा VPN"</string>
+    <string name="msg_046e475e5a" formatted="false">"लिंक"</string>
+    <string name="msg_a44800a12f" formatted="false">"लिंक कॉपी करें"</string>
+    <string name="msg_a48859c609" formatted="false">"लिंक बदलें"</string>
+    <string name="msg_ccb6cb6834" formatted="false">"सदस्यता लिंक"</string>
+    <string name="msg_6fcdbbe8f7" formatted="false">"स्वचालित अपडेट"</string>
+    <string name="msg_4e401a2e7b" formatted="false">"सदस्यता अपने आप अपडेट करें"</string>
+    <string name="msg_9066ea9564" formatted="false">"VPN चालू होने पर हर घंटे सदस्यता की जाँच करें।"</string>
+    <string name="msg_4864057d62" formatted="false">"सहेजें"</string>
+    <string name="msg_49261ec6a4" formatted="false">"लिंक कॉपी हो गया"</string>
+    <string name="msg_f18132742a" formatted="false">"लिंक बदलना पूरा करें"</string>
+    <string name="msg_0af444c6af" formatted="false">"नाम दर्ज करें"</string>
+    <string name="msg_6c6d266c63" formatted="false">"सदस्यता पहले ही हटाई गई है"</string>
+    <string name="msg_6d039299cd" formatted="false">"सदस्यता हटाएँ?"</string>
+    <string name="msg_06b9e865d0" formatted="false">"‹  सभी सेटिंग"</string>
+    <string name="msg_7f2be1ba3d" formatted="false">"विज्ञापन ब्लॉक करना"</string>
+    <string name="msg_85dd4d46ca" formatted="false">"चालू"</string>
+    <string name="msg_2106134f75" formatted="false">"बंद"</string>
+    <string name="msg_d206f1bed0" formatted="false">"दिखावट"</string>
+    <string name="msg_ed3f0e507a" formatted="false">"भाषा"</string>
+    <string name="msg_79e350f743" formatted="false">"कनेक्शन"</string>
+    <string name="msg_c7e6bf5234" formatted="false">"सूचनाएँ और आइकन"</string>
+    <string name="msg_d7907f4d43" formatted="false">"उन्नत"</string>
+    <string name="msg_9ba1e22ac3" formatted="false">"निदान"</string>
+    <string name="msg_a84ab2656e" formatted="false">"Vezdehod · संस्करण "</string>
+    <string name="msg_6521dc9632" formatted="false">"कनेक्शन सेटिंग बदली गई"</string>
+    <string name="msg_7f59da61ba" formatted="false">"दिखावट की सेटिंग बदली गई"</string>
+    <string name="msg_41a17b3bad" formatted="false">"यदि कोई साइट काम करना बंद करे, तो अपवाद जोड़ें या फ़िल्टर बंद करें।"</string>
+    <string name="msg_d6d24ec981" formatted="false">"विज्ञापन और ट्रैकर"</string>
+    <string name="msg_85e3709119" formatted="false">"VPN चालू रहने पर काम करता है। वीडियो के अंदर के विज्ञापन नहीं हटाता।"</string>
+    <string name="msg_ea65534c79" formatted="false">"अपवाद"</string>
+    <string name="msg_f82a821941" formatted="false">"कोई नहीं"</string>
+    <string name="msg_449885f5fe" formatted="false">" डोमेन"</string>
+    <string name="msg_0f97e2780c" formatted="false">"मार्ग बदले बिना डोमेन और उसके सबडोमेन को अनुमति देता है।"</string>
+    <string name="msg_2923b8f670" formatted="false">"हर पंक्ति में एक डोमेन"</string>
+    <string name="msg_494d7c7be7" formatted="false">"ब्लॉकिंग के अपवाद"</string>
+    <string name="msg_35d57a900e" formatted="false">"डिवाइस की भाषा"</string>
+    <string name="msg_553c45f1b8" formatted="false">"थीम"</string>
+    <string name="msg_bd16b23470" formatted="false">"डार्क"</string>
+    <string name="msg_8080010c5e" formatted="false">"लाइट"</string>
+    <string name="msg_f0a22d9d1a" formatted="false">"सिस्टम के अनुसार"</string>
+    <string name="msg_70f0229afd" formatted="false">"मुख्य रंग"</string>
+    <string name="msg_9f1325f197" formatted="false">"सुनहरा"</string>
+    <string name="msg_891c5e9e76" formatted="false">"मिंट"</string>
+    <string name="msg_0deebc3a96" formatted="false">"नीला"</string>
+    <string name="msg_a4617199a8" formatted="false">"प्रदर्शन का आकार"</string>
+    <string name="msg_4886f1af13" formatted="false">"छोटा · 90%"</string>
+    <string name="msg_e7e285a436" formatted="false">"सामान्य · 100%"</string>
+    <string name="msg_52bac55f34" formatted="false">"बड़ा · 110%"</string>
+    <string name="msg_d8fcb99153" formatted="false">"बहुत बड़ा · 120%"</string>
+    <string name="msg_11bb1b11c0" formatted="false">"होम स्क्रीन पर"</string>
+    <string name="msg_220afdba73" formatted="false">"पिंग"</string>
+    <string name="msg_aff5818940" formatted="false">"सदस्यता की समाप्ति"</string>
+    <string name="msg_f56353b7eb" formatted="false">"आइकन और सूचना"</string>
+    <string name="msg_64776d5102" formatted="false">"सूचना पैनल"</string>
+    <string name="msg_6ba4db3033" formatted="false">"सूचना छिपाने से VPN डिस्कनेक्ट नहीं होता।"</string>
+    <string name="msg_4e73aa66da" formatted="false">"सूचना दिखाई दे रही है"</string>
+    <string name="msg_f1d3c27f2c" formatted="false">"सूचना छिपी है"</string>
+    <string name="msg_8960ddc30e" formatted="false">"सेट करें"</string>
+    <string name="msg_be99ac8f13" formatted="false">"स्टेटस बार"</string>
+    <string name="msg_e57f3249b4" formatted="false">"यह आइकन Android नियंत्रित करता है। ऐप इसे बदल या हटा नहीं सकता।"</string>
+    <string name="msg_136e1c4c3c" formatted="false">"Android द्वारा नियंत्रित"</string>
+    <string name="msg_9d22ff847e" formatted="false">"मुख्य सर्वर विफल होने पर बैकअप चुना जाता है और ठीक होने पर वापस मुख्य सर्वर पर जाता है।"</string>
+    <string name="msg_fcb4b47313" formatted="false">"फ़ोन के साथ शुरू करें"</string>
+    <string name="msg_2be12d2d73" formatted="false">"पहली बार अनलॉक करने के बाद VPN शुरू होता है।"</string>
+    <string name="msg_a8e2cfb793" formatted="false">"फिर कनेक्ट करें"</string>
+    <string name="msg_448e226084" formatted="false">"दोबारा कोशिश का अंतराल"</string>
+    <string name="msg_8c21ba2d9d" formatted="false">"5 सेकंड"</string>
+    <string name="msg_8a45d0d1ad" formatted="false">"15 सेकंड"</string>
+    <string name="msg_d84f514695" formatted="false">"30 सेकंड"</string>
+    <string name="msg_7db1478f63" formatted="false">"60 सेकंड"</string>
+    <string name="msg_e83d7ce312" formatted="false">"Wi-Fi बैकअप"</string>
+    <string name="msg_fbf3611c53" formatted="false">"मोबाइल बैकअप"</string>
+    <string name="msg_ca20e76c0c" formatted="false">"बैकग्राउंड गतिविधि"</string>
+    <string name="msg_d26aec38b1" formatted="false">"बैटरी और ऑटोस्टार्ट"</string>
+    <string name="msg_a9d9fc2d46" formatted="false">"हमेशा चालू VPN"</string>
+    <string name="msg_8a6ceef063" formatted="false">"Android सेटिंग"</string>
+    <string name="msg_2d8f7570e1" formatted="false">"उपयोग न करें"</string>
+    <string name="msg_c8243322dc" formatted="false">"कनेक्ट करते समय"</string>
+    <string name="msg_e0cf01e43c" formatted="false">"IP मोड"</string>
+    <string name="msg_e6da72edd6" formatted="false">"ऑटो · "</string>
+    <string name="msg_5b9e24bda9" formatted="false">"केवल IPv4"</string>
+    <string name="msg_9be84e1d9f" formatted="false">"नेटवर्क समर्थन होने पर IPv6 अपने आप चालू होता है।"</string>
+    <string name="msg_8f9bf25ca6" formatted="false">"VPN DNS"</string>
+    <string name="msg_5f1326b514" formatted="false">"यह DNS VPN से चलता है। सीधे मार्ग वर्तमान नेटवर्क के DNS का उपयोग करते हैं।"</string>
+    <string name="msg_0857ba97ab" formatted="false">" बाइट"</string>
+    <string name="msg_466019b718" formatted="false">"आमतौर पर 1400। डाउनलोड अटकने पर 1280 आज़माएँ।"</string>
+    <string name="msg_7e47a7ce78" formatted="false">"नेटवर्क स्टैक"</string>
+    <string name="msg_eca17171d2" formatted="false">"सिस्टम"</string>
+    <string name="msg_d155047e55" formatted="false">"मिश्रित"</string>
+    <string name="msg_d4dbd88958" formatted="false">"gVisor बनाए रखें। दूसरे मोड संगतता समस्याओं के लिए हैं।"</string>
+    <string name="msg_e04a016600" formatted="false">"नेटवर्क सेटिंग रीसेट करें"</string>
+    <string name="msg_f1b8fc3ba0" formatted="false">"नेटवर्क सेटिंग रीसेट करें?"</string>
+    <string name="msg_478ced019a" formatted="false">"Cloudflare DNS · स्वचालित IP · MTU 1400 · gVisor। बाकी सेटिंग बनी रहेंगी।"</string>
+    <string name="msg_058f162d29" formatted="false">"रीसेट करें"</string>
+    <string name="msg_6a38870f87" formatted="false">"Cloudflare · डिफ़ॉल्ट"</string>
+    <string name="msg_8fb98f9cdd" formatted="false">"1400 · सामान्य"</string>
+    <string name="msg_b826985870" formatted="false">"1280 · छोटा"</string>
+    <string name="msg_5f233b0c2d" formatted="false">"1280 से 1500 के बीच पूर्णांक दर्ज करें"</string>
+    <string name="msg_989e4afb04" formatted="false">"केवल VPN निकास की जाँच करता है। सीधे मार्गों की अलग जाँच आवश्यक है।"</string>
+    <string name="msg_2471b6e04f" formatted="false">"टनल: "</string>
+    <string name="msg_2eabbcfdaa" formatted="false">"\nनेटवर्क: "</string>
+    <string name="msg_2afa58988e" formatted="false">"पहुँच: "</string>
+    <string name="msg_4a198cee74" formatted="false">"अभी जाँच नहीं हुई"</string>
+    <string name="msg_19e7fa6964" formatted="false">"कनेक्शन और IP जाँचें"</string>
+    <string name="msg_1fa4998331" formatted="false">"HTTPS और सार्वजनिक IP की जाँच हो रही है…"</string>
+    <string name="msg_2ddce0385c" formatted="false">"निकास IP: "</string>
+    <string name="msg_5a2f918d96" formatted="false">"\nHTTPS: उपलब्ध\nविलंब: "</string>
+    <string name="msg_32d477ea64" formatted="false">"जाँच विफल: "</string>
+    <string name="msg_d32a398cf9" formatted="false">"स्पीड मापें"</string>
+    <string name="msg_57013f6956" formatted="false">"लगभग 10 MB डेटा"</string>
+    <string name="msg_f2ee635aaa" formatted="false">"गतिविधि लॉग"</string>
+    <string name="msg_67ade741ae" formatted="false">"लॉग"</string>
+    <string name="msg_049d00ab33" formatted="false">"लॉग साफ़ करें"</string>
+    <string name="msg_46a01e5fdc" formatted="false">"लॉग साफ़ हो गया"</string>
+    <string name="msg_cde2c9f8b9" formatted="false">"एक सर्वर की सेटिंग समर्थित नहीं है। सदस्यता नहीं बदली गई।"</string>
+    <string name="msg_a734112137" formatted="false">"सर्वर सत्यापन का समय समाप्त। सदस्यता फिर जोड़ें।"</string>
+    <string name="msg_3d53cd3ab3" formatted="false">"Xray सेटिंग समर्थित नहीं है। सदस्यता नहीं बदली गई।"</string>
+    <string name="msg_46f4fe51cc" formatted="false">"सदस्यता जोड़ें"</string>
+    <string name="msg_f91f5592a9" formatted="false">"QR कोड"</string>
+    <string name="msg_19a5f8e5b8" formatted="false">"क्लिपबोर्ड से"</string>
+    <string name="msg_a30b87ef8c" formatted="false">"क्लिपबोर्ड खाली है"</string>
+    <string name="msg_2a1dd82994" formatted="false">"क्लिपबोर्ड में लिंक नहीं है"</string>
+    <string name="msg_bb84bedbe2" formatted="false">"लिंक दर्ज करें"</string>
+    <string name="msg_3f75368ab9" formatted="false">"जारी रखें"</string>
+    <string name="msg_9e506acb19" formatted="false">"फिर कोशिश करें"</string>
+    <string name="msg_92ce2819af" formatted="false">"सर्वर: "</string>
+    <string name="msg_06bb7e72a9" formatted="false">"छोड़ी गई प्रविष्टियाँ: "</string>
+    <string name="msg_44548e3dc4" formatted="false">"छोड़ी गई प्रविष्टियाँ"</string>
+    <string name="msg_fb701daed8" formatted="false">"सदस्यता पढ़ी नहीं जा सकी"</string>
+    <string name="msg_789841320c" formatted="false">"‹  नियम"</string>
+    <string name="msg_b559f9f1ca" formatted="false">"नया नियम"</string>
+    <string name="msg_97a3265a4a" formatted="false">"नियम बदलें"</string>
+    <string name="msg_56970d69fd" formatted="false">"IP पता और प्रीफ़िक्स"</string>
+    <string name="msg_67787241c9" formatted="false">"वेबसाइट का पता"</string>
+    <string name="msg_31654bd668" formatted="false">"नीचे ऐप चुनें"</string>
+    <string name="msg_72f953a4f1" formatted="false">"सबडोमेन शामिल करें"</string>
+    <string name="msg_b765f32584" formatted="false">"मार्ग"</string>
+    <string name="msg_190ba6d582" formatted="false">"इस पर लागू करें"</string>
+    <string name="msg_b03361f6c0" formatted="false">"Wi-Fi और मोबाइल"</string>
+    <string name="msg_7a1fc2cbc5" formatted="false">"नाम · वैकल्पिक"</string>
+    <string name="msg_09d340f276" formatted="false">"पहचानने के लिए"</string>
+    <string name="msg_e4d9463d19" formatted="false">"नियम हटाएँ"</string>
+    <string name="msg_58e849be29" formatted="false">"केवल Wi-Fi"</string>
+    <string name="msg_0288127e28" formatted="false">"केवल मोबाइल"</string>
+    <string name="msg_2bc1c34c0c" formatted="false">"नियम पहले ही हटाया गया है"</string>
+    <string name="msg_9b5a1ac56d" formatted="false">"‹  QR कोड"</string>
+    <string name="msg_4198cfd7ad" formatted="false">"स्कैनर बंद करें"</string>
+    <string name="msg_d16af433b5" formatted="false">"कैमरा QR कोड की ओर करें"</string>
+    <string name="msg_c01eaf3033" formatted="false">"तस्वीर खोलें"</string>
+    <string name="msg_6daead7fcc" formatted="false">"कैमरे की अनुमति नहीं मिली। आप तस्वीर खोल सकते हैं।"</string>
+    <string name="msg_c5f4e5cd89" formatted="false">"कैमरा उपलब्ध नहीं। तस्वीर खोलें।"</string>
+    <string name="msg_1821a8f4a3" formatted="false">"कैमरा शुरू नहीं हो सका"</string>
+    <string name="msg_1c313fd862" formatted="false">"कैमरा उपलब्ध नहीं"</string>
+    <string name="msg_2291f43f3b" formatted="false">"QR कोड पढ़ा जा रहा है…"</string>
+    <string name="msg_9b811806c2" formatted="false">"QR कोड नहीं मिला। दूसरी तस्वीर चुनें।"</string>
+    <string name="msg_3fed10dcd2" formatted="false">"फ़ॉर्मैट "</string>
+    <string name="msg_0ed6fd3f45" formatted="false">"सर्वर का पता नहीं है"</string>
+    <string name="msg_6fc143271e" formatted="false">"सदस्यता के लिए HTTPS लिंक आवश्यक है"</string>
+    <string name="msg_81f0596a4a" formatted="false">"सदस्यता अपडेट: HTTP "</string>
+    <string name="msg_7344ead1f2" formatted="false">"सदस्यता बहुत बड़ी है"</string>
+    <string name="msg_8478b68ef9" formatted="false">"अपडेट में असमर्थित प्रविष्टियाँ हैं। पिछले सर्वर सुरक्षित रखे गए हैं।"</string>
+    <string name="msg_e07f86b4c4" formatted="false">"हर पंक्ति में एक डोमेन दर्ज करें, https:// या पाथ के बिना"</string>
+    <string name="msg_3baad0b2cf" formatted="false">"अधिकतम 200 अपवाद"</string>
+    <string name="msg_04926ac15c" formatted="false">"बूट के बाद ऑटोस्टार्ट"</string>
+    <string name="msg_04d374e07a" formatted="false">"ऑटोस्टार्ट विफल — ऐप खोलें"</string>
+    <string name="subscription_used" formatted="false">"इस्तेमाल: %s"</string>
+    <string name="subscription_updated" formatted="false">"अपडेट: %s"</string>
+    <string name="ping_no_response" formatted="false">"जवाब नहीं"</string>
+    <string name="connection_unavailable" formatted="false">"इस सर्वर से कनेक्शन नहीं हो रहा है। दूसरा सर्वर चुनें।"</string>
+    <string name="connection_choose" formatted="false">"दूसरा सर्वर"</string>
+    <string name="update_title" formatted="false">"अपडेट"</string>
+    <string name="update_auto" formatted="false">"अपने आप जाँचें"</string>
+    <string name="update_check" formatted="false">"अभी जाँचें"</string>
+    <string name="update_latest" formatted="false">"नवीनतम संस्करण स्थापित है"</string>
+    <string name="update_available" formatted="false">"अपडेट उपलब्ध है"</string>
+    <string name="update_check_failed" formatted="false">"अपडेट की जाँच नहीं हो सकी। बाद में कोशिश करें।"</string>
+    <string name="update_not_configured" formatted="false">"ऐप प्रकाशित होने के बाद अपडेट जाँचे जा सकेंगे"</string>
+    <string name="update_download" formatted="false">"अपडेट डाउनलोड करें"</string>
+    <string name="update_install" formatted="false">"अपडेट इंस्टॉल करें"</string>
+    <string name="update_invalid" formatted="false">"APK की जाँच असफल रही। अपडेट फिर डाउनलोड करें।"</string>
+    <string name="update_permission" formatted="false">"Vezdehod को अपडेट इंस्टॉल करने दें, फिर अपडेट इंस्टॉल करें पर दोबारा टैप करें।"</string>
+    <string name="update_install_failed" formatted="false">"Android इंस्टॉलर नहीं खुल सका"</string>
+    <string name="update_verifying" formatted="false">"APK की जाँच हो रही है…"</string>
+    <string name="update_download_failed" formatted="false">"डाउनलोड असफल रहा। फिर कोशिश करें।"</string>
+    <string name="update_waiting" formatted="false">"नेटवर्क का इंतज़ार…"</string>
+    <string name="update_notes" formatted="false">"नया क्या है"</string>
+    <string name="update_checking" formatted="false">"अपडेट की जाँच हो रही है…"</string>
+    <string name="update_install_hint" formatted="false">"इंस्टॉल करने पर ऐप फिर शुरू होगा और VPN बाधित होगा।"</string>
+</resources>

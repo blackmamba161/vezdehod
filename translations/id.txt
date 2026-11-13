@@ -1,0 +1,376 @@
+MTU: 1280–1500
+Interval: 5–120 detik
+Masukkan alamat DNS-over-HTTPS: https://…
+Belum ada peristiwa
+Tidak dapat membaca log
+Tambahkan langganan dan pilih server
+Server yang dipilih tidak lagi ada dalam langganan. Pilih server lain di Jaringan.
+Tidak dapat mengalokasikan porta VPN lokal
+Jenis aturan tidak dikenal
+Server aturan tidak tersedia: 
+ID server duplikat
+Trafik lainnya
+Rute untuk situs dan aplikasi yang tidak cocok dengan aturan aktif mana pun.
+Langsung
+\nSeluler: 
+Pilihan manual: 
+Melalui VPN
+Blokir
+Server tertentu
+Untuk semua jaringan
+Batal
+, dipilih
+Tidak dapat menghapus berkas impor
+Tidak dapat membuka setelan aman. Data Anda tetap tersimpan.
+Langganan telah berubah. Perbarui lagi.
+Langganan ini sudah ditambahkan
+Pilih server lain untuk jaringan dan aturan terlebih dahulu
+Ada aturan yang menggunakan server ini
+Tautan
+Tidak ada server yang kompatibel. 
+Tidak ada server dalam langganan
+Terlalu banyak lapisan pengodean
+Langganan melebihi 4 MB
+Server mengembalikan langganan kosong
+Ini adalah halaman web. Salin tautan langganan VPN dari penyedia Anda.
+JSON langganan tidak valid
+Tidak dapat membaca YAML. Periksa berkas langganan.
+format tidak dikenal
+Baris 
+Tautan 
+Entri 
+: format tidak dikenal
+Diperlukan daftar server atau konfigurasi VPN
+Daftar proxies tidak valid
+Server 
+Daftar outbounds tidak valid
+Server
+JSON tidak memiliki outbounds atau proxies
+setelan tidak didukung atau tidak lengkap
+Langganan melebihi 512 server
+alamat atau porta server tidak ada
+protokol 
+rantai proksi belum didukung
+alamat server tidak ada
+plugin tambahan atau rantai proksi
+transport 
+ belum didukung dalam YAML
+Tempel tautan atau pindai kode QR
+Masukkan satu tautan tanpa spasi
+Tautan tidak valid
+Periksa alamat langganan
+Masukkan tautan langganan atau server
+Tautan tidak lengkap
+Dasar
+Layanan AI
+Sosial
+Aturan sendiri
+Aturan
+Urutan aturan
+Aturan pertama yang cocok akan diterapkan. Gunakan panah untuk mengubah prioritas. Ketuk layanan untuk membuka aturannya.
+Preset
++ Aturan
+Pilih layanan di Preset
+Rute campuran
+Nonaktif
+ dari 
+ aktif
+Ciutkan 
+Perluas 
+Pindah ke atas: 
+Pindah ke bawah: 
+Layanan: 
+aturan
+aturan
+aturan
+Aplikasi
+Situs web
+Edit aturan: 
+Pindahkan aturan ke atas: 
+Pindahkan aturan ke bawah: 
+Aturan: 
+Preset aturan
+Nanti
+Terapkan
+Pilih semua
+ · ditambahkan
+Terapkan · 
+Aturan ditambahkan: 
+Belum diperiksa
+Status VPN
+Menghubungkan…
+Vezdehod
+Putuskan
+Dukungan IPv6 jaringan berubah
+Jaringan berubah: 
+seluler
+Tidak ada jaringan
+Menunggu jaringan
+Jaringan seluler
+Tidak dapat memulai koneksi Xray
+Tunnel dimulai
+Kesalahan tunnel
+Kesalahan tunnel; lihat beranda
+Kesalahan koneksi · buka aplikasi
+[alamat disembunyikan]
+[kunci disembunyikan]
+VPN dihentikan
+Koneksi Xray dihentikan
+Menghubungkan kembali
+HTTPS tersedia
+Pemeriksaan HTTPS gagal
+Kembali ke server utama
+Server cadangan dipilih
+Hubungkan VPN terlebih dahulu
+Koneksi berubah — periksa lagi
+HTTPS dan IP keluar berhasil diperiksa
+Pemeriksaan gagal
+Pemeriksaan HTTPS / IP gagal
+Koneksi berubah
+Koneksi berubah — ukur lagi
+Izin VPN Android diperlukan
+Android tidak dapat membuat VPN
+Tidak dapat melindungi soket VPN
+Tutup
+Tambah
+Bantuan: 
+Pilih server
+Langganan
+Auto
+Manual
+Pergantian jaringan otomatis
+Setelan
+Kesalahan tampilan: 
+Beranda
+Server
+Jaringan
+Langganan
+VPN nonaktif
+Hubungkan sesuai aturan Anda
+Ping 
+ ms
+Otomatis
+ ditambahkan
+Terhubung
+Tidak dapat terhubung
+ · sesuai aturan Anda
+Ketuk untuk berhenti
+Ketuk untuk terhubung
+Langganan hingga 
+Tanggal kedaluwarsa tidak tersedia
+Putuskan VPN
+Hubungkan VPN
+Server tidak merespons
+Ganti otomatis
+Perbarui ping
+Pilihan manual
+Gunakan setelan jaringan
+Server Wi-Fi
+Server seluler
+Kembali
+Semua langganan
+Memeriksa koneksi…
+Server tidak tersedia: 
+Pemeriksaan sedang berlangsung
+Memeriksa…
+≈10 MB · melalui VPN
+Belum ada hasil
+Mulai tes
+Tes kecepatan
+↓ %.1f Mbps\n↑ %.1f Mbps\nLatensi: %s ms
+Hubungkan VPN terlebih dahulu
+Tunggu pemeriksaan saat ini
+Mengukur unduhan dan unggahan…
+Tes lagi
+Tes belum selesai: 
+%.1f GB
+Belum ada langganan
+Hingga 
+Tanpa tanggal kedaluwarsa
+Kedaluwarsa
+Edit langganan: 
+Perbarui langganan
+Server langganan
+Memperbarui langganan…
+Langganan diperbarui
+Server sebelumnya tetap disimpan. 
+Hapus aturan?
+Hapus
+Masukkan nama paket aplikasi
+Masukkan subnet, misalnya 192.168.0.0/16
+Masukkan domain tanpa https:// atau jalur
+Nama atau paket aplikasi
+Layanan sistem
+Tampilkan layanan sistem
+Memuat aplikasi…
+Tidak ada hasil
+Pilih aplikasi
+Tidak dapat memuat aplikasi
+Hapus langganan
+Nama
+VPN Saya
+Tautan
+Salin tautan
+Edit tautan
+Tautan langganan
+Pembaruan otomatis
+Perbarui langganan otomatis
+Periksa langganan setiap jam saat VPN aktif.
+Simpan
+Tautan disalin
+Selesaikan pengeditan tautan
+Masukkan nama
+Langganan sudah dihapus
+Hapus langganan?
+‹  Semua setelan
+Pemblokiran iklan
+Aktif
+Nonaktif
+Tampilan
+Bahasa
+Koneksi
+Notifikasi dan ikon
+Lanjutan
+Diagnostik
+Vezdehod · versi 
+Setelan koneksi diubah
+Setelan tampilan diubah
+Jika situs berhenti berfungsi, tambahkan pengecualian atau nonaktifkan filter.
+Iklan dan pelacak
+Berfungsi saat VPN aktif. Tidak menghapus iklan di dalam video.
+Pengecualian
+Tidak ada
+ domain
+Mengizinkan domain dan subdomainnya tanpa mengubah rute.
+Satu domain per baris
+Pengecualian pemblokiran
+Bahasa perangkat
+Tema
+Gelap
+Terang
+Ikuti sistem
+Warna aksen
+Emas
+Mint
+Biru
+Ukuran tampilan
+Ringkas · 90%
+Standar · 100%
+Besar · 110%
+Sangat besar · 120%
+Di beranda
+Ping
+Masa berlaku langganan
+Ikon dan notifikasi
+Panel notifikasi
+Menyembunyikan notifikasi tidak memutuskan VPN.
+Notifikasi ditampilkan
+Notifikasi disembunyikan
+Atur
+Bilah status
+Android mengendalikan ikon ini. Aplikasi tidak dapat mengganti atau memindahkannya.
+Dikendalikan Android
+Beralih ke cadangan jika server utama gagal, lalu kembali setelah pulih.
+Mulai bersama ponsel
+VPN dimulai setelah kunci layar pertama kali dibuka.
+Hubungkan kembali
+Coba lagi setelah
+5 detik
+15 detik
+30 detik
+60 detik
+Cadangan Wi-Fi
+Cadangan seluler
+Aktivitas latar belakang
+Baterai dan mulai otomatis
+VPN selalu aktif
+Setelan Android
+Jangan gunakan
+saat terhubung
+Mode IP
+Auto · 
+Hanya IPv4
+IPv6 diaktifkan otomatis jika jaringan mendukungnya.
+DNS VPN
+DNS ini menggunakan VPN. Rute langsung memakai DNS jaringan saat ini.
+ byte
+Biasanya 1400. Coba 1280 jika unduhan macet.
+Stack jaringan
+Sistem
+Campuran
+Tetap gunakan gVisor. Mode lain untuk masalah kompatibilitas.
+Reset setelan jaringan
+Reset setelan jaringan?
+DNS Cloudflare · IP otomatis · MTU 1400 · gVisor. Setelan lain tetap disimpan.
+Reset
+Cloudflare · standar
+1400 · standar
+1280 · lebih kecil
+Masukkan bilangan bulat dari 1280 hingga 1500
+Hanya memeriksa jalur keluar VPN. Rute langsung perlu pemeriksaan terpisah.
+Tunnel: 
+\nJaringan: 
+Keterjangkauan: 
+Belum diperiksa
+Periksa koneksi dan IP
+Memeriksa HTTPS dan IP publik…
+IP keluar: 
+\nHTTPS: tersedia\nLatensi: 
+Pemeriksaan gagal: 
+Ukur kecepatan
+Sekitar 10 MB trafik
+Log peristiwa
+Log
+Bersihkan log
+Log dibersihkan
+Server menggunakan setelan yang tidak didukung. Langganan tidak diubah.
+Validasi server kehabisan waktu. Coba tambahkan langganan lagi.
+Setelan Xray tidak didukung. Langganan tidak diubah.
+Tambah langganan
+Kode QR
+Dari papan klip
+Papan klip kosong
+Tidak ada tautan di papan klip
+Masukkan tautan
+Lanjutkan
+Coba lagi
+Server: 
+Entri dilewati: 
+Entri yang dilewati
+Tidak dapat membaca langganan
+‹  Aturan
+Aturan baru
+Edit aturan
+Alamat IP dan prefiks
+Alamat situs web
+Pilih aplikasi di bawah
+Sertakan subdomain
+Rute
+Terapkan pada
+Wi-Fi dan seluler
+Nama · opsional
+Untuk memudahkan pengenalan
+Hapus aturan
+Hanya Wi-Fi
+Hanya seluler
+Aturan sudah dihapus
+‹  Kode QR
+Tutup pemindai
+Arahkan kamera ke kode QR
+Buka gambar
+Izin kamera ditolak. Anda dapat membuka gambar.
+Kamera tidak tersedia. Buka gambar.
+Tidak dapat memulai kamera
+Kamera tidak tersedia
+Membaca kode QR…
+Kode QR tidak ditemukan. Pilih gambar lain.
+format 
+alamat server tidak ada
+Langganan memerlukan tautan HTTPS
+Pembaruan langganan: HTTP 
+Langganan terlalu besar
+Pembaruan memuat entri yang tidak didukung. Server sebelumnya tetap disimpan.
+Masukkan satu domain per baris, tanpa https:// atau jalur
+Maksimal 200 pengecualian
+Mulai otomatis setelah boot
+Gagal mulai otomatis — buka aplikasi

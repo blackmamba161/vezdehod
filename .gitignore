@@ -1,0 +1,8 @@
+.build/
+private/
+*.apk
+*.idsig
+vendor/
+
+release-output/
+__pycache__/
