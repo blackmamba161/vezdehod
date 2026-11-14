@@ -68,7 +68,7 @@ final class SettingsScreen {
   TunnelService tunnel=TunnelService.instance;String now=tunnel==null?L10n.s(R.string.msg_c8243322dc):tunnel.nativeIpv6()?"IPv4 + IPv6":"IPv4";
   choice(c,L10n.s(R.string.msg_e0cf01e43c),"ipv6",new String[]{L10n.s(R.string.msg_e6da72edd6)+now,L10n.s(R.string.msg_5b9e24bda9)},new Object[]{true,false},true,L10n.s(R.string.msg_9be84e1d9f));
   a.item(c,"MTU",store.data.optInt("mtu",1400)+L10n.s(R.string.msg_0857ba97ab),L10n.s(R.string.msg_466019b718),()->mtuSettings());
-  choice(c,L10n.s(R.string.msg_7e47a7ce78),"stack",new String[]{"gVisor",L10n.s(R.string.msg_eca17171d2),L10n.s(R.string.msg_d155047e55)},new Object[]{"gvisor","system","mixed"},true,L10n.s(R.string.msg_d4dbd88958));
+  if(android.os.Process.is64Bit())choice(c,L10n.s(R.string.msg_7e47a7ce78),"stack",new String[]{"gVisor",L10n.s(R.string.msg_eca17171d2),L10n.s(R.string.msg_d155047e55)},new Object[]{"gvisor","system","mixed"},true,L10n.s(R.string.msg_d4dbd88958));else a.item(c,L10n.s(R.string.msg_7e47a7ce78),L10n.s(R.string.msg_eca17171d2),()->{});
   a.item(c,L10n.s(R.string.msg_e04a016600),null,()->{AlertDialog d=new AlertDialog.Builder(a).setTitle(L10n.s(R.string.msg_f1b8fc3ba0)).setMessage(L10n.s(R.string.msg_478ced019a)).setNegativeButton(L10n.s(R.string.msg_0ec753be8d),null).setPositiveButton(L10n.s(R.string.msg_058f162d29),(v,w)->{try{store.resetNetworkPreferences();TunnelService.reload();a.render();}catch(Exception e){a.message(TunnelService.safeError(e));}}).create();a.sheet(d);});
  }
  void dnsSettings(){try{new DnsScreen(a).show();}catch(Exception e){a.message(TunnelService.safeError(e));}}

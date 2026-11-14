@@ -15,20 +15,26 @@ if compiled.find('instrumentation') is not None or compiled.find('application').
 if compiled.attrib[ns+'versionCode']!=code or compiled.attrib[ns+'versionName']!=version:raise SystemExit('Build the current version before preparing it.')
 configured=ET.parse(root/'app/res/values/update_config.xml').getroot().find('string').text or ''
 if configured!=repo:raise SystemExit('Rebuild after changing the repository.')
-receipt=json.loads((root/'.build/release-receipt.json').read_text())
-if receipt.get('variant')!='release' or receipt.get('repository')!=repo or receipt.get('sha256')!=hashlib.sha256((root/'Vezdehod.apk').read_bytes()).hexdigest():raise SystemExit('APK does not match the current release build receipt.')
 output=root/'release-output'/(version+'-preview' if preview else version);output.mkdir(parents=True,exist_ok=True)
-name=f'Vezdehod-{version}-{code}-arm64-v8a.apk';apk=output/name;shutil.copy2(root/'Vezdehod.apk',apk)
-sha=hashlib.sha256(apk.read_bytes()).hexdigest();(output/(name+'.sha256')).write_text(sha+'  '+name+'\n')
+for arch,suffix in [('universal',''),('arm64-v8a','-arm64')]:
+ receipt=json.loads((root/('.build/release-receipt'+suffix+'.json')).read_text())
+ source=root/('Vezdehod'+suffix+'.apk')
+ if receipt.get('variant')!='release' or receipt.get('architecture')!=arch or receipt.get('repository')!=repo or receipt.get('sha256')!=hashlib.sha256(source.read_bytes()).hexdigest():raise SystemExit('APK does not match the current release build receipt: '+arch)
+ with zipfile.ZipFile(source) as check:
+  abis={n.split('/')[1] for n in check.namelist() if n.startswith('lib/') and n.endswith('/libbox.so')}
+  expected={'arm64-v8a','armeabi-v7a'} if arch=='universal' else {'arm64-v8a'}
+  if abis!=expected:raise SystemExit('APK architecture mismatch: '+arch)
+ name=f'Vezdehod-{version}-{code}-{arch}.apk';apk=output/name;shutil.copy2(source,apk)
+ sha=hashlib.sha256(apk.read_bytes()).hexdigest();(output/(name+'.sha256')).write_text(sha+'  '+name+'\n')
 files=[]
 for dirname in ['app','translations','tools','licenses']:
  for path in (root/dirname).rglob('*'):
-  if path.is_file() and not path.is_symlink() and '__pycache__' not in path.parts and path.name!='SelfTest.java':files.append(path)
+  if path.is_file() and not path.is_symlink() and '__pycache__' not in path.parts:files.append(path)
 for name in ['README.md','CHANGELOG.md','PRIVACY.md','SECURITY.md','THIRD_PARTY.md','LICENSE','build.sh','build-lock.json','release-config.json','mobile_app.go','.gitignore']:
  files.append(root/name)
 files.extend(root/'docs'/name for name in ['BUILDING.md','RELEASING.md','DNS.md','security-check-'+version+'.json','verification-'+version+'.txt'])
 files.extend(path for path in (root/'docs/assets').rglob('*') if path.is_file())
-files.extend((root/'tests').glob('*.java'));files.append(root/'tests/localization_test.py')
+files.extend((root/'tests').glob('*.java'));files.extend((root/'tests').glob('*.py'))
 files.extend((root/'tests/native-routing').glob('*.go'))
 for name in ['sing-box-1.12.12','xray','xray-source','zxing','snakeyaml','adblock']:
  for path in (root/'vendor'/name).rglob('*'):
@@ -40,5 +46,5 @@ with zipfile.ZipFile(output/f'Vezdehod-{version}-source.zip','w',zipfile.ZIP_DEF
  for path in sorted(set(files)):z.write(path,'vezdehod/'+str(path.relative_to(root)))
 notes=(root/'CHANGELOG.md').read_text().split('## '+version+'\n',1)[1].split('\n## ',1)[0].strip()
 if preview:notes='PREVIEW ONLY: update repository is not configured. Do not publish this APK.\n\n'+notes
-(output/'release-notes.md').write_text('## Vezdehod '+version+'\n\n'+notes+'\n\nRequires Android 10 or newer and an ARM64 device. Install over the existing app to keep your configuration.\n')
+(output/'release-notes.md').write_text('## Vezdehod '+version+'\n\n'+notes+'\n\nRequires Android 10 or newer. Choose universal for ARMv7/ARM64, or the smaller ARM64 APK for 64-bit devices. Install over the existing app to keep your configuration.\n')
 print('Prepared',output.relative_to(root));print('Repository:',repo);print('APK SHA-256:',sha)

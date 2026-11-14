@@ -10,6 +10,10 @@ import (
  "net/http"
  "time"
  "strings"
+ "runtime"
+ runtimeDebug "runtime/debug"
+ "github.com/sagernet/sing-box/common/conntrack"
+ tunstack "github.com/sagernet/sing-tun"
  "github.com/sagernet/sing-box/adapter"
  "github.com/sagernet/sing/service"
  dnsmsg "github.com/miekg/dns"
@@ -82,3 +86,22 @@ func (s *BoxService) MobileDNSCheck() (int32,error) {
  }
  return int32(time.Since(start)/time.Millisecond),nil
 }
+
+// MobileCancel interrupts startup and outstanding DNS/dials without waiting for Close.
+func (s *BoxService) MobileCancel() { s.cancel() }
+
+// MobileMemoryBudget applies one shared soft budget to the app's native engines.
+// Unlike SetMemoryLimit(true), this does not force 10-percent GC and a 30-MiB heap.
+func MobileMemoryBudget(bytes int64) {
+ if bytes<64*1024*1024 {bytes=64*1024*1024};if bytes>192*1024*1024 {bytes=192*1024*1024}
+ runtimeDebug.SetGCPercent(100);runtimeDebug.SetMemoryLimit(bytes)
+ conntrack.KillerEnabled=true;conntrack.MemoryLimit=uint64(bytes)
+}
+func MobileRuntimeStats() string {
+ var m runtime.MemStats;runtime.ReadMemStats(&m)
+ b,_:=json.Marshal(map[string]any{"goroutines":runtime.NumGoroutine(),"heap":m.HeapAlloc,"heap_inuse":m.HeapInuse,"gc_cycles":m.NumGC,"gc_cpu_fraction":m.GCCPUFraction})
+ return string(b)
+}
+
+// gVisor is unavailable in the 32-bit ARM build; Android system stack is used there.
+func MobileGvisorSupported() bool { return tunstack.WithGVisor }

@@ -18,7 +18,7 @@ public final class DnsSettings {
  static boolean ip(String host){if(host.matches("[0-9.]+")){String[] a=host.split("\\.",-1);if(a.length!=4)return false;for(String n:a)try{if(n.isEmpty()||Integer.parseInt(n)>255)return false;}catch(Exception e){return false;}return true;}if(host.contains(":"))try{return InetAddress.getByName(host.replace("[","").replace("]","")) instanceof Inet6Address;}catch(Exception ignored){}return false;}
  static void validate(JSONObject d)throws Exception{
   if(!Arrays.asList("auto","manual").contains(d.optString("dnsMode","auto")))throw new Exception(L10n.s(R.string.dns_invalid));
-  if(!manual(d))return;address(d.optString("remoteDns",GOOGLE));for(String k:new String[]{"dnsBackup","dnsDirect","dnsBootstrap"})if(!d.optString(k).isBlank())address(d.optString(k));
+  if(!manual(d))return;address(d.optString("remoteDns",GOOGLE));for(String k:new String[]{"dnsBackup","dnsDirect","dnsBootstrap"})if(!Compat.blank(d.optString(k)))address(d.optString(k));
  }
  static JSONArray provider(JSONObject document)throws JSONException{
   JSONArray result=new JSONArray();JSONObject dns=document.optJSONObject("dns");if(dns==null)return result;
@@ -32,7 +32,7 @@ public final class DnsSettings {
  }
  static JSONArray providerFor(JSONObject node)throws JSONException {if(node==null)return new JSONArray();JSONArray p=node.optJSONArray("providerDns");if(p!=null)return p;JSONObject o=node.optJSONObject("outbound");return o!=null&&o.optJSONObject("config")!=null?provider(o.getJSONObject("config")):new JSONArray();}
  static String[] remote(JSONObject d,JSONObject node)throws Exception{
-  if(manual(d))return new String[]{address(d.optString("remoteDns",GOOGLE)),d.optString("dnsBackup").isBlank()?"":address(d.optString("dnsBackup"))};
+  if(manual(d))return new String[]{address(d.optString("remoteDns",GOOGLE)),Compat.blank(d.optString("dnsBackup"))?"":address(d.optString("dnsBackup"))};
   JSONArray p=providerFor(node);String primary=p.length()>0?p.getString(0):GOOGLE,backup=p.length()>1?p.getString(1):primary.equals(GOOGLE)?CLOUDFLARE:GOOGLE;return new String[]{primary,backup};
  }
  static boolean changed(JSONObject before,JSONObject after){for(String key:KEYS)if(!before.optString(key).equals(after.optString(key)))return true;return false;}
@@ -51,11 +51,10 @@ public final class DnsSettings {
  static JSONObject build(JSONObject d,JSONArray nodes,String active,JSONArray rules,String fin,boolean ipv6)throws Exception{
   validate(d);JSONArray servers=new JSONArray();servers.put(obj("tag","system","address","local","detour","direct"));
   String bootstrap=manual(d)?d.optString("dnsBootstrap"):"";
-  if(bootstrap.isEmpty())servers.put(obj("type","vezdehod-fallback","tag","bootstrap","servers",arr("system","bootstrap-public")));
+  if(bootstrap.isEmpty())servers.put(obj("type","vezdehod-fallback","tag","bootstrap","servers",arr("system")));
   else {JSONObject b=obj("tag","bootstrap-custom","address",address(bootstrap),"detour","direct");String h=bootstrap.contains("://")?new URI(bootstrap).getHost():bootstrap;if(!ip(h))b.put("address_resolver","system");servers.put(b);servers.put(obj("type","vezdehod-fallback","tag","bootstrap","servers",arr("bootstrap-custom")));}
-  servers.put(obj("tag","bootstrap-public","address","9.9.9.9","detour","direct"));
   String direct=manual(d)?d.optString("dnsDirect"):"";
-  if(direct.isEmpty())servers.put(obj("type","vezdehod-fallback","tag","local","servers",arr("system","bootstrap-public")));else pair(servers,"local",direct,"","direct");
+  if(direct.isEmpty())servers.put(obj("type","vezdehod-fallback","tag","local","servers",arr("system")));else pair(servers,"local",direct,"","direct");
   JSONObject selections=new JSONObject();Map<String,String> policies=new LinkedHashMap<>();
   for(int i=0;i<nodes.length();i++){JSONObject node=nodes.getJSONObject(i);String[] rem=remote(d,node);String key=Arrays.toString(rem),tag=policies.get(key);if(tag==null){tag="remote-policy-"+policies.size();policies.put(key,tag);pair(servers,tag,rem[0],rem[1],"auto");}selections.put(node.getString("id"),tag);}
   servers.put(obj("type","vezdehod-selector","tag","remote","selector","auto","routes",selections));

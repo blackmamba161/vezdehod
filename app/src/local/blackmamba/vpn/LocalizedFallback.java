@@ -433,4 +433,12 @@ case R.string.dns_check_failed:return "DNS недоступен. Проверь�
 case R.string.dns_invalid:return "Введите IP или адрес https://, tls://, udp://, tcp://";
 case R.string.dns_network_changed:return "Сеть изменилась. Повторите проверку.";
 case R.string.dns_help:return "Авто использует подходящие DNS из подписки или встроенные. DNS следует маршруту: через VPN либо напрямую. При ошибке используется резервный DNS того же маршрута. Ручные значения сохраняются. Проверка DNS не проверяет воспроизведение видео.";
+case R.string.connection_timeout:return "Подключение заняло слишком много времени. Выбери другой сервер.";
+case R.string.dns_unfiltered:return "Без фильтрации · DoH";
+case R.string.dns_unfiltered_tls:return "Без фильтрации · DoT";
+case R.string.dns_threats:return "Блокировка вредоносных сайтов · DoH";
+case R.string.dns_ads:return "Блокировка рекламы и трекеров · DoH";
+case R.string.dns_filter_threats:return "Защита";
+case R.string.dns_filter_ads:return "Реклама и трекеры";
+case R.string.dns_android:return "DNS текущей сети Android";
 default:throw new IllegalArgumentException("Unknown string resource: "+id);}}}

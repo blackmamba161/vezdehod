@@ -54,14 +54,14 @@ public final class SubscriptionFormats {
  void add(JSONObject node)throws Exception {if(node==null)return;if(result.nodes.length()>=512)throw new Exception(L10n.s(R.string.msg_7131aafc7b));String id=node.getString("id");if(ids.add(id))result.nodes.put(node);}
  JSONObject wrap(String name,String protocol,JSONObject outbound)throws Exception {
   String identity=canonical(outbound);byte[] digest=MessageDigest.getInstance("SHA-256").digest((profile+"|"+identity).getBytes(StandardCharsets.UTF_8));StringBuilder id=new StringBuilder("n");for(int i=0;i<12;i++)id.append(String.format("%02x",digest[i]));
-  if(name.isBlank())name=protocol.toUpperCase(Locale.ROOT)+" · "+(result.nodes.length()+1);return obj("id",id.toString(),"profile",profile,"name",name,"protocol",protocol,"outbound",outbound);
+  if(Compat.blank(name))name=protocol.toUpperCase(Locale.ROOT)+" · "+(result.nodes.length()+1);return obj("id",id.toString(),"profile",profile,"name",name,"protocol",protocol,"outbound",outbound);
  }
  static String canonical(Object value)throws JSONException{if(value instanceof JSONObject){JSONObject object=(JSONObject)value;List<String> keys=new ArrayList<>();Iterator<String> it=object.keys();while(it.hasNext())keys.add(it.next());Collections.sort(keys);StringBuilder s=new StringBuilder("{");for(String key:keys)s.append(JSONObject.quote(key)).append(':').append(canonical(object.get(key))).append(',');return s.append('}').toString();}if(value instanceof JSONArray){StringBuilder s=new StringBuilder("[");JSONArray a=(JSONArray)value;for(int i=0;i<a.length();i++)s.append(canonical(a.get(i))).append(',');return s.append(']').toString();}return value instanceof String?JSONObject.quote((String)value):String.valueOf(value);}
- static void endpoint(String host,int port)throws Exception{if(host.isBlank()||port<1||port>65535)throw new Exception(L10n.s(R.string.msg_210439cffd));}
+ static void endpoint(String host,int port)throws Exception{if(Compat.blank(host)||port<1||port>65535)throw new Exception(L10n.s(R.string.msg_210439cffd));}
  JSONObject outbound(JSONObject source,String group,boolean multiple)throws Exception {
   JSONObject o=new JSONObject(source.toString());String type=o.optString("protocol",o.optString("type"));
   if(Arrays.asList("freedom","blackhole","loopback","dns","direct","block","selector","urltest").contains(type))return null;
-  String tag=o.optString("tag"),name=o.optString("remarks",o.optString("name",tag));if(!group.isBlank())name=multiple&&!tag.isBlank()?group+" · "+tag:group;
+  String tag=o.optString("tag"),name=o.optString("remarks",o.optString("name",tag));if(!Compat.blank(group))name=multiple&&!Compat.blank(tag)?group+" · "+tag:group;
   o.remove("tag");o.remove("name");o.remove("remarks");
   if(o.has("protocol")){
    result.format="Xray JSON";if(!Arrays.asList("vless","vmess","trojan","shadowsocks","socks","http").contains(type))throw new Exception(L10n.s(R.string.msg_6f8352205b)+type);

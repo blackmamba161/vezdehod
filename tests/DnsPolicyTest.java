@@ -22,7 +22,7 @@ public final class DnsPolicyTest {
   check(byTag(servers,"dns-node-two-primary").getString("detour").equals("two"),"Explicit rule DNS uses wrong server");
   check(rules.getJSONObject(2).has("package_name"),"App DNS route missing");check(rules.getJSONObject(3).getString("server").equals("local"),"Direct rule DNS proxied");
   check(dns.getString("final").equals("local"),"Rest-of-traffic DNS mismatch");check(config.getJSONObject("route").getString("default_domain_resolver").equals("bootstrap"),"Server resolution loops through VPN");
-  check(byTag(servers,"bootstrap-public").getString("detour").equals("direct"),"Bootstrap recursion");check(d.toString().equals(original),"Policy mutated saved state");
+  check(byTag(servers,"system").getString("address").equals("local"),"System DNS replaced");check(byTag(servers,"bootstrap").getJSONArray("servers").length()==1&&byTag(servers,"bootstrap").getJSONArray("servers").getString(0).equals("system"),"Automatic bootstrap silently uses public DNS");check(byTag(servers,"local").getJSONArray("servers").length()==1,"Direct DNS silently uses public DNS");check(d.toString().equals(original),"Policy mutated saved state");
   // Host startup test needs no Android package resolver or TUN.
   config.put("inbounds",new JSONArray());for(int i=rules.length()-1;i>=0;i--)if(rules.getJSONObject(i).has("package_name"))rules.remove(i);
   JSONArray routes=config.getJSONObject("route").getJSONArray("rules");for(int i=routes.length()-1;i>=0;i--)if(routes.getJSONObject(i).has("package_name"))routes.remove(i);
@@ -30,6 +30,7 @@ public final class DnsPolicyTest {
   d.put("defaultTarget","block");dns=new JSONObject(Configuration.build(d,"wifi",Map.of(),"").singbox).getJSONObject("dns");rules=dns.getJSONArray("rules");check(rules.getJSONObject(rules.length()-1).getString("action").equals("reject"),"Blocked default leaks DNS");
   String clash="proxies:\n  - name: Test\n    type: socks5\n    server: 192.0.2.1\n    port: 1080\ndns:\n  nameserver:\n    - https://dns.google/dns-query\n";
   SubscriptionFormats.Result parsed=SubscriptionFormats.parse(clash,"fixture",(u,p)->null);check(parsed.nodes.getJSONObject(0).getJSONArray("providerDns").getString(0).equals(DnsSettings.GOOGLE),"Clash DNS not retained");
+  Set<String> endpoints=new HashSet<>();for(DnsProviders.Provider p:DnsProviders.ALL){check(endpoints.add(p.address),"Duplicate provider endpoint");check(DnsSettings.address(p.address).equals(p.address),"Invalid preset endpoint");}check(endpoints.size()>=8,"Provider list too small");
   System.out.println("PASS DNS address validation, auto/manual retention, provider import, route isolation, blocked DNS, immutable settings");
  }
 }

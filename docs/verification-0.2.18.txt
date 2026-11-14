@@ -1,0 +1,42 @@
+Vezdehod 0.2.18 — local verification, 2026-11-14
+
+Device: Poco C51 / Android 13 Go (API 33), 32-bit ARMv7, approximately 2 GB RAM.
+Firmware: V14.0.29.0.TGORUXM. The main personal phone was not used.
+
+Fixed issues found during testing:
+- Missing ARMv7 binaries; Android/ARM Xray requires external cgo linking.
+- Files.readString/writeString were unavailable at runtime. Replaced with compatible UTF-8 I/O.
+- Replaced newer String/collection and CIDR constructor calls to retain the declared API 29 baseline.
+
+Passed device cases:
+- safety-018: PASS, 12.15 s, sampled main-process peak PSS 54.3 MiB.
+- native-016: PASS, 12.05 s, sampled main-process peak PSS 43.5 MiB.
+- probe-016: PASS, 19.21 s, sampled main-process peak PSS 54.7 MiB.
+- dns-quality: PASS, 26.9 s, sampled main-process peak PSS 89.0 MiB.
+- connection-safety-018: PASS, 16.6 s, sampled main-process peak PSS 53.9 MiB.
+- audit-vpn: PASS, 20.65 s, sampled main-process peak PSS 57.8 MiB.
+- ui: PASS, 32.3 s, sampled main-process peak PSS 87.6 MiB.
+
+Connection safety: three stalled VPN attempts stopped completely; maximum observed stop 107 ms.
+A stalled connection produced an error in 7291 ms. No encrypted configuration changes.
+64 offline probes terminated; stalled probe cancellation passed. Native task count 3 -> 5.
+Real HTTPS probes succeeded through both engines (4 each), without creating a VPN tunnel.
+The working VPN passed HTTPS and 20 overlapping ping callers with one shared job.
+DNS auto/manual UI, cancellation, retained manual values, real automatic DNS and failed-primary fallback passed.
+Six screens, four settings pages, light/dark themes and large text passed.
+
+Host regression cases passed: CompatTest, ConnectionDeadlineTest, DnsPolicyTest,
+SubscriptionFormatsTest, SubscriptionRefreshTest, ServerProtocolTest, FailoverTest and UpdateReleaseTest.
+Both engines for ARM64/ARMv7 passed ELF architecture, 16 KB page alignment and unresolved-symbol checks.
+The signed ordinary APK contains both architectures, is not debuggable and contains no instrumentation.
+Chrome loaded example.com with the ordinary VPN enabled.
+Installed YouTube 19.20.33 requires an update even with VPN off; Google Play requires sign-in.
+Sign-in and YouTube updating were postponed at the user's request; native YouTube playback was not verified.
+
+Reproduction (explicitly choose the connected test device; stop its working VPN first):
+python3 tests/device_safety.py --adb /path/to/adb --serial DEVICE safety-018
+Other supported modes are listed by --help. Reports stay under private/device-tests.
+The memory guard samples the main process only; this is not an all-process peak guarantee.
+These checks do not certify all devices, operators, mobile network transitions or long-term stability.
+
+Release architecture selection: ARMv7 ignores incompatible ARM64-only assets; ARM64 prefers its smaller native asset, independent of release-asset order. Downloaded APKs must include both native engines for a supported ABI.

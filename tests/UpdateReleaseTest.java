@@ -14,6 +14,11 @@ public class UpdateReleaseTest {
   r=release(18,false);r.getJSONArray("assets").getJSONObject(0).put("digest",JSONObject.NULL);reject(r,"Missing checksum");
   r=release(18,false);r.getJSONArray("assets").getJSONObject(0).put("size",UpdateRelease.MAX_APK+1);reject(r,"Oversize");
   check(!UpdateRelease.repositoryValid("example/../secret")&&!UpdateRelease.repositoryValid(""),"Unsafe repository");
+  JSONObject mixed=release(24,false);JSONObject nativeAsset=mixed.getJSONArray("assets").getJSONObject(0),universal=new JSONObject(nativeAsset.toString()).put("name","Vezdehod-0.2.15-24-universal.apk");mixed.getJSONArray("assets").put(universal);
+  check(UpdateRelease.select(new JSONArray().put(mixed),"example/vezdehod",false,22,new String[]{"armeabi-v7a"}).name.endsWith("-universal.apk"),"ARMv7 offered ARM64-only APK");
+  check(UpdateRelease.select(new JSONArray().put(mixed),"example/vezdehod",false,22,new String[]{"arm64-v8a","armeabi-v7a"}).name.endsWith("-arm64-v8a.apk"),"ARM64 did not prefer smaller native asset");
+  check(UpdateRelease.select(new JSONArray().put(release(24,false)),"example/vezdehod",false,22,new String[]{"armeabi-v7a"})==null,"Incompatible legacy APK offered to ARMv7");
+  mixed.put("assets",new JSONArray().put(universal).put(nativeAsset));check(UpdateRelease.select(new JSONArray().put(mixed),"example/vezdehod",false,22,new String[]{"arm64-v8a"}).name.endsWith("-arm64-v8a.apk"),"Asset ordering changed architecture preference");
   System.out.println("PASS stable/beta, unordered releases, drafts, downgrade, ABI, origin, checksum, size and repository validation");
  }
 }

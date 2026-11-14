@@ -25,5 +25,5 @@ final class UpdateScreen {
   action.setVisibility(r==null||running?View.GONE:View.VISIBLE);action.setEnabled(!AppUpdates.verifying);action.setText(L10n.s(ready?R.string.update_install:R.string.update_download));
   cancel.setVisibility(running?View.VISIBLE:View.GONE);notes.setVisibility(r==null?View.GONE:View.VISIBLE);
  }
- void notes(){UpdateRelease r=AppUpdates.available(a);if(r==null)return;String body=r.notes.isBlank()?"Vezdehod "+r.version:r.notes;a.new DialogBuilder(a).setTitle(L10n.s(R.string.update_notes)).setMessage(body).setPositiveButton(L10n.s(R.string.msg_4ae50d3073),null).show();}
+ void notes(){UpdateRelease r=AppUpdates.available(a);if(r==null)return;String body=Compat.blank(r.notes)?"Vezdehod "+r.version:r.notes;a.new DialogBuilder(a).setTitle(L10n.s(R.string.update_notes)).setMessage(body).setPositiveButton(L10n.s(R.string.msg_4ae50d3073),null).show();}
 }

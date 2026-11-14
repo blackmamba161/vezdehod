@@ -432,4 +432,12 @@
     <string name="dns_invalid" formatted="false">"IP oder Adresse mit https://, tls://, udp://, tcp:// eingeben"</string>
     <string name="dns_network_changed" formatted="false">"Netzwerk geändert. Erneut prüfen."</string>
     <string name="dns_help" formatted="false">"Auto nutzt geeignete DNS aus dem Abonnement oder integrierte Resolver. DNS folgt der VPN- oder Direktverbindung; bei Fehlern wird ein Ersatz auf demselben Weg genutzt. Manuelle Werte bleiben erhalten. Der Test prüft keine Videowiedergabe."</string>
+    <string name="connection_timeout" formatted="false">"Zeitüberschreitung. Anderen Server wählen."</string>
+    <string name="dns_unfiltered" formatted="false">"Ohne Filter · DoH"</string>
+    <string name="dns_unfiltered_tls" formatted="false">"Ohne Filter · DoT"</string>
+    <string name="dns_threats" formatted="false">"Blockiert schädliche Websites · DoH"</string>
+    <string name="dns_ads" formatted="false">"Blockiert Werbung und Tracker · DoH"</string>
+    <string name="dns_filter_threats" formatted="false">"Schutz"</string>
+    <string name="dns_filter_ads" formatted="false">"Werbung und Tracker"</string>
+    <string name="dns_android" formatted="false">"DNS des aktuellen Android-Netzes"</string>
 </resources>

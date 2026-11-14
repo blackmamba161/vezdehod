@@ -17,7 +17,7 @@ public final class Preferences {
   if(key.equals("retrySeconds")&&(!(value instanceof Number)||((Number)value).intValue()<5||((Number)value).intValue()>120))throw new Exception(L10n.s(R.string.msg_e13fa5e7d6));
   if(key.equals("remoteDns"))DnsSettings.address(value.toString());
   if(key.equals("dnsMode")&&!java.util.Arrays.asList("auto","manual").contains(value.toString()))throw new Exception(L10n.s(R.string.dns_invalid));
-  if(java.util.Arrays.asList("dnsBackup","dnsDirect","dnsBootstrap").contains(key)&&!value.toString().isBlank())DnsSettings.address(value.toString());
+  if(java.util.Arrays.asList("dnsBackup","dnsDirect","dnsBootstrap").contains(key)&&!Compat.blank(value.toString()))DnsSettings.address(value.toString());
  }
  public static String fallbackKey(String network){return network.equals("cellular")?"fallbackCellular":"fallbackWifi";}
 }

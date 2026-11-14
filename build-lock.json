@@ -3,12 +3,15 @@
   "xray": "26.11.9",
   "go": "1.27.4",
   "ndk": "r27d",
-  "arch": "arm64-v8a",
+  "arch": [
+    "arm64-v8a",
+    "armeabi-v7a"
+  ],
   "sha256": {
     "vendor/sing-box-1.12.12.tar.gz": "f08add81eab7e4d6091195179bb39fa3f64dbb0326feaa022994566b702d1245",
-    "vendor/sing-box-1.12.12/libbox.aar": "6e4dc3c802d72303f4055b8ad5c2dabb1974f86c767fb8df638772845a655e8d",
+    "vendor/sing-box-1.12.12/libbox.aar": "9f8fe6bc752aa236a9a387f409c13cba40ba571c363701283d8796d59296f078",
     "vendor/xray-android.zip": "edcefc25b9b3195b11e18624c8269a969d6aabc39c6298a9a5ab29de15d46f3b",
-    "mobile_app.go": "c2ad92506ce4871f26bce4f585a843c7bf8db08a0ffea7f8f5630411f260a417",
+    "mobile_app.go": "1d53e828dcdde902c8bc3df0ba8a59afcf24a6fea64a794c7c18d3bf0731d0aa",
     "app/res/raw/ads_light.srs": "9877fbe5aa317936f73216828aca8dac407a402f95bcdbaeee4856e9dae4e998",
     "vendor/zxing/core-3.5.3.jar": "8d8064c1636fdaef7189dd9055c7d59950a8940a12f2293956446ec3c109fd82",
     "vendor/snakeyaml/snakeyaml-2.7.jar": "2e194eba45a67dee19a4e272f4a04b18de8054e9f598b094382f6dae0b0e4b5e",
@@ -19,9 +22,10 @@
     "vendor/xray-source/go.sum": "d53d7e8f770513935d5ab87c9e6692eb565f996cdaff5500f2c14ddd2dea05f4",
     "vendor/sing-box-1.12.12/dns/transport/vezdehod/fallback.go": "e4760baaf7fb8903fb1cf0ed9c8158c5717587c60369d9fc212c4438117cc4a4",
     "vendor/sing-box-1.12.12/dns/transport/vezdehod/selector.go": "04e9cb123fbde30c44b6a2208416f675bf305a1107c774a7d755c838dd67185f",
-    "vendor/sing-box-1.12.12/include/registry.go": "1e020f9a28bb247b5168312679581367e1fa2f24dabea3163485ac74873c1241"
+    "vendor/sing-box-1.12.12/include/registry.go": "1e020f9a28bb247b5168312679581367e1fa2f24dabea3163485ac74873c1241",
+    "vendor/xray/armeabi-v7a/xray": "9a185ad6a9642e2c16aaf6efcb4dfa0fe49d64b214e9936fd6d5f8ceb9d17e73"
   },
-  "app_version": "0.2.17",
+  "app_version": "0.2.18",
   "zxing": "3.5.3",
   "snakeyaml": "2.7",
   "native_page_size": 16384,
@@ -35,5 +39,12 @@
     "with_conntrack"
   ],
   "sing_box_gcflags": "golang.org/x/net/http2=-l",
-  "apk_sha256": "a4929aa5bf252d240f15342fd9b518419100825206067435ecdda3d0f0affb37"
+  "sing_box_build_tags_armv7": [
+    "http2legacy",
+    "with_quic",
+    "with_wireguard",
+    "with_utls",
+    "with_clash_api",
+    "with_conntrack"
+  ]
 }

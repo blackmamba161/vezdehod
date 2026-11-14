@@ -20,6 +20,7 @@ Run the relevant host and device checks. Test updates over an existing installat
 
 ```sh
 bash build.sh release
+bash build.sh release arm64-v8a
 python3 tools/prepare_release.py
 ```
 
@@ -29,7 +30,7 @@ The updater recognizes APK names in this format:
 
 `Vezdehod-VERSION-VERSIONCODE-arm64-v8a.apk`
 
-Keep that exact asset naming convention. GitHub's release asset API must expose the `sha256:` digest; without it, the updater rejects the asset.
+Publish the ARM64 asset for compatibility with the updater in earlier releases, plus `Vezdehod-VERSION-VERSIONCODE-universal.apk` for ARMv7/ARM64 devices. New clients filter by device ABI and prefer the smaller matching native asset. Keep those asset naming conventions. GitHub's release asset API must expose the `sha256:` digest; without it, the updater rejects the asset.
 
 ## Publish
 

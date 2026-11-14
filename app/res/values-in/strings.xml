@@ -432,4 +432,12 @@
     <string name="dns_invalid" formatted="false">"Masukkan IP atau alamat https://, tls://, udp://, tcp://"</string>
     <string name="dns_network_changed" formatted="false">"Jaringan berubah. Periksa kembali."</string>
     <string name="dns_help" formatted="false">"Otomatis memakai DNS langganan yang sesuai atau bawaan. DNS mengikuti rute VPN atau langsung; saat gagal, cadangan memakai rute yang sama. Nilai manual disimpan. Pemeriksaan tidak menguji pemutaran video."</string>
+    <string name="connection_timeout" formatted="false">"Waktu koneksi habis. Pilih server lain."</string>
+    <string name="dns_unfiltered" formatted="false">"Tanpa filter · DoH"</string>
+    <string name="dns_unfiltered_tls" formatted="false">"Tanpa filter · DoT"</string>
+    <string name="dns_threats" formatted="false">"Blokir situs berbahaya · DoH"</string>
+    <string name="dns_ads" formatted="false">"Blokir iklan dan pelacak · DoH"</string>
+    <string name="dns_filter_threats" formatted="false">"Perlindungan"</string>
+    <string name="dns_filter_ads" formatted="false">"Iklan dan pelacak"</string>
+    <string name="dns_android" formatted="false">"DNS jaringan Android saat ini"</string>
 </resources>

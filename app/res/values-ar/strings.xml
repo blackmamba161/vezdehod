@@ -432,4 +432,12 @@
     <string name="dns_invalid" formatted="false">"أدخل IP أو عنوان https:// أو tls:// أو udp:// أو tcp://"</string>
     <string name="dns_network_changed" formatted="false">"تغيرت الشبكة. أعد التحقق."</string>
     <string name="dns_help" formatted="false">"يستخدم الوضع التلقائي DNS المناسب من الاشتراك أو المدمج. يتبع DNS مسار VPN أو الاتصال المباشر، ويستخدم الاحتياطي عبر المسار نفسه عند الفشل. تُحفظ القيم اليدوية. التحقق لا يختبر تشغيل الفيديو."</string>
+    <string name="connection_timeout" formatted="false">"انتهت مهلة الاتصال. اختر خادمًا آخر."</string>
+    <string name="dns_unfiltered" formatted="false">"بلا تصفية · DoH"</string>
+    <string name="dns_unfiltered_tls" formatted="false">"بلا تصفية · DoT"</string>
+    <string name="dns_threats" formatted="false">"حظر المواقع الضارة · DoH"</string>
+    <string name="dns_ads" formatted="false">"حظر الإعلانات والمتعقبات · DoH"</string>
+    <string name="dns_filter_threats" formatted="false">"حماية"</string>
+    <string name="dns_filter_ads" formatted="false">"الإعلانات والمتعقبات"</string>
+    <string name="dns_android" formatted="false">"DNS لشبكة Android الحالية"</string>
 </resources>

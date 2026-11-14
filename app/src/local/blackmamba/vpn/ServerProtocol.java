@@ -4,7 +4,7 @@ import java.util.*;
 
 /** Protocols are derived from connection definitions, never from a default badge or server name. */
 public final class ServerProtocol {
- private static final Set<String> AUXILIARY=Set.of("direct","block","freedom","blackhole","loopback","dns","selector","urltest");
+ private static final Set<String> AUXILIARY=Compat.set("direct","block","freedom","blackhole","loopback","dns","selector","urltest");
  private static void add(Set<String> types,String type){
   type=type.toLowerCase(Locale.ROOT).trim();
   if(type.equals("hy2"))type="hysteria2";
@@ -43,8 +43,8 @@ public final class ServerProtocol {
   Set<String> transports=entries.computeIfAbsent(protocol,k->new LinkedHashSet<>());
   JSONObject settings=outbound.optJSONObject(xray?"streamSettings":"transport");
   String transport=settings==null?"":settings.optString(xray?"network":"type");
-  if(transport.isBlank()&&Set.of("vless","vmess","trojan","socks","http","anytls").contains(protocol))transport="tcp";
-  if(transport.isBlank())return;
+  if(Compat.blank(transport)&&Compat.set("vless","vmess","trojan","socks","http","anytls").contains(protocol))transport="tcp";
+  if(Compat.blank(transport))return;
   switch(transport.toLowerCase(Locale.ROOT)){
    case "raw":case "tcp":transport="TCP";break;
    case "grpc":transport="gRPC";break;

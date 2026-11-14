@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.18
+
+- Add 32-bit ARMv7 support alongside ARM64, with compatible update selection.
+- Fix Java runtime calls that failed on older Android versions when reading settings, writing runtime configurations or opening logs.
+- Resolve system DNS through Android on the physical network with cancellation and bounded concurrency.
+- Bound connection startup and make cancellation interrupt blocked native operations.
+- Reduce concurrent probes on low-memory devices, coalesce network callbacks and apply a shared native memory budget.
+- Add repeatable low-memory device tests for stalled connections, DNS fallback, HTTPS probes and UI compatibility.
+
 ## 0.2.17
 
 - Add compact automatic/manual DNS settings under Connection, with optional backup, direct-route and bootstrap resolvers.

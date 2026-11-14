@@ -1,0 +1,71 @@
+{
+  "version": "0.2.18",
+  "date": "2026-11-14",
+  "scope": "Structural release checks and targeted regression tests; not a full security or malware certification",
+  "engines": {
+    "sing-box": "1.12.12",
+    "xray": "26.11.9",
+    "go": "1.27.4"
+  },
+  "architectures": [
+    "arm64-v8a",
+    "armeabi-v7a"
+  ],
+  "device_tests": [
+    {
+      "mode": "safety-018",
+      "passed": true,
+      "elapsed_seconds": 12.15
+    },
+    {
+      "mode": "native-016",
+      "passed": true,
+      "elapsed_seconds": 12.05
+    },
+    {
+      "mode": "probe-016",
+      "passed": true,
+      "elapsed_seconds": 19.21
+    },
+    {
+      "mode": "dns-quality",
+      "passed": true,
+      "elapsed_seconds": 26.9
+    },
+    {
+      "mode": "connection-safety-018",
+      "passed": true,
+      "elapsed_seconds": 16.6
+    },
+    {
+      "mode": "audit-vpn",
+      "passed": true,
+      "elapsed_seconds": 20.65
+    },
+    {
+      "mode": "ui",
+      "passed": true,
+      "elapsed_seconds": 32.3
+    }
+  ],
+  "host_regressions": [
+    "CompatTest",
+    "ConnectionDeadlineTest",
+    "DnsPolicyTest",
+    "SubscriptionFormatsTest",
+    "SubscriptionRefreshTest",
+    "ServerProtocolTest",
+    "FailoverTest",
+    "UpdateReleaseTest"
+  ],
+  "native_checks": [
+    "ELF machine and class for both architectures",
+    "16 KB LOAD-segment alignment",
+    "No unresolved Go-package dynamic symbols"
+  ],
+  "limitations": [
+    "YouTube 19.20.33 requires an update even without VPN; account sign-in postponed, native YouTube playback not verified",
+    "No device-specific changes were applied to the personal Xiaomi 13 Pro",
+    "No full long-term or cellular-operator coverage claim"
+  ]
+}

@@ -15,7 +15,7 @@ Set `JAVA_HOME` and `ANDROID_HOME`. A local `.build/env.sh` may provide these va
 The full source archive prepared for a release includes the required dependency files and the corresponding sing-box source. A repository checkout requires these inputs before packaging:
 
 - `vendor/sing-box-1.12.12/libbox.aar`
-- `vendor/xray/xray` (Android ARM64 executable)
+- `vendor/xray/xray` (Android ARM64 executable) and `vendor/xray/armeabi-v7a/xray` (Android ARMv7 executable)
 - `vendor/zxing/core-3.5.3.jar`
 - `vendor/snakeyaml/snakeyaml-2.7.jar`
 
@@ -44,3 +44,5 @@ The first local build generates a signing key in `private/` if one is absent. A 
 ## Verification
 
 The build validates interface resources in all supported languages and verifies the APK signature. Additional host tests live in `tests/`. Device instrumentation is included only in test builds. Device tests must use disposable fixtures or restore the original configuration.
+
+The APK includes ARM64 and 32-bit ARMv7 libraries. The ARMv7 build uses the Android system TUN stack because gVisor is unavailable on that architecture. `tools/check_native.py` verifies both engines for both architectures before packaging. Application code must use Java APIs available on Android 10 (API 29); `Compat` provides UTF-8 text file and collection operations without newer Java runtime dependencies.

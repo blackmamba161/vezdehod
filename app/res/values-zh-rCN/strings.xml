@@ -432,4 +432,12 @@
     <string name="dns_invalid" formatted="false">"请输入 IP 或 https://、tls://、udp://、tcp:// 地址"</string>
     <string name="dns_network_changed" formatted="false">"网络已更改，请重新检查。"</string>
     <string name="dns_help" formatted="false">"自动模式使用适用的订阅 DNS 或内置解析器。DNS 随 VPN 或直连路由传输，故障时使用同一路由的备用 DNS。手动值会保留。DNS 检查不测试视频播放。"</string>
+    <string name="connection_timeout" formatted="false">"连接超时。请选择其他服务器。"</string>
+    <string name="dns_unfiltered" formatted="false">"无过滤 · DoH"</string>
+    <string name="dns_unfiltered_tls" formatted="false">"无过滤 · DoT"</string>
+    <string name="dns_threats" formatted="false">"拦截恶意网站 · DoH"</string>
+    <string name="dns_ads" formatted="false">"拦截广告和跟踪器 · DoH"</string>
+    <string name="dns_filter_threats" formatted="false">"防护"</string>
+    <string name="dns_filter_ads" formatted="false">"广告和跟踪器"</string>
+    <string name="dns_android" formatted="false">"当前 Android 网络 DNS"</string>
 </resources>

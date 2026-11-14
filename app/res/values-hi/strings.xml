@@ -432,4 +432,12 @@
     <string name="dns_invalid" formatted="false">"IP या https://, tls://, udp://, tcp:// पता दर्ज करें"</string>
     <string name="dns_network_changed" formatted="false">"नेटवर्क बदला। फिर से जाँचें।"</string>
     <string name="dns_help" formatted="false">"ऑटो उपयुक्त सदस्यता DNS या अंतर्निहित DNS उपयोग करता है। DNS VPN या सीधे मार्ग का पालन करता है। विफलता पर उसी मार्ग का बैकअप उपयोग होता है। मैन्युअल मान सुरक्षित रहते हैं। जाँच वीडियो प्लेबैक नहीं जाँचती।"</string>
+    <string name="connection_timeout" formatted="false">"कनेक्शन का समय समाप्त हुआ। दूसरा सर्वर चुनें।"</string>
+    <string name="dns_unfiltered" formatted="false">"बिना फ़िल्टर · DoH"</string>
+    <string name="dns_unfiltered_tls" formatted="false">"बिना फ़िल्टर · DoT"</string>
+    <string name="dns_threats" formatted="false">"हानिकारक साइटें रोकता है · DoH"</string>
+    <string name="dns_ads" formatted="false">"विज्ञापन और ट्रैकर रोकता है · DoH"</string>
+    <string name="dns_filter_threats" formatted="false">"सुरक्षा"</string>
+    <string name="dns_filter_ads" formatted="false">"विज्ञापन और ट्रैकर"</string>
+    <string name="dns_android" formatted="false">"वर्तमान Android नेटवर्क का DNS"</string>
 </resources>

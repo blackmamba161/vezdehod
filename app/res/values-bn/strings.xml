@@ -432,4 +432,12 @@
     <string name="dns_invalid" formatted="false">"IP অথবা https://, tls://, udp://, tcp:// ঠিকানা দিন"</string>
     <string name="dns_network_changed" formatted="false">"নেটওয়ার্ক বদলেছে। আবার যাচাই করুন।"</string>
     <string name="dns_help" formatted="false">"অটো উপযুক্ত সাবস্ক্রিপশন DNS বা অন্তর্নির্মিত DNS ব্যবহার করে। DNS VPN বা সরাসরি পথ অনুসরণ করে। ব্যর্থ হলে একই পথের বিকল্প ব্যবহার হয়। ম্যানুয়াল মান সংরক্ষিত থাকে। পরীক্ষা ভিডিও চালানো যাচাই করে না।"</string>
+    <string name="connection_timeout" formatted="false">"সংযোগের সময় শেষ। অন্য সার্ভার বেছে নিন।"</string>
+    <string name="dns_unfiltered" formatted="false">"ফিল্টার ছাড়া · DoH"</string>
+    <string name="dns_unfiltered_tls" formatted="false">"ফিল্টার ছাড়া · DoT"</string>
+    <string name="dns_threats" formatted="false">"ক্ষতিকর সাইট আটকায় · DoH"</string>
+    <string name="dns_ads" formatted="false">"বিজ্ঞাপন ও ট্র্যাকার আটকায় · DoH"</string>
+    <string name="dns_filter_threats" formatted="false">"সুরক্ষা"</string>
+    <string name="dns_filter_ads" formatted="false">"বিজ্ঞাপন ও ট্র্যাকার"</string>
+    <string name="dns_android" formatted="false">"বর্তমান Android নেটওয়ার্ক DNS"</string>
 </resources>

@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="docs/assets/hero.svg" width="1200" alt="Vezdehod — Your VPN. Your rules. Android 10+, ARM64, 12 languages.">
+  <img src="docs/assets/hero.svg" width="1200" alt="Vezdehod — Your VPN. Your rules. Android 10+, ARM64 and ARMv7, 12 languages.">
 </p>
 
 <p align="center">
-  <a href="https://github.com/blackmamba161/vezdehod/releases/download/v0.2.17/Vezdehod-0.2.17-22-arm64-v8a.apk"><img src="docs/assets/download.svg" width="260" height="58" alt="Download Vezdehod for Android"></a>
+  <a href="https://github.com/blackmamba161/vezdehod/releases/download/v0.2.18/Vezdehod-0.2.18-23-universal.apk"><img src="docs/assets/download.svg" width="260" height="58" alt="Download Vezdehod for Android"></a>
 </p>
 
 <p align="center">
-  <strong>v0.2.17</strong> · Android 10 or later · ARM64 · 24.8 MB<br>
+  <strong>v0.2.18</strong> · Android 10 or later · ARM64 / ARMv7 · 46 MB<br>
   <a href="https://github.com/blackmamba161/vezdehod/releases/latest">Latest release</a> ·
   <a href="#get-started">Installation</a> ·
   <a href="https://github.com/blackmamba161/vezdehod/issues">Help &amp; feedback</a>
@@ -60,7 +60,7 @@ Already installed? Install the new APK **over your existing version** to keep yo
 <details>
 <summary><strong>Which phones are supported?</strong></summary>
 
-Android 10 or later with an ARM64 processor. The APK is an Android application, not a Windows, macOS or iPhone installer.
+Android 10 or later with an ARM64 or ARMv7 processor. The APK is an Android application, not a Windows, macOS or iPhone installer.
 
 </details>
 

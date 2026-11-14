@@ -432,4 +432,12 @@
     <string name="dns_invalid" formatted="false">"IP または https://、tls://、udp://、tcp:// アドレスを入力"</string>
     <string name="dns_network_changed" formatted="false">"ネットワークが変わりました。再確認してください。"</string>
     <string name="dns_help" formatted="false">"自動では対応するサブスクリプション DNS または内蔵 DNS を使用します。DNS は VPN または直接通信の経路に従い、障害時も同じ経路の予備を使用します。手動の値は保持されます。動画再生は検査しません。"</string>
+    <string name="connection_timeout" formatted="false">"接続がタイムアウトしました。別のサーバーを選んでください。"</string>
+    <string name="dns_unfiltered" formatted="false">"フィルタリングなし · DoH"</string>
+    <string name="dns_unfiltered_tls" formatted="false">"フィルタリングなし · DoT"</string>
+    <string name="dns_threats" formatted="false">"悪意のあるサイトをブロック · DoH"</string>
+    <string name="dns_ads" formatted="false">"広告とトラッカーをブロック · DoH"</string>
+    <string name="dns_filter_threats" formatted="false">"保護"</string>
+    <string name="dns_filter_ads" formatted="false">"広告とトラッカー"</string>
+    <string name="dns_android" formatted="false">"現在の Android ネットワーク DNS"</string>
 </resources>

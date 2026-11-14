@@ -432,4 +432,12 @@
     <string name="dns_invalid" formatted="false">"Введите IP или адрес https://, tls://, udp://, tcp://"</string>
     <string name="dns_network_changed" formatted="false">"Сеть изменилась. Повторите проверку."</string>
     <string name="dns_help" formatted="false">"Авто использует подходящие DNS из подписки или встроенные. DNS следует маршруту: через VPN либо напрямую. При ошибке используется резервный DNS того же маршрута. Ручные значения сохраняются. Проверка DNS не проверяет воспроизведение видео."</string>
+    <string name="connection_timeout" formatted="false">"Подключение заняло слишком много времени. Выбери другой сервер."</string>
+    <string name="dns_unfiltered" formatted="false">"Без фильтрации · DoH"</string>
+    <string name="dns_unfiltered_tls" formatted="false">"Без фильтрации · DoT"</string>
+    <string name="dns_threats" formatted="false">"Блокировка вредоносных сайтов · DoH"</string>
+    <string name="dns_ads" formatted="false">"Блокировка рекламы и трекеров · DoH"</string>
+    <string name="dns_filter_threats" formatted="false">"Защита"</string>
+    <string name="dns_filter_ads" formatted="false">"Реклама и трекеры"</string>
+    <string name="dns_android" formatted="false">"DNS текущей сети Android"</string>
 </resources>
