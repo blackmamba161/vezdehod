@@ -5,7 +5,8 @@ public class SelfTest extends Instrumentation {
  volatile MainActivity currentActivity;Bundle args;public void onCreate(Bundle b){args=b;start();}
  void check(boolean value,String why)throws Exception{if(!value)throw new Exception(why);}
  public void onStart(){Bundle r=new Bundle();try{android.content.Context c=getTargetContext();Store s=Store.get(c);JSONObject data=s.snapshot();String mode=args==null?"ui":args.getString("mode","ui");
-  if(mode.equals("client-xray-019")){
+  if(mode.equals("theme-020")){themeQuality(c,s,r);}
+  else if(mode.equals("client-xray-019")){
    JSONObject original=s.data;byte[] encrypted=java.nio.file.Files.readAllBytes(new java.io.File(c.getFilesDir(),"store.enc").toPath());
    try{TunnelService.stop(c);long stopped=System.currentTimeMillis()+5000;while(TunnelService.instance!=null&&System.currentTimeMillis()<stopped)Thread.sleep(50);
     JSONObject chosen=null;for(int i=0;i<data.getJSONArray("servers").length();i++){JSONObject n=data.getJSONArray("servers").getJSONObject(i);if(n.getJSONObject("outbound").optString("type").equals("xray-group")){chosen=n;break;}}check(chosen!=null,"Xray group subscription required");
@@ -114,6 +115,41 @@ public class SelfTest extends Instrumentation {
   }
   else throw new Exception("Unknown test mode");finish(Activity.RESULT_OK,r);
  }catch(Throwable e){r.putString("error",e.getClass().getSimpleName()+": "+e.getMessage());finish(Activity.RESULT_CANCELED,r);}}
+ void themeQuality(android.content.Context c,Store store,Bundle result)throws Exception{
+  check(!((android.app.KeyguardManager)c.getSystemService(android.content.Context.KEYGUARD_SERVICE)).isKeyguardLocked(),"Unlock test device");
+  JSONObject original=store.data;byte[] encrypted=java.nio.file.Files.readAllBytes(new java.io.File(c.getFilesDir(),"store.enc").toPath());
+  MainActivity a=(MainActivity)startActivitySync(new Intent(c,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));currentActivity=a;
+  try{store.data=new JSONObject(original.toString());runOnMainSync(()->{a.active=false;a.main.removeCallbacks(a.tick);});
+   for(String theme:new String[]{"light","dark"}){
+    store.data.put("theme",theme).put("textScale",100);
+    for(String tab:new String[]{"home","servers","networks","rules","profiles","settings"}){
+     runOnMainSync(()->{a.tab=tab;a.settingsPage="main";a.render();});waitForIdleSync();check(!hasError(a.content),theme+" "+tab);capture(c,"theme-"+theme+"-"+tab);
+    }
+    check(textCount(a.content,L10n.s(R.string.settings_group_interface))==1&&textCount(a.content,"VPN")==1&&textCount(a.content,L10n.s(R.string.settings_group_protection))==1&&textCount(a.content,L10n.s(R.string.settings_group_app))==1,"Settings groups missing");check(textCount(a.content,L10n.s(R.string.msg_667d8b44a6))==0,"Duplicate Rules row retained");
+    for(int fg:new int[]{MainActivity.TEXT,MainActivity.MUTED,MainActivity.ACCENT,MainActivity.RED})check(contrast(fg,MainActivity.CARD)>=4.5,"Unreadable text contrast on card");check(contrast(MainActivity.TEXT,MainActivity.FIELD)>=4.5,"Unreadable input contrast");
+    runOnMainSync(()->{a.tab="settings";a.settingsPage="appearance";a.render();clickText(a.content,L10n.s(R.string.msg_553c45f1b8));});waitForIdleSync();captureWindow(c,"theme-"+theme+"-choice",a.lastDialog.getWindow());runOnMainSync(()->a.lastDialog.dismiss());
+    runOnMainSync(()->new SubscriptionImport(a).enter(""));waitForIdleSync();captureWindow(c,"theme-"+theme+"-input",a.lastDialog.getWindow());runOnMainSync(()->a.lastDialog.dismiss());
+   }
+   store.data.put("theme","light");
+   for(String page:new String[]{"appearance","connection","advanced","notifications","adblock","updates","diagnostics"}){runOnMainSync(()->{a.tab="settings";a.settingsPage=page;a.render();});waitForIdleSync();check(!hasError(a.content),page);capture(c,"theme-light-"+page);}
+   runOnMainSync(()->a.serverMenu(store.data.optJSONArray("servers").optJSONObject(0)));waitForIdleSync();captureWindow(c,"theme-light-server-action",a.lastDialog.getWindow());runOnMainSync(()->a.lastDialog.dismiss());
+   runOnMainSync(()->a.pickServer("Wi-Fi",store.data.optString("wifi"),id->{},null));waitForIdleSync();captureWindow(c,"theme-light-servers-picker",a.lastDialog.getWindow());runOnMainSync(()->a.lastDialog.dismiss());
+   runOnMainSync(()->new RoutePicker(a,L10n.s(R.string.msg_50e1cb1272),"auto",id->{}).show());waitForIdleSync();captureWindow(c,"theme-light-route",a.lastDialog.getWindow());runOnMainSync(()->a.lastDialog.dismiss());
+   JSONObject preview=Store.obj("id","preview-only","name","VPN","source","https://example.com/subscription","auto",true);runOnMainSync(()->new ProfileEditor(a,preview).show());waitForIdleSync();captureWindow(c,"theme-light-profile-editor",a.lastDialog.getWindow());runOnMainSync(()->a.lastDialog.dismiss());
+   AppPicker[] picker={null};runOnMainSync(()->{picker[0]=new AppPicker(a,a.edit("","com.android.chrome"));picker[0].show();});long appsDeadline=System.currentTimeMillis()+15000;int[] appCount={0};while(appCount[0]==0&&System.currentTimeMillis()<appsDeadline){Thread.sleep(250);runOnMainSync(()->appCount[0]=picker[0].shown.size());}check(appCount[0]>0,"App picker did not load installed apps");waitForIdleSync();captureWindow(c,"theme-light-app-picker",a.lastDialog.getWindow());runOnMainSync(()->picker[0].search.setText("com.android.chrome"));waitForIdleSync();check(picker[0].shown.size()==1&&picker[0].shown.get(0).pkg.equals("com.android.chrome"),"App search returned wrong result");captureWindow(c,"theme-light-app-search",a.lastDialog.getWindow());runOnMainSync(()->a.lastDialog.dismiss());
+   DnsScreen dns=new DnsScreen(a);runOnMainSync(dns::show);waitForIdleSync();captureWindow(c,"theme-light-dns",dns.dialog.getWindow());runOnMainSync(()->dns.put("dnsMode","manual"));runOnMainSync(()->dns.pick(R.string.dns_primary,"remoteDns",false));waitForIdleSync();captureWindow(c,"theme-light-dns-providers",a.lastDialog.getWindow());runOnMainSync(()->{a.lastDialog.dismiss();dns.dialog.dismiss();});
+   runOnMainSync(()->{a.tab="rules";a.render();if(a.rulesScreen!=null){a.rulesScreen.expanded.add("youtube:1");a.render();}});waitForIdleSync();capture(c,"theme-light-expanded-rules");
+
+   for(String theme:new String[]{"light","dark"}){store.data.put("theme",theme).put("textScale",120);runOnMainSync(()->{a.tab="settings";a.settingsPage="main";a.render();});waitForIdleSync();check(!hasError(a.content),"Large settings");capture(c,"theme-"+theme+"-large-settings");}
+   for(String accent:new String[]{"blue","mint","gold"}){store.data.put("theme","light").put("accent",accent);runOnMainSync(a::render);check(contrast(MainActivity.ACCENT,0xffffffff)>=4.5,"Primary button white text contrast: "+accent);}
+   check(java.util.Arrays.equals(encrypted,java.nio.file.Files.readAllBytes(new java.io.File(c.getFilesDir(),"store.enc").toPath())),"UI review changed encrypted settings");result.putString("result","PASS 6 tabs in both themes, grouped settings without duplicate Rules, 7 settings pages, native choices/inputs and 5 pickers, large text, 3 accent contrast checks; saved settings unchanged");
+  }finally{store.data=original;runOnMainSync(()->{if(a.lastDialog!=null)a.lastDialog.dismiss();a.tab="settings";a.settingsPage="main";a.render();});}
+ }
+ int textCount(android.view.View v,String text){int count=v instanceof android.widget.TextView&&text.contentEquals(((android.widget.TextView)v).getText())?1:0;if(v instanceof android.view.ViewGroup){android.view.ViewGroup g=(android.view.ViewGroup)v;for(int i=0;i<g.getChildCount();i++)count+=textCount(g.getChildAt(i),text);}return count;}
+ void clickText(android.view.View v,String text){android.view.View target=findText(v,text);if(target==null)throw new IllegalStateException("Missing UI action");while(target!=null&&!target.isClickable())target=target.getParent() instanceof android.view.View?(android.view.View)target.getParent():null;if(target==null||!target.performClick())throw new IllegalStateException("UI action not clickable");}
+ android.view.View findText(android.view.View v,String text){if(v instanceof android.widget.TextView&&text.contentEquals(((android.widget.TextView)v).getText()))return v;if(v instanceof android.view.ViewGroup){android.view.ViewGroup g=(android.view.ViewGroup)v;for(int i=0;i<g.getChildCount();i++){android.view.View found=findText(g.getChildAt(i),text);if(found!=null)return found;}}return null;}
+ double contrast(int first,int second){double a=luminance(first),b=luminance(second);return (Math.max(a,b)+.05)/(Math.min(a,b)+.05);}
+ double luminance(int color){double sum=0;int[] channels={android.graphics.Color.red(color),android.graphics.Color.green(color),android.graphics.Color.blue(color)};double[] weights={.2126,.7152,.0722};for(int i=0;i<3;i++){double c=channels[i]/255d;sum+=weights[i]*(c<=.04045?c/12.92:Math.pow((c+.055)/1.055,2.4));}return sum;}
  @Override public void runOnMainSync(Runnable action){Throwable[] problem={null};super.runOnMainSync(()->{try{action.run();}catch(Throwable e){problem[0]=e;}});if(problem[0]!=null)throw new RuntimeException(problem[0]);}
  void auditVpn(android.content.Context c,Store s,Bundle result)throws Exception{
   JSONObject before=s.snapshot();check(android.net.VpnService.prepare(c)==null,"VPN permission required");TunnelService.start(c);long until=System.currentTimeMillis()+45000;while(!TunnelService.status.equals("connected")&&System.currentTimeMillis()<until){check(!TunnelService.status.equals("error"),"VPN error: "+TunnelService.error);Thread.sleep(250);}check(TunnelService.status.equals("connected"),"VPN connection timed out");TunnelService service=TunnelService.instance;String id=TunnelService.server;

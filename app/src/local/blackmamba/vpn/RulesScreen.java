@@ -29,7 +29,7 @@ final class RulesScreen {
    header.addView(arrow("move-up",L10n.s(R.string.msg_8f769303f6)+title,gi>0,()->moveGroup(groupIndex,-1)),a.lp(44,48));header.addView(arrow("move-down",L10n.s(R.string.msg_c800355918)+title,gi<groups.size()-1,()->moveGroup(groupIndex,1)),a.lp(44,48));
    Switch toggle=a.switchControl();toggle.setChecked(enabled>0);toggle.setContentDescription(L10n.s(R.string.msg_9189fc3f32)+title);toggle.setOnCheckedChangeListener((b,on)->{try{JSONArray next=RuleGroups.copy(a.store.data.getJSONArray("rules"));for(int i=group.start;i<group.end;i++)next.getJSONObject(i).put("enabled",on);save(next);}catch(Exception e){a.message(TunnelService.safeError(e));refresh();}});header.addView(toggle,a.lp(-2,48));card.addView(header);
    if(open){
-    LinearLayout children=a.vertical();children.setPaddingRelative(a.dp(8),a.dp(3),a.dp(6),a.dp(3));children.setBackground(a.bg(a.light?0xfff1f5fa:0xff252b33,12));
+    LinearLayout children=a.vertical();children.setPaddingRelative(a.dp(8),a.dp(3),a.dp(6),a.dp(3));children.setBackground(a.bg(a.light?0xffe8f0f9:0xff252b33,12));
     LinearLayout.LayoutParams nested=a.lp(-1,-2);nested.setMarginStart(a.dp(10));nested.bottomMargin=a.dp(6);card.addView(children,nested);
     for(int i=group.start;i<group.end;i++)rule(children,rules.getJSONObject(i),i,group);
    }

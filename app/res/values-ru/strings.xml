@@ -440,4 +440,7 @@
     <string name="dns_filter_threats" formatted="false">"Защита"</string>
     <string name="dns_filter_ads" formatted="false">"Реклама и трекеры"</string>
     <string name="dns_android" formatted="false">"DNS текущей сети Android"</string>
+    <string name="settings_group_interface" formatted="false">"Интерфейс"</string>
+    <string name="settings_group_protection" formatted="false">"Защита"</string>
+    <string name="settings_group_app" formatted="false">"Приложение"</string>
 </resources>

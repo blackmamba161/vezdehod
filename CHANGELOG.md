@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.20
+
+- Use a native Android light theme for controls and dialogs, with distinct page, card, field and button surfaces.
+- Improve text, error and selection contrast; show focused input fields and selected servers/apps clearly.
+- Group Settings into Interface, VPN, Protection and App on a single compact screen; remove the duplicate Rules entry.
+- Localize the new section headings in all 12 supported languages.
+
 ## 0.2.19
 
 - Replace the system download queue with a bounded in-app APK download, fixing indefinite waiting while the VPN is enabled.

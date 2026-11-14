@@ -1,0 +1,29 @@
+{
+  "version": "0.2.20",
+  "date": "2026-11-14",
+  "scope": "Interface and packaging checks; not a full security or malware certification",
+  "architectures": [
+    "arm64-v8a",
+    "armeabi-v7a"
+  ],
+  "engines": {
+    "sing-box": "1.12.12",
+    "xray": "26.11.9",
+    "go": "1.27.4"
+  },
+  "passed_checks": [
+    "443 messages in 12 languages",
+    "Native ELF architecture and alignment",
+    "APK release signature verification",
+    "ARM64 payload matches the universal APK tested on Poco C51",
+    "Release is not debuggable and contains no instrumentation",
+    "theme-020: both themes, settings groups, native dialogs, app search, enlarged text, contrast",
+    "Encrypted settings unchanged by UI instrumentation",
+    "Normal APK on Poco: theme switching, VPN connection and Chrome HTTPS document responses"
+  ],
+  "limitations": [
+    "Xiaomi is currently not connected over ADB",
+    "No new long-term or cellular-operator coverage claim",
+    "This release does not change VPN engines, DNS or routing"
+  ]
+}

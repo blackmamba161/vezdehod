@@ -1,1 +1,12 @@
-<resources><style name="AppTheme" parent="android:style/Theme.Material.NoActionBar"><item name="android:fontFamily">sans</item><item name="android:colorAccent">#65CFFF</item><item name="android:windowLightStatusBar">false</item><item name="android:statusBarColor">#111316</item><item name="android:navigationBarColor">#15171B</item><item name="android:windowBackground">#111316</item><item name="android:windowActionModeOverlay">true</item></style></resources>
+<resources>
+ <style name="AppTheme" parent="android:style/Theme.Material.NoActionBar">
+  <item name="android:fontFamily">sans</item><item name="android:colorAccent">#65CFFF</item>
+  <item name="android:windowLightStatusBar">false</item><item name="android:statusBarColor">#111316</item><item name="android:navigationBarColor">#15171B</item><item name="android:windowBackground">#111316</item><item name="android:windowActionModeOverlay">true</item>
+ </style>
+ <style name="AppTheme.Light" parent="android:style/Theme.Material.Light.NoActionBar">
+  <item name="android:fontFamily">sans</item><item name="android:colorAccent">#125DA8</item><item name="android:colorControlNormal">#526277</item><item name="android:textColorPrimary">#172536</item><item name="android:textColorSecondary">#526277</item>
+  <item name="android:windowLightStatusBar">true</item><item name="android:windowLightNavigationBar">true</item><item name="android:statusBarColor">#EAF0F6</item><item name="android:navigationBarColor">#F8FAFC</item><item name="android:windowBackground">#EAF0F6</item><item name="android:windowActionModeOverlay">true</item>
+ </style>
+ <style name="AppDialog" parent="android:style/Theme.Material.Dialog.Alert"><item name="android:colorAccent">#65CFFF</item><item name="android:fontFamily">sans</item></style>
+ <style name="AppDialog.Light" parent="android:style/Theme.Material.Light.Dialog.Alert"><item name="android:colorAccent">#125DA8</item><item name="android:colorControlNormal">#526277</item><item name="android:textColorPrimary">#172536</item><item name="android:textColorSecondary">#526277</item><item name="android:fontFamily">sans</item></style>
+</resources>

@@ -440,4 +440,7 @@
     <string name="dns_filter_threats" formatted="false">"सुरक्षा"</string>
     <string name="dns_filter_ads" formatted="false">"विज्ञापन और ट्रैकर"</string>
     <string name="dns_android" formatted="false">"वर्तमान Android नेटवर्क का DNS"</string>
+    <string name="settings_group_interface" formatted="false">"इंटरफ़ेस"</string>
+    <string name="settings_group_protection" formatted="false">"सुरक्षा"</string>
+    <string name="settings_group_app" formatted="false">"ऐप"</string>
 </resources>

@@ -6158,5 +6158,47 @@
     "de": "DNS des aktuellen Android-Netzes",
     "ja": "現在の Android ネットワーク DNS",
     "id": "DNS jaringan Android saat ini"
+  },
+  "settings_group_interface": {
+    "ru": "Интерфейс",
+    "en": "Interface",
+    "zh": "界面",
+    "es": "Interfaz",
+    "hi": "इंटरफ़ेस",
+    "ar": "الواجهة",
+    "pt": "Interface",
+    "fr": "Interface",
+    "bn": "ইন্টারফেস",
+    "de": "Benutzeroberfläche",
+    "ja": "表示",
+    "id": "Tampilan"
+  },
+  "settings_group_protection": {
+    "ru": "Защита",
+    "en": "Protection",
+    "zh": "安全保护",
+    "es": "Protección",
+    "hi": "सुरक्षा",
+    "ar": "الحماية",
+    "pt": "Proteção",
+    "fr": "Protection",
+    "bn": "সুরক্ষা",
+    "de": "Schutz",
+    "ja": "保護",
+    "id": "Perlindungan"
+  },
+  "settings_group_app": {
+    "ru": "Приложение",
+    "en": "App",
+    "zh": "应用",
+    "es": "Aplicación",
+    "hi": "ऐप",
+    "ar": "التطبيق",
+    "pt": "Aplicativo",
+    "fr": "Application",
+    "bn": "অ্যাপ",
+    "de": "App",
+    "ja": "アプリ",
+    "id": "Aplikasi"
   }
 }

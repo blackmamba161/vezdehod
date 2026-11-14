@@ -1,0 +1,21 @@
+Vezdehod 0.2.20 — interface verification
+
+Test device: Poco C51, Android 13, 32-bit ARMv7.
+
+PASS theme-020 instrumentation: 6 tabs in light and dark themes; 4 grouped Settings sections without a duplicate Rules entry; 7 settings pages; native theme choices and subscription inputs; server assignment, server selection, routing, subscription editor and installed-app picker.
+PASS installed-app loading and package-name search, compact result height, expanded rule groups, DNS and provider selection sheets, and Settings at 120% text.
+PASS WCAG AA text contrast for normal, secondary, accent and error text on cards, input text, and white primary-button labels for all 3 light-theme accents.
+PASS encrypted settings unchanged by instrumentation; interface drafts are restored in memory.
+PASS visual inspection of device screenshots, including loaded app search and both native dialog themes.
+PASS 443 interface messages in all 12 languages; resource coverage and placeholders.
+PASS native architecture/alignment checks for sing-box and Xray on ARM64 and ARMv7.
+
+Final UI instrumentation: 54.05 seconds; peak sampled process PSS 91870 KiB (includes screenshot captures).
+
+No VPN engine, DNS, subscription parsing or routing implementation changes in this version.
+
+PASS ordinary universal release installed over the test build on Poco; versionName 0.2.20, versionCode 25, DEBUGGABLE absent, installed APK SHA-256 matches the build output.
+PASS normal-APK Settings grouping and light/dark switching through the UI; saved light theme restored.
+PASS normal-APK VPN connection on the existing selected Helsinki server; Chrome document requests to https://ya.ru/ and https://example.com/ both returned HTTP 200 with the VPN active and browser cache disabled.
+Ordinary release left installed; VPN connected. No test instrumentation remains. Chrome debug forward removed.
+APK SHA-256: 42435064a470e998301a777ba60b8449364e18c1b594f7d41b660479a6a9d8ce

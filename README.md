@@ -3,11 +3,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/blackmamba161/vezdehod/releases/download/v0.2.19/Vezdehod-0.2.19-24-universal.apk"><img src="docs/assets/download.svg" width="260" height="58" alt="Download Vezdehod for Android"></a>
+  <a href="https://github.com/blackmamba161/vezdehod/releases/download/v0.2.20/Vezdehod-0.2.20-25-universal.apk"><img src="docs/assets/download.svg" width="260" height="58" alt="Download Vezdehod for Android"></a>
 </p>
 
 <p align="center">
-  <strong>v0.2.19</strong> · Android 10 or later · ARM64 / ARMv7 · 46 MB<br>
+  <strong>v0.2.20</strong> · Android 10 or later · ARM64 / ARMv7 · 46 MB<br>
   <a href="https://github.com/blackmamba161/vezdehod/releases/latest">Latest release</a> ·
   <a href="#get-started">Installation</a> ·
   <a href="https://github.com/blackmamba161/vezdehod/issues">Help &amp; feedback</a>

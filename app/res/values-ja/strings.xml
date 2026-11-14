@@ -440,4 +440,7 @@
     <string name="dns_filter_threats" formatted="false">"保護"</string>
     <string name="dns_filter_ads" formatted="false">"広告とトラッカー"</string>
     <string name="dns_android" formatted="false">"現在の Android ネットワーク DNS"</string>
+    <string name="settings_group_interface" formatted="false">"表示"</string>
+    <string name="settings_group_protection" formatted="false">"保護"</string>
+    <string name="settings_group_app" formatted="false">"アプリ"</string>
 </resources>

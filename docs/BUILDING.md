@@ -43,8 +43,10 @@ The first local build generates a signing key in `private/` if one is absent. A 
 
 ## Verification
 
-The build validates interface resources in all supported languages and verifies the APK signature. Additional host tests live in `tests/`. Device instrumentation is included only in test builds. Device tests must use disposable fixtures or restore the original configuration.
+The build validates interface resources in all supported languages and verifies the APK signature. Additional host tests live in `tests/`. Device instrumentation is included only in test builds. Device tests must use disposable fixtures or restore the original configuration. Every candidate build must be verified on the Poco C51 test device before it is handed off; host checks and checks on a more powerful phone do not replace this step. The final ordinary APK must also be installed and smoke-tested after instrumentation.
 
 The APK includes ARM64 and 32-bit ARMv7 libraries. The ARMv7 build uses the Android system TUN stack because gVisor is unavailable on that architecture. `tools/check_native.py` verifies both engines for both architectures before packaging. Application code must use Java APIs available on Android 10 (API 29); `Compat` provides UTF-8 text file and collection operations without newer Java runtime dependencies.
 
 Xray Android workers use the app-owned same-UID Unix socket to protect and bind outbound file descriptors. The VPN app remains in its own TUN UID range so the system TCP stack can receive kernel replies. Do not reintroduce a package-wide VPN exclusion.
+
+For interface changes, run `tests/device_safety.py --serial DEVICE_SERIAL theme-020` with a test APK, then inspect the captured screens in the app-private `files/test-screens` directory. This covers both themes, grouped Settings, native choices, inputs, app search, DNS/server/route pickers and 120% text. It checks text contrast and verifies that encrypted settings remain unchanged. Screens can contain private subscription data and must not be published.

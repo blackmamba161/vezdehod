@@ -441,4 +441,7 @@ case R.string.dns_ads:return "Блокировка рекламы и треке�
 case R.string.dns_filter_threats:return "Защита";
 case R.string.dns_filter_ads:return "Реклама и трекеры";
 case R.string.dns_android:return "DNS текущей сети Android";
+case R.string.settings_group_interface:return "Интерфейс";
+case R.string.settings_group_protection:return "Защита";
+case R.string.settings_group_app:return "Приложение";
 default:throw new IllegalArgumentException("Unknown string resource: "+id);}}}
