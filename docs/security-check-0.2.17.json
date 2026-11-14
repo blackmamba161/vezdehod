@@ -1,0 +1,22 @@
+{
+  "version": "0.2.17",
+  "date": "2026-11-14",
+  "go": "1.27.4",
+  "engines": [
+    "sing-box 1.12.12",
+    "Xray 26.11.9"
+  ],
+  "apk_sha256": "a4929aa5bf252d240f15342fd9b518419100825206067435ecdda3d0f0affb37",
+  "govulncheck_binary": {
+    "libbox": "No vulnerabilities found.",
+    "xray": "No vulnerabilities found."
+  },
+  "checks": [
+    "Release APK signature verified",
+    "16 KB APK ZIP alignment verified",
+    "Release contains no debug instrumentation",
+    "DNS native race tests and routing integration tests passed",
+    "On-device DNS fallback and settings integrity passed"
+  ],
+  "limitations": "Known vulnerability database checks do not certify absence of malware. Play Protect classification has not been re-evaluated by Google. No new OSV module scan was performed for this release."
+}

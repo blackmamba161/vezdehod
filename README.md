@@ -3,11 +3,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/blackmamba161/vezdehod/releases/download/v0.2.16/Vezdehod-0.2.16-21-arm64-v8a.apk"><img src="docs/assets/download.svg" width="260" height="58" alt="Download Vezdehod for Android"></a>
+  <a href="https://github.com/blackmamba161/vezdehod/releases/download/v0.2.17/Vezdehod-0.2.17-22-arm64-v8a.apk"><img src="docs/assets/download.svg" width="260" height="58" alt="Download Vezdehod for Android"></a>
 </p>
 
 <p align="center">
-  <strong>v0.2.16</strong> · Android 10 or later · ARM64 · 24.7 MB<br>
+  <strong>v0.2.17</strong> · Android 10 or later · ARM64 · 24.8 MB<br>
   <a href="https://github.com/blackmamba161/vezdehod/releases/latest">Latest release</a> ·
   <a href="#get-started">Installation</a> ·
   <a href="https://github.com/blackmamba161/vezdehod/issues">Help &amp; feedback</a>
@@ -42,6 +42,7 @@ Bring your own VPN subscription or server configuration. Vezdehod does not inclu
 | **Choose what uses the VPN** | Route apps and domains through the VPN, directly, or block them. Start with service presets and adjust the rules. |
 | **Keep subscriptions together** | Add a link from the clipboard, scan a QR code, or import a supported configuration. See usage and expiry when supplied by your provider. Use the ⋮ menu to copy, share, edit or remove a subscription. |
 | **Check before connecting** | Test server latency individually or in a batch. Connection status is verified before the app reports a successful connection. |
+| **Control DNS** | Use automatic DNS or choose your own primary and backup resolvers in Settings → Connection → DNS. Test the settings before saving. |
 | **Make it yours** | Choose the appearance and follow the device language, or select from 12 interface languages. |
 | **Stay up to date** | Check for updates manually or automatically. Download and install when you are ready. |
 

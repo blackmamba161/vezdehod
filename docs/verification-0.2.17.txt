@@ -1,0 +1,28 @@
+Vezdehod 0.2.17 / code 22
+APK SHA-256: a4929aa5bf252d240f15342fd9b518419100825206067435ecdda3d0f0affb37
+
+PASS host: DnsPolicyTest, ConfigTest, SubscriptionRefreshTest,
+SubscriptionFormatsTest and ProviderGroupsTest with synthetic configurations.
+PASS native race tests: primary/backup, NXDOMAIN, timeout/failure, cancellation,
+cooldown/recovery, concurrent recovery, network reset and selector changes.
+PASS native integration: stale proxy selection, isolated probe cache and startup
+of the generated DNS configuration without a TUN interface.
+PASS localization validation: 432 messages in 12 languages.
+PASS native ARM64 and 16 KB ELF alignment checks.
+PASS final APK signature and 16 KB ZIP alignment; no debug instrumentation.
+PASS govulncheck binary scans for both packaged engines: no vulnerabilities found.
+
+PASS Xiaomi 13 Pro / Android 14: final DNS dialog captures reviewed; automatic,
+manual, advanced and provider selection screens; cancel preserves configuration;
+manual resolver retained when toggling automatic/manual mode.
+PASS real on-device automatic DNS check: 562 ms.
+PASS real on-device DNS check with deliberately unreachable primary and working
+backup: 1138 ms. Checks run without a TUN and preserve encrypted stored settings.
+PASS temporary DNS-check cache cleanup after checks.
+PASS ordinary signed release installed over test build; installed version 0.2.17,
+code 22, no DEBUGGABLE flag. No system lock or security settings changed.
+
+Limits: DNS checks do not establish long-term VPN or video playback reliability.
+Play Protect classification has not been re-evaluated. Poco-specific behavior and
+execution on a 16 KB page-size device were not tested. Target SDK remains 34;
+Google Play publication requires a separate migration and review.

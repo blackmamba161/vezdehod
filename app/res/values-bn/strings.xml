@@ -415,4 +415,21 @@
     <string name="notification_title" formatted="false">"VPN বিজ্ঞপ্তি"</string>
     <string name="notification_allowed" formatted="false">"অনুমোদিত"</string>
     <string name="notification_blocked" formatted="false">"Android বন্ধ রেখেছে"</string>
+    <string name="dns_auto" formatted="false">"স্বয়ংক্রিয়"</string>
+    <string name="dns_manual" formatted="false">"ম্যানুয়াল"</string>
+    <string name="dns_primary" formatted="false">"প্রধান DNS"</string>
+    <string name="dns_backup" formatted="false">"বিকল্প DNS"</string>
+    <string name="dns_direct" formatted="false">"সরাসরি ট্রাফিক"</string>
+    <string name="dns_bootstrap" formatted="false">"সার্ভার সংযোগ"</string>
+    <string name="dns_subscription" formatted="false">"সাবস্ক্রিপশন থেকে"</string>
+    <string name="dns_builtin" formatted="false">"অন্তর্নির্মিত সেটিংস"</string>
+    <string name="dns_custom" formatted="false">"নিজস্ব ঠিকানা…"</string>
+    <string name="dns_none" formatted="false">"নিষ্ক্রিয়"</string>
+    <string name="dns_check" formatted="false">"যাচাই করুন"</string>
+    <string name="dns_checking" formatted="false">"DNS যাচাই হচ্ছে…"</string>
+    <string name="dns_check_ok" formatted="false">"DNS সাড়া দিচ্ছে"</string>
+    <string name="dns_check_failed" formatted="false">"DNS অনুপলব্ধ। সংযোগ ও ঠিকানা যাচাই করুন।"</string>
+    <string name="dns_invalid" formatted="false">"IP অথবা https://, tls://, udp://, tcp:// ঠিকানা দিন"</string>
+    <string name="dns_network_changed" formatted="false">"নেটওয়ার্ক বদলেছে। আবার যাচাই করুন।"</string>
+    <string name="dns_help" formatted="false">"অটো উপযুক্ত সাবস্ক্রিপশন DNS বা অন্তর্নির্মিত DNS ব্যবহার করে। DNS VPN বা সরাসরি পথ অনুসরণ করে। ব্যর্থ হলে একই পথের বিকল্প ব্যবহার হয়। ম্যানুয়াল মান সংরক্ষিত থাকে। পরীক্ষা ভিডিও চালানো যাচাই করে না।"</string>
 </resources>

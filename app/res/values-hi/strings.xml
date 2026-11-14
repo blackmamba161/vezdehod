@@ -415,4 +415,21 @@
     <string name="notification_title" formatted="false">"VPN सूचना"</string>
     <string name="notification_allowed" formatted="false">"अनुमति है"</string>
     <string name="notification_blocked" formatted="false">"Android ने रोका है"</string>
+    <string name="dns_auto" formatted="false">"स्वचालित"</string>
+    <string name="dns_manual" formatted="false">"मैन्युअल"</string>
+    <string name="dns_primary" formatted="false">"प्राथमिक DNS"</string>
+    <string name="dns_backup" formatted="false">"बैकअप DNS"</string>
+    <string name="dns_direct" formatted="false">"सीधा ट्रैफ़िक"</string>
+    <string name="dns_bootstrap" formatted="false">"सर्वर कनेक्शन"</string>
+    <string name="dns_subscription" formatted="false">"सदस्यता से"</string>
+    <string name="dns_builtin" formatted="false">"अंतर्निहित सेटिंग"</string>
+    <string name="dns_custom" formatted="false">"अपना पता…"</string>
+    <string name="dns_none" formatted="false">"बंद"</string>
+    <string name="dns_check" formatted="false">"जाँचें"</string>
+    <string name="dns_checking" formatted="false">"DNS की जाँच…"</string>
+    <string name="dns_check_ok" formatted="false">"DNS जवाब दे रहा है"</string>
+    <string name="dns_check_failed" formatted="false">"DNS उपलब्ध नहीं है। कनेक्शन और पते जाँचें।"</string>
+    <string name="dns_invalid" formatted="false">"IP या https://, tls://, udp://, tcp:// पता दर्ज करें"</string>
+    <string name="dns_network_changed" formatted="false">"नेटवर्क बदला। फिर से जाँचें।"</string>
+    <string name="dns_help" formatted="false">"ऑटो उपयुक्त सदस्यता DNS या अंतर्निहित DNS उपयोग करता है। DNS VPN या सीधे मार्ग का पालन करता है। विफलता पर उसी मार्ग का बैकअप उपयोग होता है। मैन्युअल मान सुरक्षित रहते हैं। जाँच वीडियो प्लेबैक नहीं जाँचती।"</string>
 </resources>

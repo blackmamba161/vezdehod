@@ -415,4 +415,21 @@
     <string name="notification_title" formatted="false">"Notifikasi VPN"</string>
     <string name="notification_allowed" formatted="false">"Diizinkan"</string>
     <string name="notification_blocked" formatted="false">"Diblokir Android"</string>
+    <string name="dns_auto" formatted="false">"Otomatis"</string>
+    <string name="dns_manual" formatted="false">"Manual"</string>
+    <string name="dns_primary" formatted="false">"DNS utama"</string>
+    <string name="dns_backup" formatted="false">"DNS cadangan"</string>
+    <string name="dns_direct" formatted="false">"Lalu lintas langsung"</string>
+    <string name="dns_bootstrap" formatted="false">"Koneksi server"</string>
+    <string name="dns_subscription" formatted="false">"Dari langganan"</string>
+    <string name="dns_builtin" formatted="false">"Pengaturan bawaan"</string>
+    <string name="dns_custom" formatted="false">"Alamat khusus…"</string>
+    <string name="dns_none" formatted="false">"Dinonaktifkan"</string>
+    <string name="dns_check" formatted="false">"Periksa"</string>
+    <string name="dns_checking" formatted="false">"Memeriksa DNS…"</string>
+    <string name="dns_check_ok" formatted="false">"DNS merespons"</string>
+    <string name="dns_check_failed" formatted="false">"DNS tidak tersedia. Periksa koneksi dan alamat."</string>
+    <string name="dns_invalid" formatted="false">"Masukkan IP atau alamat https://, tls://, udp://, tcp://"</string>
+    <string name="dns_network_changed" formatted="false">"Jaringan berubah. Periksa kembali."</string>
+    <string name="dns_help" formatted="false">"Otomatis memakai DNS langganan yang sesuai atau bawaan. DNS mengikuti rute VPN atau langsung; saat gagal, cadangan memakai rute yang sama. Nilai manual disimpan. Pemeriksaan tidak menguji pemutaran video."</string>
 </resources>

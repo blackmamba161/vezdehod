@@ -415,4 +415,21 @@
     <string name="notification_title" formatted="false">"VPN 通知"</string>
     <string name="notification_allowed" formatted="false">"許可済み"</string>
     <string name="notification_blocked" formatted="false">"Android によりブロック"</string>
+    <string name="dns_auto" formatted="false">"自動"</string>
+    <string name="dns_manual" formatted="false">"手動"</string>
+    <string name="dns_primary" formatted="false">"優先 DNS"</string>
+    <string name="dns_backup" formatted="false">"予備 DNS"</string>
+    <string name="dns_direct" formatted="false">"直接通信"</string>
+    <string name="dns_bootstrap" formatted="false">"サーバー接続"</string>
+    <string name="dns_subscription" formatted="false">"サブスクリプションから"</string>
+    <string name="dns_builtin" formatted="false">"内蔵設定"</string>
+    <string name="dns_custom" formatted="false">"アドレスを指定…"</string>
+    <string name="dns_none" formatted="false">"使用しない"</string>
+    <string name="dns_check" formatted="false">"確認"</string>
+    <string name="dns_checking" formatted="false">"DNS を確認中…"</string>
+    <string name="dns_check_ok" formatted="false">"DNS 応答あり"</string>
+    <string name="dns_check_failed" formatted="false">"DNS に接続できません。接続とアドレスを確認してください。"</string>
+    <string name="dns_invalid" formatted="false">"IP または https://、tls://、udp://、tcp:// アドレスを入力"</string>
+    <string name="dns_network_changed" formatted="false">"ネットワークが変わりました。再確認してください。"</string>
+    <string name="dns_help" formatted="false">"自動では対応するサブスクリプション DNS または内蔵 DNS を使用します。DNS は VPN または直接通信の経路に従い、障害時も同じ経路の予備を使用します。手動の値は保持されます。動画再生は検査しません。"</string>
 </resources>

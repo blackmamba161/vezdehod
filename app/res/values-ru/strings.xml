@@ -415,4 +415,21 @@
     <string name="notification_title" formatted="false">"Уведомление VPN"</string>
     <string name="notification_allowed" formatted="false">"Разрешено"</string>
     <string name="notification_blocked" formatted="false">"Запрещено Android"</string>
+    <string name="dns_auto" formatted="false">"Автоматически"</string>
+    <string name="dns_manual" formatted="false">"Вручную"</string>
+    <string name="dns_primary" formatted="false">"Основной DNS"</string>
+    <string name="dns_backup" formatted="false">"Резервный DNS"</string>
+    <string name="dns_direct" formatted="false">"Напрямую"</string>
+    <string name="dns_bootstrap" formatted="false">"Для подключения к серверу"</string>
+    <string name="dns_subscription" formatted="false">"Из подписки"</string>
+    <string name="dns_builtin" formatted="false">"Встроенные настройки"</string>
+    <string name="dns_custom" formatted="false">"Свой адрес…"</string>
+    <string name="dns_none" formatted="false">"Не использовать"</string>
+    <string name="dns_check" formatted="false">"Проверить"</string>
+    <string name="dns_checking" formatted="false">"Проверка DNS…"</string>
+    <string name="dns_check_ok" formatted="false">"DNS отвечает"</string>
+    <string name="dns_check_failed" formatted="false">"DNS недоступен. Проверьте подключение и адреса."</string>
+    <string name="dns_invalid" formatted="false">"Введите IP или адрес https://, tls://, udp://, tcp://"</string>
+    <string name="dns_network_changed" formatted="false">"Сеть изменилась. Повторите проверку."</string>
+    <string name="dns_help" formatted="false">"Авто использует подходящие DNS из подписки или встроенные. DNS следует маршруту: через VPN либо напрямую. При ошибке используется резервный DNS того же маршрута. Ручные значения сохраняются. Проверка DNS не проверяет воспроизведение видео."</string>
 </resources>

@@ -415,4 +415,21 @@
     <string name="notification_title" formatted="false">"VPN notification"</string>
     <string name="notification_allowed" formatted="false">"Allowed"</string>
     <string name="notification_blocked" formatted="false">"Blocked by Android"</string>
+    <string name="dns_auto" formatted="false">"Automatic"</string>
+    <string name="dns_manual" formatted="false">"Manual"</string>
+    <string name="dns_primary" formatted="false">"Primary DNS"</string>
+    <string name="dns_backup" formatted="false">"Backup DNS"</string>
+    <string name="dns_direct" formatted="false">"Direct traffic"</string>
+    <string name="dns_bootstrap" formatted="false">"Server connection"</string>
+    <string name="dns_subscription" formatted="false">"From subscription"</string>
+    <string name="dns_builtin" formatted="false">"Built-in settings"</string>
+    <string name="dns_custom" formatted="false">"Custom address…"</string>
+    <string name="dns_none" formatted="false">"Disabled"</string>
+    <string name="dns_check" formatted="false">"Check"</string>
+    <string name="dns_checking" formatted="false">"Checking DNS…"</string>
+    <string name="dns_check_ok" formatted="false">"DNS responds"</string>
+    <string name="dns_check_failed" formatted="false">"DNS unavailable. Check the connection and addresses."</string>
+    <string name="dns_invalid" formatted="false">"Enter an IP or an https://, tls://, udp://, tcp:// address"</string>
+    <string name="dns_network_changed" formatted="false">"Network changed. Run the check again."</string>
+    <string name="dns_help" formatted="false">"Auto uses suitable subscription DNS or built-in resolvers. DNS follows the VPN or direct route. Failures use a backup on the same route. Manual values are retained. The DNS check does not test video playback."</string>
 </resources>

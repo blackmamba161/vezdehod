@@ -26,9 +26,10 @@ for dirname in ['app','translations','tools','licenses']:
   if path.is_file() and not path.is_symlink() and '__pycache__' not in path.parts and path.name!='SelfTest.java':files.append(path)
 for name in ['README.md','CHANGELOG.md','PRIVACY.md','SECURITY.md','THIRD_PARTY.md','LICENSE','build.sh','build-lock.json','release-config.json','mobile_app.go','.gitignore']:
  files.append(root/name)
-files.extend(root/'docs'/name for name in ['BUILDING.md','RELEASING.md','security-check-'+version+'.json','verification-'+version+'.txt'])
+files.extend(root/'docs'/name for name in ['BUILDING.md','RELEASING.md','DNS.md','security-check-'+version+'.json','verification-'+version+'.txt'])
 files.extend(path for path in (root/'docs/assets').rglob('*') if path.is_file())
 files.extend((root/'tests').glob('*.java'));files.append(root/'tests/localization_test.py')
+files.extend((root/'tests/native-routing').glob('*.go'))
 for name in ['sing-box-1.12.12','xray','xray-source','zxing','snakeyaml','adblock']:
  for path in (root/'vendor'/name).rglob('*'):
   if path.is_file() and not path.is_symlink() and '.git' not in path.parts and not path.name.endswith('.idsig'):files.append(path)

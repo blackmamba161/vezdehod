@@ -10,6 +10,9 @@ import (
  "net/http"
  "time"
  "strings"
+ "github.com/sagernet/sing-box/adapter"
+ "github.com/sagernet/sing/service"
+ dnsmsg "github.com/miekg/dns"
  "github.com/sagernet/sing-box/experimental/clashapi"
  "github.com/sagernet/sing-box/protocol/group"
  M "github.com/sagernet/sing/common/metadata"
@@ -20,7 +23,7 @@ func (s *BoxService) MobileStats() string {
 }
 func (s *BoxService) MobileSelect(tag string) error {
  o,ok:=s.instance.Outbound().Outbound("auto");if !ok{return fmt.Errorf("selector unavailable")}
- g,ok:=o.(*group.Selector);if !ok||!g.SelectOutbound(tag){return fmt.Errorf("server unavailable")};return nil
+ g,ok:=o.(*group.Selector);if !ok{return fmt.Errorf("server unavailable")};previous:=g.Now();if !g.SelectOutbound(tag){return fmt.Errorf("server unavailable")};if previous!=tag{service.FromContext[adapter.DNSRouter](s.ctx).ResetNetwork()};return nil
 }
 func (s *BoxService) MobileDelay(tag string) (int32,error) { return s.MobileDelayFor(tag,6000) }
 func (s *BoxService) MobileDelayFor(tag string, milliseconds int32) (int32,error) {
@@ -63,4 +66,19 @@ func (s *BoxService) MobileProbe(tag string) (string,error) {
  body,err:=io.ReadAll(io.LimitReader(resp.Body,8192));if err!=nil{return "",err};ip:="";for _,line:=range strings.Split(string(body),"\n"){if strings.HasPrefix(line,"ip="){ip=strings.TrimSpace(strings.TrimPrefix(line,"ip="))}}
  if net.ParseIP(ip)==nil{return "",fmt.Errorf("IP endpoint returned no valid address")}
  ping,err:=s.MobileDelay(tag);if err!=nil{return "",err};b,_:=json.Marshal(map[string]any{"ip":ip,"ping":ping});return string(b),nil
+}
+
+// MobileDNSCheck uses the configured DNS router without accepting a cached result.
+func (s *BoxService) MobileDNSCheck() (int32,error) {
+ ctx,cancel:=context.WithTimeout(s.ctx,12*time.Second);defer cancel()
+ router:=service.FromContext[adapter.DNSRouter](s.ctx);start:=time.Now()
+ manager:=service.FromContext[adapter.DNSTransportManager](s.ctx)
+ for _,check:=range []struct{tag,host string}{{"remote","www.youtube.com."},{"local","example.com."}}{
+  transport,ok:=manager.Transport(check.tag);if !ok{return -1,fmt.Errorf("DNS route missing")}
+  q:=new(dnsmsg.Msg);q.SetQuestion(check.host,dnsmsg.TypeA)
+  r,err:=router.Exchange(ctx,q,adapter.DNSQueryOptions{Transport:transport,DisableCache:true})
+  if err!=nil{return -1,fmt.Errorf("DNS query failed: %w",err)}
+  if r==nil||r.Rcode!=dnsmsg.RcodeSuccess||len(r.Answer)==0{return -1,fmt.Errorf("DNS returned no address")}
+ }
+ return int32(time.Since(start)/time.Millisecond),nil
 }

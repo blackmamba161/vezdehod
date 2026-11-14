@@ -15,7 +15,7 @@ final class SettingsScreen {
     a.iconItem(c,"networks",L10n.s(R.string.msg_79e350f743),null,()->open("connection"));
     a.iconItem(c,"rules",L10n.s(R.string.msg_667d8b44a6),null,()->{a.tab="rules";a.render();});
     a.iconItem(c,"bell",L10n.s(R.string.msg_c7e6bf5234),null,()->open("notifications"));
-    a.iconItem(c,"settings",L10n.s(R.string.msg_d7907f4d43),"DNS, IP, MTU",()->open("advanced"));
+    a.iconItem(c,"settings",L10n.s(R.string.msg_d7907f4d43),"IP, MTU",()->open("advanced"));
     a.iconItem(c,"diagnostics",L10n.s(R.string.msg_9ba1e22ac3),null,()->open("diagnostics"));
     a.iconItem(c,"download",L10n.s(R.string.update_title),null,()->open("updates"));
     a.iconItem(c,"shield",L10n.s(R.string.privacy_title),null,()->{AlertDialog d=a.new DialogBuilder(a).setTitle(L10n.s(R.string.privacy_title)).setMessage(L10n.s(R.string.privacy_summary)).setPositiveButton(L10n.s(R.string.msg_4ae50d3073),null).create();a.sheet(d);});
@@ -56,6 +56,7 @@ final class SettingsScreen {
   toggle(c,L10n.s(R.string.msg_fcb4b47313),L10n.s(R.string.msg_2be12d2d73),"boot",false);
   toggle(c,L10n.s(R.string.msg_a8e2cfb793),"","reconnect",false);
   choice(c,L10n.s(R.string.msg_448e226084),"retrySeconds",new String[]{L10n.s(R.string.msg_8c21ba2d9d),L10n.s(R.string.msg_8a45d0d1ad),L10n.s(R.string.msg_d84f514695),L10n.s(R.string.msg_7db1478f63)},new Object[]{5,15,30,60},false);
+  a.item(c,"DNS",DnsSettings.summary(store.data),()->dnsSettings());
   fallback(c,L10n.s(R.string.msg_e83d7ce312),"fallbackWifi");fallback(c,L10n.s(R.string.msg_fbf3611c53),"fallbackCellular");
 
   a.item(host,L10n.s(R.string.msg_ca20e76c0c),L10n.s(R.string.msg_d26aec38b1),()->a.startActivity(new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,android.net.Uri.parse("package:"+a.getPackageName()))));
@@ -66,19 +67,11 @@ final class SettingsScreen {
   a.title(L10n.s(R.string.msg_d7907f4d43),"");LinearLayout c=a.card(host);
   TunnelService tunnel=TunnelService.instance;String now=tunnel==null?L10n.s(R.string.msg_c8243322dc):tunnel.nativeIpv6()?"IPv4 + IPv6":"IPv4";
   choice(c,L10n.s(R.string.msg_e0cf01e43c),"ipv6",new String[]{L10n.s(R.string.msg_e6da72edd6)+now,L10n.s(R.string.msg_5b9e24bda9)},new Object[]{true,false},true,L10n.s(R.string.msg_9be84e1d9f));
-  a.item(c,L10n.s(R.string.msg_8f9bf25ca6),store.data.optString("remoteDns"),L10n.s(R.string.msg_5f1326b514),()->dnsSettings());
   a.item(c,"MTU",store.data.optInt("mtu",1400)+L10n.s(R.string.msg_0857ba97ab),L10n.s(R.string.msg_466019b718),()->mtuSettings());
   choice(c,L10n.s(R.string.msg_7e47a7ce78),"stack",new String[]{"gVisor",L10n.s(R.string.msg_eca17171d2),L10n.s(R.string.msg_d155047e55)},new Object[]{"gvisor","system","mixed"},true,L10n.s(R.string.msg_d4dbd88958));
   a.item(c,L10n.s(R.string.msg_e04a016600),null,()->{AlertDialog d=new AlertDialog.Builder(a).setTitle(L10n.s(R.string.msg_f1b8fc3ba0)).setMessage(L10n.s(R.string.msg_478ced019a)).setNegativeButton(L10n.s(R.string.msg_0ec753be8d),null).setPositiveButton(L10n.s(R.string.msg_058f162d29),(v,w)->{try{store.resetNetworkPreferences();TunnelService.reload();a.render();}catch(Exception e){a.message(TunnelService.safeError(e));}}).create();a.sheet(d);});
  }
- void dnsSettings(){
-  LinearLayout c=a.vertical();c.setPaddingRelative(a.dp(20),a.dp(12),a.dp(20),a.dp(8));
-
-  EditText field=a.edit("https://…/dns-query",store.data.optString("remoteDns"));field.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_URI);field.setTextDirection(android.view.View.TEXT_DIRECTION_LTR);field.setSingleLine(false);field.setMaxLines(3);c.addView(field);
-  c.addView(a.button(L10n.s(R.string.msg_6a38870f87),()->field.setText("https://1.1.1.1/dns-query")),a.lp(-1,48));
-  AlertDialog d=new AlertDialog.Builder(a).setTitle(L10n.s(R.string.msg_8f9bf25ca6)).setView(c).setNegativeButton(L10n.s(R.string.msg_0ec753be8d),null).setPositiveButton(L10n.s(R.string.msg_4864057d62),null).create();
-  d.setOnShowListener(v->d.getButton(-1).setOnClickListener(w->{try{String value=field.getText().toString().trim();Preferences.validate("remoteDns",value);store.change("remoteDns",value);TunnelService.reload();d.dismiss();a.render();}catch(Exception e){field.setError(e.getMessage());}}));a.sheet(d);
- }
+ void dnsSettings(){try{new DnsScreen(a).show();}catch(Exception e){a.message(TunnelService.safeError(e));}}
  void mtuSettings(){
   LinearLayout c=a.vertical();c.setPaddingRelative(a.dp(20),a.dp(12),a.dp(20),a.dp(8));
   EditText field=a.edit("MTU",Integer.toString(store.data.optInt("mtu",1400)));field.setInputType(InputType.TYPE_CLASS_NUMBER);c.addView(field);

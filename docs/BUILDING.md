@@ -25,6 +25,8 @@ To rebuild both engines with the pinned security updates, install the recorded G
 
 The pinned HTTP/2 package uses its upstream `http2legacy` compatibility tag and `-gcflags=golang.org/x/net/http2=-l` to retain the symbol used by sing-box 1.12’s transport reset. Device JNI loading is checked before publication.
 
+The bundled sing-box source also contains the Vezdehod DNS fallback/selector transports in `dns/transport/vezdehod` and their registration in `include/registry.go`. Keep these changes when rebuilding; copying `mobile_app.go` into unmodified upstream source alone is insufficient.
+
 For reference, to rebuild the customized libbox, copy `mobile_app.go` into `vendor/sing-box-1.12.12/experimental/libbox/mobile_app.go`, then use the upstream Android library build process with Android ARM64 as the target. Keep the `with_gvisor`, `with_quic`, `with_wireguard`, `with_utls`, `with_clash_api`, and `with_conntrack` features required by the application. Consult the bundled upstream build script for the pinned version's additional flags.
 
 ## APK

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.17
+
+- Add compact automatic/manual DNS settings under Connection, with optional backup, direct-route and bootstrap resolvers.
+- Retain suitable subscription DNS, follow server selection, and use bounded same-route DNS fallback without restarting the VPN.
+- Preserve manual settings and verify DNS on demand in an isolated engine.
+- Fix stale cached proxy selection, isolate probe caches and avoid reconnecting for unchanged subscription refreshes.
+
 ## 0.2.16
 
 - Subscription action menu with edit, sensitive URL copy, Android sharing, refresh, server list and deletion.

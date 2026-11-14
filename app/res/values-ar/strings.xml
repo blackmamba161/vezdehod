@@ -415,4 +415,21 @@
     <string name="notification_title" formatted="false">"إشعار VPN"</string>
     <string name="notification_allowed" formatted="false">"مسموح"</string>
     <string name="notification_blocked" formatted="false">"محظور من Android"</string>
+    <string name="dns_auto" formatted="false">"تلقائي"</string>
+    <string name="dns_manual" formatted="false">"يدوي"</string>
+    <string name="dns_primary" formatted="false">"DNS الأساسي"</string>
+    <string name="dns_backup" formatted="false">"DNS الاحتياطي"</string>
+    <string name="dns_direct" formatted="false">"الاتصال المباشر"</string>
+    <string name="dns_bootstrap" formatted="false">"الاتصال بالخادم"</string>
+    <string name="dns_subscription" formatted="false">"من الاشتراك"</string>
+    <string name="dns_builtin" formatted="false">"الإعدادات المدمجة"</string>
+    <string name="dns_custom" formatted="false">"عنوان مخصص…"</string>
+    <string name="dns_none" formatted="false">"معطل"</string>
+    <string name="dns_check" formatted="false">"تحقق"</string>
+    <string name="dns_checking" formatted="false">"جارٍ التحقق من DNS…"</string>
+    <string name="dns_check_ok" formatted="false">"DNS يستجيب"</string>
+    <string name="dns_check_failed" formatted="false">"DNS غير متاح. تحقق من الاتصال والعناوين."</string>
+    <string name="dns_invalid" formatted="false">"أدخل IP أو عنوان https:// أو tls:// أو udp:// أو tcp://"</string>
+    <string name="dns_network_changed" formatted="false">"تغيرت الشبكة. أعد التحقق."</string>
+    <string name="dns_help" formatted="false">"يستخدم الوضع التلقائي DNS المناسب من الاشتراك أو المدمج. يتبع DNS مسار VPN أو الاتصال المباشر، ويستخدم الاحتياطي عبر المسار نفسه عند الفشل. تُحفظ القيم اليدوية. التحقق لا يختبر تشغيل الفيديو."</string>
 </resources>

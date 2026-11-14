@@ -415,4 +415,21 @@
     <string name="notification_title" formatted="false">"Notification VPN"</string>
     <string name="notification_allowed" formatted="false">"Autorisée"</string>
     <string name="notification_blocked" formatted="false">"Bloquée par Android"</string>
+    <string name="dns_auto" formatted="false">"Automatique"</string>
+    <string name="dns_manual" formatted="false">"Manuel"</string>
+    <string name="dns_primary" formatted="false">"DNS principal"</string>
+    <string name="dns_backup" formatted="false">"DNS de secours"</string>
+    <string name="dns_direct" formatted="false">"Trafic direct"</string>
+    <string name="dns_bootstrap" formatted="false">"Connexion au serveur"</string>
+    <string name="dns_subscription" formatted="false">"Depuis l’abonnement"</string>
+    <string name="dns_builtin" formatted="false">"Réglages intégrés"</string>
+    <string name="dns_custom" formatted="false">"Adresse personnalisée…"</string>
+    <string name="dns_none" formatted="false">"Désactivé"</string>
+    <string name="dns_check" formatted="false">"Vérifier"</string>
+    <string name="dns_checking" formatted="false">"Vérification du DNS…"</string>
+    <string name="dns_check_ok" formatted="false">"Le DNS répond"</string>
+    <string name="dns_check_failed" formatted="false">"DNS indisponible. Vérifiez la connexion et les adresses."</string>
+    <string name="dns_invalid" formatted="false">"Saisissez une IP ou une adresse https://, tls://, udp://, tcp://"</string>
+    <string name="dns_network_changed" formatted="false">"Le réseau a changé. Relancez la vérification."</string>
+    <string name="dns_help" formatted="false">"Auto utilise les DNS compatibles de l’abonnement ou intégrés. Le DNS suit le trajet VPN ou direct, avec un secours sur le même trajet en cas d’échec. Les valeurs manuelles sont conservées. Le test ne vérifie pas les vidéos."</string>
 </resources>

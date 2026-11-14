@@ -415,4 +415,21 @@
     <string name="notification_title" formatted="false">"VPN 通知"</string>
     <string name="notification_allowed" formatted="false">"已允许"</string>
     <string name="notification_blocked" formatted="false">"被 Android 阻止"</string>
+    <string name="dns_auto" formatted="false">"自动"</string>
+    <string name="dns_manual" formatted="false">"手动"</string>
+    <string name="dns_primary" formatted="false">"首选 DNS"</string>
+    <string name="dns_backup" formatted="false">"备用 DNS"</string>
+    <string name="dns_direct" formatted="false">"直连流量"</string>
+    <string name="dns_bootstrap" formatted="false">"服务器连接"</string>
+    <string name="dns_subscription" formatted="false">"来自订阅"</string>
+    <string name="dns_builtin" formatted="false">"内置设置"</string>
+    <string name="dns_custom" formatted="false">"自定义地址…"</string>
+    <string name="dns_none" formatted="false">"不使用"</string>
+    <string name="dns_check" formatted="false">"检查"</string>
+    <string name="dns_checking" formatted="false">"正在检查 DNS…"</string>
+    <string name="dns_check_ok" formatted="false">"DNS 正常响应"</string>
+    <string name="dns_check_failed" formatted="false">"DNS 不可用，请检查连接和地址。"</string>
+    <string name="dns_invalid" formatted="false">"请输入 IP 或 https://、tls://、udp://、tcp:// 地址"</string>
+    <string name="dns_network_changed" formatted="false">"网络已更改，请重新检查。"</string>
+    <string name="dns_help" formatted="false">"自动模式使用适用的订阅 DNS 或内置解析器。DNS 随 VPN 或直连路由传输，故障时使用同一路由的备用 DNS。手动值会保留。DNS 检查不测试视频播放。"</string>
 </resources>
