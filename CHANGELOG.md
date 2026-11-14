@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.19
+
+- Replace the system download queue with a bounded in-app APK download, fixing indefinite waiting while the VPN is enabled.
+- Validate redirect destinations, file size and SHA-256 during download; preserve package, version and signing-certificate checks before installation.
+- Fix browser TCP traffic with the system TUN stack on ARMv7 by retaining the app UID in the VPN on both architectures and protecting Xray outbound sockets individually.
+- Clean up cancelled transfers and make interrupted downloads explicitly retryable.
+
 ## 0.2.18
 
 - Add 32-bit ARMv7 support alongside ARM64, with compatible update selection.

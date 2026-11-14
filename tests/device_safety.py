@@ -6,7 +6,7 @@ parser.add_argument('--adb',default=os.environ.get('ADB') or shutil.which('adb')
 parser.add_argument('--serial',required=True)
 parser.add_argument('--timeout',type=int,default=100)
 parser.add_argument('--output',type=Path,default=Path(__file__).resolve().parents[1]/'private/device-tests')
-parser.add_argument('mode',choices=['safety-018','connection-safety-018','native-016','probe-016','dns-quality','audit-vpn','ui'])
+parser.add_argument('mode',choices=['client-xray-019','socket-protect-019','update-download-019','network-summary-019','safety-018','connection-safety-018','native-016','probe-016','dns-quality','audit-vpn','ui'])
 args=parser.parse_args()
 if not args.adb:parser.error('Install adb or supply --adb /path/to/adb')
 ADB=args.adb;serial=args.serial;mode=args.mode;timeout=args.timeout

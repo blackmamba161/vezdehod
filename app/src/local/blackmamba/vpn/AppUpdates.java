@@ -1,16 +1,17 @@
 package local.blackmamba.vpn;
-import android.app.*;import android.app.job.*;import android.content.*;import android.content.pm.*;import android.database.Cursor;import android.net.Uri;import android.os.*;import java.io.*;import java.net.*;import java.security.MessageDigest;import java.util.*;import java.util.concurrent.*;import org.json.*;
+import android.app.*;import android.app.job.*;import android.content.*;import android.content.pm.*;import android.net.Uri;import android.os.*;import java.io.*;import java.net.*;import java.security.MessageDigest;import java.util.*;import java.util.concurrent.*;import org.json.*;
 
 final class AppUpdates {
  static final int JOB=7415;static final long DAY=24*60*60*1000L;
- static final ExecutorService IO=Executors.newSingleThreadExecutor();static volatile boolean checking,verifying;static volatile String failure="";
+ static final ExecutorService IO=Executors.newSingleThreadExecutor(), DOWNLOADS=Executors.newSingleThreadExecutor();
+ static final int RUNNING=2,SUCCESSFUL=8,FAILED=16;static volatile UpdateDownload transfer;static volatile boolean checking,verifying;static volatile String failure="";
  interface Done{void done(String error);}
  static SharedPreferences prefs(Context c){return c.getSharedPreferences("app_updates",Context.MODE_PRIVATE);}
  static String repository(Context c){return c.getString(R.string.update_repository).trim();}
  static long installed(Context c)throws Exception{return c.getPackageManager().getPackageInfo(c.getPackageName(),0).getLongVersionCode();}
  static String version(Context c){try{return c.getPackageManager().getPackageInfo(c.getPackageName(),0).versionName;}catch(Exception e){return "—";}}
  static UpdateRelease available(Context c){try{UpdateRelease r=new UpdateRelease(new JSONObject(prefs(c).getString("release","{}")));return r.code>installed(c)&&r.supports(Build.SUPPORTED_ABIS)&&UpdateRelease.trustedUrl(r.url,repository(c))?r:null;}catch(Exception e){return null;}}
- static void cleanInstalled(Context c){if(prefs(c).getBoolean("downloadAuto",false))cancelDownload(c);if(prefs(c).contains("channel")){prefs(c).edit().remove("release").remove("lastCheck").remove("channel").remove("download").apply();}try{long code=prefs(c).getLong("downloadCode",0);if(code>0&&code<=installed(c))cancelDownload(c);}catch(Exception ignored){}}
+ static void cleanInstalled(Context c){File downloads=c.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS);if(downloads!=null){File[] stale=downloads.listFiles((dir,name)->name.startsWith("Vezdehod-")&&name.endsWith(".part"));if(stale!=null)for(File file:stale)file.delete();}if(prefs(c).contains("downloadId"))cancelDownload(c);if(prefs(c).getBoolean("downloadAuto",false))cancelDownload(c);if(prefs(c).contains("channel")){prefs(c).edit().remove("release").remove("lastCheck").remove("channel").remove("download").apply();}try{long code=prefs(c).getLong("downloadCode",0);if(code>0&&code<=installed(c))cancelDownload(c);}catch(Exception ignored){}}
  static void schedule(Context c){
   JobScheduler jobs=c.getSystemService(JobScheduler.class);if(!prefs(c).getBoolean("auto",true)||!UpdateRelease.repositoryValid(repository(c))){jobs.cancel(JOB);return;}
   if(jobs.getPendingJob(JOB)!=null)return;
@@ -28,23 +29,37 @@ final class AppUpdates {
   if(!UpdateRelease.repositoryValid(repository(c))){failure=L10n.s(R.string.update_not_configured);if(callback!=null)callback.done(failure);return;}
   checking=true;failure="";prefs(c).edit().putLong("lastAttempt",System.currentTimeMillis()).apply();
   IO.execute(()->{String error=null;try{
-   HttpURLConnection connection=(HttpURLConnection)new URL("https://api.github.com/repos/"+repository(c)+"/releases?per_page=100").openConnection();connection.setConnectTimeout(12000);connection.setReadTimeout(12000);connection.setInstanceFollowRedirects(false);connection.setRequestProperty("Accept","application/vnd.github+json");connection.setRequestProperty("User-Agent","Vezdehod/"+version(c));
+   android.net.Network updateNetwork=ProbeManager.physical(c);if(updateNetwork==null)throw new IOException("Physical network unavailable");HttpURLConnection connection=(HttpURLConnection)updateNetwork.openConnection(new URL("https://api.github.com/repos/"+repository(c)+"/releases?per_page=100"));connection.setConnectTimeout(12000);connection.setReadTimeout(12000);connection.setInstanceFollowRedirects(false);connection.setRequestProperty("Accept","application/vnd.github+json");connection.setRequestProperty("User-Agent","Vezdehod/"+version(c));
    String body;try{int status=connection.getResponseCode();if(status!=200)throw new IOException("HTTP "+status);try(InputStream in=connection.getInputStream();ByteArrayOutputStream out=new ByteArrayOutputStream()){byte[] buffer=new byte[8192];int n;while((n=in.read(buffer))!=-1){if(out.size()+n>2*1024*1024)throw new IOException("Response too large");out.write(buffer,0,n);}body=out.toString("UTF-8");}}finally{connection.disconnect();}
    UpdateRelease release=UpdateRelease.select(new JSONArray(body),repository(c),false,installed(c),Build.SUPPORTED_ABIS);
    if(manual||prefs(c).getBoolean("auto",true)){SharedPreferences.Editor e=prefs(c).edit().putLong("lastCheck",System.currentTimeMillis());if(release==null)e.remove("release");else e.putString("release",release.json().toString());e.apply();}
   }catch(Exception e){error=L10n.s(R.string.update_check_failed);}finally{failure=error==null?"":error;checking=false;if(callback!=null){String result=error;new Handler(Looper.getMainLooper()).post(()->callback.done(result));}}});
  }
  static File target(Context c,UpdateRelease r)throws IOException{File dir=c.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS);if(dir==null)throw new IOException("Download storage unavailable");return new File(dir,r.name);}
- static synchronized void download(Context c,UpdateRelease release)throws Exception{
-  if(!UpdateRelease.trustedUrl(release.url,repository(c)))throw new IOException("Invalid asset origin");
-  if(prefs(c).getLong("downloadCode",0)==release.code&&downloadState(c).status!=DownloadManager.STATUS_FAILED&&prefs(c).getLong("downloadId",-1)>=0)return;
+ static synchronized void download(Context context,UpdateRelease release)throws Exception{
+  Context c=context.getApplicationContext();if(!UpdateRelease.trustedUrl(release.url,repository(c))||!release.supports(Build.SUPPORTED_ABIS))throw new IOException("Invalid asset");
+  Progress state=downloadState(c);if(prefs(c).getLong("downloadCode",0)==release.code&&(state.status==RUNNING||state.status==SUCCESSFUL))return;
   cancelDownload(c);File file=target(c,release);if(file.exists()&&!file.delete())throw new IOException("Cannot replace download");
-  DownloadManager.Request request=new DownloadManager.Request(Uri.parse(release.url)).setTitle("Vezdehod "+release.version).setMimeType("application/vnd.android.package-archive").setDestinationUri(Uri.fromFile(file)).setAllowedOverRoaming(false).setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
-  long id=c.getSystemService(DownloadManager.class).enqueue(request);prefs(c).edit().putLong("downloadId",id).putLong("downloadCode",release.code).putString("downloadRelease",release.json().toString()).apply();failure="";
+  android.net.Network network=ProbeManager.physical(c);if(network==null)throw new IOException("Physical network unavailable");
+  UpdateDownload task=new UpdateDownload(release.size,release.sha256);File part=new File(file.getParentFile(),file.getName()+"."+UUID.randomUUID()+".part");transfer=task;
+  prefs(c).edit().putLong("downloadCode",release.code).putString("downloadRelease",release.json().toString()).apply();failure="";
+  DOWNLOADS.execute(()->{try{
+   task.run(new URL(release.url),part,url->(HttpURLConnection)(TunnelService.instance!=null&&TunnelService.status.equals("connected")?url.openConnection():network.openConnection(url)),900000);
+   synchronized(AppUpdates.class){if(transfer!=task||task.canceled)return;if(!part.renameTo(file))throw new IOException("Cannot stage download");}
+  }catch(Exception e){synchronized(AppUpdates.class){if(transfer==task&&(!task.canceled||task.timedOut)){failure=L10n.s(R.string.update_download_failed);NetworkErrors.record("update-download","",safeUpdateError(e));}}}
+  finally{part.delete();synchronized(AppUpdates.class){if(transfer==task)transfer=null;}}});
  }
- static void cancelDownload(Context c){long id=prefs(c).getLong("downloadId",-1);if(id>=0)c.getSystemService(DownloadManager.class).remove(id);prefs(c).edit().remove("downloadId").remove("downloadCode").remove("downloadRelease").remove("downloadAuto").apply();new File(c.getFilesDir(),"update-ready.apk").delete();}
+ static String safeUpdateError(Exception e){return TunnelService.safeError(e);}
+ static synchronized void cancelDownload(Context c){UpdateDownload old=transfer;transfer=null;if(old!=null)old.cancel();
+  long id=prefs(c).getLong("downloadId",-1);if(id>=0)c.getSystemService(DownloadManager.class).remove(id);
+  try{String raw=prefs(c).getString("downloadRelease","");if(!raw.isEmpty())target(c,new UpdateRelease(new JSONObject(raw))).delete();}catch(Exception ignored){}
+  prefs(c).edit().remove("downloadId").remove("downloadCode").remove("downloadRelease").remove("downloadAuto").apply();new File(c.getFilesDir(),"update-ready.apk").delete();failure="";
+ }
  static final class Progress{int status;long bytes,total;}
- static Progress downloadState(Context c){Progress p=new Progress();long id=prefs(c).getLong("downloadId",-1);if(id<0)return p;try(Cursor row=c.getSystemService(DownloadManager.class).query(new DownloadManager.Query().setFilterById(id))){if(row!=null&&row.moveToFirst()){p.status=row.getInt(row.getColumnIndexOrThrow(DownloadManager.COLUMN_STATUS));p.bytes=row.getLong(row.getColumnIndexOrThrow(DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR));p.total=row.getLong(row.getColumnIndexOrThrow(DownloadManager.COLUMN_TOTAL_SIZE_BYTES));}else p.status=DownloadManager.STATUS_FAILED;}return p;}
+ static synchronized Progress downloadState(Context c){Progress p=new Progress();if(!prefs(c).contains("downloadCode"))return p;
+  UpdateDownload task=transfer;if(task!=null){p.status=RUNNING;p.bytes=task.bytes;p.total=task.expected;return p;}
+  try{UpdateRelease r=new UpdateRelease(new JSONObject(prefs(c).getString("downloadRelease","{}")));File file=target(c,r);p.total=r.size;p.bytes=file.length();p.status=file.isFile()&&p.bytes==p.total?SUCCESSFUL:FAILED;}catch(Exception e){p.status=FAILED;}return p;
+ }
  static File verify(Context c,File source,UpdateRelease r)throws Exception{
   if(source.length()!=r.size||source.length()>UpdateRelease.MAX_APK)throw new IOException("APK size mismatch");
   File ready=new File(c.getFilesDir(),"update-ready.apk"),part=new File(c.getFilesDir(),"update-ready.part");ready.delete();

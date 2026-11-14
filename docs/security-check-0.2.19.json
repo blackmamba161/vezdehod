@@ -1,0 +1,42 @@
+{
+  "version": "0.2.19",
+  "date": "2026-11-14",
+  "scope": "Targeted updater and TUN regression checks; not a full security or malware certification",
+  "architectures": [
+    "arm64-v8a",
+    "armeabi-v7a"
+  ],
+  "engines": {
+    "sing-box": "1.12.12",
+    "xray": "26.11.9",
+    "go": "1.27.4"
+  },
+  "download_checks": [
+    "HTTPS redirect allowlist",
+    "bounded streaming",
+    "expected size",
+    "SHA-256",
+    "package and version",
+    "signing certificate",
+    "compatible native ABI",
+    "cancellation",
+    "partial-file cleanup"
+  ],
+  "socket_protection": [
+    "same-UID peer credentials",
+    "single SCM_RIGHTS descriptor",
+    "VpnService.protect",
+    "physical Network.bindSocket",
+    "bounded workers and IPC deadline"
+  ],
+  "passed_device_cases": [
+    "socket-protect-019",
+    "update-download-019",
+    "connection-safety-018",
+    "client-xray-019"
+  ],
+  "limitations": [
+    "No full long-term or cellular-operator coverage claim",
+    "Native YouTube playback not verified: installed client requires update"
+  ]
+}

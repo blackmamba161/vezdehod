@@ -1,0 +1,24 @@
+Vezdehod 0.2.19 — targeted regression verification, 2026-11-14
+
+Reproduced failures:
+- Xiaomi 13 / Android: the app-owned DownloadManager job selected a VPN network whose UID range excluded the app. CONNECTIVITY remained unsatisfied despite working validated Wi-Fi.
+- Poco C51 / Android 13 Go / ARMv7: Chrome showed ERR_CONNECTION_TIMED_OUT for Yandex with VPN enabled. The same browser opened Yandex and example.com with VPN stopped.
+- A first physical-network APK transfer exceeded the old three-minute cap. It was not reported as a successful test.
+
+Fixes:
+- Replace the system download queue with bounded streaming inside the app, checked HTTPS redirects, expected length and SHA-256. Keep the existing package/version/signing-certificate checks before installation.
+- Use the working VPN for transfers when connected; otherwise use the physical network. Check release metadata on the physical network independently of tunnel health.
+- Preserve the VPN app UID in the TUN network, including the ARMv7 system TCP stack. Protect and bind Xray outbound socket file descriptors through a bounded same-UID local channel.
+- Keep progress and cancellation; interrupted transfers are retryable and partial files are cleaned up. Limit idle network reads to 12 seconds and total transfer time to 15 minutes.
+
+Passed:
+- Host UpdateDownloadTest: real loopback HTTP transfer, trusted HTTPS redirect policy, checksum, size, redirect limit, deadline, cancellation and partial-file cleanup.
+- Poco socket-protect-019: real HTTPS through sing-box (5) and Xray (3) while VPN was enabled; 26.48 s; sampled main-process peak PSS 57.98 MiB. Encrypted configuration unchanged.
+- Poco update-download-019: actual published universal APK (47,764,947 bytes) downloaded through the active VPN and SHA-256 verified in 41,358 ms. Cancellation returned promptly; VPN instance unchanged. Full case 58.43 s; sampled main-process peak PSS 58.80 MiB.
+- Poco connection-safety-018: three stalled connections stopped; maximum observed stop 154 ms; unavailable connection reported error in 7322 ms; encrypted settings unchanged.
+- Chrome with the repaired VPN: Yandex redirected to dzen.ru with HTTP 200, ya.ru returned HTTP 200, and example.com returned HTTP 200. Tests used real browser traffic through TUN, rather than only a core outbound health probe.
+
+Final ordinary APK checks: 0.2.19 / code 24 installed over the existing app on Poco and Xiaomi. The legacy Xiaomi download job disappeared. With the ordinary Poco VPN active, ya.ru, example.com and another uncached ya.ru navigation returned HTTP 200.
+Selected Xray group client check also passed: ya.ru and example.com returned HTTP 200, the tunnel stayed connected and the encrypted configuration remained unchanged; original assignments were restored.
+
+Scope: targeted checks, not a guarantee for all operators or long-term operation. Installed native YouTube still requires an update; playback testing remains postponed. Ordinary release APKs exclude instrumentation.

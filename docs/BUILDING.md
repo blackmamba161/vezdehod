@@ -46,3 +46,5 @@ The first local build generates a signing key in `private/` if one is absent. A 
 The build validates interface resources in all supported languages and verifies the APK signature. Additional host tests live in `tests/`. Device instrumentation is included only in test builds. Device tests must use disposable fixtures or restore the original configuration.
 
 The APK includes ARM64 and 32-bit ARMv7 libraries. The ARMv7 build uses the Android system TUN stack because gVisor is unavailable on that architecture. `tools/check_native.py` verifies both engines for both architectures before packaging. Application code must use Java APIs available on Android 10 (API 29); `Compat` provides UTF-8 text file and collection operations without newer Java runtime dependencies.
+
+Xray Android workers use the app-owned same-UID Unix socket to protect and bind outbound file descriptors. The VPN app remains in its own TUN UID range so the system TCP stack can receive kernel replies. Do not reintroduce a package-wide VPN exclusion.
