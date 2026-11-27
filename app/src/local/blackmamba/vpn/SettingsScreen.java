@@ -58,6 +58,8 @@ final class SettingsScreen {
   toggle(c,L10n.s(R.string.msg_fcb4b47313),L10n.s(R.string.msg_2be12d2d73),"boot",false);
   toggle(c,L10n.s(R.string.msg_a8e2cfb793),"","reconnect",false);
   choice(c,L10n.s(R.string.msg_448e226084),"retrySeconds",new String[]{L10n.s(R.string.msg_8c21ba2d9d),L10n.s(R.string.msg_8a45d0d1ad),L10n.s(R.string.msg_d84f514695),L10n.s(R.string.msg_7db1478f63)},new Object[]{5,15,30,60},false);
+  choice(c,L10n.s(R.string.msg_a4f5a37bae),"failOpen",new String[]{L10n.s(R.string.msg_166e251ca1),L10n.s(R.string.msg_e481dedaf2)},new Object[]{true,false},true,L10n.s(R.string.msg_a3e8600cee));
+  toggle(c,L10n.s(R.string.msg_058e67308f),L10n.s(R.string.msg_hide_vpn_hint),"appScope",true);
   a.item(c,"DNS",DnsSettings.summary(store.data),()->dnsSettings());
   fallback(c,L10n.s(R.string.msg_e83d7ce312),"fallbackWifi");fallback(c,L10n.s(R.string.msg_fbf3611c53),"fallbackCellular");
 

@@ -443,4 +443,24 @@
     <string name="settings_group_interface" formatted="false">"Tampilan"</string>
     <string name="settings_group_protection" formatted="false">"Perlindungan"</string>
     <string name="settings_group_app" formatted="false">"Aplikasi"</string>
+    <string name="msg_6268037bd9" formatted="false">"VPN unavailable — going direct"</string>
+    <string name="msg_8db805fb1a" formatted="false">"Without VPN"</string>
+    <string name="msg_ecd3610b6d" formatted="false">"VPN unavailable: traffic goes direct, still checking"</string>
+    <string name="msg_b4f1b04c34" formatted="false">"Server is back — VPN restored"</string>
+    <string name="msg_a4f5a37bae" formatted="false">"When VPN is unavailable"</string>
+    <string name="msg_166e251ca1" formatted="false">"Go direct"</string>
+    <string name="msg_a3e8600cee" formatted="false">"When the server is down, send all traffic directly without interruption. DNS also goes direct. When the server recovers, VPN is restored."</string>
+    <string name="msg_dd22010599" formatted="false">"Aplikasi dari aturan tidak terpasang: "</string>
+    <string name="msg_c28130e4b1" formatted="false">"Jaringan berubah — membangun ulang terowongan untuk aturan aplikasi"</string>
+    <string name="app_picker_multiple" formatted="false">"Pilih aplikasi"</string>
+    <string name="app_picker_pending" formatted="false">"Perubahan: %d. Rute dan jaringan di bawah hanya berlaku untuk aturan baru."</string>
+    <string name="msg_hide_vpn_hint" formatted="false">"Aktif: hanya aplikasi di dalam aturan Anda yang memakai VPN. Aplikasi lain terhubung langsung dan tidak bisa melihat bahwa VPN sedang berjalan. Aturan situs dan IP, pemblokiran, serta filter iklan tidak berlaku untuk aplikasi tersebut.\n\nNonaktif: semua aplikasi melewati Vezdehod, yang menerapkan aturan Anda dan memutuskan per aplikasi atau situs apakah VPN dipakai. Aplikasi bisa melihat bahwa VPN aktif.\n\nIkon VPN di bilah status tetap ada dalam kedua kasus."</string>
+    <string name="msg_058e67308f" formatted="false">"Sembunyikan VPN dari aplikasi"</string>
+    <string name="connection_stopping" formatted="false">"Memutus koneksi VPN…"</string>
+    <string name="connection_temporary_unavailable" formatted="false">"VPN untuk sementara tidak tersedia"</string>
+    <string name="connection_direct" formatted="false">"Internet saat ini tanpa VPN"</string>
+    <string name="connection_retry_pending" formatted="false">"VPN akan diperiksa lagi"</string>
+    <string name="connection_recovery_until" formatted="false">"Hingga pemeriksaan VPN berikutnya"</string>
+    <string name="connection_recovery_countdown" formatted="false">"Pemeriksaan berikutnya dalam %d dtk"</string>
+    <string name="connection_recovery_checking" formatted="false">"Memeriksa VPN…"</string>
 </resources>

@@ -443,4 +443,24 @@
     <string name="settings_group_interface" formatted="false">"Interface"</string>
     <string name="settings_group_protection" formatted="false">"Protection"</string>
     <string name="settings_group_app" formatted="false">"Application"</string>
+    <string name="msg_6268037bd9" formatted="false">"VPN unavailable — going direct"</string>
+    <string name="msg_8db805fb1a" formatted="false">"Without VPN"</string>
+    <string name="msg_ecd3610b6d" formatted="false">"VPN unavailable: traffic goes direct, still checking"</string>
+    <string name="msg_b4f1b04c34" formatted="false">"Server is back — VPN restored"</string>
+    <string name="msg_a4f5a37bae" formatted="false">"When VPN is unavailable"</string>
+    <string name="msg_166e251ca1" formatted="false">"Go direct"</string>
+    <string name="msg_a3e8600cee" formatted="false">"When the server is down, send all traffic directly without interruption. DNS also goes direct. When the server recovers, VPN is restored."</string>
+    <string name="msg_dd22010599" formatted="false">"Apps des règles non installées : "</string>
+    <string name="msg_c28130e4b1" formatted="false">"Réseau changé — reconstruction du tunnel pour les règles d\'apps"</string>
+    <string name="app_picker_multiple" formatted="false">"Sélectionner les applications"</string>
+    <string name="app_picker_pending" formatted="false">"Modifications : %d. La route et le réseau ci-dessous ne concernent que les nouvelles règles."</string>
+    <string name="msg_hide_vpn_hint" formatted="false">"Activé : seules les apps de vos règles utilisent le VPN. Les autres se connectent directement et ne peuvent pas voir qu\'un VPN est actif. Les règles de sites et d\'IP, le blocage et le filtre de pub ne s\'appliquent pas à elles.\n\nDésactivé : toutes les apps passent par Vezdehod, qui applique vos règles et décide pour chaque app ou site si le VPN est utilisé. Les apps peuvent voir qu\'un VPN est activé.\n\nL\'icône VPN dans la barre d\'état reste dans les deux cas."</string>
+    <string name="msg_058e67308f" formatted="false">"Masquer le VPN aux applications"</string>
+    <string name="connection_stopping" formatted="false">"Déconnexion du VPN…"</string>
+    <string name="connection_temporary_unavailable" formatted="false">"VPN temporairement indisponible"</string>
+    <string name="connection_direct" formatted="false">"Connexion Internet sans VPN pour le moment"</string>
+    <string name="connection_retry_pending" formatted="false">"Le VPN sera vérifié à nouveau"</string>
+    <string name="connection_recovery_until" formatted="false">"Avant la prochaine vérification du VPN"</string>
+    <string name="connection_recovery_countdown" formatted="false">"Prochaine vérification dans %d s"</string>
+    <string name="connection_recovery_checking" formatted="false">"Vérification du VPN…"</string>
 </resources>

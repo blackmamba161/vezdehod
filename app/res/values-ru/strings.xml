@@ -443,4 +443,24 @@
     <string name="settings_group_interface" formatted="false">"Интерфейс"</string>
     <string name="settings_group_protection" formatted="false">"Защита"</string>
     <string name="settings_group_app" formatted="false">"Приложение"</string>
+    <string name="msg_6268037bd9" formatted="false">"VPN недоступен — идём напрямую"</string>
+    <string name="msg_8db805fb1a" formatted="false">"Без VPN"</string>
+    <string name="msg_ecd3610b6d" formatted="false">"VPN недоступен: трафик идёт напрямую, проверка продолжается"</string>
+    <string name="msg_b4f1b04c34" formatted="false">"Сервер снова доступен — VPN восстановлен"</string>
+    <string name="msg_a4f5a37bae" formatted="false">"Если VPN недоступен"</string>
+    <string name="msg_166e251ca1" formatted="false">"Идти напрямую"</string>
+    <string name="msg_a3e8600cee" formatted="false">"При падении сервера пропускать весь трафик напрямую, без обрыва. DNS тоже идёт напрямую. Когда сервер оживает, VPN включается снова."</string>
+    <string name="msg_dd22010599" formatted="false">"Приложений из правил нет на устройстве: "</string>
+    <string name="msg_c28130e4b1" formatted="false">"Сменилась сеть — перестраиваю туннель под правила приложений"</string>
+    <string name="app_picker_multiple" formatted="false">"Выбрать приложения"</string>
+    <string name="app_picker_pending" formatted="false">"Изменений: %d. Маршрут и сеть ниже — только для новых правил."</string>
+    <string name="msg_hide_vpn_hint" formatted="false">"Включено: через VPN идут только приложения из правил. Остальные выходят в интернет напрямую и не видят, что VPN работает. Для них не действуют правила по сайтам и IP, блокировка и фильтр рекламы.\n\nВыключено: все приложения идут через «Вездеход», и он сам решает по правилам, кому VPN, кому напрямую. Приложения при этом видят, что VPN включён.\n\nЗначок VPN в строке состояния остаётся в обоих случаях."</string>
+    <string name="msg_058e67308f" formatted="false">"Скрывать VPN от приложений"</string>
+    <string name="connection_stopping" formatted="false">"Отключение VPN…"</string>
+    <string name="connection_temporary_unavailable" formatted="false">"VPN временно недоступен"</string>
+    <string name="connection_direct" formatted="false">"Сейчас интернет без VPN"</string>
+    <string name="connection_retry_pending" formatted="false">"Повторим проверку VPN"</string>
+    <string name="connection_recovery_until" formatted="false">"До проверки VPN"</string>
+    <string name="connection_recovery_countdown" formatted="false">"Следующая проверка через %d с"</string>
+    <string name="connection_recovery_checking" formatted="false">"Проверяем VPN…"</string>
 </resources>

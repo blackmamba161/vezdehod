@@ -443,4 +443,24 @@
     <string name="settings_group_interface" formatted="false">"الواجهة"</string>
     <string name="settings_group_protection" formatted="false">"الحماية"</string>
     <string name="settings_group_app" formatted="false">"التطبيق"</string>
+    <string name="msg_6268037bd9" formatted="false">"VPN unavailable — going direct"</string>
+    <string name="msg_8db805fb1a" formatted="false">"Without VPN"</string>
+    <string name="msg_ecd3610b6d" formatted="false">"VPN unavailable: traffic goes direct, still checking"</string>
+    <string name="msg_b4f1b04c34" formatted="false">"Server is back — VPN restored"</string>
+    <string name="msg_a4f5a37bae" formatted="false">"When VPN is unavailable"</string>
+    <string name="msg_166e251ca1" formatted="false">"Go direct"</string>
+    <string name="msg_a3e8600cee" formatted="false">"When the server is down, send all traffic directly without interruption. DNS also goes direct. When the server recovers, VPN is restored."</string>
+    <string name="msg_dd22010599" formatted="false">"تطبيقات من القواعد غير مثبتة: "</string>
+    <string name="msg_c28130e4b1" formatted="false">"تغيّرت الشبكة — إعادة بناء النفق لقواعد التطبيقات"</string>
+    <string name="app_picker_multiple" formatted="false">"اختيار التطبيقات"</string>
+    <string name="app_picker_pending" formatted="false">"التغييرات: %d. المسار والشبكة أدناه يطبّقان على القواعد الجديدة فقط."</string>
+    <string name="msg_hide_vpn_hint" formatted="false">"مفعّل: التطبيقات الموجودة في قواعدك فقط هي التي تستخدم VPN. باقي التطبيقات تتصل مباشرة ولا ترى أن هناك VPN يعمل. قواعد المواقع وعناوين IP والحظر ومرشّح الإعلانات لا تنطبق عليها.\n\nمعطّل: كل التطبيقات تمر عبر Vezdehod، الذي يطبّق قواعدك ويقرّر لكل تطبيق أو موقع ما إذا كان سيستخدم VPN. التطبيقات ترى أن VPN مفعّل.\n\nأيقونة VPN في شريط الحالة تبقى في الحالتين."</string>
+    <string name="msg_058e67308f" formatted="false">"إخفاء VPN عن التطبيقات"</string>
+    <string name="connection_stopping" formatted="false">"جارٍ قطع اتصال VPN…"</string>
+    <string name="connection_temporary_unavailable" formatted="false">"VPN غير متاح مؤقتًا"</string>
+    <string name="connection_direct" formatted="false">"اتصال الإنترنت حاليًا بدون VPN"</string>
+    <string name="connection_retry_pending" formatted="false">"سنعيد التحقق من اتصال VPN"</string>
+    <string name="connection_recovery_until" formatted="false">"حتى التحقق التالي من VPN"</string>
+    <string name="connection_recovery_countdown" formatted="false">"التحقق التالي بعد %d ث"</string>
+    <string name="connection_recovery_checking" formatted="false">"جارٍ التحقق من VPN…"</string>
 </resources>

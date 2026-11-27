@@ -3,6 +3,26 @@ import org.json.*;import java.util.*;import static local.blackmamba.vpn.Store.*;
 
 public final class Configuration {
  public static final class Result {public String singbox,xray;public final Map<String,String> groups=new LinkedHashMap<>();}
+ /** Apps the OS itself keeps out of (allow=false) or lets into (allow=true) the TUN. null = all apps use the TUN. */
+ public static final class Plan {public final boolean allow;public final Set<String> packages;Plan(boolean a,Set<String> p){allow=a;packages=Collections.unmodifiableSet(new LinkedHashSet<>(p));}public boolean equals(Object o){return o instanceof Plan&&allow==((Plan)o).allow&&packages.equals(((Plan)o).packages);}public int hashCode(){return packages.hashCode()*31+(allow?1:0);}public String toString(){return (allow?"only ":"except ")+packages;}}
+ /** Derive the per-app tunnel scope from the app rules and the final destination. Pure logic, shared with host tests. */
+ public static Plan plan(JSONObject data,String network){
+  String fin=data.optString("defaultTarget","direct").replace("server:","");
+  /* Final "block": everything must stay in the TUN, otherwise apps outside the system list would escape the block. */
+  if(fin.equals("block"))return null;
+  boolean restGoesVpn=!fin.equals("direct");
+  JSONArray rules=data.optJSONArray("rules");
+  /* An app may only bypass the TUN when EVERY active rule for it says "direct": a VPN or block rule needs the core, so the app must stay inside. */
+  Set<String> vpn=new LinkedHashSet<>(),direct=new LinkedHashSet<>(),scoped=new HashSet<>();
+  for(int i=0;rules!=null&&i<rules.length();i++){JSONObject r=rules.optJSONObject(i);if(r==null||!r.optBoolean("enabled",true)||!"app".equals(r.optString("type")))continue;String pkg=r.optString("value").trim();if(pkg.isEmpty())continue;String net=r.optString("network","all");if(!net.equals("all"))scoped.add(pkg);if(!net.equals("all")&&!net.equals(network))continue;
+   if(r.optString("target","auto").equals("direct"))direct.add(pkg);else vpn.add(pkg);
+  }
+  /* Rules bound to one network (VPN on Wi-Fi, direct on cellular) cannot be expressed as a static system list: keep such apps in the TUN. */
+  direct.removeAll(scoped);direct.removeAll(vpn);
+  if(restGoesVpn){if(direct.isEmpty())return null;return new Plan(false,direct);}
+  vpn.addAll(scoped);
+  if(vpn.isEmpty())return null;return new Plan(true,vpn);
+ }
  public static Result build(JSONObject data,String network,Map<String,Integer> ports,String password)throws Exception{
   Preferences.validate("mtu",data.optInt("mtu",data.optInt("mtu",1400)));DnsSettings.validate(data);
   boolean ipv6=data.optBoolean("ipv6",true)&&data.optBoolean("networkIpv6",true);
@@ -14,7 +34,8 @@ public final class Configuration {
    else if(Arrays.asList("xhttp","xray").contains(o.getString("type"))){Integer port=ports.get(id);if(port==null)throw new Exception(L10n.s(R.string.msg_27a403dd36));JSONObject x=o.getJSONObject("xray");x.put("tag",id);xo.put(x);xi.put(obj("tag","in-"+id,"listen","127.0.0.1","port",port,"protocol","socks","settings",obj("auth","password","accounts",arr(obj("user","vpn","pass",password)),"udp",true)));xr.put(obj("type","field","inboundTag",arr("in-"+id),"outboundTag",id));o=obj("type","socks","server","127.0.0.1","server_port",port,"version","5","username","vpn","password",password);}
    o.put("tag",id);out.put(o);
   }
-  out.put(obj("type","selector","tag","auto","outbounds",tags,"default",active,"interrupt_exist_connections",true));out.put(obj("type","direct","tag","direct"));
+  // "direct" inside the selector lets the service fail open without tearing the TUN down.
+  if(data.optBoolean("failOpen",true))tags.put("direct");out.put(obj("type","selector","tag","auto","outbounds",tags,"default",active,"interrupt_exist_connections",true));out.put(obj("type","direct","tag","direct"));
   JSONArray rules=arr(obj("action","sniff"),obj("protocol","dns","action","hijack-dns"));if(!ipv6)rules.put(obj("ip_version",6,"action","reject"));JSONArray dnsRules=new JSONArray();
   if(data.optBoolean("adBlock",false)){rules.put(AdBlock.rejection(data));dnsRules.put(AdBlock.rejection(data));}
   JSONArray rr=data.getJSONArray("rules");for(int i=0;i<rr.length();i++){JSONObject r=rr.getJSONObject(i);if(!r.optBoolean("enabled",true))continue;String type=r.optString("type"),v=r.optString("value"),target=r.optString("target","auto");if(type.equals("unsupported"))continue;

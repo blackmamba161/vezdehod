@@ -57,7 +57,8 @@ public final class DnsSettings {
   if(direct.isEmpty())servers.put(obj("type","vezdehod-fallback","tag","local","servers",arr("system")));else pair(servers,"local",direct,"","direct");
   JSONObject selections=new JSONObject();Map<String,String> policies=new LinkedHashMap<>();
   for(int i=0;i<nodes.length();i++){JSONObject node=nodes.getJSONObject(i);String[] rem=remote(d,node);String key=Arrays.toString(rem),tag=policies.get(key);if(tag==null){tag="remote-policy-"+policies.size();policies.put(key,tag);pair(servers,tag,rem[0],rem[1],"auto");}selections.put(node.getString("id"),tag);}
-  servers.put(obj("type","vezdehod-selector","tag","remote","selector","auto","routes",selections));
+  // When the outbound selector fails open to "direct", DNS must follow it to the system resolver.
+  if(d.optBoolean("failOpen",true))selections.put("direct","local");servers.put(obj("type","vezdehod-selector","tag","remote","selector","auto","routes",selections));
   Set<String> specific=new LinkedHashSet<>();for(int i=0;i<rules.length();i++){String tag=rules.getJSONObject(i).optString("server");if(tag.startsWith("dns-node-"))specific.add(tag.substring(9));}
   if(!fin.equals("auto")&&!fin.equals("direct"))specific.add(fin);
   for(String id:specific){JSONObject node=find(nodes,id);if(node==null)throw new Exception("DNS route references missing server");String[] r=remote(d,node);pair(servers,"dns-node-"+id,r[0],r[1],id);}

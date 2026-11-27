@@ -443,4 +443,24 @@
     <string name="settings_group_interface" formatted="false">"界面"</string>
     <string name="settings_group_protection" formatted="false">"安全保护"</string>
     <string name="settings_group_app" formatted="false">"应用"</string>
+    <string name="msg_6268037bd9" formatted="false">"VPN unavailable — going direct"</string>
+    <string name="msg_8db805fb1a" formatted="false">"Without VPN"</string>
+    <string name="msg_ecd3610b6d" formatted="false">"VPN unavailable: traffic goes direct, still checking"</string>
+    <string name="msg_b4f1b04c34" formatted="false">"Server is back — VPN restored"</string>
+    <string name="msg_a4f5a37bae" formatted="false">"When VPN is unavailable"</string>
+    <string name="msg_166e251ca1" formatted="false">"Go direct"</string>
+    <string name="msg_a3e8600cee" formatted="false">"When the server is down, send all traffic directly without interruption. DNS also goes direct. When the server recovers, VPN is restored."</string>
+    <string name="msg_dd22010599" formatted="false">"规则中的应用未安装："</string>
+    <string name="msg_c28130e4b1" formatted="false">"网络已变化——按应用规则重建隧道"</string>
+    <string name="app_picker_multiple" formatted="false">"选择应用"</string>
+    <string name="app_picker_pending" formatted="false">"更改数：%d。下方的路由和网络仅适用于新规则。"</string>
+    <string name="msg_hide_vpn_hint" formatted="false">"开启：只有规则中的应用使用 VPN。其他应用直接联网，看不到 VPN 正在运行。网站规则、IP 规则、屏蔽和广告过滤对它们不生效。\n\n关闭：所有应用都经过 Vezdehod，由它按规则决定每个应用或网站是否使用 VPN。应用能看到 VPN 已开启。\n\n无论哪种情况，状态栏的 VPN 图标都会保留。"</string>
+    <string name="msg_058e67308f" formatted="false">"向应用隐藏 VPN"</string>
+    <string name="connection_stopping" formatted="false">"正在断开 VPN…"</string>
+    <string name="connection_temporary_unavailable" formatted="false">"VPN 暂时不可用"</string>
+    <string name="connection_direct" formatted="false">"当前直接联网，不经过 VPN"</string>
+    <string name="connection_retry_pending" formatted="false">"将再次检查 VPN"</string>
+    <string name="connection_recovery_until" formatted="false">"距下次 VPN 检查"</string>
+    <string name="connection_recovery_countdown" formatted="false">"%d 秒后再次检查"</string>
+    <string name="connection_recovery_checking" formatted="false">"正在检查 VPN…"</string>
 </resources>

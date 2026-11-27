@@ -4,6 +4,34 @@ import android.app.*;import android.os.*;import android.content.*;import org.jso
 public class SelfTest extends Instrumentation {
  volatile MainActivity currentActivity;Bundle args;public void onCreate(Bundle b){args=b;start();}
  void check(boolean value,String why)throws Exception{if(!value)throw new Exception(why);}
+ void waitForState(java.util.function.BooleanSupplier ready,long timeout,String error)throws Exception{
+  long until=SystemClock.elapsedRealtime()+timeout;
+  while(!ready.getAsBoolean()&&SystemClock.elapsedRealtime()<until)Thread.sleep(40);
+  check(ready.getAsBoolean(),error);
+ }
+ void verifyDirectRecovery(Context c,Bundle result)throws Exception{
+  TunnelService.start(c);
+  waitForState(()->TunnelService.status.equals("retrying")||TunnelService.status.equals("error"),14000,"Missing first VPN retry state");
+  TunnelService service=TunnelService.instance;
+  check(service!=null&&TunnelService.status.equals("retrying")&&service.directRecovery()==null,"First failure falsely advertised direct fallback or raised a hard error");
+  waitForState(()->service.directRecovery()!=null||TunnelService.status.equals("error"),18000,"Fallback was not entered");
+  VpnRecovery countdown=service.directRecovery();
+  check(countdown!=null&&countdown.remainingSeconds(SystemClock.elapsedRealtime())>0,"Missing countdown on direct fallback");
+  NotificationManager notifications=c.getSystemService(NotificationManager.class);
+  if(notifications.areNotificationsEnabled())waitForState(()->{
+   for(android.service.notification.StatusBarNotification item:notifications.getActiveNotifications())if(item.getId()==1){
+    Bundle extra=item.getNotification().extras;
+    return L10n.s(R.string.connection_temporary_unavailable).equals(extra.getString(Notification.EXTRA_TITLE))&&L10n.s(R.string.connection_direct).equals(extra.getString(Notification.EXTRA_TEXT))&&!extra.getBoolean(Notification.EXTRA_SHOW_CHRONOMETER);
+   }
+   return false;
+  },2500,"Fallback notification should show its status without a system timer");
+  stage("fallback-countdown-passed");
+  waitForState(()->service.directRecovery()==VpnRecovery.CHECKING,18000,"Recovery check did not follow the countdown");
+  check(countdown.isDue(SystemClock.elapsedRealtime()),"Recovery checked too early");
+  waitForState(()->service.directRecovery()!=null&&service.directRecovery()!=VpnRecovery.CHECKING,13000,"Failed recovery check did not schedule another attempt");
+  check(service.directRecovery().remainingSeconds(SystemClock.elapsedRealtime())>0,"Retry countdown expired too early");
+  result.putString("result","PASS soft retry before fallback, real direct fallback, scheduled countdown, checking state and next attempt");
+ }
  public void onStart(){Bundle r=new Bundle();try{android.content.Context c=getTargetContext();Store s=Store.get(c);JSONObject data=s.snapshot();String mode=args==null?"ui":args.getString("mode","ui");
   if(mode.equals("theme-020")){themeQuality(c,s,r);}
   else if(mode.equals("client-xray-019")){
@@ -49,7 +77,30 @@ public class SelfTest extends Instrumentation {
    java.io.File[] leftovers=c.getCacheDir().listFiles((dir,name)->name.startsWith("dns-check-")||name.startsWith("probe-"));check(leftovers==null||leftovers.length==0,"Temporary native cache retained");
    r.putString("result","PASS physical Android DNS; 64 offline server checks; stalled proxy cancellation; no TUN or saved-data changes; "+dnsResult+"; baseline="+baseline+"; final="+after);
   }
-  else if(mode.equals("connection-safety-018")){
+  else if(mode.equals("tun-close-isolation")){
+   check(TunnelService.instance==null,"Stop VPN before the TUN test");check(android.net.VpnService.prepare(c)==null,"VPN permission required");
+   long bare=-1,retained=-1;
+   try{
+    for(boolean hold:new boolean[]{false,true}){
+     c.startForegroundService(new Intent(c,TunnelService.class).setAction("test-bare-tun"));
+     waitForState(()->TunnelService.status.equals("connected")||TunnelService.status.equals("error"),6000,"Test VPN did not start");
+     check(TunnelService.status.equals("connected"),"Test VPN startup failed: "+TunnelService.error);
+     android.net.ConnectivityManager connectivity=c.getSystemService(android.net.ConnectivityManager.class);
+     waitForState(()->{
+      android.net.NetworkCapabilities caps=connectivity.getNetworkCapabilities(connectivity.getActiveNetwork());
+      return caps!=null&&caps.hasTransport(android.net.NetworkCapabilities.TRANSPORT_VPN);
+     },2000,"Test VPN did not become the app's active network");
+     try(ParcelFileDescriptor keepOpen=hold?TunnelService.instance.keepTestTunOpen():null){
+      long start=SystemClock.elapsedRealtime();TunnelService.stop(c);
+      waitForState(()->TunnelService.instance==null,2500,"VPN service remained bound after stop");
+      if(hold)retained=SystemClock.elapsedRealtime()-start;else bare=SystemClock.elapsedRealtime()-start;
+     }
+     stage(hold?"retained-tun-released":"bare-tun-released");
+    }
+    r.putString("result","PASS ordinary Android TUN stopped in "+bare+" ms; TUN with retained descriptor in "+retained+" ms");
+   }finally{TunnelService.stop(c);}
+  }
+  else if(mode.equals("connection-safety-018")||mode.equals("connection-recovery")||mode.equals("connection-reserve")){
    check(TunnelService.instance==null,"Stop VPN before connection safety checks");check(android.net.VpnService.prepare(c)==null,"VPN permission required");
    JSONObject original=s.data;byte[] encrypted=java.nio.file.Files.readAllBytes(new java.io.File(c.getFilesDir(),"store.enc").toPath());
    java.net.ServerSocket blackhole=new java.net.ServerSocket(0,0,java.net.InetAddress.getByName("127.0.0.1"));java.util.List<java.net.Socket> sockets=java.util.Collections.synchronizedList(new ArrayList<>());
@@ -57,15 +108,32 @@ public class SelfTest extends Instrumentation {
    long longestStop=0,failedAfter=0;
    try{
     JSONObject node=Store.obj("id","fixture-stalled-vpn","name","Stalled connection fixture","profile","fixture","protocol","socks","outbound",Store.obj("type","socks","server","127.0.0.1","server_port",blackhole.getLocalPort(),"version","5"));
-    s.data=Preferences.defaults().put("profiles",new JSONArray()).put("servers",Store.arr(node)).put("rules",new JSONArray()).put("wifi",node.getString("id")).put("cellular",node.getString("id")).put("auto",true).put("defaultTarget","auto").put("reconnect",false);
+    s.data=Preferences.defaults().put("profiles",new JSONArray()).put("servers",Store.arr(node)).put("rules",new JSONArray()).put("wifi",node.getString("id")).put("cellular",node.getString("id")).put("auto",true).put("defaultTarget","auto").put("reconnect",false).put("failOpen",false);
+    if(mode.equals("connection-recovery")){s.data.put("failOpen",true);verifyDirectRecovery(c,r);}
+    else if(mode.equals("connection-reserve")){
+     String backup="fixture-reserve";
+     s.data.getJSONArray("servers").put(Store.obj("id",backup,"name","Reachable reserve fixture","outbound",Store.obj("type","direct")));
+     s.data.put("defaultTarget","direct").put("fallbackWifi",backup).put("fallbackCellular",backup);
+     // Keep the primary an actual timed-out SOCKS probe. Inject the reserve response so the test is independent of the carrier reaching public probe URLs.
+     TunnelService.testHealthReply=id->backup.equals(id)?25:null;
+     try{
+      TunnelService.start(c);
+      waitForState(()->TunnelService.status.equals("connected")||TunnelService.status.equals("error"),19500,"Startup did not select the verified reserve");
+      check(!sockets.isEmpty(),"Primary probe did not hit the local black hole");
+      check(TunnelService.status.equals("connected")&&TunnelService.server.equals(backup)&&TunnelService.lastPing==25,"Startup showed an error or did not select the available reserve: "+TunnelService.error);
+      r.putString("result","PASS timed-out primary selected a reserve with a simulated successful probe on the first check, without an error state");
+     }finally{TunnelService.testHealthReply=null;}
+    }
+    else{
     for(int attempt=0;attempt<3;attempt++){
      int before=sockets.size();TunnelService.start(c);long entered=System.currentTimeMillis()+7000;while(sockets.size()==before&&System.currentTimeMillis()<entered){check(!TunnelService.status.equals("error"),"Startup failed before cancellation test: "+TunnelService.error);Thread.sleep(25);}check(sockets.size()>before,"Stalled VPN did not reach proxy");
-     long stopped=System.currentTimeMillis();TunnelService.stop(c);while(TunnelService.instance!=null&&System.currentTimeMillis()-stopped<4000)Thread.sleep(25);check(TunnelService.instance==null&&TunnelService.status.equals("off"),"Stop left VPN service running");longestStop=Math.max(longestStop,System.currentTimeMillis()-stopped);Thread.sleep(200);
+     long stopped=System.currentTimeMillis();TunnelService.stop(c);TunnelService closing=TunnelService.instance;if(closing!=null)check(closing.isStopping(),"VPN must show that it is still stopping");TunnelService.stop(c);while(TunnelService.instance!=null&&System.currentTimeMillis()-stopped<4000)Thread.sleep(25);check(TunnelService.instance==null&&TunnelService.status.equals("off"),"Stop left VPN service running");longestStop=Math.max(longestStop,System.currentTimeMillis()-stopped);
     }
     stage("three-stalled-vpn-stops-passed");
     long started=System.currentTimeMillis();TunnelService.start(c);while(!TunnelService.status.equals("error")&&System.currentTimeMillis()-started<25000){check(!TunnelService.status.equals("connected"),"Blackhole falsely reported connected");Thread.sleep(50);}failedAfter=System.currentTimeMillis()-started;check(TunnelService.status.equals("error")&&!TunnelService.error.isEmpty(),"Stalled connection never reported an error");
     stage("stalled-vpn-timeout-passed");
     r.putString("result","PASS three stalled VPN connections stop completely; maximum stop="+longestStop+" ms; unavailable connection reports error within "+failedAfter+" ms; no saved configuration changes");
+    }
    }finally{TunnelService.stop(c);long stopped=System.currentTimeMillis()+5000;while(TunnelService.instance!=null&&System.currentTimeMillis()<stopped)Thread.sleep(25);s.data=original;blackhole.close();for(java.net.Socket socket:sockets)socket.close();acceptor.join(1000);check(java.util.Arrays.equals(encrypted,java.nio.file.Files.readAllBytes(new java.io.File(c.getFilesDir(),"store.enc").toPath())),"Connection safety checks modified encrypted settings");}
   }
   else if(mode.equals("dns-quality")){

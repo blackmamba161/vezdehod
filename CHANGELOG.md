@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.21
+
+- Check up to four servers at a time, show live progress, and queue extra checks requested during a batch.
+- Improve app selection and editing for per-app routing rules, with optional Android-level VPN inclusion and exclusion.
+- Show connection recovery progress, improve fallback handling, and make VPN shutdown more reliable.
+
 ## 0.2.20
 
 - Use a native Android light theme for controls and dialogs, with distinct page, card, field and button surfaces.

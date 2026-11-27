@@ -12,7 +12,7 @@ Set `JAVA_HOME` and `ANDROID_HOME`. A local `.build/env.sh` may provide these va
 
 ## Dependencies
 
-The full source archive prepared for a release includes the required dependency files and the corresponding sing-box source. A repository checkout requires these inputs before packaging:
+The `Vezdehod-<version>-source.zip` asset on the matching [GitHub release](https://github.com/blackmamba161/vezdehod/releases) includes the required dependencies and corresponding engine sources. For a Git checkout, extract the archive and copy its `vezdehod/vendor/` directory into the repository root. Do not commit that directory. Packaging requires these files:
 
 - `vendor/sing-box-1.12.12/libbox.aar`
 - `vendor/xray/xray` (Android ARM64 executable) and `vendor/xray/armeabi-v7a/xray` (Android ARMv7 executable)

@@ -26,7 +26,7 @@
     "vendor/xray/armeabi-v7a/xray": "7f0afa6552a66eca48d5437c6bf6532bb5272d862929a19c300a3759bfc0ee4f",
     "vendor/xray-source/main/vezdehod_protect_android.go": "19d845f29b8ba4d9e2423ce0f42ab6fd266db2fc3f77ef14b950de71d236a002"
   },
-  "app_version": "0.2.19",
+  "app_version": "0.2.21",
   "zxing": "3.5.3",
   "snakeyaml": "2.7",
   "native_page_size": 16384,

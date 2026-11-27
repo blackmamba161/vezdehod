@@ -443,4 +443,24 @@
     <string name="settings_group_interface" formatted="false">"Interface"</string>
     <string name="settings_group_protection" formatted="false">"Protection"</string>
     <string name="settings_group_app" formatted="false">"App"</string>
+    <string name="msg_6268037bd9" formatted="false">"VPN unavailable — going direct"</string>
+    <string name="msg_8db805fb1a" formatted="false">"Without VPN"</string>
+    <string name="msg_ecd3610b6d" formatted="false">"VPN unavailable: traffic goes direct, still checking"</string>
+    <string name="msg_b4f1b04c34" formatted="false">"Server is back — VPN restored"</string>
+    <string name="msg_a4f5a37bae" formatted="false">"When VPN is unavailable"</string>
+    <string name="msg_166e251ca1" formatted="false">"Go direct"</string>
+    <string name="msg_a3e8600cee" formatted="false">"When the server is down, send all traffic directly without interruption. DNS also goes direct. When the server recovers, VPN is restored."</string>
+    <string name="msg_dd22010599" formatted="false">"Apps from the rules are not installed: "</string>
+    <string name="msg_c28130e4b1" formatted="false">"Network changed — rebuilding the tunnel for app rules"</string>
+    <string name="app_picker_multiple" formatted="false">"Select apps"</string>
+    <string name="app_picker_pending" formatted="false">"Changes: %d. The route and network below apply only to new rules."</string>
+    <string name="msg_hide_vpn_hint" formatted="false">"On: only the apps in your rules use the VPN. The other apps connect directly and cannot see that a VPN is running. Site and IP rules, blocking and the ad filter do not apply to them.\n\nOff: every app goes through Vezdehod, which applies your rules and decides per app or site whether to use the VPN. Apps can see that a VPN is enabled.\n\nThe VPN icon in the status bar stays either way."</string>
+    <string name="msg_058e67308f" formatted="false">"Hide VPN from apps"</string>
+    <string name="connection_stopping" formatted="false">"Disconnecting VPN…"</string>
+    <string name="connection_temporary_unavailable" formatted="false">"VPN temporarily unavailable"</string>
+    <string name="connection_direct" formatted="false">"Internet is currently using a direct connection"</string>
+    <string name="connection_retry_pending" formatted="false">"We\'ll check the VPN again"</string>
+    <string name="connection_recovery_until" formatted="false">"Until the next VPN check"</string>
+    <string name="connection_recovery_countdown" formatted="false">"Next check in %d s"</string>
+    <string name="connection_recovery_checking" formatted="false">"Checking VPN…"</string>
 </resources>

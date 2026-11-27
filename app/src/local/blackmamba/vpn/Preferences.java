@@ -5,10 +5,11 @@ import static local.blackmamba.vpn.Store.*;
 
 /** Settings shared by UI and core. Defaults preserve the installed configuration. */
 public final class Preferences {
+ static final boolean DEFAULT_APP_SCOPE=true;
  public static JSONObject defaults() throws JSONException {return obj(
   "adBlock",false,"adBlockAllow","","theme","dark","accent","blue","textScale",100,
   "showSpeed",true,"showPing",true,"showServer",true,"showTraffic",false,"showExpiry",true,
-  "boot",false,"reconnect",true,"retrySeconds",15,"fallbackWifi","","fallbackCellular","",
+  "boot",false,"reconnect",true,"retrySeconds",15,"fallbackWifi","","fallbackCellular","","failOpen",true,"appScope",DEFAULT_APP_SCOPE,
   "dnsMode","auto","dnsBackup",DnsSettings.CLOUDFLARE,"dnsDirect","","dnsBootstrap","","remoteDns",DnsSettings.GOOGLE,"ipv6",true,"mtu",1400,"stack","gvisor");}
  public static JSONObject networkDefaults()throws JSONException{return obj("dnsMode","auto","dnsBackup",DnsSettings.CLOUDFLARE,"dnsDirect","","dnsBootstrap","","remoteDns",DnsSettings.GOOGLE,"ipv6",true,"mtu",1400,"stack","gvisor");}
  public static void validate(String key,Object value)throws Exception {

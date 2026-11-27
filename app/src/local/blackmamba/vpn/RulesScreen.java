@@ -32,14 +32,24 @@ final class RulesScreen {
     LinearLayout children=a.vertical();children.setPaddingRelative(a.dp(8),a.dp(3),a.dp(6),a.dp(3));children.setBackground(a.bg(a.light?0xffe8f0f9:0xff252b33,12));
     LinearLayout.LayoutParams nested=a.lp(-1,-2);nested.setMarginStart(a.dp(10));nested.bottomMargin=a.dp(6);card.addView(children,nested);
     for(int i=group.start;i<group.end;i++)rule(children,rules.getJSONObject(i),i,group);
+    if("custom".equals(group.service))addRuleTile(card);
    }
   }
   a.item(a.content,L10n.s(R.string.msg_50e1cb1272),a.targetName(a.store.data.optString("defaultTarget","direct")),()->new RoutePicker(a,L10n.s(R.string.msg_50e1cb1272),a.store.data.optString("defaultTarget","direct"),target->a.change("defaultTarget",target)).show());
  }
+ private void addRuleTile(LinearLayout card){
+  FrameLayout tile=new FrameLayout(a);tile.setBackground(a.buttonSurface(false));
+  tile.setContentDescription(L10n.s(R.string.msg_b559f9f1ca));tile.setFocusable(true);tile.setOnClickListener(v->a.editRule(null));
+  Icons plus=new Icons(a,"plus",MainActivity.ACCENT);plus.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
+  tile.addView(plus,new FrameLayout.LayoutParams(a.dp(26),a.dp(26),Gravity.CENTER));
+  LinearLayout.LayoutParams layout=a.lp(-1,48);layout.setMarginStart(a.dp(10));layout.bottomMargin=a.dp(6);card.addView(tile,layout);
+ }
  String count(int n){if(!L10n.locale().getLanguage().equals("ru"))return L10n.s(R.string.msg_667d8b44a6)+": "+n;int last=n%10,ten=n%100;return n+" "+(ten>=11&&ten<=14?L10n.s(R.string.msg_3ca212f4fc):last==1?L10n.s(R.string.msg_5d1611f2fb):last>=2&&last<=4?L10n.s(R.string.msg_69b46d600c):L10n.s(R.string.msg_3ca212f4fc));}
  String route(JSONObject rule){String target=rule.optString("target","auto"),network=rule.optString("network","all");return (target.equals("auto")?"VPN":a.targetName(target))+(network.equals("all")?"":" · "+a.routeName(network));}
  void rule(LinearLayout parent,JSONObject r,int index,RuleGroups.Group group){
-  if(index>group.start)a.divider(parent);LinearLayout row=a.row(),labels=a.vertical();String value=r.optString("value"),title=r.optString("label",value);if(title.isEmpty())title=value;
+  if(index>group.start)a.divider(parent);LinearLayout row=a.row(),labels=a.vertical();String value=r.optString("value"),title=a.ruleTitle(r);
+   /* Launcher icon on the left for app rules; non-app rules and uninstalled packages keep the plain layout. */
+   if(r.optString("type").equals("app")){android.graphics.drawable.Drawable icon=a.appIcon(value);if(icon!=null){ImageView image=new ImageView(a);image.setImageDrawable(icon);image.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);android.widget.LinearLayout.LayoutParams ip=a.lp(36,36);ip.setMarginEnd(a.dp(10));row.addView(image,ip);}}
   TextView name=a.text(title,13,MainActivity.TEXT);name.setMaxLines(2);name.setEllipsize(android.text.TextUtils.TruncateAt.END);labels.addView(name);
   TextView detail=a.text((r.optString("type").equals("app")?L10n.s(R.string.msg_f9886ca2bc):r.optString("type").equals("cidr")?"IP":!title.equals(value)?value:L10n.s(R.string.msg_045bef7d26))+" · "+route(r),11,MainActivity.MUTED);detail.setMaxLines(2);detail.setEllipsize(android.text.TextUtils.TruncateAt.END);labels.addView(detail);labels.setMinimumHeight(a.dp(52));labels.setGravity(Gravity.CENTER_VERTICAL);labels.setBackground(a.selectable());labels.setContentDescription(L10n.s(R.string.msg_2681a24f90)+title);labels.setOnClickListener(v->a.editRule(r));row.addView(labels,new LinearLayout.LayoutParams(0,-2,1));
   row.addView(arrow("move-up",L10n.s(R.string.msg_27c9c75d4a)+title,index>group.start,()->moveRule(index,-1)),a.lp(44,48));row.addView(arrow("move-down",L10n.s(R.string.msg_08525c9005)+title,index<group.end-1,()->moveRule(index,1)),a.lp(44,48));

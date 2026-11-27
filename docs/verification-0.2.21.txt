@@ -1,0 +1,12 @@
+Vezdehod 0.2.21 (version code 26), 2026-11-27
+
+PASS 20 JVM tests, including per-app routing, fallback/recovery, DNS and update selection/download validation.
+PASS 463 messages in 12 languages, including resource coverage and placeholders.
+PASS ARM64 and ARMv7 native architecture and 16 KiB ELF alignment checks.
+PASS both release APKs: version code 26, correct ABI set, ZIP alignment and official v0.2.20 signing certificate.
+PASS Android 14 emulator: install official v0.2.20, upgrade to the ARM64 0.2.21 APK in place, and launch. The first install time and selected app locale were unchanged.
+
+A physical phone was not connected for this check. This does not cover live VPN traffic, low-memory devices, or ping performance.
+
+Universal APK SHA-256: 92befa1583f870f7dab95d2a51bc2777ae393c006322e14b013eb33aaf4d2bc4
+ARM64 APK SHA-256: 4207be0912e309be7f5b0227db5d951c44ceda56c43556920f33f9c32f79eb64

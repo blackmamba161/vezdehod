@@ -1,0 +1,16 @@
+{
+  "version": "0.2.21",
+  "date": "2026-11-27",
+  "scope": "Release signing, packaging and update checks; not a full security audit",
+  "architectures": ["arm64-v8a", "armeabi-v7a"],
+  "passed_checks": [
+    "Both APKs verify with the official v0.2.20 signing certificate",
+    "Release version code is 26; APKs are not debuggable",
+    "Native ELF and APK ZIP alignment checks",
+    "JVM tests for trusted update origins, release selection, checksum validation, and download cancellation",
+    "Android 14 emulator accepts and launches the ARM64 APK as an in-place update of official v0.2.20"
+  ],
+  "limitations": [
+    "No physical-device VPN or performance validation in this release check"
+  ]
+}

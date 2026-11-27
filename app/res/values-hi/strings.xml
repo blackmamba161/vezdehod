@@ -443,4 +443,24 @@
     <string name="settings_group_interface" formatted="false">"इंटरफ़ेस"</string>
     <string name="settings_group_protection" formatted="false">"सुरक्षा"</string>
     <string name="settings_group_app" formatted="false">"ऐप"</string>
+    <string name="msg_6268037bd9" formatted="false">"VPN unavailable — going direct"</string>
+    <string name="msg_8db805fb1a" formatted="false">"Without VPN"</string>
+    <string name="msg_ecd3610b6d" formatted="false">"VPN unavailable: traffic goes direct, still checking"</string>
+    <string name="msg_b4f1b04c34" formatted="false">"Server is back — VPN restored"</string>
+    <string name="msg_a4f5a37bae" formatted="false">"When VPN is unavailable"</string>
+    <string name="msg_166e251ca1" formatted="false">"Go direct"</string>
+    <string name="msg_a3e8600cee" formatted="false">"When the server is down, send all traffic directly without interruption. DNS also goes direct. When the server recovers, VPN is restored."</string>
+    <string name="msg_dd22010599" formatted="false">"नियमों के ऐप इंस्टॉल नहीं हैं: "</string>
+    <string name="msg_c28130e4b1" formatted="false">"नेटवर्क बदला — ऐप नियमों के लिए टनल फिर से बनाया जा रहा है"</string>
+    <string name="app_picker_multiple" formatted="false">"ऐप चुनें"</string>
+    <string name="app_picker_pending" formatted="false">"बदलाव: %d। नीचे दिए गए रूट और नेटवर्क केवल नए नियमों पर लागू होंगे।"</string>
+    <string name="msg_hide_vpn_hint" formatted="false">"चालू: केवल आपके नियमों वाले ऐप्स VPN का उपयोग करते हैं। बाकी ऐप्स सीधे कनेक्ट होते हैं और यह नहीं देख पाते कि VPN चल रहा है। साइट और IP नियम, ब्लॉकिंग और विज्ञापन फ़िल्टर उन पर लागू नहीं होते।\n\nबंद: हर ऐप Vezdehod से गुज़रता है, जो आपके नियम लागू करके हर ऐप या साइट के लिए तय करता है कि VPN इस्तेमाल हो या नहीं। ऐप्स देख सकते हैं कि VPN चालू है।\n\nस्टेटस बार का VPN आइकॉन दोनों स्थितियों में बना रहता है।"</string>
+    <string name="msg_058e67308f" formatted="false">"ऐप्स से VPN छिपाएँ"</string>
+    <string name="connection_stopping" formatted="false">"VPN डिस्कनेक्ट हो रहा है…"</string>
+    <string name="connection_temporary_unavailable" formatted="false">"VPN अस्थायी रूप से उपलब्ध नहीं है"</string>
+    <string name="connection_direct" formatted="false">"अभी इंटरनेट बिना VPN के चल रहा है"</string>
+    <string name="connection_retry_pending" formatted="false">"VPN की फिर से जाँच करेंगे"</string>
+    <string name="connection_recovery_until" formatted="false">"VPN की अगली जाँच तक"</string>
+    <string name="connection_recovery_countdown" formatted="false">"अगली जाँच %d सेकंड में"</string>
+    <string name="connection_recovery_checking" formatted="false">"VPN की जाँच हो रही है…"</string>
 </resources>

@@ -443,4 +443,24 @@
     <string name="settings_group_interface" formatted="false">"Benutzeroberfläche"</string>
     <string name="settings_group_protection" formatted="false">"Schutz"</string>
     <string name="settings_group_app" formatted="false">"App"</string>
+    <string name="msg_6268037bd9" formatted="false">"VPN unavailable — going direct"</string>
+    <string name="msg_8db805fb1a" formatted="false">"Without VPN"</string>
+    <string name="msg_ecd3610b6d" formatted="false">"VPN unavailable: traffic goes direct, still checking"</string>
+    <string name="msg_b4f1b04c34" formatted="false">"Server is back — VPN restored"</string>
+    <string name="msg_a4f5a37bae" formatted="false">"When VPN is unavailable"</string>
+    <string name="msg_166e251ca1" formatted="false">"Go direct"</string>
+    <string name="msg_a3e8600cee" formatted="false">"When the server is down, send all traffic directly without interruption. DNS also goes direct. When the server recovers, VPN is restored."</string>
+    <string name="msg_dd22010599" formatted="false">"Apps aus den Regeln nicht installiert: "</string>
+    <string name="msg_c28130e4b1" formatted="false">"Netzwerk gewechselt — Tunnel für App-Regeln wird neu aufgebaut"</string>
+    <string name="app_picker_multiple" formatted="false">"Apps auswählen"</string>
+    <string name="app_picker_pending" formatted="false">"Änderungen: %d. Route und Netzwerk unten gelten nur für neue Regeln."</string>
+    <string name="msg_hide_vpn_hint" formatted="false">"Ein: Nur die Apps in deinen Regeln nutzen das VPN. Die anderen verbinden sich direkt und können nicht sehen, dass ein VPN läuft. Seiten- und IP-Regeln, Blockieren und Werbefilter gelten für sie nicht.\n\nAus: Alle Apps laufen über Vezdehod, das deine Regeln anwendet und pro App oder Seite entscheidet, ob das VPN genutzt wird. Apps können sehen, dass ein VPN aktiv ist.\n\nDas VPN-Symbol in der Statusleiste bleibt in beiden Fällen."</string>
+    <string name="msg_058e67308f" formatted="false">"VPN vor Apps verbergen"</string>
+    <string name="connection_stopping" formatted="false">"VPN wird getrennt…"</string>
+    <string name="connection_temporary_unavailable" formatted="false">"VPN vorübergehend nicht verfügbar"</string>
+    <string name="connection_direct" formatted="false">"Internet derzeit ohne VPN"</string>
+    <string name="connection_retry_pending" formatted="false">"Das VPN wird erneut geprüft"</string>
+    <string name="connection_recovery_until" formatted="false">"Bis zur nächsten VPN-Prüfung"</string>
+    <string name="connection_recovery_countdown" formatted="false">"Nächste Prüfung in %d s"</string>
+    <string name="connection_recovery_checking" formatted="false">"VPN wird geprüft…"</string>
 </resources>

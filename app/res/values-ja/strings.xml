@@ -443,4 +443,24 @@
     <string name="settings_group_interface" formatted="false">"表示"</string>
     <string name="settings_group_protection" formatted="false">"保護"</string>
     <string name="settings_group_app" formatted="false">"アプリ"</string>
+    <string name="msg_6268037bd9" formatted="false">"VPN unavailable — going direct"</string>
+    <string name="msg_8db805fb1a" formatted="false">"Without VPN"</string>
+    <string name="msg_ecd3610b6d" formatted="false">"VPN unavailable: traffic goes direct, still checking"</string>
+    <string name="msg_b4f1b04c34" formatted="false">"Server is back — VPN restored"</string>
+    <string name="msg_a4f5a37bae" formatted="false">"When VPN is unavailable"</string>
+    <string name="msg_166e251ca1" formatted="false">"Go direct"</string>
+    <string name="msg_a3e8600cee" formatted="false">"When the server is down, send all traffic directly without interruption. DNS also goes direct. When the server recovers, VPN is restored."</string>
+    <string name="msg_dd22010599" formatted="false">"ルールのアプリが未インストール："</string>
+    <string name="msg_c28130e4b1" formatted="false">"ネットワークが変わりました——アプリルールに合わせてトンネルを再構築します"</string>
+    <string name="app_picker_multiple" formatted="false">"アプリを選択"</string>
+    <string name="app_picker_pending" formatted="false">"変更数：%d。下のルートとネットワークは新しいルールにのみ適用されます。"</string>
+    <string name="msg_hide_vpn_hint" formatted="false">"オン：ルール内のアプリだけが VPN を使用します。他のアプリは直接接続し、VPN が動いていることがわかりません。サイト規則、IP 規則、ブロック、広告フィルタはそれらに適用されません。\n\nオフ：すべてのアプリが Vezdehod を経由し、ルールを適用してアプリやサイトごとに VPN を使うかどうかを決めます。アプリは VPN が有効なことがわかります。\n\nステータスバーの VPN アイコンはどちらの場合も残ります。"</string>
+    <string name="msg_058e67308f" formatted="false">"アプリに VPN を隠す"</string>
+    <string name="connection_stopping" formatted="false">"VPN を切断しています…"</string>
+    <string name="connection_temporary_unavailable" formatted="false">"VPN は一時的に利用できません"</string>
+    <string name="connection_direct" formatted="false">"現在は VPN なしでインターネットに接続しています"</string>
+    <string name="connection_retry_pending" formatted="false">"VPN を再確認します"</string>
+    <string name="connection_recovery_until" formatted="false">"次の VPN 確認まで"</string>
+    <string name="connection_recovery_countdown" formatted="false">"次の確認まで %d 秒"</string>
+    <string name="connection_recovery_checking" formatted="false">"VPN を確認しています…"</string>
 </resources>
