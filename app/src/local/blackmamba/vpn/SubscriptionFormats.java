@@ -64,10 +64,16 @@ public final class SubscriptionFormats {
   String tag=o.optString("tag"),name=o.optString("remarks",o.optString("name",tag));if(!Compat.blank(group))name=multiple&&!Compat.blank(tag)?group+" · "+tag:group;
   o.remove("tag");o.remove("name");o.remove("remarks");
   if(o.has("protocol")){
-   result.format="Xray JSON";if(!Arrays.asList("vless","vmess","trojan","shadowsocks","socks","http").contains(type))throw new Exception(L10n.s(R.string.msg_6f8352205b)+type);
+   result.format="Xray JSON";if(!Arrays.asList("vless","vmess","trojan","shadowsocks","socks","http","hysteria").contains(type))throw new Exception(L10n.s(R.string.msg_6f8352205b)+type);
    JSONObject stream=o.optJSONObject("streamSettings"),sock=stream==null?null:stream.optJSONObject("sockopt");
    if(o.has("proxySettings")||sock!=null&&sock.has("dialerProxy"))throw new Exception(L10n.s(R.string.msg_b329e9ab1b));
-   JSONObject settings=o.getJSONObject("settings");JSONArray servers=settings.optJSONArray(type.equals("vless")||type.equals("vmess")?"vnext":"servers");if(servers==null||servers.length()==0)throw new Exception(L10n.s(R.string.msg_67acde8ec5));for(int i=0;i<servers.length();i++)endpoint(servers.getJSONObject(i).optString("address"),servers.getJSONObject(i).optInt("port"));
+   JSONObject settings=o.getJSONObject("settings");
+   if(type.equals("hysteria")){
+    if(settings.optInt("version")!=2||stream==null||!"hysteria".equals(stream.optString("network"))||!"tls".equals(stream.optString("security")))throw new Exception(L10n.s(R.string.msg_67acde8ec5));
+    endpoint(settings.optString("address"),settings.optInt("port"));
+   }else{
+    JSONArray servers=settings.optJSONArray(type.equals("vless")||type.equals("vmess")?"vnext":"servers");if(servers==null||servers.length()==0)throw new Exception(L10n.s(R.string.msg_67acde8ec5));for(int i=0;i<servers.length();i++)endpoint(servers.getJSONObject(i).optString("address"),servers.getJSONObject(i).optInt("port"));
+   }
    return wrap(name,type,obj("type","xray","xray",o));
   }
   result.format="sing-box JSON";if(!Arrays.asList("vless","vmess","trojan","shadowsocks","hysteria","hysteria2","tuic","socks","http","anytls").contains(type))throw new Exception(L10n.s(R.string.msg_6f8352205b)+type);

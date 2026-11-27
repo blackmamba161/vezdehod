@@ -6,8 +6,9 @@ import static local.blackmamba.vpn.Store.*;
 /** Settings shared by UI and core. Defaults preserve the installed configuration. */
 public final class Preferences {
  static final boolean DEFAULT_APP_SCOPE=true;
+ static final String SEND_SUBSCRIPTION_HWID="sendSubscriptionHwid";
  public static JSONObject defaults() throws JSONException {return obj(
-  "adBlock",false,"adBlockAllow","","theme","dark","accent","blue","textScale",100,
+  "adBlock",false,"adBlockAllow","",SEND_SUBSCRIPTION_HWID,true,ServerOrder.KEY,ServerOrder.PING,"theme","dark","accent","blue","textScale",100,
   "showSpeed",true,"showPing",true,"showServer",true,"showTraffic",false,"showExpiry",true,
   "boot",false,"reconnect",true,"retrySeconds",15,"fallbackWifi","","fallbackCellular","","failOpen",true,"appScope",DEFAULT_APP_SCOPE,
   "dnsMode","auto","dnsBackup",DnsSettings.CLOUDFLARE,"dnsDirect","","dnsBootstrap","","remoteDns",DnsSettings.GOOGLE,"ipv6",true,"mtu",1400,"stack","gvisor");}

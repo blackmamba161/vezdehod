@@ -463,4 +463,10 @@
     <string name="connection_recovery_until" formatted="false">"Until the next VPN check"</string>
     <string name="connection_recovery_countdown" formatted="false">"Next check in %d s"</string>
     <string name="connection_recovery_checking" formatted="false">"Checking VPN…"</string>
+    <string name="subscription_hwid" formatted="false">"Send HWID"</string>
+    <string name="subscription_hwid_hint" formatted="false">"Some subscriptions require a device ID. Vezdehod sends a different ID to each subscription origin. Clearing app data or reinstalling changes the ID."</string>
+    <string name="server_sort" formatted="false">"Sort servers"</string>
+    <string name="sort_ping" formatted="false">"Lowest ping first"</string>
+    <string name="sort_name" formatted="false">"By name"</string>
+    <string name="sort_source" formatted="false">"Subscription order"</string>
 </resources>

@@ -463,4 +463,10 @@
     <string name="connection_recovery_until" formatted="false">"Bis zur nächsten VPN-Prüfung"</string>
     <string name="connection_recovery_countdown" formatted="false">"Nächste Prüfung in %d s"</string>
     <string name="connection_recovery_checking" formatted="false">"VPN wird geprüft…"</string>
+    <string name="subscription_hwid" formatted="false">"HWID senden"</string>
+    <string name="subscription_hwid_hint" formatted="false">"Einige Abos benötigen eine Geräte-ID. Vezdehod sendet jedem Abo-Ursprung eine eigene ID. Beim Löschen der App-Daten oder bei einer Neuinstallation ändert sich die ID."</string>
+    <string name="server_sort" formatted="false">"Server sortieren"</string>
+    <string name="sort_ping" formatted="false">"Niedrigster Ping zuerst"</string>
+    <string name="sort_name" formatted="false">"Nach Namen"</string>
+    <string name="sort_source" formatted="false">"Abo-Reihenfolge"</string>
 </resources>

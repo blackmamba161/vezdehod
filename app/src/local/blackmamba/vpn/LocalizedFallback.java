@@ -464,4 +464,10 @@ case R.string.connection_retry_pending:return "Повторим проверку
 case R.string.connection_recovery_until:return "До проверки VPN";
 case R.string.connection_recovery_countdown:return "Следующая проверка через %d с";
 case R.string.connection_recovery_checking:return "Проверяем VPN…";
+case R.string.subscription_hwid:return "Передавать HWID";
+case R.string.subscription_hwid_hint:return "Некоторые подписки требуют ID устройства. Вездеход отправляет отдельный ID каждому серверу подписок. После очистки данных или переустановки ID изменится.";
+case R.string.server_sort:return "Сортировка";
+case R.string.sort_ping:return "По пингу";
+case R.string.sort_name:return "По названию";
+case R.string.sort_source:return "Порядок подписки";
 default:throw new IllegalArgumentException("Unknown string resource: "+id);}}}

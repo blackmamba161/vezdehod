@@ -4,7 +4,7 @@ Vezdehod stores VPN subscriptions and configuration on your device. The configur
 
 Network requests depend on the features you use:
 
-- Subscription imports and refreshes contact the subscription URL you provide.
+- Subscription imports and refreshes contact the subscription URL you provide. The global **Send HWID** setting is on by default for new installations. An existing saved choice is preserved; you can turn it off under Settings → Protection. When enabled, these requests send an app-generated ID specific to the URL's HTTPS origin (scheme, host and port). Redirects to other origins do not receive the ID. The random seed stays in private app storage excluded from backup; it survives app updates but not clearing app data or uninstalling. A provider may count a new ID as a new device. No IMEI, serial number or MAC address is read.
 - VPN connections contact the servers and services selected by your configuration.
 - Connectivity checks contact Google and Cloudflare test endpoints through the server being checked.
 - Update checks contact the configured public GitHub repository. Downloads contact GitHub and its release-asset delivery infrastructure. These services receive normal connection metadata such as your IP address; update checks also include the app version in the User-Agent header.

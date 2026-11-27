@@ -463,4 +463,10 @@
     <string name="connection_recovery_until" formatted="false">"Até a próxima verificação da VPN"</string>
     <string name="connection_recovery_countdown" formatted="false">"Próxima verificação em %d s"</string>
     <string name="connection_recovery_checking" formatted="false">"Verificando a VPN…"</string>
+    <string name="subscription_hwid" formatted="false">"Enviar HWID"</string>
+    <string name="subscription_hwid_hint" formatted="false">"Algumas assinaturas exigem um ID do dispositivo. O Vezdehod envia um ID diferente para cada origem de assinatura. Limpar os dados do app ou reinstalá-lo altera o ID."</string>
+    <string name="server_sort" formatted="false">"Ordenar servidores"</string>
+    <string name="sort_ping" formatted="false">"Menor latência primeiro"</string>
+    <string name="sort_name" formatted="false">"Por nome"</string>
+    <string name="sort_source" formatted="false">"Ordem da assinatura"</string>
 </resources>

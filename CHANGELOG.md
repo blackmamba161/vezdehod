@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.22
+
+Fixes.
+
 ## 0.2.21
 
 - Check up to four servers at a time, show live progress, and queue extra checks requested during a batch.

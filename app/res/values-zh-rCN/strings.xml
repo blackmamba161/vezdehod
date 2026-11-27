@@ -463,4 +463,10 @@
     <string name="connection_recovery_until" formatted="false">"距下次 VPN 检查"</string>
     <string name="connection_recovery_countdown" formatted="false">"%d 秒后再次检查"</string>
     <string name="connection_recovery_checking" formatted="false">"正在检查 VPN…"</string>
+    <string name="subscription_hwid" formatted="false">"发送 HWID"</string>
+    <string name="subscription_hwid_hint" formatted="false">"部分订阅需要设备 ID。Vezdehod 会向每个订阅来源发送不同的 ID。清除应用数据或重新安装后，ID 会改变。"</string>
+    <string name="server_sort" formatted="false">"服务器排序"</string>
+    <string name="sort_ping" formatted="false">"延迟最低优先"</string>
+    <string name="sort_name" formatted="false">"按名称"</string>
+    <string name="sort_source" formatted="false">"订阅顺序"</string>
 </resources>

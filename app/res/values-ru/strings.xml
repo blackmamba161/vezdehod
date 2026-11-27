@@ -463,4 +463,10 @@
     <string name="connection_recovery_until" formatted="false">"До проверки VPN"</string>
     <string name="connection_recovery_countdown" formatted="false">"Следующая проверка через %d с"</string>
     <string name="connection_recovery_checking" formatted="false">"Проверяем VPN…"</string>
+    <string name="subscription_hwid" formatted="false">"Передавать HWID"</string>
+    <string name="subscription_hwid_hint" formatted="false">"Некоторые подписки требуют ID устройства. Вездеход отправляет отдельный ID каждому серверу подписок. После очистки данных или переустановки ID изменится."</string>
+    <string name="server_sort" formatted="false">"Сортировка"</string>
+    <string name="sort_ping" formatted="false">"По пингу"</string>
+    <string name="sort_name" formatted="false">"По названию"</string>
+    <string name="sort_source" formatted="false">"Порядок подписки"</string>
 </resources>

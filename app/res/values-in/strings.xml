@@ -463,4 +463,10 @@
     <string name="connection_recovery_until" formatted="false">"Hingga pemeriksaan VPN berikutnya"</string>
     <string name="connection_recovery_countdown" formatted="false">"Pemeriksaan berikutnya dalam %d dtk"</string>
     <string name="connection_recovery_checking" formatted="false">"Memeriksa VPN…"</string>
+    <string name="subscription_hwid" formatted="false">"Kirim HWID"</string>
+    <string name="subscription_hwid_hint" formatted="false">"Beberapa langganan memerlukan ID perangkat. Vezdehod mengirim ID yang berbeda ke setiap asal langganan. Menghapus data aplikasi atau memasang ulang aplikasi akan mengubah ID."</string>
+    <string name="server_sort" formatted="false">"Urutkan server"</string>
+    <string name="sort_ping" formatted="false">"Ping terendah dahulu"</string>
+    <string name="sort_name" formatted="false">"Menurut nama"</string>
+    <string name="sort_source" formatted="false">"Urutan langganan"</string>
 </resources>

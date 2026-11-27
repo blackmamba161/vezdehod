@@ -16,6 +16,7 @@ public final class Icons extends View {
   switch(name){
    case "share":c.drawCircle(5,12,2.5f,p);c.drawCircle(19,4,2.5f,p);c.drawCircle(19,20,2.5f,p);line(c,7.2f,10.7f,16.8f,5.3f);line(c,7.2f,13.3f,16.8f,18.7f);break;
    case "more":dot(c,12,5);dot(c,12,12);dot(c,12,19);break;
+   case "sort":line(c,3,6,16,6);line(c,3,12,12,12);line(c,3,18,8,18);line(c,18,8,18,20);line(c,14,16,18,20,22,16);break;
    case "download":line(c,12,3,12,15);line(c,7,10,12,15,17,10);line(c,4,16,4,21,20,21,20,16);break;
    case "check":line(c,4,12,9,17,20,6);break;
    case "copy":c.drawRoundRect(8,8,21,21,2,2,p);line(c,16,5,16,3,3,3,3,16,5,16);break;
@@ -32,6 +33,7 @@ public final class Icons extends View {
    case "profiles":c.drawRoundRect(3,4,21,20,3,3,p);line(c,3,9,21,9);line(c,7,14,12,14);line(c,7,17,10,17);break;
    case "settings":for(int i=0;i<6;i++){c.save();c.rotate(i*60,12,12);line(c,10,3,10,1.8f,14,1.8f,14,3);c.restore();}c.drawCircle(12,12,8.2f,p);c.drawCircle(12,12,3,p);break;
    case "shield":line(c,12,2.5f,20,5.5f,20,12,18,17,12,21.5f,6,17,4,12,4,5.5f,12,2.5f);line(c,8,11.5f,11,14.5f,16,9);break;
+   case "device":c.drawRoundRect(6,2.5f,18,21.5f,2.5f,2.5f,p);line(c,10,5.5f,14,5.5f);dot(c,12,18.5f);break;
    case "appearance":c.drawCircle(12,12,9,p);p.setStyle(Paint.Style.FILL);c.drawArc(3,3,21,21,90,180,true,p);break;
    case "bell":c.drawArc(6,3,18,15,180,180,false,p);line(c,6,9,6,14,3.5f,18,20.5f,18,18,14,18,9);c.drawArc(9,18,15,23,20,140,false,p);break;
    case "diagnostics":line(c,2,12,6,12,9,5,13,19,16,12,22,12);break;

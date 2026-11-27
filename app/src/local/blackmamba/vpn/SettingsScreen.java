@@ -16,6 +16,7 @@ final class SettingsScreen {
     entry(c,"settings",L10n.s(R.string.msg_d7907f4d43),"IP, MTU",()->open("advanced"));
     c=group(L10n.s(R.string.settings_group_protection));
     entry(c,"shield",L10n.s(R.string.msg_7f2be1ba3d),store.data.optBoolean("adBlock")?L10n.s(R.string.msg_85dd4d46ca):L10n.s(R.string.msg_2106134f75),()->open("adblock"));
+    toggleEntry(c,"device",L10n.s(R.string.subscription_hwid),L10n.s(R.string.subscription_hwid_hint),Preferences.SEND_SUBSCRIPTION_HWID);
     entry(c,"shield",L10n.s(R.string.privacy_title),null,()->{AlertDialog d=a.new DialogBuilder(a).setTitle(L10n.s(R.string.privacy_title)).setMessage(L10n.s(R.string.privacy_summary)).setPositiveButton(L10n.s(R.string.msg_4ae50d3073),null).create();a.sheet(d);});
     c=group(L10n.s(R.string.settings_group_app));entry(c,"download",L10n.s(R.string.update_title),null,()->open("updates"));
     entry(c,"diagnostics",L10n.s(R.string.msg_9ba1e22ac3),null,()->open("diagnostics"));
@@ -24,6 +25,7 @@ final class SettingsScreen {
  }
  LinearLayout group(String title){TextView heading=a.bold(title,12);heading.setTextColor(MainActivity.MUTED);heading.setPaddingRelative(a.dp(10),0,0,a.dp(3));host.addView(heading);LinearLayout card=a.card(host);card.setPaddingRelative(a.dp(12),a.dp(2),a.dp(12),a.dp(2));LinearLayout.LayoutParams layout=(LinearLayout.LayoutParams)card.getLayoutParams();layout.bottomMargin=a.dp(6);card.setLayoutParams(layout);return card;}
  void entry(LinearLayout group,String icon,String title,String description,Runnable action){a.iconItem(group,icon,title,description,action,true);}
+ void toggleEntry(LinearLayout group,String icon,String title,String hint,String key){LinearLayout row=a.iconItemRow(group,icon,title,null,true);row.addView(a.helpButton(title,hint),a.lp(44,44));Switch sw=a.switchControl();sw.setContentDescription(title);sw.setChecked(store.data.optBoolean(key));sw.setOnCheckedChangeListener((b,on)->set(key,on,false));row.addView(sw);group.addView(row);}
  void open(String page){a.settingsPage=page;a.tab="settings";a.render();}
  void set(String key,Object value,boolean core){try{store.change(key,value);EventLog.add(a,core?L10n.s(R.string.msg_6521dc9632):L10n.s(R.string.msg_7f59da61ba));if(core)TunnelService.reload();a.render();}catch(Exception e){a.message(TunnelService.safeError(e));}}
  void toggle(LinearLayout parent,String name,String hint,String key,boolean core){LinearLayout row=a.row(),labels=a.vertical();labels.addView(a.bold(name,14));row.addView(labels,new LinearLayout.LayoutParams(0,-2,1));if(!hint.isEmpty())row.addView(a.helpButton(name,hint),a.lp(44,44));Switch sw=a.switchControl();sw.setContentDescription(name);sw.setChecked(store.data.optBoolean(key));sw.setOnCheckedChangeListener((b,on)->set(key,on,core));row.addView(sw);row.setPaddingRelative(0,a.dp(4),0,a.dp(4));parent.addView(row);a.divider(parent);}

@@ -463,4 +463,10 @@
     <string name="connection_recovery_until" formatted="false">"حتى التحقق التالي من VPN"</string>
     <string name="connection_recovery_countdown" formatted="false">"التحقق التالي بعد %d ث"</string>
     <string name="connection_recovery_checking" formatted="false">"جارٍ التحقق من VPN…"</string>
+    <string name="subscription_hwid" formatted="false">"إرسال HWID"</string>
+    <string name="subscription_hwid_hint" formatted="false">"تتطلب بعض الاشتراكات معرّف جهاز. يرسل Vezdehod معرّفًا مختلفًا لكل مصدر اشتراك. يؤدي محو بيانات التطبيق أو إعادة تثبيته إلى تغيير المعرّف."</string>
+    <string name="server_sort" formatted="false">"ترتيب الخوادم"</string>
+    <string name="sort_ping" formatted="false">"الأقل تأخيرًا أولًا"</string>
+    <string name="sort_name" formatted="false">"حسب الاسم"</string>
+    <string name="sort_source" formatted="false">"ترتيب الاشتراك"</string>
 </resources>

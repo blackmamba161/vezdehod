@@ -463,4 +463,10 @@
     <string name="connection_recovery_until" formatted="false">"VPN की अगली जाँच तक"</string>
     <string name="connection_recovery_countdown" formatted="false">"अगली जाँच %d सेकंड में"</string>
     <string name="connection_recovery_checking" formatted="false">"VPN की जाँच हो रही है…"</string>
+    <string name="subscription_hwid" formatted="false">"HWID भेजें"</string>
+    <string name="subscription_hwid_hint" formatted="false">"कुछ सदस्यताओं को डिवाइस आईडी चाहिए। Vezdehod हर सदस्यता स्रोत को अलग आईडी भेजता है। ऐप का डेटा मिटाने या उसे फिर से इंस्टॉल करने पर आईडी बदल जाती है।"</string>
+    <string name="server_sort" formatted="false">"सर्वर क्रम"</string>
+    <string name="sort_ping" formatted="false">"सबसे कम पिंग पहले"</string>
+    <string name="sort_name" formatted="false">"नाम के अनुसार"</string>
+    <string name="sort_source" formatted="false">"सदस्यता का क्रम"</string>
 </resources>

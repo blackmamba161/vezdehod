@@ -463,4 +463,10 @@
     <string name="connection_recovery_until" formatted="false">"Avant la prochaine vérification du VPN"</string>
     <string name="connection_recovery_countdown" formatted="false">"Prochaine vérification dans %d s"</string>
     <string name="connection_recovery_checking" formatted="false">"Vérification du VPN…"</string>
+    <string name="subscription_hwid" formatted="false">"Envoyer le HWID"</string>
+    <string name="subscription_hwid_hint" formatted="false">"Certains abonnements nécessitent un identifiant d’appareil. Vezdehod envoie un identifiant différent à chaque origine d’abonnement. Effacer les données de l’application ou la réinstaller change cet identifiant."</string>
+    <string name="server_sort" formatted="false">"Trier les serveurs"</string>
+    <string name="sort_ping" formatted="false">"Latence croissante"</string>
+    <string name="sort_name" formatted="false">"Par nom"</string>
+    <string name="sort_source" formatted="false">"Ordre de l’abonnement"</string>
 </resources>

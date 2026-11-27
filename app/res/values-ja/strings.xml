@@ -463,4 +463,10 @@
     <string name="connection_recovery_until" formatted="false">"次の VPN 確認まで"</string>
     <string name="connection_recovery_countdown" formatted="false">"次の確認まで %d 秒"</string>
     <string name="connection_recovery_checking" formatted="false">"VPN を確認しています…"</string>
+    <string name="subscription_hwid" formatted="false">"HWID を送信"</string>
+    <string name="subscription_hwid_hint" formatted="false">"一部のサブスクリプションではデバイス ID が必要です。Vezdehod は配信元ごとに異なる ID を送信します。アプリのデータを消去するか再インストールすると ID が変わります。"</string>
+    <string name="server_sort" formatted="false">"サーバーの並べ替え"</string>
+    <string name="sort_ping" formatted="false">"低遅延順"</string>
+    <string name="sort_name" formatted="false">"名前順"</string>
+    <string name="sort_source" formatted="false">"サブスクリプション順"</string>
 </resources>
