@@ -63,7 +63,7 @@ final class RulesScreen {
  void presets(boolean first){
   try{
    JSONArray current=a.store.data.getJSONArray("rules");Set<String> selected=new LinkedHashSet<>();Map<String,CheckBox> boxes=new LinkedHashMap<>();
-   LinearLayout body=a.vertical();body.setPaddingRelative(a.dp(12),0,a.dp(12),0);ScrollView scroll=new ScrollView(a);scroll.setVerticalScrollBarEnabled(false);scroll.addView(body);
+   LinearLayout body=a.vertical();ScrollView scroll=new ScrollView(a);scroll.setVerticalScrollBarEnabled(false);scroll.addView(body);
    AlertDialog dialog=a.new DialogBuilder(a).setTitle(L10n.s(R.string.msg_a11443ec76)).setView(scroll).setNegativeButton(first?L10n.s(R.string.msg_fd042c9a3a):L10n.s(R.string.msg_0ec753be8d),null).setPositiveButton(L10n.s(R.string.msg_768af67762),null).create();
    String section="";for(RuleCatalog.Service service:RuleCatalog.SERVICES){
     if(!section.equals(service.section)){section=service.section;LinearLayout title=a.row();TextView name=a.bold(RuleCatalog.sectionName(section),13);name.setTextColor(MainActivity.MUTED);title.addView(name,new LinearLayout.LayoutParams(0,a.dp(38),1));if(section.equals("base")){TextView all=a.text(L10n.s(R.string.msg_bdda7682fb),12,MainActivity.ACCENT);all.setGravity(Gravity.CENTER);all.setMinHeight(a.dp(44));all.setPaddingRelative(a.dp(8),0,a.dp(8),0);all.setBackground(a.selectable());all.setOnClickListener(v->{boolean complete=true;for(RuleCatalog.Service s:RuleCatalog.SERVICES)if(s.section.equals("base")&&boxes.get(s.id).isEnabled()&&!boxes.get(s.id).isChecked())complete=false;for(RuleCatalog.Service s:RuleCatalog.SERVICES)if(s.section.equals("base")&&boxes.get(s.id).isEnabled())boxes.get(s.id).setChecked(!complete);});title.addView(all);}body.addView(title);}

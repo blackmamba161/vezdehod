@@ -1,0 +1,1 @@
+0.2.23 (28): UI checks passed at 100% and 200% font scale. In-place APK upgrade from 0.2.22 on Android 14 preserved app locale and first install timestamp; app launched.

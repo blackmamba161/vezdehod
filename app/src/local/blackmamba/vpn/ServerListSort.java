@@ -17,7 +17,8 @@ final class ServerListSort {
  private final int[] labels={R.string.sort_ping,R.string.sort_name,R.string.sort_source};
  private boolean dirty=true;
  private String mode;
- ServerListSort(MainActivity activity,LinearLayout list){a=activity;this.list=list;mode=a.store.data.optString(ServerOrder.KEY,ServerOrder.PING);if(!Arrays.asList(modes).contains(mode))mode=ServerOrder.PING;collator.setStrength(Collator.SECONDARY);}
+ ServerListSort(MainActivity activity,LinearLayout list){this(activity,list,activity.store.data.optString(ServerOrder.KEY,ServerOrder.PING));}
+ ServerListSort(MainActivity activity,LinearLayout list,String initialMode){a=activity;this.list=list;mode=initialMode;if(!Arrays.asList(modes).contains(mode))mode=ServerOrder.PING;collator.setStrength(Collator.SECONDARY);}
  void reset(){rows.clear();names.clear();snapshot.clear();dirty=true;}
  void add(String id,String name,View row){names.put(id,name);rows.put(id,row);}
  void refresh(){

@@ -7,7 +7,7 @@ final class ProfileEditor {
  ProfileEditor(MainActivity a,JSONObject profile){this.a=a;original=profile;name=profile.optString("name");source=profile.optString("source");automatic=profile.optBoolean("auto",true);}
  EditText sourceField;TextView sourceText;android.view.View copyButton,editButton;LinearLayout sourceBox;boolean editingSource=false;
  void stash(){if(nameField!=null)name=nameField.getText().toString().trim();if(autoField!=null)automatic=autoField.isChecked();if(editingSource&&sourceField!=null)source=sourceField.getText().toString().trim();}
- void show(){LinearLayout box=a.vertical();box.setPaddingRelative(a.dp(12),0,a.dp(12),0);
+ void show(){LinearLayout box=a.vertical();
   box.addView(a.bold(L10n.s(R.string.msg_109f623f52),18));
   a.label(box,L10n.s(R.string.msg_3de49828e8));nameField=a.edit(L10n.s(R.string.msg_11b385895c),name);nameField.setSingleLine(true);box.addView(nameField);
   LinearLayout sourceHeading=a.row();sourceHeading.addView(a.text(L10n.s(R.string.msg_046e475e5a),13,MainActivity.MUTED),new LinearLayout.LayoutParams(0,-2,1));copyButton=a.iconButton("copy",L10n.s(R.string.msg_a44800a12f),()->copySource());editButton=a.iconButton("edit",L10n.s(R.string.msg_a48859c609),()->replaceSource());sourceHeading.addView(copyButton,a.lp(48,48));sourceHeading.addView(editButton,a.lp(48,48));box.addView(sourceHeading);

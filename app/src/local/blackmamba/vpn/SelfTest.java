@@ -34,6 +34,9 @@ public class SelfTest extends Instrumentation {
  }
  public void onStart(){Bundle r=new Bundle();try{android.content.Context c=getTargetContext();Store s=Store.get(c);JSONObject data=s.snapshot();String mode=args==null?"ui":args.getString("mode","ui");
   if(mode.equals("theme-020")){themeQuality(c,s,r);}
+  else if(mode.equals("install-dialog")){verifyInstallDialog(c,r);}
+  else if(mode.equals("adaptive-dialogs")){verifyAdaptiveDialogs(c,s,r);}
+  else if(mode.equals("server-picker")){verifyServerPicker(c,s,r);}
   else if(mode.equals("client-xray-019")){
    JSONObject original=s.data;byte[] encrypted=java.nio.file.Files.readAllBytes(new java.io.File(c.getFilesDir(),"store.enc").toPath());
    try{TunnelService.stop(c);long stopped=System.currentTimeMillis()+5000;while(TunnelService.instance!=null&&System.currentTimeMillis()<stopped)Thread.sleep(50);
@@ -235,6 +238,74 @@ public class SelfTest extends Instrumentation {
  boolean hasError(android.view.View v){if(v instanceof android.widget.TextView&&((android.widget.TextView)v).getText().toString().contains(L10n.s(R.string.msg_7d8d1526a4)))return true;if(v instanceof android.view.ViewGroup){android.view.ViewGroup g=(android.view.ViewGroup)v;for(int i=0;i<g.getChildCount();i++)if(hasError(g.getChildAt(i)))return true;}return false;}
  void capture(android.content.Context c,String name)throws Exception{Thread.sleep(250);final android.graphics.Bitmap[] image={null};runOnMainSync(()->{android.view.View view=currentActivity.getWindow().getDecorView();if(view.getWidth()>0&&view.getHeight()>0){image[0]=android.graphics.Bitmap.createBitmap(view.getWidth(),view.getHeight(),android.graphics.Bitmap.Config.ARGB_8888);view.draw(new android.graphics.Canvas(image[0]));}});android.graphics.Bitmap b=image[0];if(b!=null){java.io.File dir=new java.io.File(c.getFilesDir(),"test-screens");dir.mkdirs();try(java.io.FileOutputStream o=new java.io.FileOutputStream(new java.io.File(dir,name+".png"))){b.compress(android.graphics.Bitmap.CompressFormat.PNG,100,o);}b.recycle();}}
  void captureWindow(android.content.Context c,String name,android.view.Window window)throws Exception{final android.graphics.Bitmap[] bitmap={null};runOnMainSync(()->{android.view.View v=window.getDecorView();bitmap[0]=android.graphics.Bitmap.createBitmap(v.getWidth(),v.getHeight(),android.graphics.Bitmap.Config.ARGB_8888);v.draw(new android.graphics.Canvas(bitmap[0]));});java.io.File dir=new java.io.File(c.getFilesDir(),"test-screens");dir.mkdirs();try(java.io.FileOutputStream out=new java.io.FileOutputStream(new java.io.File(dir,name+".png"))){bitmap[0].compress(android.graphics.Bitmap.CompressFormat.PNG,100,out);}bitmap[0].recycle();}
+ void verifyServerPicker(Context c,Store store,Bundle result)throws Exception{
+  MainActivity a=(MainActivity)startActivitySync(new Intent(c,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+  JSONObject original=store.data,fixture=new JSONObject(original.toString());String[] ids={"picker-A","picker-B","picker-C"};String[] picked={null};
+  JSONArray nodes=new JSONArray();for(int i=0;i<ids.length;i++)nodes.put(Store.obj("id",ids[i],"name",ids[i],"profile",i==2?"second":"first","outbound",Store.obj("type","socks","server","127.0.0.1","server_port",1)));
+  fixture.put("profiles",Store.arr(Store.obj("id","first","name","First"),Store.obj("id","second","name","Second"))).put("servers",nodes).put(ServerOrder.KEY,ServerOrder.NAME);
+  try{
+   JSONArray[] batch={null};runOnMainSync(()->{store.data=fixture;new ServerPicker(a,"Wi-Fi",ids[2],id->picked[0]=id,null,false).show(list->batch[0]=list);});waitForIdleSync();ServerPicker p=a.serverPicker;
+   runOnMainSync(()->p.filter.setSelection(1));waitForIdleSync();check(p.delays.size()==2&&!p.delays.containsKey(ids[2]),"Wrong filtered rows");
+   runOnMainSync(()->p.check.performClick());check(batch[0]!=null&&batch[0].length()==2&&Store.find(batch[0],ids[0])!=null&&Store.find(batch[0],ids[1])!=null,"Mass ping ignored picker filter");
+   runOnMainSync(()->{a.pings.put(ids[0],120);a.pings.put(ids[1],35);a.updatePings();});
+   check(findText(p.list.getChildAt(0),ids[1])!=null&&picked[0]==null,"Live ping order or selection changed");
+   runOnMainSync(()->{a.pings.put(ids[1],-1);a.updatePings();});check(findText(p.list.getChildAt(1),ids[1])!=null,"No response not last");
+   runOnMainSync(()->clickText(p.list.getChildAt(0),ids[0]));waitForIdleSync();check(p.dialog.isShowing()&&picked[0]==null&&findText(p.list,"✓  "+ids[0])!=null,"Selection closed picker or marked wrong ID");
+   runOnMainSync(()->p.dialog.getButton(AlertDialog.BUTTON_POSITIVE).performClick());waitForIdleSync();check(ids[0].equals(picked[0])&&a.serverPicker==null,"Wrong ID saved after reorder");
+   runOnMainSync(()->new ServerPicker(a,L10n.s(R.string.msg_fbf3611c53),ids[2],id->picked[0]=id,null,true).show());waitForIdleSync();ServerPicker reserve=a.serverPicker;
+   if(args.getBoolean("capture",false)||"yes".equals(args.getString("preview")))captureWindow(c,"reserve-preview",reserve.dialog.getWindow());
+   android.view.View marked=findText(reserve.list,"✓  "+ids[2]);check(marked!=null,"Existing reserve not marked");
+   runOnMainSync(()->reserve.filter.setSelection(1));waitForIdleSync();android.view.View root=reserve.dialog.getWindow().getDecorView();
+   check(findText(reserve.selection,ids[2])!=null&&findText(reserve.selection,"Second")!=null&&!reserve.delays.containsKey(ids[2]),"Current reserve lost when filtered out");
+   check(reserve.disable.getParent()==reserve.check.getParent()&&reserve.disable.getTop()==reserve.check.getTop()&&reserve.disable.getBottom()==reserve.check.getBottom()&&reserve.disable.getWidth()>0&&reserve.check.getWidth()>0,"Action buttons not in one aligned row");
+   runOnMainSync(()->clickText(root,L10n.s(R.string.msg_2d8f7570e1)));waitForIdleSync();check(reserve.dialog.isShowing()&&reserve.disable.isSelected()&&"first".equals(reserve.scope)&&ids[0].equals(picked[0]),"Disabling closed dialog or changed filter");
+   runOnMainSync(()->clickText(reserve.list,ids[1]));waitForIdleSync();check(reserve.dialog.isShowing()&&!reserve.disable.isSelected()&&findText(reserve.list,"✓  "+ids[1])!=null,"Cannot reselect after disabling");
+   runOnMainSync(()->{reserve.disable.performClick();reserve.dialog.getButton(AlertDialog.BUTTON_POSITIVE).performClick();});waitForIdleSync();check("".equals(picked[0]),"Cannot save disabled fallback");
+   result.putString("result","PASS scoped mass ping, live order, stable row action, reserve selection across filters, disable");
+  }finally{runOnMainSync(()->{if(a.serverPicker!=null)a.serverPicker.dialog.dismiss();store.data=original;for(String id:ids)a.pings.remove(id);a.finish();});}
+ }
+ void checkSheetEdge(MainActivity a,AlertDialog d,android.view.View... buttons)throws Exception{
+  android.view.View window=d.getWindow().getDecorView();int edge=a.dp(SheetSpacing.EDGE);int[] origin=new int[2];window.getLocationInWindow(origin);int left=window.getWidth(),right=0,bottom=0;
+  for(android.view.View b:buttons){int[] pos=new int[2];b.getLocationInWindow(pos);left=Math.min(left,pos[0]-origin[0]);right=Math.max(right,pos[0]-origin[0]+b.getWidth());bottom=Math.max(bottom,pos[1]-origin[1]+b.getHeight());}
+  int end=window.getWidth()-right,below=window.getHeight()-bottom;
+  check(left==edge&&end==edge&&below==edge&&window.getPaddingTop()==edge,"Expected sheet edge "+edge+"px, got "+left+"/"+end+"/"+below);
+ }
+ void checkPair(AlertDialog d,int first,int second)throws Exception{
+  android.view.View root=d.getWindow().getDecorView();android.widget.Button left=(android.widget.Button)findText(root,L10n.s(first)),right=(android.widget.Button)findText(root,L10n.s(second));
+  for(android.widget.Button b:new android.widget.Button[]{left,right}){check(b!=null&&b.isShown()&&b.getLayout()!=null&&b.getLineCount()==1,"Missing or split action");check(b.getLayout().getEllipsisCount(0)==0&&b.getLayout().getLineWidth(0)<=b.getWidth()-b.getCompoundPaddingLeft()-b.getCompoundPaddingRight()+1,"Clipped action");}
+  check((left.getTop()==right.getTop()&&left.getBottom()==right.getBottom())||(left.getBottom()<right.getTop()&&left.getWidth()==right.getWidth()),"Misaligned pair");
+ }
+ void verifyAdaptiveDialogs(Context c,Store store,Bundle result)throws Exception{
+  MainActivity a=(MainActivity)startActivitySync(new Intent(c,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));JSONObject original=store.data;
+  try{
+   runOnMainSync(()->new SubscriptionImport(a).enter(""));waitForIdleSync();AlertDialog link=a.lastDialog;checkPair(link,R.string.msg_0ec753be8d,R.string.msg_3f75368ab9);checkSheetEdge(a,link,findText(link.getWindow().getDecorView(),L10n.s(R.string.msg_0ec753be8d)),findText(link.getWindow().getDecorView(),L10n.s(R.string.msg_3f75368ab9)));captureWindow(c,"after-link",link.getWindow());
+   runOnMainSync(()->clickText(link.getWindow().getDecorView(),L10n.s(R.string.msg_3f75368ab9)));waitForIdleSync();check(link.isShowing(),"Empty link bypassed validation");runOnMainSync(()->clickText(link.getWindow().getDecorView(),L10n.s(R.string.msg_0ec753be8d)));waitForIdleSync();check(!link.isShowing(),"Cancel failed");
+   DnsScreen dns=new DnsScreen(a);runOnMainSync(dns::show);waitForIdleSync();checkPair(dns.dialog,R.string.dns_auto,R.string.dns_manual);checkSheetEdge(a,dns.dialog,dns.dialog.getButton(-1),dns.dialog.getButton(-2));captureWindow(c,"after-dns",dns.dialog.getWindow());
+   runOnMainSync(()->clickText(dns.body,L10n.s(R.string.dns_manual)));waitForIdleSync();check(DnsSettings.manual(dns.draft),"Manual DNS not selected");runOnMainSync(()->{clickText(dns.body,L10n.s(R.string.dns_auto));dns.dialog.dismiss();});waitForIdleSync();check(!DnsSettings.manual(dns.draft),"Auto DNS not selected");
+   JSONObject fixture=new JSONObject(original.toString()).put("auto",true).put("wifi","w").put("cellular","m").put("servers",Store.arr(Store.obj("id","w","name","Тестовый сервер Wi-Fi"),Store.obj("id","m","name","Тестовый сервер LTE")));
+   runOnMainSync(()->{store.data=fixture;new RoutePicker(a,L10n.s(R.string.msg_50e1cb1272),"auto",id->{}).show();});waitForIdleSync();AlertDialog route=a.lastDialog;String full="Wi-Fi: "+a.serverName("w")+L10n.s(R.string.msg_e26ed24f9e)+a.serverName("m");android.widget.TextView text=(android.widget.TextView)findText(route.getWindow().getDecorView(),full);
+   check(text!=null&&text.getLayout()!=null,"Missing network assignments");android.text.Layout layout=text.getLayout();int end=layout.getLineCount()-1;check(layout.getLineEnd(end)==full.length()&&layout.getEllipsisCount(end)==0&&layout.getHeight()<=text.getHeight(),"Truncated route");checkSheetEdge(a,route,route.getButton(-2));captureWindow(c,"after-route",route.getWindow());result.putString("result","PASS subscription actions, DNS modes and full route description");
+  }finally{runOnMainSync(()->{if(a.lastDialog!=null)a.lastDialog.dismiss();store.data=original;a.finish();});}
+ }
+ void verifyInstallDialog(Context c,Bundle result)throws Exception{
+  MainActivity a=(MainActivity)startActivitySync(new Intent(c,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+  AlertDialog[] dialog={null};runOnMainSync(()->dialog[0]=new UpdateScreen(a).confirmInstall());waitForIdleSync();
+  try{
+   android.view.View root=dialog[0].getWindow().getDecorView();android.widget.Button[] buttons=new android.widget.Button[2];
+   for(int i=0;i<2;i++){
+    ArrayList<android.view.View> hits=new ArrayList<>();root.findViewsWithText(hits,L10n.s(i==0?R.string.msg_0ec753be8d:R.string.update_install),android.view.View.FIND_VIEWS_WITH_TEXT);
+    for(android.view.View v:hits)if(v instanceof android.widget.Button&&v.isShown())buttons[i]=(android.widget.Button)v;
+    android.widget.Button b=buttons[i];check(b!=null&&b.isClickable(),"Missing action "+i);
+    runOnMainSync(()->b.requestRectangleOnScreen(new android.graphics.Rect(0,0,b.getWidth(),b.getHeight()),true));waitForIdleSync();
+    android.graphics.Rect visible=new android.graphics.Rect();check(b.getGlobalVisibleRect(visible)&&visible.width()==b.getWidth()&&visible.height()==b.getHeight(),"Unreachable action "+i);
+    android.text.Layout text=b.getLayout();check(text!=null&&text.getLineCount()>0&&text.getEllipsisCount(text.getLineCount()-1)==0&&text.getHeight()<=b.getHeight()-b.getCompoundPaddingTop()-b.getCompoundPaddingBottom(),"Clipped action "+i);
+   }
+   boolean row=buttons[0].getTop()==buttons[1].getTop();
+   check(row?buttons[0].getBottom()==buttons[1].getBottom()&&(buttons[0].getRight()<buttons[1].getLeft()||buttons[1].getRight()<buttons[0].getLeft()):buttons[0].getBottom()<buttons[1].getTop()&&buttons[0].getLeft()==buttons[1].getLeft()&&buttons[0].getRight()==buttons[1].getRight(),"Misaligned actions");
+   String layout=row?"row":"column";check(layout.equals(args.getString("layout",layout)),"Unexpected layout: "+layout);
+   runOnMainSync(()->buttons[0].performClick());check(!dialog[0].isShowing(),"Cancel did not dismiss dialog");result.putString("result","PASS "+layout+", both labels and actions accessible");
+  }finally{runOnMainSync(()->{dialog[0].dismiss();a.finish();});}
+ }
  void stage(String name){Bundle state=new Bundle();state.putString("stage",name);sendStatus(1,state);}
  String probeResult()throws Exception{return probeServer(TunnelService.server);}
  String probeServer(String id)throws Exception{java.util.concurrent.CountDownLatch done=new java.util.concurrent.CountDownLatch(1);String[] result={"timeout"};TunnelService.instance.probeServer(id,(v,e)->{result[0]=e==null?"HTTPS OK, "+v.optInt("ping")+" ms":"HTTPS failed: "+e;done.countDown();});done.await(35,java.util.concurrent.TimeUnit.SECONDS);return result[0];}
